@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+
+\kategoria{Wikieł/P1.20a}
+\zadStart{Zadanie z Wikieł P 1.20 a) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8]
+%[p2]:[2,3,4,5,6]
+%[p3]:[4,5,6,7,8,9,10,11]
+%[p4]:[2,3,4,5,6]
+%[a]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[c]=random.randint(1,10)
+%[d]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[f]=random.randint(1,10)
+%[g]=2*[a]
+%[p3p1m]=[p3]-[p1]
+%[p3p2m]=[p3]-[p2]
+%[p3p4m]=[p3]-[p4]
+%[p3]>[p1] and [p3]>[p4] and [p1]>[p2] and math.gcd([a],[d])==1 and [p3p1m]>1 and [p3p2m]>1 and [p3p4m]>1
+Zbadać parzystość (nieparzystość) funkcji $f(x)=\sqrt[3]{(x-[a])^2}-\sqrt[3]{(x+[a])^2}$.
+\zadStop
+\rozwStart{Pascal Nawrocki}{}
+Funkcja jest parzysta jeżeli w całej swojej dziedznie spełnia warunek, że $f(x)=-f(x)$. Natomiast nieparzysta jeżeli spełnia warunek, że $f(-x)=-f(x)$.
+Sprawdzamy dziedzinę, jako że pod pierwiastkami występują wyrażenia kwadratowe, to oznacza, że dziedzina naszej funkcji równa jest $ \mathbb{R}$.
+Sprawdźmy:
+$$f(-x)=\sqrt[3]{(-x-[a])^2}-\sqrt[3]{(x+[a])^2}$$
+Korzystamy z własności potęgi:
+$$(-x-[a])^2=[-(x+[a])]^2=(x+[a])^2$$
+$$(-x+[a])^2=[-(x-[a])]^2=(x-[a])^2$$
+Dokańczamy:
+\begin{equation}
+\begin{split}
+f(-x)=&\sqrt[3]{(-x-[a])^2}-\sqrt[3]{(x+[a])^2}=\sqrt[3]{(x+[a])^2}-\sqrt[3]{(x-[a])^2}=\\
+&=-[\sqrt[3]{(x-[a])^2}-\sqrt[3]{(x+[a])^2}]=-f(x)
+\end{split}
+\end{equation}
+Zatem funkcja jest nieparzysta, gdyż w całej swojej dziedznie spełnia warunek, że $f(-x)=-f(x)$.
+\rozwStop
+\odpStart
+ Funkcja jest nieparzysta
+\odpStop
+\testStart
+A.Funkcja jest nieparzysta
+B.Funkcja jest parzysta
+C.Funkcja nie jest parzysta ani nieparzysta
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+\end{document}
