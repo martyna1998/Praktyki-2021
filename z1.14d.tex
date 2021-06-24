@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+
+\kategoria{Wikieł/Z1.14d}
+\zadStart{Zadanie z Wikieł Z 1.14 d) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8]
+%[p2]:[2,3,4,5,6]
+%[p3]:[4,5,6,7,8,9,10,11]
+%[p4]:[2,3,4,5,6]
+%[a]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[c]=random.randint(1,10)
+%[d]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[f]=random.randint(1,10)
+%[g]=2*[a]
+%[p3p1m]=[p3]-[p1]
+%[p3p2m]=[p3]-[p2]
+%[p3p4m]=[p3]-[p4]
+%[p3]>[p1] and [p3]>[p4] and [p1]>[p2] and math.gcd([a],[d])==1 and [p3p1m]>1 and [p3p2m]>1 and [p3p4m]>1
+Rozwiązać rówanie $\sqrt{{(3x-[a])}^2}=[a]-3x$
+\zadStop
+\rozwStart{Pascal Nawrocki}{}
+Zauważmy, że dziedzina wynosi $\mathbb{R}$, ze względu na to, że wartość pod pierwiastkiem zawsze będzie nieujemna nieważne jakiego x podstawimy.
+Na samym początku korzystamy z własności potęgi pod pierwiastkiem: $$\sqrt{a^2}=|a|$$
+Czyli:
+$$\sqrt{{(3x-[a])}^2}=[a]-3x \Leftrightarrow |3x-[a]|=[a]-3x $$
+Rozwiązujemy standardowo, na dwa przypadki:
+\begin{enumerate}
+\item$x\in(-\infty,\frac{[a]}{3})$
+\item$x\in[\frac{[a]}{3},+\infty)$
+\end{enumerate}
+Rozwiązujemy:
+\begin{enumerate}
+\item$x\in(-\infty,\frac{[a]}{3})$
+$$|3x-[a]|=[a]-3x\Leftrightarrow-3x+[a]=[a]-3x\Leftrightarrow 0=0$$
+A to oznacza, że mamy tożsamość dla wszystkich x z przedziału $(-\infty,\frac{[a]}{3})$, czyli rozwiązaniem w tym przypadku jest cały ten przedział.
+\item$x\in[\frac{[a]}{3},+\infty)$
+$$|3x-[a]|=[a]-3x\Leftrightarrow3x-[a]=[a]-3x\Leftrightarrow6x=[g]\Leftrightarrow x=\frac{[a]}{3}$$
+Rozwiązaniem w tym wypadku jest $x=\frac{[a]}{3}$
+\end{enumerate}
+Stąd możemy podsumować czyli przypadek $1\cup2$ dają nam przedział $x\in(-\infty,\frac{[a]}{3}]$, upraszczając: $x\leq\frac{[a]}{3}$.
+\odpStart
+$x\leq\frac{[a]}{3}$
+\odpStop
+\testStart
+A.$x\in\frac{[a]}{3}$
+B.$x\in \emptyset$
+C.$\infty$
+D. $x\in (-\infty,-[a])$
+E. $x\in (-\infty,-[a])\cup x\in[-[a],+\infty)$
+F.$\frac{1}{[d]}$
+G.$[d]$
+H.$-[a]$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+\end{document}
