@@ -1,0 +1,820 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z3.12i}
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 1}
+Obliczyć granicę ciągu $a_{n}=\frac{68^{n+4} - 783^{n+4}}{783^{n}-68^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{68^{n+4} - 783^{n+4}}{783^{n}-68^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{68^{4} \cdot 68^{n} - 783^{4} \cdot 783^{n}}{783^{n}-68^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{783^{n}(68^{4} \cdot \frac{68^{n}}{783^{n}} - 783^{4})}{783^{n}(1-\frac{68^{n}}{783^{n}})} = -783^{4}$$
+\rozwStop
+\odpStart
+$-783^{4}$
+\odpStop
+\testStart
+A.$-783^{4}$
+B.$-68^{4}$
+C.$783$
+D.$-783$
+E.$783^{2}$
+F.$68^{2}$
+G.$\frac{-68}{783}$
+H.$\frac{-783}{68}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 2}
+Obliczyć granicę ciągu $a_{n}=\frac{13^{n+4} - 874^{n+9}}{874^{n}-13^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{13^{n+4} - 874^{n+9}}{874^{n}-13^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{13^{4} \cdot 13^{n} - 874^{9} \cdot 874^{n}}{874^{n}-13^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{874^{n}(13^{4} \cdot \frac{13^{n}}{874^{n}} - 874^{9})}{874^{n}(1-\frac{13^{n}}{874^{n}})} = -874^{9}$$
+\rozwStop
+\odpStart
+$-874^{9}$
+\odpStop
+\testStart
+A.$-874^{9}$
+B.$-13^{4}$
+C.$874$
+D.$-874$
+E.$874^{2}$
+F.$13^{2}$
+G.$\frac{-13}{874}$
+H.$\frac{-874}{13}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 3}
+Obliczyć granicę ciągu $a_{n}=\frac{155^{n+5} - 793^{n+2}}{793^{n}-155^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{155^{n+5} - 793^{n+2}}{793^{n}-155^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{155^{5} \cdot 155^{n} - 793^{2} \cdot 793^{n}}{793^{n}-155^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{793^{n}(155^{5} \cdot \frac{155^{n}}{793^{n}} - 793^{2})}{793^{n}(1-\frac{155^{n}}{793^{n}})} = -793^{2}$$
+\rozwStop
+\odpStart
+$-793^{2}$
+\odpStop
+\testStart
+A.$-793^{2}$
+B.$-155^{5}$
+C.$793$
+D.$-793$
+E.$793^{2}$
+F.$155^{2}$
+G.$\frac{-155}{793}$
+H.$\frac{-793}{155}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 4}
+Obliczyć granicę ciągu $a_{n}=\frac{408^{n+5} - 829^{n+10}}{829^{n}-408^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{408^{n+5} - 829^{n+10}}{829^{n}-408^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{408^{5} \cdot 408^{n} - 829^{10} \cdot 829^{n}}{829^{n}-408^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{829^{n}(408^{5} \cdot \frac{408^{n}}{829^{n}} - 829^{10})}{829^{n}(1-\frac{408^{n}}{829^{n}})} = -829^{10}$$
+\rozwStop
+\odpStart
+$-829^{10}$
+\odpStop
+\testStart
+A.$-829^{10}$
+B.$-408^{5}$
+C.$829$
+D.$-829$
+E.$829^{2}$
+F.$408^{2}$
+G.$\frac{-408}{829}$
+H.$\frac{-829}{408}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 5}
+Obliczyć granicę ciągu $a_{n}=\frac{631^{n+5} - 937^{n+12}}{937^{n}-631^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{631^{n+5} - 937^{n+12}}{937^{n}-631^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{631^{5} \cdot 631^{n} - 937^{12} \cdot 937^{n}}{937^{n}-631^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{937^{n}(631^{5} \cdot \frac{631^{n}}{937^{n}} - 937^{12})}{937^{n}(1-\frac{631^{n}}{937^{n}})} = -937^{12}$$
+\rozwStop
+\odpStart
+$-937^{12}$
+\odpStop
+\testStart
+A.$-937^{12}$
+B.$-631^{5}$
+C.$937$
+D.$-937$
+E.$937^{2}$
+F.$631^{2}$
+G.$\frac{-631}{937}$
+H.$\frac{-937}{631}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 6}
+Obliczyć granicę ciągu $a_{n}=\frac{127^{n+6} - 503^{n+4}}{503^{n}-127^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{127^{n+6} - 503^{n+4}}{503^{n}-127^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{127^{6} \cdot 127^{n} - 503^{4} \cdot 503^{n}}{503^{n}-127^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{503^{n}(127^{6} \cdot \frac{127^{n}}{503^{n}} - 503^{4})}{503^{n}(1-\frac{127^{n}}{503^{n}})} = -503^{4}$$
+\rozwStop
+\odpStart
+$-503^{4}$
+\odpStop
+\testStart
+A.$-503^{4}$
+B.$-127^{6}$
+C.$503$
+D.$-503$
+E.$503^{2}$
+F.$127^{2}$
+G.$\frac{-127}{503}$
+H.$\frac{-503}{127}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 7}
+Obliczyć granicę ciągu $a_{n}=\frac{139^{n+6} - 756^{n+11}}{756^{n}-139^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{139^{n+6} - 756^{n+11}}{756^{n}-139^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{139^{6} \cdot 139^{n} - 756^{11} \cdot 756^{n}}{756^{n}-139^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{756^{n}(139^{6} \cdot \frac{139^{n}}{756^{n}} - 756^{11})}{756^{n}(1-\frac{139^{n}}{756^{n}})} = -756^{11}$$
+\rozwStop
+\odpStart
+$-756^{11}$
+\odpStop
+\testStart
+A.$-756^{11}$
+B.$-139^{6}$
+C.$756$
+D.$-756$
+E.$756^{2}$
+F.$139^{2}$
+G.$\frac{-139}{756}$
+H.$\frac{-756}{139}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 8}
+Obliczyć granicę ciągu $a_{n}=\frac{424^{n+6} - 945^{n+12}}{945^{n}-424^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{424^{n+6} - 945^{n+12}}{945^{n}-424^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{424^{6} \cdot 424^{n} - 945^{12} \cdot 945^{n}}{945^{n}-424^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{945^{n}(424^{6} \cdot \frac{424^{n}}{945^{n}} - 945^{12})}{945^{n}(1-\frac{424^{n}}{945^{n}})} = -945^{12}$$
+\rozwStop
+\odpStart
+$-945^{12}$
+\odpStop
+\testStart
+A.$-945^{12}$
+B.$-424^{6}$
+C.$945$
+D.$-945$
+E.$945^{2}$
+F.$424^{2}$
+G.$\frac{-424}{945}$
+H.$\frac{-945}{424}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 9}
+Obliczyć granicę ciągu $a_{n}=\frac{37^{n+7} - 865^{n+3}}{865^{n}-37^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{37^{n+7} - 865^{n+3}}{865^{n}-37^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{37^{7} \cdot 37^{n} - 865^{3} \cdot 865^{n}}{865^{n}-37^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{865^{n}(37^{7} \cdot \frac{37^{n}}{865^{n}} - 865^{3})}{865^{n}(1-\frac{37^{n}}{865^{n}})} = -865^{3}$$
+\rozwStop
+\odpStart
+$-865^{3}$
+\odpStop
+\testStart
+A.$-865^{3}$
+B.$-37^{7}$
+C.$865$
+D.$-865$
+E.$865^{2}$
+F.$37^{2}$
+G.$\frac{-37}{865}$
+H.$\frac{-865}{37}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 10}
+Obliczyć granicę ciągu $a_{n}=\frac{481^{n+7} - 933^{n+4}}{933^{n}-481^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{481^{n+7} - 933^{n+4}}{933^{n}-481^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{481^{7} \cdot 481^{n} - 933^{4} \cdot 933^{n}}{933^{n}-481^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{933^{n}(481^{7} \cdot \frac{481^{n}}{933^{n}} - 933^{4})}{933^{n}(1-\frac{481^{n}}{933^{n}})} = -933^{4}$$
+\rozwStop
+\odpStart
+$-933^{4}$
+\odpStop
+\testStart
+A.$-933^{4}$
+B.$-481^{7}$
+C.$933$
+D.$-933$
+E.$933^{2}$
+F.$481^{2}$
+G.$\frac{-481}{933}$
+H.$\frac{-933}{481}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 11}
+Obliczyć granicę ciągu $a_{n}=\frac{403^{n+7} - 971^{n+7}}{971^{n}-403^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{403^{n+7} - 971^{n+7}}{971^{n}-403^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{403^{7} \cdot 403^{n} - 971^{7} \cdot 971^{n}}{971^{n}-403^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{971^{n}(403^{7} \cdot \frac{403^{n}}{971^{n}} - 971^{7})}{971^{n}(1-\frac{403^{n}}{971^{n}})} = -971^{7}$$
+\rozwStop
+\odpStart
+$-971^{7}$
+\odpStop
+\testStart
+A.$-971^{7}$
+B.$-403^{7}$
+C.$971$
+D.$-971$
+E.$971^{2}$
+F.$403^{2}$
+G.$\frac{-403}{971}$
+H.$\frac{-971}{403}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 12}
+Obliczyć granicę ciągu $a_{n}=\frac{913^{n+8} - 921^{n+4}}{921^{n}-913^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{913^{n+8} - 921^{n+4}}{921^{n}-913^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{913^{8} \cdot 913^{n} - 921^{4} \cdot 921^{n}}{921^{n}-913^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{921^{n}(913^{8} \cdot \frac{913^{n}}{921^{n}} - 921^{4})}{921^{n}(1-\frac{913^{n}}{921^{n}})} = -921^{4}$$
+\rozwStop
+\odpStart
+$-921^{4}$
+\odpStop
+\testStart
+A.$-921^{4}$
+B.$-913^{8}$
+C.$921$
+D.$-921$
+E.$921^{2}$
+F.$913^{2}$
+G.$\frac{-913}{921}$
+H.$\frac{-921}{913}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 13}
+Obliczyć granicę ciągu $a_{n}=\frac{117^{n+8} - 722^{n+5}}{722^{n}-117^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{117^{n+8} - 722^{n+5}}{722^{n}-117^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{117^{8} \cdot 117^{n} - 722^{5} \cdot 722^{n}}{722^{n}-117^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{722^{n}(117^{8} \cdot \frac{117^{n}}{722^{n}} - 722^{5})}{722^{n}(1-\frac{117^{n}}{722^{n}})} = -722^{5}$$
+\rozwStop
+\odpStart
+$-722^{5}$
+\odpStop
+\testStart
+A.$-722^{5}$
+B.$-117^{8}$
+C.$722$
+D.$-722$
+E.$722^{2}$
+F.$117^{2}$
+G.$\frac{-117}{722}$
+H.$\frac{-722}{117}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 14}
+Obliczyć granicę ciągu $a_{n}=\frac{149^{n+8} - 585^{n+7}}{585^{n}-149^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{149^{n+8} - 585^{n+7}}{585^{n}-149^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{149^{8} \cdot 149^{n} - 585^{7} \cdot 585^{n}}{585^{n}-149^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{585^{n}(149^{8} \cdot \frac{149^{n}}{585^{n}} - 585^{7})}{585^{n}(1-\frac{149^{n}}{585^{n}})} = -585^{7}$$
+\rozwStop
+\odpStart
+$-585^{7}$
+\odpStop
+\testStart
+A.$-585^{7}$
+B.$-149^{8}$
+C.$585$
+D.$-585$
+E.$585^{2}$
+F.$149^{2}$
+G.$\frac{-149}{585}$
+H.$\frac{-585}{149}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 15}
+Obliczyć granicę ciągu $a_{n}=\frac{120^{n+8} - 337^{n+11}}{337^{n}-120^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{120^{n+8} - 337^{n+11}}{337^{n}-120^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{120^{8} \cdot 120^{n} - 337^{11} \cdot 337^{n}}{337^{n}-120^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{337^{n}(120^{8} \cdot \frac{120^{n}}{337^{n}} - 337^{11})}{337^{n}(1-\frac{120^{n}}{337^{n}})} = -337^{11}$$
+\rozwStop
+\odpStart
+$-337^{11}$
+\odpStop
+\testStart
+A.$-337^{11}$
+B.$-120^{8}$
+C.$337$
+D.$-337$
+E.$337^{2}$
+F.$120^{2}$
+G.$\frac{-120}{337}$
+H.$\frac{-337}{120}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 16}
+Obliczyć granicę ciągu $a_{n}=\frac{431^{n+9} - 776^{n+6}}{776^{n}-431^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{431^{n+9} - 776^{n+6}}{776^{n}-431^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{431^{9} \cdot 431^{n} - 776^{6} \cdot 776^{n}}{776^{n}-431^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{776^{n}(431^{9} \cdot \frac{431^{n}}{776^{n}} - 776^{6})}{776^{n}(1-\frac{431^{n}}{776^{n}})} = -776^{6}$$
+\rozwStop
+\odpStart
+$-776^{6}$
+\odpStop
+\testStart
+A.$-776^{6}$
+B.$-431^{9}$
+C.$776$
+D.$-776$
+E.$776^{2}$
+F.$431^{2}$
+G.$\frac{-431}{776}$
+H.$\frac{-776}{431}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 17}
+Obliczyć granicę ciągu $a_{n}=\frac{557^{n+9} - 860^{n+8}}{860^{n}-557^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{557^{n+9} - 860^{n+8}}{860^{n}-557^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{557^{9} \cdot 557^{n} - 860^{8} \cdot 860^{n}}{860^{n}-557^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{860^{n}(557^{9} \cdot \frac{557^{n}}{860^{n}} - 860^{8})}{860^{n}(1-\frac{557^{n}}{860^{n}})} = -860^{8}$$
+\rozwStop
+\odpStart
+$-860^{8}$
+\odpStop
+\testStart
+A.$-860^{8}$
+B.$-557^{9}$
+C.$860$
+D.$-860$
+E.$860^{2}$
+F.$557^{2}$
+G.$\frac{-557}{860}$
+H.$\frac{-860}{557}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 18}
+Obliczyć granicę ciągu $a_{n}=\frac{685^{n+9} - 736^{n+10}}{736^{n}-685^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{685^{n+9} - 736^{n+10}}{736^{n}-685^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{685^{9} \cdot 685^{n} - 736^{10} \cdot 736^{n}}{736^{n}-685^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{736^{n}(685^{9} \cdot \frac{685^{n}}{736^{n}} - 736^{10})}{736^{n}(1-\frac{685^{n}}{736^{n}})} = -736^{10}$$
+\rozwStop
+\odpStart
+$-736^{10}$
+\odpStop
+\testStart
+A.$-736^{10}$
+B.$-685^{9}$
+C.$736$
+D.$-736$
+E.$736^{2}$
+F.$685^{2}$
+G.$\frac{-685}{736}$
+H.$\frac{-736}{685}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 19}
+Obliczyć granicę ciągu $a_{n}=\frac{203^{n+9} - 710^{n+11}}{710^{n}-203^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{203^{n+9} - 710^{n+11}}{710^{n}-203^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{203^{9} \cdot 203^{n} - 710^{11} \cdot 710^{n}}{710^{n}-203^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{710^{n}(203^{9} \cdot \frac{203^{n}}{710^{n}} - 710^{11})}{710^{n}(1-\frac{203^{n}}{710^{n}})} = -710^{11}$$
+\rozwStop
+\odpStart
+$-710^{11}$
+\odpStop
+\testStart
+A.$-710^{11}$
+B.$-203^{9}$
+C.$710$
+D.$-710$
+E.$710^{2}$
+F.$203^{2}$
+G.$\frac{-203}{710}$
+H.$\frac{-710}{203}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 20}
+Obliczyć granicę ciągu $a_{n}=\frac{559^{n+9} - 794^{n+12}}{794^{n}-559^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{559^{n+9} - 794^{n+12}}{794^{n}-559^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{559^{9} \cdot 559^{n} - 794^{12} \cdot 794^{n}}{794^{n}-559^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{794^{n}(559^{9} \cdot \frac{559^{n}}{794^{n}} - 794^{12})}{794^{n}(1-\frac{559^{n}}{794^{n}})} = -794^{12}$$
+\rozwStop
+\odpStart
+$-794^{12}$
+\odpStop
+\testStart
+A.$-794^{12}$
+B.$-559^{9}$
+C.$794$
+D.$-794$
+E.$794^{2}$
+F.$559^{2}$
+G.$\frac{-559}{794}$
+H.$\frac{-794}{559}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 21}
+Obliczyć granicę ciągu $a_{n}=\frac{180^{n+10} - 229^{n+2}}{229^{n}-180^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{180^{n+10} - 229^{n+2}}{229^{n}-180^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{180^{10} \cdot 180^{n} - 229^{2} \cdot 229^{n}}{229^{n}-180^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{229^{n}(180^{10} \cdot \frac{180^{n}}{229^{n}} - 229^{2})}{229^{n}(1-\frac{180^{n}}{229^{n}})} = -229^{2}$$
+\rozwStop
+\odpStart
+$-229^{2}$
+\odpStop
+\testStart
+A.$-229^{2}$
+B.$-180^{10}$
+C.$229$
+D.$-229$
+E.$229^{2}$
+F.$180^{2}$
+G.$\frac{-180}{229}$
+H.$\frac{-229}{180}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 22}
+Obliczyć granicę ciągu $a_{n}=\frac{507^{n+10} - 868^{n+4}}{868^{n}-507^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{507^{n+10} - 868^{n+4}}{868^{n}-507^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{507^{10} \cdot 507^{n} - 868^{4} \cdot 868^{n}}{868^{n}-507^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{868^{n}(507^{10} \cdot \frac{507^{n}}{868^{n}} - 868^{4})}{868^{n}(1-\frac{507^{n}}{868^{n}})} = -868^{4}$$
+\rozwStop
+\odpStart
+$-868^{4}$
+\odpStop
+\testStart
+A.$-868^{4}$
+B.$-507^{10}$
+C.$868$
+D.$-868$
+E.$868^{2}$
+F.$507^{2}$
+G.$\frac{-507}{868}$
+H.$\frac{-868}{507}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 23}
+Obliczyć granicę ciągu $a_{n}=\frac{289^{n+11} - 745^{n+4}}{745^{n}-289^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{289^{n+11} - 745^{n+4}}{745^{n}-289^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{289^{11} \cdot 289^{n} - 745^{4} \cdot 745^{n}}{745^{n}-289^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{745^{n}(289^{11} \cdot \frac{289^{n}}{745^{n}} - 745^{4})}{745^{n}(1-\frac{289^{n}}{745^{n}})} = -745^{4}$$
+\rozwStop
+\odpStart
+$-745^{4}$
+\odpStop
+\testStart
+A.$-745^{4}$
+B.$-289^{11}$
+C.$745$
+D.$-745$
+E.$745^{2}$
+F.$289^{2}$
+G.$\frac{-289}{745}$
+H.$\frac{-745}{289}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 24}
+Obliczyć granicę ciągu $a_{n}=\frac{537^{n+11} - 833^{n+6}}{833^{n}-537^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{537^{n+11} - 833^{n+6}}{833^{n}-537^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{537^{11} \cdot 537^{n} - 833^{6} \cdot 833^{n}}{833^{n}-537^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{833^{n}(537^{11} \cdot \frac{537^{n}}{833^{n}} - 833^{6})}{833^{n}(1-\frac{537^{n}}{833^{n}})} = -833^{6}$$
+\rozwStop
+\odpStart
+$-833^{6}$
+\odpStop
+\testStart
+A.$-833^{6}$
+B.$-537^{11}$
+C.$833$
+D.$-833$
+E.$833^{2}$
+F.$537^{2}$
+G.$\frac{-537}{833}$
+H.$\frac{-833}{537}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 25}
+Obliczyć granicę ciągu $a_{n}=\frac{195^{n+12} - 817^{n+2}}{817^{n}-195^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{195^{n+12} - 817^{n+2}}{817^{n}-195^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{195^{12} \cdot 195^{n} - 817^{2} \cdot 817^{n}}{817^{n}-195^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{817^{n}(195^{12} \cdot \frac{195^{n}}{817^{n}} - 817^{2})}{817^{n}(1-\frac{195^{n}}{817^{n}})} = -817^{2}$$
+\rozwStop
+\odpStart
+$-817^{2}$
+\odpStop
+\testStart
+A.$-817^{2}$
+B.$-195^{12}$
+C.$817$
+D.$-817$
+E.$817^{2}$
+F.$195^{2}$
+G.$\frac{-195}{817}$
+H.$\frac{-817}{195}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 26}
+Obliczyć granicę ciągu $a_{n}=\frac{501^{n+12} - 641^{n+5}}{641^{n}-501^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{501^{n+12} - 641^{n+5}}{641^{n}-501^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{501^{12} \cdot 501^{n} - 641^{5} \cdot 641^{n}}{641^{n}-501^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{641^{n}(501^{12} \cdot \frac{501^{n}}{641^{n}} - 641^{5})}{641^{n}(1-\frac{501^{n}}{641^{n}})} = -641^{5}$$
+\rozwStop
+\odpStart
+$-641^{5}$
+\odpStop
+\testStart
+A.$-641^{5}$
+B.$-501^{12}$
+C.$641$
+D.$-641$
+E.$641^{2}$
+F.$501^{2}$
+G.$\frac{-501}{641}$
+H.$\frac{-641}{501}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 27}
+Obliczyć granicę ciągu $a_{n}=\frac{766^{n+12} - 829^{n+7}}{829^{n}-766^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{766^{n+12} - 829^{n+7}}{829^{n}-766^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{766^{12} \cdot 766^{n} - 829^{7} \cdot 829^{n}}{829^{n}-766^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{829^{n}(766^{12} \cdot \frac{766^{n}}{829^{n}} - 829^{7})}{829^{n}(1-\frac{766^{n}}{829^{n}})} = -829^{7}$$
+\rozwStop
+\odpStart
+$-829^{7}$
+\odpStop
+\testStart
+A.$-829^{7}$
+B.$-766^{12}$
+C.$829$
+D.$-829$
+E.$829^{2}$
+F.$766^{2}$
+G.$\frac{-766}{829}$
+H.$\frac{-829}{766}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 i) moja wersja nr 28}
+Obliczyć granicę ciągu $a_{n}=\frac{335^{n+12} - 512^{n+9}}{512^{n}-335^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{335^{n+12} - 512^{n+9}}{512^{n}-335^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{335^{12} \cdot 335^{n} - 512^{9} \cdot 512^{n}}{512^{n}-335^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{512^{n}(335^{12} \cdot \frac{335^{n}}{512^{n}} - 512^{9})}{512^{n}(1-\frac{335^{n}}{512^{n}})} = -512^{9}$$
+\rozwStop
+\odpStart
+$-512^{9}$
+\odpStop
+\testStart
+A.$-512^{9}$
+B.$-335^{12}$
+C.$512$
+D.$-512$
+E.$512^{2}$
+F.$335^{2}$
+G.$\frac{-335}{512}$
+H.$\frac{-512}{335}$
+I.$-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}
