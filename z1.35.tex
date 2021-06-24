@@ -1,0 +1,98 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.35}
+\zadStart{Zadanie z Wikieł Z 1.35) moja wersja nr [nrWersji]}
+%[p1]:[1,4,9,16,25,36,49,64,91,100]
+%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
+%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
+%[a]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[c]=random.randint(1,10)
+%[d]=random.randint(1,10)
+%[b]=random.randint(1,10)
+%[f]=random.randint(1,10)
+%[p1p2m]=[p1]-[p2]
+%[p1p3m]=[p1]-[p3]
+%[akw]=[a]*[a]
+%[bkw]=[b]*[b]
+%[2ab]=2*[a]*[b]
+%[2a]=2*[a]
+%[wywolny]=[bkw]-[b]-1
+%[4acdelta]=4*[akw]*[wywolny]
+%[bkwdelta]=[2ab]*[2ab]
+%[delta]=[bkwdelta]-[4acdelta]
+%[pierw]=(pow([delta],1/2))
+%[pierw1]=[pierw].real
+%[pierw2]=int([pierw1])
+%[t1]=([2ab]+[pierw2])/([2a])
+%[t2]=([2ab]-[pierw2])/([2a])
+%[t11]=int([t1])
+%[t22]=int([t2])
+%[bkwdelta]-[4acdelta] and [4acdelta]>0 and [pierw].is_integer()==True and [2ab]>0 and [wywolny]>0
+Dana jest funkcja $f(x)=[a]x^2-[b]$.
+Wyznaczyć miejsca zerowe funkcji \mbox{$g(x)=f(f(x))-1$}.
+\zadStop
+\rozwStart{Pascal Nawrocki}{}
+Jako, że nie mamy żadnych ograniczeń, to dziedzina funkcji to $\mathbb{R}$.
+Zaczniemy od wyznaczenia sobie funkcji $g(x)$.
+\begin{equation}
+\begin{split}
+g(x)=&f(f(x))-1 \Leftrightarrow g(x)=f([a]x^2-[b])-1 \Leftrightarrow g(x)=([a]x^2-[b])^2-[b]-1=\\&=[akw]x^4-[2ab]x^2+[wywolny]
+\end{split}
+\end{equation}
+Policzmy teraz:
+$$ g(x)=([a]x^2-[b])^2-[b]-1=[a]^2x^4-(2\cdot[a]\cdot[b]x^2)+[b]^2-[b]-1$$
+Następnie musimy policzyć miejsca zerowe. Zauważmy, że nie będzie to problem, gdyż podana funkcja jest postaci $ax^4+bx^2+c$. Szukając miejsc zerowych, przyrównujemy ją do zera, a tu łatwo zauważyć, że otrzymaliśmy równanie dwukwadratowe postaci $ax^4+bx^2+c=0, a\neq0$. Równanie to sprowadza się do równania kwadratowego za pomocą podstawienia $t=x^2$. Zatem stosując to podstawienie do naszego równania, otrzymamy równanie:
+$$[akw]t^2-[2ab]t+[wywolny]=0$$
+Liczymy deltę:
+$$\bigtriangleup=[bkwdelta]-[4acdelta]=[delta]\Rightarrow\sqrt{[delta]}=[pierw2]$$
+Miejsca zerowe:
+$$t_1=\frac{[2ab]+[pierw2]}{[2a]}=[t11] \text{ oraz } t_2=\frac{[2ab]-[pierw2]}{[2a]}=[t22]$$
+Czyli:
+$$x^2={[t11]}\Leftrightarrow x_1=\sqrt{[t11]} \vee x_2=-\sqrt{[t11]} \text{ oraz } x^2=[t22]\Leftrightarrow x_3=\sqrt{[t22]} \vee x_4=-\sqrt{[t22]}$$
+\rozwStop
+\odpStart
+$x\in\{\sqrt{[t11]},-\sqrt{[t11]},\sqrt{[t22]},-\sqrt{[t22]}\}$
+\odpStop
+\testStart
+A.$x\in\{\sqrt{[t11]},-\sqrt{[t11]},\sqrt{[t22]},-\sqrt{[t22]}\}$
+B.$x=3$
+C.$x\in\{\sqrt{11},\sqrt{5}\}$
+D.$x\in \emptyset$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}
