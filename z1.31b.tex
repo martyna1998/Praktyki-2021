@@ -1,0 +1,82 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.31b}
+\zadStart{Zadanie z Wikieł Z 1.31 b) moja wersja nr [nrWersji]}
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,15,17]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,15,17]
+%[a]=random.randint(2,100)
+%[m]=random.randint(2,100)
+%math.gcd([a],[m])==1
+Wyznaczyć funkcję odwrotną $f^{-1}$ dla funkcji $f$ określonej poniżej. \\
+$f(x)=[m]x^2-[a]$, $x\geq 0$
+\zadStop
+\rozwStart{Katarzyna Filipowicz}{}
+$$
+y=[m]x^2-[a] 
+$$ $$
+y+[a]=[m]x^2
+$$ $$
+\frac{y+[a]}{[m]}=x^2
+$$ $$
+x=\sqrt{\frac{y+[a]}{[m]}}
+$$ $$
+f(x)^{-1}=\sqrt{\frac{x+[a]}{[m]}}
+$$ 
+Dziedzina:
+$$
+0\leq \frac{x+[a]}{[m]} \quad \Rightarrow   \quad  x \geq -[a] \quad \Rightarrow \quad x\in [-[a],\infty)
+$$
+\rozwStop
+\odpStart
+$f(x)^{-1}=\sqrt{\frac{x+[a]}{[m]}}$, $x\in [-[a],\infty)$
+\odpStop
+\testStart
+A.$f(x)^{-1}=\sqrt{x+[a]}$, $x\in [-[a],\infty)$
+B.$0$
+C.$f(x)^{-1}=\sqrt{x+[a]}$, $x \in R$
+D.$f(x)^{-1}=x$
+E.$f(x)^{-1}=\sqrt{x-[a]}$, $x \in  [[a],\infty)$
+F.$f(x)^{-1}=y+[a]$
+G.$f(x)^{-1}=-[a]x$
+H.$f(x)^{-1}=[b]x$
+I.$f(x)^{-1}=\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
