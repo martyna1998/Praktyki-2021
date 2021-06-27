@@ -32,35 +32,43 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
+\kategoria{Wikieł/Z3.7f}
+\zadStart{Zadanie z Wikieł Z 3.7 f)  moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+%[p0]:[1]
+%[a2]=[p1]*[p1]-[p2]
+%[a3]=[a2]*[a2]-[p2]
+%[a4]=[a3]*[a3]-[p2]
+%[a5]=[a4]*[a4]-[p2]
+
+Wypisać pięć początkowych wyrazów ciągu określonego rekurencyjnie.
+$$\left\{ \begin{array}{ll}
+a_{1}=[p1]\\
+a_{n+1}=(a_{n})^{2}-[p2]& \textrm{dla n$\geq$1} 
+\end{array} \right.
+$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Maja Szabłowska}{}
+$$a_{1}=[p1]$$
+$$a_{2}=a_{1}^{2}- [p2]=[a2]$$
+$$a_{3}=a_{2}^{2}- [p2]=[a3]$$
+$$a_{4}=a_{3}^{2}-[p2]=[a4]$$
+$$a_{5}=a_{4}^{2}- [p2]=[a5]$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$[p1],[a2],[a3],[a4],[a5]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$[p1],[a2],[a3],[a4],[a5]$
+B.$[p1],[a2],[a3],[a4],[p1]$
+C.$[p1],[a2],[a2],[a4],[a5]$
+D.$[p1],[a2],[a2],[a2],[a5]$
+E.$[p1],[p1],[a3],[a4],[a5]$
+F.$[p1],[a2],[a3],[a2],[a3]$
+G.$[p1],[a2],[a3],[a2],[a2]$
+H.$[a2],[a2],[a3],[a4],[a5]$
+I.$[a5],[a2],[a3],[a4],[a5]$
 \testStop
 \kluczStart
 A

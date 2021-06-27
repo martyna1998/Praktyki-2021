@@ -32,35 +32,50 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/P1.6c}
+\zadStart{Zadanie z Wikieł P 1.6 c) moja wersja nr 1}
+%[p1]:[4,5,6,7,8,9,10,11,12]
+%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
+%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
+%[a]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[c]=random.randint(1,10)
+%[d]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[f]=random.randint(1,10)
+%[p1p2m]=[p1]-[p2]
+%[p1p3m]=[p1]-[p3]
+%[p1]>[p2] and [p1]>[p3] and [p2]!=[p3] and math.gcd([a],[d])==1 and [p1p2m]>1 and [p1p3m]>1
+%[ab]=math.floor([a]/[b])
+%[cb]=math.floor([c]/[b])
+%[w1]=-[cb]+[ab]
+%[w2]=[cb]+[ab]
+%[e1]=random.randint(2,10)
+%[e2]=random.randint(2,10)
+%[e3]=random.randint(2,10)
+%[e4]=random.randint(2,10)
+%[e5]=random.randint(2,10)
+%[e6]=random.randint(2,10)
+%math.gcd([a],[b])==[b] and math.gcd([b],[c])==[b] and [a]>[b] and [c]>[b] and [e1]!=[e2] and [e3]!=[e4] and [e5]!=[e6]
+
+Rozwiązać nierówność $|[a]-[b]x|\geq[c]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Jakub Ulrych}{}
+$$|[a]-[b]x|\geq[c]$$ 
+$$|[b]([ab]-x)|\geq[c]$$
+$$[b]|[ab]-x|\geq[c]$$
+$$|x-[ab]|\geq[cb]$$
+$$x-[ab]\leq-[cb]\vee x-[ab]\geq[cb]$$
+$$x\leq [w1]\vee x\geq [w2]$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$$x\leq [w1]\vee x\geq [w2]$$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$$x\leq [w1]\vee x\geq [w2]$$
+B.$$x\leq [e1]\vee x\geq [e2]$$
+C.$$x\leq [e3]\vee x\geq [e4]$$
+D.$$x\leq [e5]\vee x\geq [e6]$$
 \testStop
 \kluczStart
 A

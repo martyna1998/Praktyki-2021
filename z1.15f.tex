@@ -32,35 +32,52 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.15f}
+\zadStart{Zadanie z Wikieł Z 1.15 f) moja wersja nr 1}
+%[p1]:[4,5,6,7,8,9,10,11,12]
+%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
+%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
+%[a]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[f]=random.randint(2,10)
+%[p1p2m]=[p1]-[p2]
+%[p1p3m]=[p1]-[p3]
+%[da]=[d]-[a]
+%[dab]=-[da]-[b]
+%[dabb]=[da]-[b]
+%[w1]=[dab]/-[c]
+%[w2]=[dabb]/-[c]
+%[w11]=int([w1])
+%[w22]=int([w2])
+%[e1]=random.randint(2,15)
+%[e2]=random.randint(2,15)
+%[e3]=random.randint(2,15)
+%[e4]=random.randint(2,15)
+%[e5]=random.randint(2,15)
+%[e6]=random.randint(2,15)
+%[e7]=random.randint(2,15)
+%[p1]>[p2] and [p1]>[p3] and [p2]!=[p3] and math.gcd([a],[d])==1 and [p1p2m]>1 and [p1p3m]>1 and [e1]!=[e2] and [e1]!=[e2] and [e3]!=[e4] and [e5]!=[e6] and math.gcd([dab],[c])==[c] and math.gcd([dabb],[c])==[c]
+Rozwiązać nierówność $[a]-|[b]-[c]x|>[d]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Jakub Ulrych}{}
+$$[a]-|[b]-[c]x|>[d]$$ 
+$$-|[b]-[c]x|>[da]$$
+$$|[b]-[c]x|<-([da])$$
+$$[b]-[c]x< -([da]) \land [b]-[c]x>[da]$$
+$$-([c]x)< [dab] \land -([c]x)> [dabb]$$
+$$x> [w11] \land x< [w22]$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$$x> [w11] \land x< [w22]$$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$$x > [w11]\land x< [w22]$$
+B.$$x >  [e1]\land x < [e2]$$
+C.$$x > [e3]\land x < [e4]$$
+D.$$x > [e5]\land x <  [e6]$$
 \testStop
 \kluczStart
 A
