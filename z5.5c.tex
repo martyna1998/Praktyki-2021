@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5c}
+\zadStart{Zadanie z Wikieł Z 5.5 c) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[a1]=7*[a]
+%[a2]=4*[a]
+%[a3]=[a1]-[a2]
+%[b]:[2,3,4,5,6,7,8,9]
+%[b1]=5*[b]
+%[b2]=4*[b]
+%[b3]=-1*(-[b1]+[b2])
+%[c]:[2,3,4,5,6,7,8,9]
+%[c1]=4*[c]
+%[c2]=4*[c]
+%[c3]=-[c1]+[c2]
+%[d]=random.randint(2,10)
+%[d2]=4*[d]
+%[d3]=-1*([d]-[d2])
+%[e]=random.randint(2,10)
+%[e2]=4*[e]
+%[f]=random.randint(2,10)
+%[f1]=4*[f]
+%[g]=[f]*[f]
+%[a4]=int([a3]/[f])
+%[e4]=int([e2]/[f])
+%[d4]=int([d3]/[f])
+%math.gcd([b3],[f])==1 and [d3]%[f]==0 and [a3]%[f]==0 and [e2]%[f]==0 and [a4]!=1 and [e4]!=1 and [d4]!=1
+Wyznacz pochodną funkcji \\ $f(x)=\frac{[a]x^7-[b]x^5-[c]x^4+[d]x-[e]}{[f]x^4}$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\frac{[a]x^7-[b]x^5-[c]x^4+[d]x-[e]}{[f]x^4}$$
+$$f'(x)=\left(\frac{[a]x^7-[b]x^5-[c]x^4+[d]x-[e]}{[f]x^4}\right)' = $$
+$$ = \frac{\left([a]x^7-[b]x^5-[c]x^4+[d]x-[e]\right)'([f]x^4)- \left([a]x^7-[b]x^5-[c]x^4+[d]x-[e]\right) ([f]x^4)'}{([f]x^4)^2} = $$
+$$ = \frac{\left(7\cdot[a]x^6-5\cdot[b]x^4-4\cdot[c]x^3+[d]\right)([f]x^4)- \left([a]x^7-[b]x^5-[c]x^4+[d]x-[e]\right) (4\cdot[f]x^3)}{[f]\cdot[f]x^8} = $$
+$$ = \frac{\left([a1]x^6-[b1]x^4-[c1]x^3+[d]\right)([f]x^4)- \left([a]x^7-[b]x^5-[c]x^4+[d]x-[e]\right) ([f1]x^3)}{[f]\cdot[f]x^8} = $$
+$$ = \frac{[a1]x^{10}-[b1]x^8-[c1]x^7+[d]x^4 - 4\cdot [a]x^{10}+4\cdot[b]x^8+4\cdot[c]x^7-4\cdot[d]x^4+4\cdot[e]x^3}{[f]x^8} = $$
+$$ = \frac{[a1]x^{10}-[b1]x^8-[c1]x^7+[d]x^4 - [a2]x^{10}+[b2]x^8+[c2]x^7-[d2]x^4+[e2]x^3}{[f]x^8} = $$
+$$ = \frac{[a3]x^{10}-[b3]x^8-[d3]x^4+[e2]x^3}{[f]x^8} = $$
+$$ = \frac{[a3]}{[f]}x^{2}-\frac{[b3]}{[f]}-\frac{[d3]}{[f]x^4}+\frac{[e2]}{[f]x^5}$$
+$$ = [a4]x^{2}-\frac{[b3]}{[f]}-\frac{[d4]}{x^4}+\frac{[e4]}{x^5}$$
+\rozwStop
+\odpStart
+$ f'(x) = [a4]x^{2}-\frac{[b3]}{[f]}-\frac{[d4]}{x^4}+\frac{[e4]}{x^5}$
+\odpStop
+\testStart
+A. $ f'(x) = [a4]x^{2}-\frac{[b3]}{[f]}-\frac{[d4]}{x^4}+\frac{[e4]}{x^5}$\\
+B. $ f'(x) = x^{2}+\frac{[b3]}{[f]}+\frac{[c3]}{[f]x}+\frac{[d3]}{[f]x^4}+\frac{[e2]}{[f]x^5}$ \\
+C. $ f'(x) = \frac{[a3]}{[f]}x^{2}+\frac{[c3]}{[f]x}+\frac{[d3]}{[f]x^4}+\frac{[e2]}{[f]x^5}$ \\
+D. $ f'(x) = x^{2}+1+\frac{1}{x}+\frac{1}{x^4}+\frac{1}{x^5}$\\
+E. $ f'(x) = \frac{1}{[f]}x^{2}+\frac{1}{[f]}+\frac{1}{[f]x}+\frac{1}{[f]x^4}+\frac{1}{[f]x^5}$\\
+F. $ f'(x) = \frac{[a3]}{[f]}x^{2}+\frac{[e2]}{[f]x^5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
