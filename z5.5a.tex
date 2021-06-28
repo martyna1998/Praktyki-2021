@@ -32,35 +32,41 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z5.5a}
+\zadStart{Zadanie z Wikieł Z 5.5 a) moja wersja nr [nrWersji]}
+%[a]=random.randint(2,10)
+%[a1]=7*[a]
+%[b]:[2,3,4,5,6,7,8,9]
+%[b1]=6*[b]
+%[c]:[2,3,4,5,6,7,8,9]
+%[c1]=5*[c]
+%[d]=random.randint(2,10)
+%[d1]=4*[d]
+%[e]=random.randint(2,10)
+%[e1]=3*[e]
+%[f]=random.randint(2,10)
+%[f1]=2*[f]
+%[g]=random.randint(2,10)
+%[h]=random.randint(2,10)
+%[a]!=0 
+Wyznacz pochodną funkcji \\ $f(x)=[a]x^7-[b]x^6+[c]x^5-[d]x^4+[e]x^3-[f]x^2+[g]x-[h]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=[a]x^7-[b]x^6+[c]x^5-[d]x^4+[e]x^3-[f]x^2+[g]x-[h]$$
+$$f'(x)=([a]x^7-[b]x^6+[c]x^5-[d]x^4+[e]x^3-[f]x^2+[g]x-[h])' = $$
+$$ = 7 \cdot [a]x^6-6\cdot [b]x^5+5\cdot [c]x^4-4 \cdot [d]x^3+ 3\cdot[e]x^2-2\cdot [f]x+[g] = $$
+$$ = [a1]x^6 - [b1]x^5+ [c1]x^4- [d1]x^3+ [e1]x^2- [f1]x+[g] $$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$ f'(x)= [a1]x^6 - [b1]x^5+ [c1]x^4- [d1]x^3+ [e1]x^2- [f1]x+[g] $
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$ f'(x)= [a1]x^6 - [b1]x^5+ [c1]x^4- [d1]x^3+ [e1]x^2- [f1]x+[g] $\\
+B. $ f'(x)= [a1]x^4 - [b1]x^3+ [c1]x^2- [d1]x^1 $ \\
+C. $ f'(x)= [a1]x^6 - [b1]x^5+ [c1]x^4- [d1]x^3+ [e1]x^2- [f1]x $ \\
+D. $ f'(x)= [d1]x^3+ [e1]x^2- [f1]x+[g] $\\
+E. $ f'(x)= x^6 - x^5+ x^4- x^3+ x^2- x+[g] $\\
+F. $ f'(x)= [a1]x^6 - [b1]x^5+ [e1]x^2- [f1]x+[g] $
 \testStop
 \kluczStart
 A
