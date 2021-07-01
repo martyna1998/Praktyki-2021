@@ -32,35 +32,50 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/P3.5}
+\zadStart{Zadanie z Wikieł P 3.5 moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]:[200,204,207,209,306,304,309,360,395,350,490,402,406,459,492,454,444,401,503,523,553,556,576,587,536,590,510,522,552,600,645,623,665,680,690,604,678,709,749,766,702,799]
+%[a1]=[a]+[b]
+%[a1b]=[a1]+[b]
+%[c2]=2*[c]
+%[c3]=4*[a]*[c2]
+%[d]=[a1b]*[a1b]+[c3]
+%[d1]=math.sqrt([d]) 
+%[d1].is_integer()==True
+%[nn]=[d1]-[a1b]
+%[nm]=2*[a]
+%[n]=[nn]/[nm] 
+%[n].is_integer()==True 
+%[p]=int([n])
+%[d2]=int([d1])
+Wyznaczyć liczbę początkowych wyrazów ciągu arytmetycznego $a_{n}=[a]n+[b]$, dających w sumie [c].
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Aleksandra Pasińska}{}
+Szukamy takiego n, dla którego $S_{n}=[c]$. Z treści zadania wynika, że 
+$$a_{1}=[a1], a_{n}=[a]n+[b]$$ Czyli 
+$$\frac{(a_{1}+a_{n})n}{2}=[c]$$ 
+$$n([a1]+[a]n+[b])=[c2]$$
+$$[a]n^2+[a1b]n-[c2]=0$$
+$$\sqrt{\Delta}=[d2]$$
+$$n=\frac{-[a1b]+[d2]}{2\cdot [a]}=[p]$$
+$$n=[p]$$
+Zatem dla n$=[p]$ otrzymujemy $S_{14}=[c]$.
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$n=[p]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$n=[p]$
+B.$n=2*[p]$
+C.$n=0$
+D.$n=-6$
+E.$n=[p]*[p]$
+F.$n=-9$
+G.$n=1/2$
+H.$n=\frac{1}{7}$
+I.$n=-1$
 \testStop
 \kluczStart
 A

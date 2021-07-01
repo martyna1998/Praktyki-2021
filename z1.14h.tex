@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,38 +32,35 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.14h}
+\zadStart{Zadanie z Wikieł Z 1.14 h) moja wersja nr [nrWersji]}
+%[a]:[3,4,5,6,7,8,9,10]
+%[b]:[2,3,4,5,6,7,8,9,10]
+%[c]=[a]-1
+%[d]=[a]+1
+%[a]!=-1 and [a]!=1
+%math.gcd([c],[b])==1 and math.gcd([d],[b])==1
+Rozwiązać równanie $|[a]x|-[b]=x$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$|[a]x|-[b]=x \Longleftrightarrow |[a]x|=x+[b] $$ 
+$$[a]x=x+[b] \vee [a]x=-x-[b]$$
+$$[a]x-x=[b] \vee [a]x+x=-[b]$$
+$$([a]-1)x=[b] \vee ([a]+1)x=-[b]$$
+$$[c]x=[b] \vee [d]x=-[b]$$
+$$x=\frac{[b]}{[c]} \vee x=-\frac{[b]}{[d]}$$
+
 \odpStart
-$[x1], [x2]$
+$x=\frac{[b]}{[c]} \vee x=-\frac{[b]}{[d]}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $x=-\frac{[b]}{[c]} \vee x=\frac{[b]}{[c]}$ \\
+B. $x=\frac{[b]}{[c]} \vee x=-\frac{[b]}{[d]}$ \\
+C. $x=-\frac{[b]}{[c]} \vee x=-\frac{[b]}{[d]}$ \\
+D. $x=-\frac{[b]}{[d]} \vee x=\frac{[b]}{[c]}$ 
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

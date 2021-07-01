@@ -32,35 +32,34 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/p3.9}
+\zadStart{Zadanie z Wikieł P 3.9 moja wersja nr [nrWersji]}
+%[z]:[1,2,3,4,5,6,7]
+%[y]:[1,2,3,4,5,6,7,8,9]
+%[a]=random.randint(0,30)
+%[w]=7*[a]
+%[k]=[a]*7
+W ciągu arytmetycznym $(a_n)$ mamy $a_4=[a]$. Oblicz sumę siedmiu początkowych wyrazów tego ciągu.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Katarzyna Filipowicz}{}
+Z warunków zadania mamy $a_4=a_1+3r=[a]$. Wtedy
+$$
+a_1+a_2+a_3+a_4+a_5+a_6+a_7=\frac{7(a_1+a_7)}{2}=\frac{7(a_1+a_1+6r)}{2}=7(a_1+3r)=7 \cdot [a] = [w]
+$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$[w]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$[w]$
+B.$-[w]$
+C.$0$
+D.$[a]$
+E.$5$
+F.$7$
+G.$-[a]$
+H.$[k]$
+I.$\infty$
 \testStop
 \kluczStart
 A

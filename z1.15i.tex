@@ -32,35 +32,39 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.15 i}
+\zadStart{Zadanie z Wikieł Z 1.15 i) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]:[1,2,3,4,5,6,7,8,9]
+%[d]:[1,2,3,4,5,6,7,8,9]
+%[acm]=-[a]+[c]
+%[acp]=[a]+[c]
+%[dcm]=-[d]+[c]
+%[dcp]=[d]+[c]
+%math.gcd([acm],[b])==1 and math.gcd([acp],[b])==1 and math.gcd([dcm],[b])==1 and math.gcd([dcp],[b])==1 and [a]<[d] and [acm]!=0 and [acp] !=0 and [dcm]!=0 and [dcp]!=0
+
+
+Rozwiązać nierówności  $[a] \leq |{[b]x-[c]}| < [d]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Joanna Świerzbin}{}
+$$[a] \leq |{[b]x-[c]}| < [d]$$
+$$ |{[b]x-[c]}| \geq [a] \land |{[b]x-[c]}| < [d]$$
+$$ ( {[b]x-[c]} \leq -[a] \vee {[b]x-[c]} \geq [a] ) \land ( {[b]x-[c]} > -[d] \land {[b]x-[c]} < [d] )$$
+$$ ( {[b]x} \leq [acm] \vee {[b]x} \geq [acp] ) \land ( {[b]x} > [dcm] \land {[b]x} < [dcp] )$$
+$$ \left( {x} \leq \frac{[acm]}{[b]} \vee {x} \geq \frac{[acp]}{[b]} \right) \land \left( {x} > \frac{[dcm]}{[b]} \land {x} < \frac{[dcp]}{[b]} \right)$$
+$$ x \in \left( -\infty, \frac{[acm]}{[b]} \right] \cup \left[ \frac{[acp]}{[b]}, \infty \right) \land x \in \left( \frac{[dcm]}{[b]} ,\frac{[dcp]}{[b]} \right)$$
+$$ x \in \left( \frac{[dcm]}{[b]}, \frac{[acm]}{[b]} \right] \cup \left[ \frac{[acp]}{[b]}, \frac{[dcp]}{[b]} \right)$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$ x \in \left( \frac{[dcm]}{[b]}, \frac{[acm]}{[b]} \right] \cup \left[ \frac{[acp]}{[b]}, \frac{[dcp]}{[b]} \right)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $ x \in \left( \frac{[dcm]}{[b]}, \frac{[acm]}{[b]} \right] \cup \left[ \frac{[acp]}{[b]}, \frac{[dcp]}{[b]} \right)$\\
+B. $ x \in \left( \frac{[dcm]}{[b]}, \frac{[acm]}{[b]} \right] $\\
+C. $ x \in  \left[ \frac{[acp]}{[b]}, \frac{[dcp]}{[b]} \right)$\\
+D. $ x \in \left( -\infty, \frac{[acm]}{[b]} \right] \cup \left[ \frac{[acp]}{[b]}, \frac{[dcp]}{[b]} \right)$\\
+E. $ x \in \emptyset $
 \testStop
 \kluczStart
 A

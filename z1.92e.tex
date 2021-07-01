@@ -32,35 +32,37 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.92e}
+\zadStart{Zadanie z Wikieł Z1.92 e) moja wersja nr [nrWersji]}
+%[z]:[3,4,5,6,7,8,9,10,11,12,13,14,15,15,17,18,19,20]
+
+Rozwiąż równanie.\\
+Podane równanie $ \ln([z]x-e)=1 $\\
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Martyna Czarnobaj}{}
+\begin{center}
+	 $ \ln([z]x-e)=1 $\\
+	 $ \ln[z]x - \ln e = 1 $\\
+	 $ \ln e = 1 $, więc podstawiamy\\
+	 $ \ln[z]x - 1 = 1 $,\\
+	 Przenosimy podstawioną jedynkę na drugą stronę równania\\
+	 $ \ln[z]x = 1 + 1 $\\
+	 $ \ln[z]x = 2 $\\
+	 Mnożymy obie strony przez $ e $, aby pozbyć się logarytmu naturalnego.\\
+	 $ [z]x = 2e $\\
+	 Dzielimy obie strony przez $ [z] $, aby otrzymać wartość $ x $.\\
+	 $ x = \frac{2}{[z]}e $\\
+	 
+\end{center}
+Koniec rozwiązania.\\
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$ x = \frac{2}{[z]}e $\\
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$ x = \frac{2}{[z]}e $\\
+B.$ x = \frac{4}{[z]}e $\\
+C.$ x = \frac{2}{[z]} $\\
 \testStop
 \kluczStart
 A

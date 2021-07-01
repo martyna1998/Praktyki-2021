@@ -32,35 +32,40 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z5.5f}
+\zadStart{Zadanie z Wikieł Z 5.5 f) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[a1]=2*[a]
+%[b]:[2,3,4,5,6,7,8,9]
+%[b1]=2*[b]
+%[ab]=[a1]+[b1]
+%[ab1]=[a]+[b]
+%[ab2]=3*[ab1]
+%[c]:[2,3,4,5,6,7,8,9]
+%[c1]=[c]*[c]
+%[c2]=2*[c]
+%math.gcd([ab2],[c2])==1 and [ab2]!=0
+Wyznacz pochodną funkcji \\ $f(x)=\frac{[a]x^2+[b]x\sqrt{x^2}}{[c]\sqrt{x}}$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\frac{[a]x^2+[b]x\sqrt{x^2}}{[c]\sqrt{x}}$$
+$$f'(x)=\left(\frac{[a]x^2+[b]x\sqrt{x^2}}{[c]\sqrt{x}}\right)' = $$
+$$ = \frac{\left([a]x^2+[b]x\sqrt{x^2}\right)'([c]\sqrt{x})- \left([a]x^2+[b]x\sqrt{x^2}\right) ([c]\sqrt{x})'}{([c]\sqrt{x})^2} = $$
+$$  = \frac{\left(2\cdot[a]x+2\cdot[b]x\right)([c]\sqrt{x})- \left([a]x^2+[b]x\sqrt{x^2}\right) (\frac{[c]}{2\sqrt{x}})}{[c]\cdot[c]x} =  $$
+$$  = \frac{\left([a1]x+[b1]x\right)([c]\sqrt{x})- \left([a]x^2+[b]x\sqrt{x^2}\right) (\frac{[c]}{2\sqrt{x}})}{[c1]x} =  $$
+$$  = \frac{\left([ab]x\right)([c]\sqrt{x})- \left([ab1]x^2\right) (\frac{[c]}{2\sqrt{x}})}{[c1]x} =  $$
+$$  = \frac{\left([ab]\sqrt{x}\right)}{[c]}-\frac{\left([ab1]x \frac{1}{2\sqrt{x}}\right)}{[c]} = \frac{\sqrt{x}}{[c]} \left(\frac{3\cdot[ab1]}{2}\right) =  \frac{[ab2]\sqrt{x}}{[c2]}  $$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$ f'(x) = \frac{[ab2]\sqrt{x}}{[c2]}  $
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $ f'(x) = \frac{[ab2]\sqrt{x}}{[c2]}  $\\
+B. $ f'(x) = \frac{[ab2]x}{[c2]}  $ \\
+C. $ f'(x) = \frac{[ab2]\sqrt{x}}{[c]}  $ \\
+D. $ f'(x) = \frac{[ab1]\sqrt{x}}{[c2]}  $\\
+E. $ f'(x) = \frac{[ab2]}{[c2]}  $\\
+F. $ f'(x) = \frac{[ab2]x}{[c]}  $
 \testStop
 \kluczStart
 A
