@@ -32,44 +32,41 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.5b}
-\zadStart{Zadanie z Wikieł Z 3.5 b)  moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p0]:[1]
-%[p2]:[2,3,4,5]
+\kategoria{Wikieł/Z2.37}
+\zadStart{Zadanie z Wikieł Z 2.37  moja wersja nr [nrWersji]}
+%[p1]=random.randint(-10,-2)
+%[p2]:[2,3,4,5,6,7,8,9,10]
 %[p4]:[2,3,4,5,6,7,8,9,10]
-%[p3]=random.randint(1,100)
-%[q]=round([p1]/([p4]+0.0000001),2)
-%[a]=round(pow([q],[p2]),2)
-%[a1]=round([p0]-[a],2)
-%[b]=round([p0]-[q],2)
-%[pb]=round([p3]*[b],2)
-%[w]=round([pb]/([a1]+0.0000001),2)
-%math.gcd([p1],[p4])==1 and [p4]>[p1] and [p4]!=0 and [a1]!=0 
+%[p5]=random.randint(1,10)
+%[p11]=-[p1]
+%[m]=round([p11]/[p4],2)
 
 
-Znaleźć pierwszy wyraz ciągu geometrycznego $(a_{n})$, w którym $q=\frac{[p1]}{[p4]}$ oraz $S_{[p2]}=[p3].$
+Podać wartości parametru $m$, dla których układ równań
+$$\left\{\begin{array}{rcl}
+mx [p1]y&=&[p2]\\
+ x+[p4]y&=&[p5]
+\end{array} \right.$$
+ma rozwiązanie.
 \zadStop
 \rozwStart{Maja Szabłowska}{}
-Korzystając ze wzoru na sumę ciągu geometrycznego mamy:
-$$ [p3]=a_{1}\cdot \frac{1-(\frac{[p1]}{[p4]})^{[p2]}}{1-\frac{[p1]}{[p4]}}$$
-$$ [p3]=a_{1}\cdot \frac{1-[a]}{[b]}$$
-$$ [p3]=a_{1}\cdot \frac{[a1]}{[b]}$$
-$$ a_{1}=\frac{[p3]}{\frac{[a1]}{[b]}}=\frac{[p3]\cdot[b]}{[a1]}=\frac{[pb]}{[a1]}=[w]$$
+$$W=\left| \begin{array}{lccr} m & [p1]  \\ 1 & [p4] \end{array}\right| = m\cdot [p4] [p1]\cdot 1=[p4]m [p1] \neq 0$$
+
+$$[p4]m [p1] \neq 0 \Rightarrow [p4]m\neq [p11] \Rightarrow m\neq [m]$$
 \rozwStop
 \odpStart
-$[w]$
+$m\neq [m]$
 \odpStop
 \testStart
-A.$[w]$
-B.$[b]$
-C.$[pb]$
-D.$[p0]$
-E.$[p3]$
-F.$[p1]$
-G.$[p2]$
-H.$[a1]$
-I.$0$
+A.$m\neq [p1]$
+B.$m\neq [p2]$
+C.$m\neq [p4]$
+D.$m\neq [p5]$
+E.$m\neq [p11]$
+F.$m\neq -[p2]$
+G.$m\neq 0$
+H.$m\neq -[p4]$
+I.$m\neq -[p5]$
 \testStop
 \kluczStart
 A

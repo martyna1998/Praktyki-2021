@@ -32,44 +32,60 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.5b}
-\zadStart{Zadanie z Wikieł Z 3.5 b)  moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
+\kategoria{Wikieł/Z3.3a}
+\zadStart{Zadanie z Wikieł Z 3.3 a)  moja wersja nr [nrWersji]}
+%[p1]:[3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[p2]=random.randint(2,10)
+%[p3]=random.randint(2,100)
+%[p4]=random.randint(2,10)
+%[p5]=random.randint(2,10)
+%[p6]=random.randint(1,100)
 %[p0]:[1]
-%[p2]:[2,3,4,5]
-%[p4]:[2,3,4,5,6,7,8,9,10]
-%[p3]=random.randint(1,100)
-%[q]=round([p1]/([p4]+0.0000001),2)
-%[a]=round(pow([q],[p2]),2)
-%[a1]=round([p0]-[a],2)
-%[b]=round([p0]-[q],2)
-%[pb]=round([p3]*[b],2)
-%[w]=round([pb]/([a1]+0.0000001),2)
-%math.gcd([p1],[p4])==1 and [p4]>[p1] and [p4]!=0 and [a1]!=0 
+%[a]=[p1]-[p0]
+%[b]=[p2]-[p0]
+%[c]=[p4]-[p0]
+%[d]=[p5]-[p0]
+%[ab]=[a]-[b]
+%[r]=round([p3]/([ab]+0.0000001),2)
+%[cr]=round([c]*[r],2)
+%[dr]=round([d]*[r],2)
+%[cd]=round([cr]*[dr],2)
+%[cdd]=round([cr]+[dr],2)
+%[cdp3]=round([cd]-[p6],2)
+%[del]=round([cdd]*[cdd]-4*[cdp3],2)
+%[pdel]=round(math.sqrt([del]),2)
+%[a1]=round((-[cdd]-[pdel])/2,2)
+%[a2]=round((-[cdd]+[pdel])/2,2)
+%[ab]!=0 and [del]>0 and [p1]!=[p2] and [p4]!=[p5]
 
 
-Znaleźć pierwszy wyraz ciągu geometrycznego $(a_{n})$, w którym $q=\frac{[p1]}{[p4]}$ oraz $S_{[p2]}=[p3].$
+Znaleźć wyraz pierwszy $a_{1}$ oraz różnicę $r$ ciągu arytmicznego $(a_{n})$, w którym $a_{[p1]}-a_{[p2]}=[p3]$ oraz $a_{[p4]}\cdot a_{[p5]}=[p6].$
 \zadStop
 \rozwStart{Maja Szabłowska}{}
-Korzystając ze wzoru na sumę ciągu geometrycznego mamy:
-$$ [p3]=a_{1}\cdot \frac{1-(\frac{[p1]}{[p4]})^{[p2]}}{1-\frac{[p1]}{[p4]}}$$
-$$ [p3]=a_{1}\cdot \frac{1-[a]}{[b]}$$
-$$ [p3]=a_{1}\cdot \frac{[a1]}{[b]}$$
-$$ a_{1}=\frac{[p3]}{\frac{[a1]}{[b]}}=\frac{[p3]\cdot[b]}{[a1]}=\frac{[pb]}{[a1]}=[w]$$
+Z pierwszego równania otrzymujemy:
+$$a_{[p1]}-a_{[p2]}=[p3] \Rightarrow a_{1}+[a]r-a_{1}-[b]r=[p3]$$
+$$[ab]r=[p3] \Rightarrow r=[r]$$
+Korzystamy z wyliczonej zmiennej:
+$$a_{[p4]}\cdot a_{[p5]}=[p6] \Rightarrow (a_{1}+[c]r)(a_{1}+[d]r)=[p6] $$
+$$(a_{1}+[cr])(a_{1}+[dr])=[p6] \Rightarrow a_{1}^{2}+[cr]a_{1}+[dr]a_{1}+[cd]=[p6] $$
+
+$$a_{1}^{2}+[cdd]a_{1}+[cdp3]=0 $$
+$$\Delta=[cdd]^{2}-4\cdot1\cdot([cdp3]) \Rightarrow \Delta=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$a_{1}=\frac{-([cdd])-[pdel]}{2}=[a1]$$ $$\lor$$ $$ a_{1}=\frac{-([cdd])+[pdel]}{2}=[a2] $$
 \rozwStop
 \odpStart
-$[w]$
+$r=[r], a_{1}=[a1] \lor a_{1}=[a2]$
 \odpStop
 \testStart
-A.$[w]$
-B.$[b]$
-C.$[pb]$
-D.$[p0]$
-E.$[p3]$
-F.$[p1]$
-G.$[p2]$
-H.$[a1]$
-I.$0$
+A.$r=[r], a_{1}=[a1] \lor a_{1}=[a2]$
+B.$r=[r], a_{1}=[dr] \lor a_{1}=[a2]$
+C.$r=[r], a_{1}=[a1] \lor a_{1}=[cr]$
+D.$r=[r], a_{1}=[p6] \lor a_{1}=[a2]$
+E.$r=[p3], a_{1}=[a1] \lor a_{1}=[a2]$
+F.$r=[cdd], a_{1}=[a1] \lor a_{1}=[a2]$
+G.$r=[r], a_{1}=[a1] \lor a_{1}=[del]$
+H.$r=[pdel], a_{1}=[a1] \lor a_{1}=[r]$
+I.$r=[r], a_{1}=[p5] \lor a_{1}=[a2]$
 \testStop
 \kluczStart
 A

@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,44 +46,52 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.5b}
-\zadStart{Zadanie z Wikieł Z 3.5 b)  moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.129u}
+\zadStart{Zadanie z Wikieł Z 1.129 u) moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p0]:[1]
-%[p2]:[2,3,4,5]
-%[p4]:[2,3,4,5,6,7,8,9,10]
-%[p3]=random.randint(1,100)
-%[q]=round([p1]/([p4]+0.0000001),2)
-%[a]=round(pow([q],[p2]),2)
-%[a1]=round([p0]-[a],2)
-%[b]=round([p0]-[q],2)
-%[pb]=round([p3]*[b],2)
-%[w]=round([pb]/([a1]+0.0000001),2)
-%math.gcd([p1],[p4])==1 and [p4]>[p1] and [p4]!=0 and [a1]!=0 
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[del]=[p3]*[p3]+4*[p2]*[p1]
+%[pdel]=round(math.sqrt([del]),2)
+%[2p2]=2*[p2]
+%[x1]=round(([p3]-[pdel])/[2p2],2)
+%[x2]=round(([p3]+[pdel])/[2p2],2)
+%[a]=[p3]/[p2]
+%[del]>0 and [x1]<[x2] and math.gcd([p3],[p2])==1 and [a]<[x2]
 
-
-Znaleźć pierwszy wyraz ciągu geometrycznego $(a_{n})$, w którym $q=\frac{[p1]}{[p4]}$ oraz $S_{[p2]}=[p3].$
+Wyznaczyć dziedzinę naturalną funkcji.
+$$f(x)=\sqrt{1-\log_{[p1]}([p2]x^{2}-[p3]x)}$$
 \zadStop
+
 \rozwStart{Maja Szabłowska}{}
-Korzystając ze wzoru na sumę ciągu geometrycznego mamy:
-$$ [p3]=a_{1}\cdot \frac{1-(\frac{[p1]}{[p4]})^{[p2]}}{1-\frac{[p1]}{[p4]}}$$
-$$ [p3]=a_{1}\cdot \frac{1-[a]}{[b]}$$
-$$ [p3]=a_{1}\cdot \frac{[a1]}{[b]}$$
-$$ a_{1}=\frac{[p3]}{\frac{[a1]}{[b]}}=\frac{[p3]\cdot[b]}{[a1]}=\frac{[pb]}{[a1]}=[w]$$
+$$1-\log_{[p1]}([p2]x^{2}-[p3]x)>0$$
+$$\log_{[p1]}([p2]x^{2}-[p3]x)<1$$
+$$\log_{[p1]}([p2]x^{2}-[p3]x)<\log_{[p1]}[p1]$$
+$$[p2]x^{2}-[p3]x<[p1]$$
+$$[p2]x^{2}-[p3]x-[p1]<0$$
+$$\Delta=(-[p3])^{2}-4\cdot[p2]\cdot(-[p1])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$x_{1}=\frac{[p3]-[pdel]}{[2p2]}=[x1], \quad x_{2}=\frac{[p3]+[pdel]}{[2p2]}=[x2]$$
+$$x\in([x1],[x2])$$
+
+$$[p2]x^{2}-[p3]x>0$$
+$$x([p2]x-[p3])>0$$
+$$x\in\left(0,\frac{[p3]}{[p2]}\right)$$
+
+Zatem ostatecznie
+$$x\in\left(0,\frac{[p3]}{[p2]}\right)$$
 \rozwStop
 \odpStart
-$[w]$
+$x\in\left(0,\frac{[p3]}{[p2]}\right)$
 \odpStop
 \testStart
-A.$[w]$
-B.$[b]$
-C.$[pb]$
-D.$[p0]$
-E.$[p3]$
-F.$[p1]$
-G.$[p2]$
-H.$[a1]$
-I.$0$
+A.$x\in\left(0,\frac{[p3]}{[p2]}\right)$
+B.$x\in[e^{[p2]},\infty)$
+C.$x\in(-\infty, 0)$
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
+E.$x\in[[p1],\infty)$
+F.$x\in([p2],\infty)$
+G.$x\in\emptyset$
+
 \testStop
 \kluczStart
 A

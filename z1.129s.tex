@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,44 +46,55 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.5b}
-\zadStart{Zadanie z Wikieł Z 3.5 b)  moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.129s}
+\zadStart{Zadanie z Wikieł Z 1.129 s) moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p0]:[1]
-%[p2]:[2,3,4,5]
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
 %[p4]:[2,3,4,5,6,7,8,9,10]
-%[p3]=random.randint(1,100)
-%[q]=round([p1]/([p4]+0.0000001),2)
-%[a]=round(pow([q],[p2]),2)
-%[a1]=round([p0]-[a],2)
-%[b]=round([p0]-[q],2)
-%[pb]=round([p3]*[b],2)
-%[w]=round([pb]/([a1]+0.0000001),2)
-%math.gcd([p1],[p4])==1 and [p4]>[p1] and [p4]!=0 and [a1]!=0 
+%[p5]=random.randint(2,10)
+%[p5p4]=[p5]+[p4]
+%[p5p42]=-[p5]+[p4]
+%[a]=-[p2]+[p1]
+%[b]=[p2]+[p1]
+%[pp3]=round(math.sqrt([p3]),2)
+%[p5p42]<[p5p4] and [pp3]<[a]
 
-
-Znaleźć pierwszy wyraz ciągu geometrycznego $(a_{n})$, w którym $q=\frac{[p1]}{[p4]}$ oraz $S_{[p2]}=[p3].$
+Wyznaczyć dziedzinę naturalną funkcji.
+$$f(x)=\frac{\arcsin\frac{x-[p1]}{[p2]}-\log([p3]-x^{2})}{\sqrt{|x-[p4]|-[p5]}}$$
 \zadStop
+
 \rozwStart{Maja Szabłowska}{}
-Korzystając ze wzoru na sumę ciągu geometrycznego mamy:
-$$ [p3]=a_{1}\cdot \frac{1-(\frac{[p1]}{[p4]})^{[p2]}}{1-\frac{[p1]}{[p4]}}$$
-$$ [p3]=a_{1}\cdot \frac{1-[a]}{[b]}$$
-$$ [p3]=a_{1}\cdot \frac{[a1]}{[b]}$$
-$$ a_{1}=\frac{[p3]}{\frac{[a1]}{[b]}}=\frac{[p3]\cdot[b]}{[a1]}=\frac{[pb]}{[a1]}=[w]$$
+$$\sqrt{|x-[p4]|-[p5]}\neq 0 \quad \land \quad |x-[p4]|-[p5]\geq0$$
+$$|x-[p4]|-[p5]>0$$
+$$|x-[p4]|>[p5]$$
+$$x-[p4]>[p5]\quad \lor  \quad x-[p4]<-[p5]$$
+$$x>[p5p4] \quad \lor  \quad x<[p5p42]$$
+$$x\in (-\infty, [p5p42])\cup([p5p4],\infty)$$
+
+$$-1\leq\frac{x-[p1]}{[p2]}\leq 1$$
+$$-[p2]\leq x-[p1]\leq [p2]$$
+$$[a]\leq x \leq [b]$$
+$$x\in [[a],[b]]$$
+
+$$[p3]-x^{2} > 0$$
+$$([pp3]-x)([pp3]+x)>0$$
+$$x\in(-[pp3],[pp3])$$
+
+Ostatecznie: $x\in\emptyset$
 \rozwStop
 \odpStart
-$[w]$
+$x\in\emptyset$
 \odpStop
 \testStart
-A.$[w]$
-B.$[b]$
-C.$[pb]$
-D.$[p0]$
-E.$[p3]$
-F.$[p1]$
-G.$[p2]$
-H.$[a1]$
-I.$0$
+A.$x\in\emptyset$
+B.$x\in[e^{[p2]},\infty)$
+C.$x\in(-\infty, 0)$
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
+E.$x\in[[p1],\infty)$
+F.$x\in([p2],\infty)$
+G.$x\in\mathbb{R}$
+
 \testStop
 \kluczStart
 A
