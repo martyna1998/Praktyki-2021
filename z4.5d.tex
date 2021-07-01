@@ -1,0 +1,2136 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z4.5d}
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 1}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 19$
+F.$5+\frac{7}{4}+\frac{19}{3}$ G.$-5$
+H.$\frac{7}{4}+\frac{19}{3}$
+I.$\frac{5}{4}+\frac{7}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 2}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 19$
+F.$5+\frac{7}{4}+\frac{19}{5}$ G.$-5$
+H.$\frac{7}{4}+\frac{19}{5}$
+I.$\frac{5}{4}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 3}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{19}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{7}{x^{7}}+\frac{19}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 19$
+F.$5+\frac{7}{6}+\frac{19}{5}$ G.$-5$
+H.$\frac{7}{6}+\frac{19}{5}$
+I.$\frac{5}{6}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 4}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{19}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{7}{x^{19}}+\frac{19}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 19$
+F.$5+\frac{7}{12}+\frac{19}{5}$ G.$-5$
+H.$\frac{7}{12}+\frac{19}{5}$
+I.$\frac{5}{12}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 5}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + -17$
+F.$5+\frac{7}{4}+\frac{-17}{3}$ G.$-5$
+H.$\frac{7}{4}+\frac{-17}{3}$
+I.$\frac{5}{4}+\frac{7}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 6}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + -17$
+F.$5+\frac{7}{4}+\frac{-17}{5}$ G.$-5$
+H.$\frac{7}{4}+\frac{-17}{5}$
+I.$\frac{5}{4}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 7}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{-17}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{7}{x^{7}}+\frac{-17}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + -17$
+F.$5+\frac{7}{6}+\frac{-17}{5}$ G.$-5$
+H.$\frac{7}{6}+\frac{-17}{5}$
+I.$\frac{5}{6}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 8}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{-17}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{7}{x^{19}}+\frac{-17}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + -17$
+F.$5+\frac{7}{12}+\frac{-17}{5}$ G.$-5$
+H.$\frac{7}{12}+\frac{-17}{5}$
+I.$\frac{5}{12}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 9}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 11$
+F.$5+\frac{7}{4}+\frac{11}{3}$ G.$-5$
+H.$\frac{7}{4}+\frac{11}{3}$
+I.$\frac{5}{4}+\frac{7}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 10}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 11$
+F.$5+\frac{7}{4}+\frac{11}{5}$ G.$-5$
+H.$\frac{7}{4}+\frac{11}{5}$
+I.$\frac{5}{4}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 11}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{11}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{7}{x^{7}}+\frac{11}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 11$
+F.$5+\frac{7}{6}+\frac{11}{5}$ G.$-5$
+H.$\frac{7}{6}+\frac{11}{5}$
+I.$\frac{5}{6}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 12}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{11}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{7}{x^{19}}+\frac{11}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 11$
+F.$5+\frac{7}{12}+\frac{11}{5}$ G.$-5$
+H.$\frac{7}{12}+\frac{11}{5}$
+I.$\frac{5}{12}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 13}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 13$
+F.$5+\frac{7}{4}+\frac{13}{3}$ G.$-5$
+H.$\frac{7}{4}+\frac{13}{3}$
+I.$\frac{5}{4}+\frac{7}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 14}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+7 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{7}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 13$
+F.$5+\frac{7}{4}+\frac{13}{5}$ G.$-5$
+H.$\frac{7}{4}+\frac{13}{5}$
+I.$\frac{5}{4}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 15}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+7 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{13}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{7}{x^{7}}+\frac{13}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 13$
+F.$5+\frac{7}{6}+\frac{13}{5}$ G.$-5$
+H.$\frac{7}{6}+\frac{13}{5}$
+I.$\frac{5}{6}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 16}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+7 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +7 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{13}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{7}{x^{19}}+\frac{13}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 7 + 13$
+F.$5+\frac{7}{12}+\frac{13}{5}$ G.$-5$
+H.$\frac{7}{12}+\frac{13}{5}$
+I.$\frac{5}{12}+\frac{7}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 17}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 19$
+F.$5+\frac{1}{4}+\frac{19}{3}$ G.$-5$
+H.$\frac{1}{4}+\frac{19}{3}$
+I.$\frac{5}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 18}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 19$
+F.$5+\frac{1}{4}+\frac{19}{5}$ G.$-5$
+H.$\frac{1}{4}+\frac{19}{5}$
+I.$\frac{5}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 19}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{19}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{1}{x^{7}}+\frac{19}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 19$
+F.$5+\frac{1}{6}+\frac{19}{5}$ G.$-5$
+H.$\frac{1}{6}+\frac{19}{5}$
+I.$\frac{5}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 20}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{19}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{1}{x^{19}}+\frac{19}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 19$
+F.$5+\frac{1}{12}+\frac{19}{5}$ G.$-5$
+H.$\frac{1}{12}+\frac{19}{5}$
+I.$\frac{5}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 21}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + -17$
+F.$5+\frac{1}{4}+\frac{-17}{3}$ G.$-5$
+H.$\frac{1}{4}+\frac{-17}{3}$
+I.$\frac{5}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 22}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + -17$
+F.$5+\frac{1}{4}+\frac{-17}{5}$ G.$-5$
+H.$\frac{1}{4}+\frac{-17}{5}$
+I.$\frac{5}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 23}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{-17}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{1}{x^{7}}+\frac{-17}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + -17$
+F.$5+\frac{1}{6}+\frac{-17}{5}$ G.$-5$
+H.$\frac{1}{6}+\frac{-17}{5}$
+I.$\frac{5}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 24}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{-17}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{1}{x^{19}}+\frac{-17}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + -17$
+F.$5+\frac{1}{12}+\frac{-17}{5}$ G.$-5$
+H.$\frac{1}{12}+\frac{-17}{5}$
+I.$\frac{5}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 25}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 11$
+F.$5+\frac{1}{4}+\frac{11}{3}$ G.$-5$
+H.$\frac{1}{4}+\frac{11}{3}$
+I.$\frac{5}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 26}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 11$
+F.$5+\frac{1}{4}+\frac{11}{5}$ G.$-5$
+H.$\frac{1}{4}+\frac{11}{5}$
+I.$\frac{5}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 27}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{11}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{1}{x^{7}}+\frac{11}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 11$
+F.$5+\frac{1}{6}+\frac{11}{5}$ G.$-5$
+H.$\frac{1}{6}+\frac{11}{5}$
+I.$\frac{5}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 28}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{11}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{1}{x^{19}}+\frac{11}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 11$
+F.$5+\frac{1}{12}+\frac{11}{5}$ G.$-5$
+H.$\frac{1}{12}+\frac{11}{5}$
+I.$\frac{5}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 29}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 13$
+F.$5+\frac{1}{4}+\frac{13}{3}$ G.$-5$
+H.$\frac{1}{4}+\frac{13}{3}$
+I.$\frac{5}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 30}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{1}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 13$
+F.$5+\frac{1}{4}+\frac{13}{5}$ G.$-5$
+H.$\frac{1}{4}+\frac{13}{5}$
+I.$\frac{5}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 31}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{13}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{1}{x^{7}}+\frac{13}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 13$
+F.$5+\frac{1}{6}+\frac{13}{5}$ G.$-5$
+H.$\frac{1}{6}+\frac{13}{5}$
+I.$\frac{5}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 32}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{13}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{1}{x^{19}}+\frac{13}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 1 + 13$
+F.$5+\frac{1}{12}+\frac{13}{5}$ G.$-5$
+H.$\frac{1}{12}+\frac{13}{5}$
+I.$\frac{5}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 33}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 19$
+F.$5+\frac{43}{4}+\frac{19}{3}$ G.$-5$
+H.$\frac{43}{4}+\frac{19}{3}$
+I.$\frac{5}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 34}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 19$
+F.$5+\frac{43}{4}+\frac{19}{5}$ G.$-5$
+H.$\frac{43}{4}+\frac{19}{5}$
+I.$\frac{5}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 35}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{19}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{43}{x^{7}}+\frac{19}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 19$
+F.$5+\frac{43}{6}+\frac{19}{5}$ G.$-5$
+H.$\frac{43}{6}+\frac{19}{5}$
+I.$\frac{5}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 36}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{19}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{43}{x^{19}}+\frac{19}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 19$
+F.$5+\frac{43}{12}+\frac{19}{5}$ G.$-5$
+H.$\frac{43}{12}+\frac{19}{5}$
+I.$\frac{5}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 37}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + -17$
+F.$5+\frac{43}{4}+\frac{-17}{3}$ G.$-5$
+H.$\frac{43}{4}+\frac{-17}{3}$
+I.$\frac{5}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 38}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + -17$
+F.$5+\frac{43}{4}+\frac{-17}{5}$ G.$-5$
+H.$\frac{43}{4}+\frac{-17}{5}$
+I.$\frac{5}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 39}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{-17}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{43}{x^{7}}+\frac{-17}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + -17$
+F.$5+\frac{43}{6}+\frac{-17}{5}$ G.$-5$
+H.$\frac{43}{6}+\frac{-17}{5}$
+I.$\frac{5}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 40}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{-17}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{43}{x^{19}}+\frac{-17}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + -17$
+F.$5+\frac{43}{12}+\frac{-17}{5}$ G.$-5$
+H.$\frac{43}{12}+\frac{-17}{5}$
+I.$\frac{5}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 41}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 11$
+F.$5+\frac{43}{4}+\frac{11}{3}$ G.$-5$
+H.$\frac{43}{4}+\frac{11}{3}$
+I.$\frac{5}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 42}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 11$
+F.$5+\frac{43}{4}+\frac{11}{5}$ G.$-5$
+H.$\frac{43}{4}+\frac{11}{5}$
+I.$\frac{5}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 43}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{11}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{43}{x^{7}}+\frac{11}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 11$
+F.$5+\frac{43}{6}+\frac{11}{5}$ G.$-5$
+H.$\frac{43}{6}+\frac{11}{5}$
+I.$\frac{5}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 44}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{11}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{43}{x^{19}}+\frac{11}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 11$
+F.$5+\frac{43}{12}+\frac{11}{5}$ G.$-5$
+H.$\frac{43}{12}+\frac{11}{5}$
+I.$\frac{5}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 45}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 13$
+F.$5+\frac{43}{4}+\frac{13}{3}$ G.$-5$
+H.$\frac{43}{4}+\frac{13}{3}$
+I.$\frac{5}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 46}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{43}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 13$
+F.$5+\frac{43}{4}+\frac{13}{5}$ G.$-5$
+H.$\frac{43}{4}+\frac{13}{5}$
+I.$\frac{5}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 47}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot6}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{13}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(5 +\frac{43}{x^{7}}+\frac{13}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 13$
+F.$5+\frac{43}{6}+\frac{13}{5}$ G.$-5$
+H.$\frac{43}{6}+\frac{13}{5}$
+I.$\frac{5}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 48}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot12}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{13}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(5 +\frac{43}{x^{19}}+\frac{13}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 43 + 13$
+F.$5+\frac{43}{12}+\frac{13}{5}$ G.$-5$
+H.$\frac{43}{12}+\frac{13}{5}$
+I.$\frac{5}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 49}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{3}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 3 + 19$
+F.$5+\frac{3}{4}+\frac{19}{5}$ G.$-5$
+H.$\frac{3}{4}+\frac{19}{5}$
+I.$\frac{5}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 50}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{3}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 3 + -17$
+F.$5+\frac{3}{4}+\frac{-17}{5}$ G.$-5$
+H.$\frac{3}{4}+\frac{-17}{5}$
+I.$\frac{5}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 51}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{3}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 3 + 11$
+F.$5+\frac{3}{4}+\frac{11}{5}$ G.$-5$
+H.$\frac{3}{4}+\frac{11}{5}$
+I.$\frac{5}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 52}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+3 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{3}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 3 + 13$
+F.$5+\frac{3}{4}+\frac{13}{5}$ G.$-5$
+H.$\frac{3}{4}+\frac{13}{5}$
+I.$\frac{5}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 53}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{9}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 9 + 19$
+F.$5+\frac{9}{4}+\frac{19}{5}$ G.$-5$
+H.$\frac{9}{4}+\frac{19}{5}$
+I.$\frac{5}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 54}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{9}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 9 + -17$
+F.$5+\frac{9}{4}+\frac{-17}{5}$ G.$-5$
+H.$\frac{9}{4}+\frac{-17}{5}$
+I.$\frac{5}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 55}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{9}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 9 + 11$
+F.$5+\frac{9}{4}+\frac{11}{5}$ G.$-5$
+H.$\frac{9}{4}+\frac{11}{5}$
+I.$\frac{5}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 56}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(5 \cdot x^{2\cdot4}+9 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(5 +\frac{9}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$5$ E.$5 + 9 + 13$
+F.$5+\frac{9}{4}+\frac{13}{5}$ G.$-5$
+H.$\frac{9}{4}+\frac{13}{5}$
+I.$\frac{5}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 57}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +5 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{5}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 5 + 19$
+F.$7+\frac{5}{4}+\frac{19}{3}$ G.$-7$
+H.$\frac{5}{4}+\frac{19}{3}$
+I.$\frac{7}{4}+\frac{5}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 58}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +5 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{5}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 5 + -17$
+F.$7+\frac{5}{4}+\frac{-17}{3}$ G.$-7$
+H.$\frac{5}{4}+\frac{-17}{3}$
+I.$\frac{7}{4}+\frac{5}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 59}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +5 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{5}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 5 + 11$
+F.$7+\frac{5}{4}+\frac{11}{3}$ G.$-7$
+H.$\frac{5}{4}+\frac{11}{3}$
+I.$\frac{7}{4}+\frac{5}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 60}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+5 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +5 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{5}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 5 + 13$
+F.$7+\frac{5}{4}+\frac{13}{3}$ G.$-7$
+H.$\frac{5}{4}+\frac{13}{3}$
+I.$\frac{7}{4}+\frac{5}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 61}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 19$
+F.$7+\frac{1}{4}+\frac{19}{3}$ G.$-7$
+H.$\frac{1}{4}+\frac{19}{3}$
+I.$\frac{7}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 62}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 19$
+F.$7+\frac{1}{4}+\frac{19}{5}$ G.$-7$
+H.$\frac{1}{4}+\frac{19}{5}$
+I.$\frac{7}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 63}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{19}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{1}{x^{7}}+\frac{19}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 19$
+F.$7+\frac{1}{6}+\frac{19}{5}$ G.$-7$
+H.$\frac{1}{6}+\frac{19}{5}$
+I.$\frac{7}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 64}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{19}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{1}{x^{19}}+\frac{19}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 19$
+F.$7+\frac{1}{12}+\frac{19}{5}$ G.$-7$
+H.$\frac{1}{12}+\frac{19}{5}$
+I.$\frac{7}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 65}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + -17$
+F.$7+\frac{1}{4}+\frac{-17}{3}$ G.$-7$
+H.$\frac{1}{4}+\frac{-17}{3}$
+I.$\frac{7}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 66}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + -17$
+F.$7+\frac{1}{4}+\frac{-17}{5}$ G.$-7$
+H.$\frac{1}{4}+\frac{-17}{5}$
+I.$\frac{7}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 67}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{-17}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{1}{x^{7}}+\frac{-17}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + -17$
+F.$7+\frac{1}{6}+\frac{-17}{5}$ G.$-7$
+H.$\frac{1}{6}+\frac{-17}{5}$
+I.$\frac{7}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 68}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{-17}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{1}{x^{19}}+\frac{-17}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + -17$
+F.$7+\frac{1}{12}+\frac{-17}{5}$ G.$-7$
+H.$\frac{1}{12}+\frac{-17}{5}$
+I.$\frac{7}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 69}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 11$
+F.$7+\frac{1}{4}+\frac{11}{3}$ G.$-7$
+H.$\frac{1}{4}+\frac{11}{3}$
+I.$\frac{7}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 70}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 11$
+F.$7+\frac{1}{4}+\frac{11}{5}$ G.$-7$
+H.$\frac{1}{4}+\frac{11}{5}$
+I.$\frac{7}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 71}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{11}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{1}{x^{7}}+\frac{11}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 11$
+F.$7+\frac{1}{6}+\frac{11}{5}$ G.$-7$
+H.$\frac{1}{6}+\frac{11}{5}$
+I.$\frac{7}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 72}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{11}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{1}{x^{19}}+\frac{11}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 11$
+F.$7+\frac{1}{12}+\frac{11}{5}$ G.$-7$
+H.$\frac{1}{12}+\frac{11}{5}$
+I.$\frac{7}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 73}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 13$
+F.$7+\frac{1}{4}+\frac{13}{3}$ G.$-7$
+H.$\frac{1}{4}+\frac{13}{3}$
+I.$\frac{7}{4}+\frac{1}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 74}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{1}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 13$
+F.$7+\frac{1}{4}+\frac{13}{5}$ G.$-7$
+H.$\frac{1}{4}+\frac{13}{5}$
+I.$\frac{7}{4}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 75}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{13}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{1}{x^{7}}+\frac{13}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 13$
+F.$7+\frac{1}{6}+\frac{13}{5}$ G.$-7$
+H.$\frac{1}{6}+\frac{13}{5}$
+I.$\frac{7}{6}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 76}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+1 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +1 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{13}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{1}{x^{19}}+\frac{13}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 1 + 13$
+F.$7+\frac{1}{12}+\frac{13}{5}$ G.$-7$
+H.$\frac{1}{12}+\frac{13}{5}$
+I.$\frac{7}{12}+\frac{1}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 77}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{5}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 19$
+F.$7+\frac{43}{4}+\frac{19}{3}$ G.$-7$
+H.$\frac{43}{4}+\frac{19}{3}$
+I.$\frac{7}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 78}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 19$
+F.$7+\frac{43}{4}+\frac{19}{5}$ G.$-7$
+H.$\frac{43}{4}+\frac{19}{5}$
+I.$\frac{7}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 79}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{19}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{43}{x^{7}}+\frac{19}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 19$
+F.$7+\frac{43}{6}+\frac{19}{5}$ G.$-7$
+H.$\frac{43}{6}+\frac{19}{5}$
+I.$\frac{7}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 80}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{19}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{43}{x^{19}}+\frac{19}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 19$
+F.$7+\frac{43}{12}+\frac{19}{5}$ G.$-7$
+H.$\frac{43}{12}+\frac{19}{5}$
+I.$\frac{7}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 81}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{5}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + -17$
+F.$7+\frac{43}{4}+\frac{-17}{3}$ G.$-7$
+H.$\frac{43}{4}+\frac{-17}{3}$
+I.$\frac{7}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 82}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + -17$
+F.$7+\frac{43}{4}+\frac{-17}{5}$ G.$-7$
+H.$\frac{43}{4}+\frac{-17}{5}$
+I.$\frac{7}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 83}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{-17}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{43}{x^{7}}+\frac{-17}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + -17$
+F.$7+\frac{43}{6}+\frac{-17}{5}$ G.$-7$
+H.$\frac{43}{6}+\frac{-17}{5}$
+I.$\frac{7}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 84}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{-17}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{43}{x^{19}}+\frac{-17}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + -17$
+F.$7+\frac{43}{12}+\frac{-17}{5}$ G.$-7$
+H.$\frac{43}{12}+\frac{-17}{5}$
+I.$\frac{7}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 85}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{5}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 11$
+F.$7+\frac{43}{4}+\frac{11}{3}$ G.$-7$
+H.$\frac{43}{4}+\frac{11}{3}$
+I.$\frac{7}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 86}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 11$
+F.$7+\frac{43}{4}+\frac{11}{5}$ G.$-7$
+H.$\frac{43}{4}+\frac{11}{5}$
+I.$\frac{7}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 87}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{11}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{43}{x^{7}}+\frac{11}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 11$
+F.$7+\frac{43}{6}+\frac{11}{5}$ G.$-7$
+H.$\frac{43}{6}+\frac{11}{5}$
+I.$\frac{7}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 88}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{11}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{43}{x^{19}}+\frac{11}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 11$
+F.$7+\frac{43}{12}+\frac{11}{5}$ G.$-7$
+H.$\frac{43}{12}+\frac{11}{5}$
+I.$\frac{7}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 89}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{3}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{3}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{5}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 13$
+F.$7+\frac{43}{4}+\frac{13}{3}$ G.$-7$
+H.$\frac{43}{4}+\frac{13}{3}$
+I.$\frac{7}{4}+\frac{43}{3}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 90}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{43}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 13$
+F.$7+\frac{43}{4}+\frac{13}{5}$ G.$-7$
+H.$\frac{43}{4}+\frac{13}{5}$
+I.$\frac{7}{4}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 91}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot6}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot6}}+\frac{13}{x^{2\cdot6}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot6}(7 +\frac{43}{x^{7}}+\frac{13}{x^{2\cdot6}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 13$
+F.$7+\frac{43}{6}+\frac{13}{5}$ G.$-7$
+H.$\frac{43}{6}+\frac{13}{5}$
+I.$\frac{7}{6}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 92}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot12}+43 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +43 \cdot \frac{x^{5}}{x^{2\cdot12}}+\frac{13}{x^{2\cdot12}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot12}(7 +\frac{43}{x^{19}}+\frac{13}{x^{2\cdot12}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 43 + 13$
+F.$7+\frac{43}{12}+\frac{13}{5}$ G.$-7$
+H.$\frac{43}{12}+\frac{13}{5}$
+I.$\frac{7}{12}+\frac{43}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 93}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{3}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 3 + 19$
+F.$7+\frac{3}{4}+\frac{19}{5}$ G.$-7$
+H.$\frac{3}{4}+\frac{19}{5}$
+I.$\frac{7}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 94}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{3}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 3 + -17$
+F.$7+\frac{3}{4}+\frac{-17}{5}$ G.$-7$
+H.$\frac{3}{4}+\frac{-17}{5}$
+I.$\frac{7}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 95}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{3}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 3 + 11$
+F.$7+\frac{3}{4}+\frac{11}{5}$ G.$-7$
+H.$\frac{3}{4}+\frac{11}{5}$
+I.$\frac{7}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 96}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+3 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +3 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{3}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 3 + 13$
+F.$7+\frac{3}{4}+\frac{13}{5}$ G.$-7$
+H.$\frac{3}{4}+\frac{13}{5}$
+I.$\frac{7}{4}+\frac{3}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 97}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+19)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+19) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{19}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{9}{x^{3}}+\frac{19}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 9 + 19$
+F.$7+\frac{9}{4}+\frac{19}{5}$ G.$-7$
+H.$\frac{9}{4}+\frac{19}{5}$
+I.$\frac{7}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 98}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+-17)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+-17) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{-17}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{9}{x^{3}}+\frac{-17}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 9 + -17$
+F.$7+\frac{9}{4}+\frac{-17}{5}$ G.$-7$
+H.$\frac{9}{4}+\frac{-17}{5}$
+I.$\frac{7}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 99}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+11)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+11) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{11}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{9}{x^{3}}+\frac{11}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 9 + 11$
+F.$7+\frac{9}{4}+\frac{11}{5}$ G.$-7$
+H.$\frac{9}{4}+\frac{11}{5}$
+I.$\frac{7}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.5 d) moja wersja nr 100}
+Obliczyć granicę funkcji  $\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+13)$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{x\to\ -\infty}(7 \cdot x^{2\cdot4}+9 \cdot x^{5}+13) = \lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +9 \cdot \frac{x^{5}}{x^{2\cdot4}}+\frac{13}{x^{2\cdot4}})) =$$ $$\lim\limits_{x\to\ -\infty}(x^{2\cdot4}(7 +\frac{9}{x^{3}}+\frac{13}{x^{2\cdot4}})) =\infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$ B.$-\infty$ C.$0$ D.$7$ E.$7 + 9 + 13$
+F.$7+\frac{9}{4}+\frac{13}{5}$ G.$-7$
+H.$\frac{9}{4}+\frac{13}{5}$
+I.$\frac{7}{4}+\frac{9}{5}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}
