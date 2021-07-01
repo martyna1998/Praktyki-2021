@@ -1,0 +1,75 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Jacek Jabłoński}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/P5.2d}
+\zadStart{Zadanie z Wikieł P 5.2d) moja wersja nr [nrWersji]}
+%[p1]:[2,4,8,16,32,64,128,256,512,1024]
+%[p2]:[2,4,8,16,32,64,128,256,512,1024]
+%[a]=random.randint(2,6)
+%[b]=random.randint(2,6)
+%[c]=random.randint(2,6)
+%[d]=random.randint(2,6)
+%[f]=random.randint(2,6)
+%[g]=random.randint(2,6)
+%[w1]=[a]*[b]
+%[w11]=[b]-1
+%[w2]=[f]*(-2)
+Korzystając z podanych wzorów i twierdzeń, wyznacz pochodną funkcji:
+d) $f(x)=[a]x^{[b]} + \log_{[c]}(x) + [d]e^x + \frac{[f]}{x^2} + [g]arctg(x)$ , gdzie $x>0$
+\zadStop
+\rozwStart{Jacek Jabłoński}{}
+$$f'(x)=[a](x^{[b]})' + (\log_{[c]}(x))' + [d](e^x)' + [f](x^{-2})' + [g](arctg(x))' =$$
+$$= [w1]x^{[w11]} + \frac{1}{x ln([c])} +[d] e^x + \frac{[w2]}{x^3} + \frac{[g]}{1+x^2}$$
+\rozwStop
+\odpStart
+$$[w1]x^{[w11]} + \frac{1}{x ln([c])} +[d] e^x + \frac{[w2]}{x^3} + \frac{[g]}{1+x^2}$$
+\odpStop
+\testStart
+A. $$[w1]x^{[w11]} + \frac{1}{x ln([c])} +[d] e^x + \frac{[w2]}{x^3} + \frac{[g]}{1+x^2}$$
+B. $$[a]x^{[w11]} + \frac{1}{x ln([c])}+[d]x e^x + \frac{[w2]}{x^3} + \frac{[g]}{1+x^2}$$
+C. $$[a]x^{[a]} + \frac{1}{x ln([c])} +e^x + \frac{[w2]}{x^3} + \frac{[g]}{1+x^2}$$
+D. $$[a]x^{[w11]} + \frac{1}{x log([c])} +[d] e^x + \frac{[w2]}{x^3} - \frac{[g]}{1+x^2}$$
+E. $$[w1]x^{[w11]} + \frac{1}{x ln([c])} -[d] e^x + \frac{[w2]}{x^3} - \frac{[g]}{x+x^2}$$
+F. $$[w1]x^{[w11]} + \frac{1}{x ln([c])} +[d] e^x + \frac{[w1]}{x^3} + \frac{[g]}{x+2x+x^2}$$
+G. $$[a]x^{[w11]} + \frac{1}{x ln([c])} +[d] e^{-x} + \frac{[w2]}{x^4} + \frac{[g]}{1+x^3}$$
+H. $$[w1]x^{[w11]} + \frac{1}{x log([c])} +[d] e^{-x} + \frac{[w2]}{x^4} + \frac{[g]}{1+x^3}$$
+I. $$[w1]x^{[w11]} + \frac{1}{x log([c])} +[d] e^{-x} + \frac{[w2]}{x^4} + \frac{[g]}{1+x^3}$$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
