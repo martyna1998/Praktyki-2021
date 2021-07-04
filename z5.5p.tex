@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5p}
+\zadStart{Zadanie z Wikieł Z 5.5 p) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[f]=3*[a]
+%[a]!=0 
+Wyznacz pochodną funkcji \\ $f(x)=\log\left([a]x^3-[b]\right) +[c]^{[d]x-[e]} $.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\log\left([a]x^3-[b]\right) +[c]^{[d]x-[e]} $$
+$$f(x)=h(x)+w(x)$$
+$$f'(x)=(h(x)+w(x))'=h'(x)+w'(x)$$
+$$h(x)=\log\left([a]x^3-[b]\right)$$
+$$h'(x)=\frac{\left(3\cdot[a]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}}$$
+$$w(x)=[c]^{[d]x-[e]}$$
+$$w'(x)=[d]\cdot[c]^{[d]x-[e]} \ln{([c])}$$
+$$f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} + [d]\cdot[c]^{[d]x-[e]} \ln{([c])} $$
+\rozwStop
+\odpStart
+$f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} + [d]\cdot[c]^{[d]x-[e]} \ln{([c])} $
+\odpStop
+\testStart
+A. $f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} + [d]\cdot[c]^{[d]x-[e]} \ln{([c])} $\\
+B. $f'(x)= [d]\cdot[c]^{[d]x-[e]} \ln{([c])} $\\
+C. $f'(x)= \frac{1}{\left([a]x^3-[b]\right)\ln{(10)}} + [d]\cdot[c]^{[d]x-[e]} \ln{([c])} $\\
+D. $f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} $\\
+E. $f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} + [c]^{[d]x-[e]} \ln{([c])} $\\
+F. $f'(x)= \frac{\left([f]x^2\right)}{\left([a]x^3-[b]\right)\ln{(10)}} + [d]\cdot[c]^{x} \ln{([c])} $
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}
