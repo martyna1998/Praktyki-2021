@@ -32,35 +32,47 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.93r}
+\zadStart{Zadanie z Wikieł Z 1.93 r) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12]
+%[c]=[a]-[b]
+%[d]=[b]**2-4*[c]
+%[pr2]=(pow([d],(1/2)))
+%[pr1]=[pr2].real
+%[pr]=int([pr1])
+%[zz1]=((-[b]-[pr])/2)
+%[zz2]=((-[b]+[pr])/2)
+%[z1]=int([zz1])
+%[z2]=int([zz2])
+%[abs1]=abs([z1])
+%[abs2]=abs([z2])
+%[w1]=(pow(10,[abs1]))
+%[w2]=(pow(10,[abs2]))
+%[a]>[b] and [d]>0 and [pr2].is_integer()==True and [z1]<0 and [z2]<0 and math.gcd((-[b]-[pr]),2)==2 and math.gcd((-[b]+[pr]),2)==2
+Rozwiązać równanie $\log^2{x}+[b]\log{10x} =[a]$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Małgorzata Ugowska}{}
+$$\log^2{x}+[b]\log{10x} =[a] \quad \Longleftrightarrow \quad \log^2{x}+[b](\log{x}+\log{10}) =[a] $$
+$$ \quad \Longleftrightarrow \quad \log^2{x}+[b](\log{x}+1) =[a] \quad \Longleftrightarrow \quad \log^2{x}+[b]\log{x}-[c]=0$$
+Podstawmy: $y=\log{x}$\\
+Mamy wtedy:
+$$y^2 +[b]y-[c]=0$$
+$$ \bigtriangleup = [b]^2-4 \cdot [c] = [d] \Longrightarrow y_1=\frac{-[b]-\sqrt{\bigtriangleup}}{2} = [z1], \quad y_2=\frac{-[b]+\sqrt{\bigtriangleup}}{2} = [z2]$$
+dla $y=[z1]$ mamy:
+$$\log{x} = [z1] \quad \Longleftrightarrow \quad 10^{[z1]}=x \quad \Longleftrightarrow \quad x=\frac{1}{[w1]}$$
+dla $y=[z2]$ mamy:
+$$\log{x} = [z2] \quad \Longleftrightarrow \quad 10^{[z2]}=x \quad \Longleftrightarrow \quad x=\frac{1}{[w2]}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in \{\frac{1}{[w1]}, \frac{1}{[w2]}\}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $x \in \{\frac{1}{[w1]}, \frac{1}{[w2]}\}$\\
+B. $x \in \{-4, 2\}$\\
+C. $x \in \{[abs1], [abs2]\}$\\
+D. $x \in \{[z1], [z2]\}$\\
+E. $x \in \{[w1], [w2]\}$
 \testStop
 \kluczStart
 A

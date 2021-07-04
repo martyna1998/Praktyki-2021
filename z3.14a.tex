@@ -32,38 +32,35 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.14a}
+\zadStart{Zadanie z Wikieł Z 3.14 a) moja wersja nr [nrWersji]}
+%[f]:[1,2,3,4,5,9,10,11,12,13,14,15,16,17,18,19,20,21]
+%[z]:[1,2,3,4,5,9,10,11,12,13,14]
+%[b]=random.randint(3,70)
+%[a]=random.randint(2,[b]-1)
+%[c]=random.randint(1,90)
+%[a]!=[b] and math.gcd([a],[b])==1
+Obliczyć granicę ciągu $a_n= \frac{[a]n + {(-1)}^n}{[b]n+[c]}$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Barbara Bączek}{}
+$$\lim_{n \rightarrow \infty} a_n= \lim_{n \rightarrow \infty} \frac{[a]n + {(-1)}^n}{[b]n+[c]}=  \lim_{n \rightarrow \infty} \frac{n([a] + \frac{{(-1)}^n}{n})}{n([b]+\frac{[c]}{n})} = (*)$$
+Dla $n$ parzystych, czy nieparzystych $$ \lim_{n \rightarrow \infty} \frac{{(-1)}^n}{n} = 0, $$
+a zatem mamy $(*)= \frac{[a]}{[b]}$. 
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$\frac{[a]}{[b]}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
+A.$\infty$
+B.$[a]$
+C.$-\infty$
 D.$0$
+E.$\frac{[a]}{[b]}$
+G.$[b]$
+H.$\frac{[b]}{[a]}$
 \testStop
 \kluczStart
-A
+E
 \kluczStop
 
 

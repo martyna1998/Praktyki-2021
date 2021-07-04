@@ -32,38 +32,36 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.93q}
+\zadStart{Zadanie z Wikieł Z 1.93 q) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[a3]=pow([a],3)
+Rozwiązać równanie $\big(\log_{[a]}{x}\big)^3=\log_{[a]}{x}$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Małgorzata Ugowska}{}
+Podstawmy: $y=\log_{[a]}{x}$\\
+Mamy wtedy:
+$$y^3=y \quad \Longleftrightarrow \quad y^3-y=0 \quad \Longleftrightarrow \quad y(y^2-1)=0 \quad \Longleftrightarrow \quad y(y-1)(y+1)=0$$
+$$\Longleftrightarrow \quad y=0 \quad \vee \quad y=1 \quad \vee \quad y=-1$$
+dla $y=0$ mamy:
+$$\log_{[a]}{x} = 0 \quad \Longleftrightarrow \quad [a]^0=x \quad \Longleftrightarrow \quad x=1$$
+dla $y=1$ mamy:
+$$\log_{[a]}{x} = 1 \quad \Longleftrightarrow \quad [a]^1=x \quad \Longleftrightarrow \quad x=[a]$$
+dla $y=-1$ mamy:
+$$\log_{[a]}{x} = -1 \quad \Longleftrightarrow \quad [a]^{-1}=x \quad \Longleftrightarrow \quad x=\frac{1}{[a]}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in \{1, [a], \frac{1}{[a]}\}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $x=3$\\
+B. $x=1$\\
+C. $x = [a3]$\\
+D. $x \in \{1, [a], \frac{1}{[a]}\}$\\
+E. $x \in \{-1, 0, 1\}$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

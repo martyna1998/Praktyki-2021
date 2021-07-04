@@ -1,0 +1,2095 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z4.3a}
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 1}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+2}-2}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+2}-2}{x}=\frac{(\sqrt{x+2}-2)(\sqrt{x+2}+2)}{x(\sqrt{x+2}+2)}=\frac{1}{\sqrt{x+2}+2}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+2}-2}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+2}+2)} = \frac{1}{\sqrt{2}+2}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{2}+2}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{2}+2}$
+B.$\frac{2}{\sqrt{2}+2}$
+C.$0$
+D.$\sqrt{2}+2$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{2}-2$
+H.$-2$
+I.$2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 2}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+3}-3}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+3}-3}{x}=\frac{(\sqrt{x+3}-3)(\sqrt{x+3}+3)}{x(\sqrt{x+3}+3)}=\frac{1}{\sqrt{x+3}+3}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+3}-3}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+3}+3)} = \frac{1}{\sqrt{3}+3}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{3}+3}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{3}+3}$
+B.$\frac{3}{\sqrt{3}+3}$
+C.$0$
+D.$\sqrt{3}+3$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{3}-3$
+H.$-3$
+I.$3$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 3}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+5}-5}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+5}-5}{x}=\frac{(\sqrt{x+5}-5)(\sqrt{x+5}+5)}{x(\sqrt{x+5}+5)}=\frac{1}{\sqrt{x+5}+5}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+5}-5}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+5}+5)} = \frac{1}{\sqrt{5}+5}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{5}+5}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{5}+5}$
+B.$\frac{5}{\sqrt{5}+5}$
+C.$0$
+D.$\sqrt{5}+5$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{5}-5$
+H.$-5$
+I.$5$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 4}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+7}-7}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+7}-7}{x}=\frac{(\sqrt{x+7}-7)(\sqrt{x+7}+7)}{x(\sqrt{x+7}+7)}=\frac{1}{\sqrt{x+7}+7}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+7}-7}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+7}+7)} = \frac{1}{\sqrt{7}+7}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{7}+7}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{7}+7}$
+B.$\frac{7}{\sqrt{7}+7}$
+C.$0$
+D.$\sqrt{7}+7$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{7}-7$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 5}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+11}-11}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+11}-11}{x}=\frac{(\sqrt{x+11}-11)(\sqrt{x+11}+11)}{x(\sqrt{x+11}+11)}=\frac{1}{\sqrt{x+11}+11}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+11}-11}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+11}+11)} = \frac{1}{\sqrt{11}+11}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{11}+11}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{11}+11}$
+B.$\frac{11}{\sqrt{11}+11}$
+C.$0$
+D.$\sqrt{11}+11$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{11}-11$
+H.$-11$
+I.$11$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 6}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+13}-13}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+13}-13}{x}=\frac{(\sqrt{x+13}-13)(\sqrt{x+13}+13)}{x(\sqrt{x+13}+13)}=\frac{1}{\sqrt{x+13}+13}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+13}-13}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+13}+13)} = \frac{1}{\sqrt{13}+13}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{13}+13}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{13}+13}$
+B.$\frac{13}{\sqrt{13}+13}$
+C.$0$
+D.$\sqrt{13}+13$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{13}-13$
+H.$-13$
+I.$13$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 7}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+17}-17}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+17}-17}{x}=\frac{(\sqrt{x+17}-17)(\sqrt{x+17}+17)}{x(\sqrt{x+17}+17)}=\frac{1}{\sqrt{x+17}+17}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+17}-17}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+17}+17)} = \frac{1}{\sqrt{17}+17}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{17}+17}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{17}+17}$
+B.$\frac{17}{\sqrt{17}+17}$
+C.$0$
+D.$\sqrt{17}+17$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{17}-17$
+H.$-17$
+I.$17$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 8}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+19}-19}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+19}-19}{x}=\frac{(\sqrt{x+19}-19)(\sqrt{x+19}+19)}{x(\sqrt{x+19}+19)}=\frac{1}{\sqrt{x+19}+19}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+19}-19}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+19}+19)} = \frac{1}{\sqrt{19}+19}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{19}+19}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{19}+19}$
+B.$\frac{19}{\sqrt{19}+19}$
+C.$0$
+D.$\sqrt{19}+19$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{19}-19$
+H.$-19$
+I.$19$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 9}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+23}-23}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+23}-23}{x}=\frac{(\sqrt{x+23}-23)(\sqrt{x+23}+23)}{x(\sqrt{x+23}+23)}=\frac{1}{\sqrt{x+23}+23}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+23}-23}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+23}+23)} = \frac{1}{\sqrt{23}+23}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{23}+23}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{23}+23}$
+B.$\frac{23}{\sqrt{23}+23}$
+C.$0$
+D.$\sqrt{23}+23$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{23}-23$
+H.$-23$
+I.$23$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 10}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+29}-29}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+29}-29}{x}=\frac{(\sqrt{x+29}-29)(\sqrt{x+29}+29)}{x(\sqrt{x+29}+29)}=\frac{1}{\sqrt{x+29}+29}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+29}-29}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+29}+29)} = \frac{1}{\sqrt{29}+29}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{29}+29}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{29}+29}$
+B.$\frac{29}{\sqrt{29}+29}$
+C.$0$
+D.$\sqrt{29}+29$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{29}-29$
+H.$-29$
+I.$29$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 11}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+31}-31}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+31}-31}{x}=\frac{(\sqrt{x+31}-31)(\sqrt{x+31}+31)}{x(\sqrt{x+31}+31)}=\frac{1}{\sqrt{x+31}+31}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+31}-31}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+31}+31)} = \frac{1}{\sqrt{31}+31}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{31}+31}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{31}+31}$
+B.$\frac{31}{\sqrt{31}+31}$
+C.$0$
+D.$\sqrt{31}+31$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{31}-31$
+H.$-31$
+I.$31$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 12}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+37}-37}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+37}-37}{x}=\frac{(\sqrt{x+37}-37)(\sqrt{x+37}+37)}{x(\sqrt{x+37}+37)}=\frac{1}{\sqrt{x+37}+37}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+37}-37}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+37}+37)} = \frac{1}{\sqrt{37}+37}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{37}+37}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{37}+37}$
+B.$\frac{37}{\sqrt{37}+37}$
+C.$0$
+D.$\sqrt{37}+37$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{37}-37$
+H.$-37$
+I.$37$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 13}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+41}-41}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+41}-41}{x}=\frac{(\sqrt{x+41}-41)(\sqrt{x+41}+41)}{x(\sqrt{x+41}+41)}=\frac{1}{\sqrt{x+41}+41}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+41}-41}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+41}+41)} = \frac{1}{\sqrt{41}+41}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{41}+41}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{41}+41}$
+B.$\frac{41}{\sqrt{41}+41}$
+C.$0$
+D.$\sqrt{41}+41$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{41}-41$
+H.$-41$
+I.$41$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 14}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+43}-43}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+43}-43}{x}=\frac{(\sqrt{x+43}-43)(\sqrt{x+43}+43)}{x(\sqrt{x+43}+43)}=\frac{1}{\sqrt{x+43}+43}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+43}-43}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+43}+43)} = \frac{1}{\sqrt{43}+43}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{43}+43}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{43}+43}$
+B.$\frac{43}{\sqrt{43}+43}$
+C.$0$
+D.$\sqrt{43}+43$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{43}-43$
+H.$-43$
+I.$43$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 15}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+47}-47}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+47}-47}{x}=\frac{(\sqrt{x+47}-47)(\sqrt{x+47}+47)}{x(\sqrt{x+47}+47)}=\frac{1}{\sqrt{x+47}+47}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+47}-47}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+47}+47)} = \frac{1}{\sqrt{47}+47}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{47}+47}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{47}+47}$
+B.$\frac{47}{\sqrt{47}+47}$
+C.$0$
+D.$\sqrt{47}+47$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{47}-47$
+H.$-47$
+I.$47$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 16}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+53}-53}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+53}-53}{x}=\frac{(\sqrt{x+53}-53)(\sqrt{x+53}+53)}{x(\sqrt{x+53}+53)}=\frac{1}{\sqrt{x+53}+53}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+53}-53}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+53}+53)} = \frac{1}{\sqrt{53}+53}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{53}+53}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{53}+53}$
+B.$\frac{53}{\sqrt{53}+53}$
+C.$0$
+D.$\sqrt{53}+53$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{53}-53$
+H.$-53$
+I.$53$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 17}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+59}-59}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+59}-59}{x}=\frac{(\sqrt{x+59}-59)(\sqrt{x+59}+59)}{x(\sqrt{x+59}+59)}=\frac{1}{\sqrt{x+59}+59}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+59}-59}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+59}+59)} = \frac{1}{\sqrt{59}+59}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{59}+59}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{59}+59}$
+B.$\frac{59}{\sqrt{59}+59}$
+C.$0$
+D.$\sqrt{59}+59$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{59}-59$
+H.$-59$
+I.$59$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 18}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+61}-61}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+61}-61}{x}=\frac{(\sqrt{x+61}-61)(\sqrt{x+61}+61)}{x(\sqrt{x+61}+61)}=\frac{1}{\sqrt{x+61}+61}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+61}-61}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+61}+61)} = \frac{1}{\sqrt{61}+61}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{61}+61}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{61}+61}$
+B.$\frac{61}{\sqrt{61}+61}$
+C.$0$
+D.$\sqrt{61}+61$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{61}-61$
+H.$-61$
+I.$61$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 19}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+67}-67}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+67}-67}{x}=\frac{(\sqrt{x+67}-67)(\sqrt{x+67}+67)}{x(\sqrt{x+67}+67)}=\frac{1}{\sqrt{x+67}+67}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+67}-67}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+67}+67)} = \frac{1}{\sqrt{67}+67}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{67}+67}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{67}+67}$
+B.$\frac{67}{\sqrt{67}+67}$
+C.$0$
+D.$\sqrt{67}+67$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{67}-67$
+H.$-67$
+I.$67$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 20}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+71}-71}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+71}-71}{x}=\frac{(\sqrt{x+71}-71)(\sqrt{x+71}+71)}{x(\sqrt{x+71}+71)}=\frac{1}{\sqrt{x+71}+71}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+71}-71}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+71}+71)} = \frac{1}{\sqrt{71}+71}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{71}+71}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{71}+71}$
+B.$\frac{71}{\sqrt{71}+71}$
+C.$0$
+D.$\sqrt{71}+71$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{71}-71$
+H.$-71$
+I.$71$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 21}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+73}-73}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+73}-73}{x}=\frac{(\sqrt{x+73}-73)(\sqrt{x+73}+73)}{x(\sqrt{x+73}+73)}=\frac{1}{\sqrt{x+73}+73}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+73}-73}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+73}+73)} = \frac{1}{\sqrt{73}+73}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{73}+73}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{73}+73}$
+B.$\frac{73}{\sqrt{73}+73}$
+C.$0$
+D.$\sqrt{73}+73$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{73}-73$
+H.$-73$
+I.$73$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 22}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+79}-79}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+79}-79}{x}=\frac{(\sqrt{x+79}-79)(\sqrt{x+79}+79)}{x(\sqrt{x+79}+79)}=\frac{1}{\sqrt{x+79}+79}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+79}-79}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+79}+79)} = \frac{1}{\sqrt{79}+79}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{79}+79}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{79}+79}$
+B.$\frac{79}{\sqrt{79}+79}$
+C.$0$
+D.$\sqrt{79}+79$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{79}-79$
+H.$-79$
+I.$79$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 23}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+83}-83}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+83}-83}{x}=\frac{(\sqrt{x+83}-83)(\sqrt{x+83}+83)}{x(\sqrt{x+83}+83)}=\frac{1}{\sqrt{x+83}+83}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+83}-83}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+83}+83)} = \frac{1}{\sqrt{83}+83}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{83}+83}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{83}+83}$
+B.$\frac{83}{\sqrt{83}+83}$
+C.$0$
+D.$\sqrt{83}+83$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{83}-83$
+H.$-83$
+I.$83$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 24}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+89}-89}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+89}-89}{x}=\frac{(\sqrt{x+89}-89)(\sqrt{x+89}+89)}{x(\sqrt{x+89}+89)}=\frac{1}{\sqrt{x+89}+89}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+89}-89}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+89}+89)} = \frac{1}{\sqrt{89}+89}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{89}+89}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{89}+89}$
+B.$\frac{89}{\sqrt{89}+89}$
+C.$0$
+D.$\sqrt{89}+89$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{89}-89$
+H.$-89$
+I.$89$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 25}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+97}-97}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+97}-97}{x}=\frac{(\sqrt{x+97}-97)(\sqrt{x+97}+97)}{x(\sqrt{x+97}+97)}=\frac{1}{\sqrt{x+97}+97}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+97}-97}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+97}+97)} = \frac{1}{\sqrt{97}+97}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{97}+97}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{97}+97}$
+B.$\frac{97}{\sqrt{97}+97}$
+C.$0$
+D.$\sqrt{97}+97$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{97}-97$
+H.$-97$
+I.$97$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 26}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+101}-101}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+101}-101}{x}=\frac{(\sqrt{x+101}-101)(\sqrt{x+101}+101)}{x(\sqrt{x+101}+101)}=\frac{1}{\sqrt{x+101}+101}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+101}-101}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+101}+101)} = \frac{1}{\sqrt{101}+101}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{101}+101}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{101}+101}$
+B.$\frac{101}{\sqrt{101}+101}$
+C.$0$
+D.$\sqrt{101}+101$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{101}-101$
+H.$-101$
+I.$101$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 27}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+103}-103}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+103}-103}{x}=\frac{(\sqrt{x+103}-103)(\sqrt{x+103}+103)}{x(\sqrt{x+103}+103)}=\frac{1}{\sqrt{x+103}+103}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+103}-103}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+103}+103)} = \frac{1}{\sqrt{103}+103}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{103}+103}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{103}+103}$
+B.$\frac{103}{\sqrt{103}+103}$
+C.$0$
+D.$\sqrt{103}+103$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{103}-103$
+H.$-103$
+I.$103$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 28}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+107}-107}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+107}-107}{x}=\frac{(\sqrt{x+107}-107)(\sqrt{x+107}+107)}{x(\sqrt{x+107}+107)}=\frac{1}{\sqrt{x+107}+107}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+107}-107}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+107}+107)} = \frac{1}{\sqrt{107}+107}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{107}+107}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{107}+107}$
+B.$\frac{107}{\sqrt{107}+107}$
+C.$0$
+D.$\sqrt{107}+107$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{107}-107$
+H.$-107$
+I.$107$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 29}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+109}-109}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+109}-109}{x}=\frac{(\sqrt{x+109}-109)(\sqrt{x+109}+109)}{x(\sqrt{x+109}+109)}=\frac{1}{\sqrt{x+109}+109}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+109}-109}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+109}+109)} = \frac{1}{\sqrt{109}+109}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{109}+109}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{109}+109}$
+B.$\frac{109}{\sqrt{109}+109}$
+C.$0$
+D.$\sqrt{109}+109$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{109}-109$
+H.$-109$
+I.$109$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 30}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+113}-113}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+113}-113}{x}=\frac{(\sqrt{x+113}-113)(\sqrt{x+113}+113)}{x(\sqrt{x+113}+113)}=\frac{1}{\sqrt{x+113}+113}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+113}-113}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+113}+113)} = \frac{1}{\sqrt{113}+113}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{113}+113}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{113}+113}$
+B.$\frac{113}{\sqrt{113}+113}$
+C.$0$
+D.$\sqrt{113}+113$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{113}-113$
+H.$-113$
+I.$113$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 31}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+127}-127}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+127}-127}{x}=\frac{(\sqrt{x+127}-127)(\sqrt{x+127}+127)}{x(\sqrt{x+127}+127)}=\frac{1}{\sqrt{x+127}+127}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+127}-127}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+127}+127)} = \frac{1}{\sqrt{127}+127}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{127}+127}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{127}+127}$
+B.$\frac{127}{\sqrt{127}+127}$
+C.$0$
+D.$\sqrt{127}+127$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{127}-127$
+H.$-127$
+I.$127$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 32}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+131}-131}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+131}-131}{x}=\frac{(\sqrt{x+131}-131)(\sqrt{x+131}+131)}{x(\sqrt{x+131}+131)}=\frac{1}{\sqrt{x+131}+131}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+131}-131}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+131}+131)} = \frac{1}{\sqrt{131}+131}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{131}+131}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{131}+131}$
+B.$\frac{131}{\sqrt{131}+131}$
+C.$0$
+D.$\sqrt{131}+131$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{131}-131$
+H.$-131$
+I.$131$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 33}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+137}-137}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+137}-137}{x}=\frac{(\sqrt{x+137}-137)(\sqrt{x+137}+137)}{x(\sqrt{x+137}+137)}=\frac{1}{\sqrt{x+137}+137}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+137}-137}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+137}+137)} = \frac{1}{\sqrt{137}+137}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{137}+137}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{137}+137}$
+B.$\frac{137}{\sqrt{137}+137}$
+C.$0$
+D.$\sqrt{137}+137$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{137}-137$
+H.$-137$
+I.$137$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 34}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+139}-139}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+139}-139}{x}=\frac{(\sqrt{x+139}-139)(\sqrt{x+139}+139)}{x(\sqrt{x+139}+139)}=\frac{1}{\sqrt{x+139}+139}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+139}-139}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+139}+139)} = \frac{1}{\sqrt{139}+139}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{139}+139}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{139}+139}$
+B.$\frac{139}{\sqrt{139}+139}$
+C.$0$
+D.$\sqrt{139}+139$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{139}-139$
+H.$-139$
+I.$139$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 35}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+149}-149}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+149}-149}{x}=\frac{(\sqrt{x+149}-149)(\sqrt{x+149}+149)}{x(\sqrt{x+149}+149)}=\frac{1}{\sqrt{x+149}+149}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+149}-149}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+149}+149)} = \frac{1}{\sqrt{149}+149}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{149}+149}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{149}+149}$
+B.$\frac{149}{\sqrt{149}+149}$
+C.$0$
+D.$\sqrt{149}+149$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{149}-149$
+H.$-149$
+I.$149$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 36}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+151}-151}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+151}-151}{x}=\frac{(\sqrt{x+151}-151)(\sqrt{x+151}+151)}{x(\sqrt{x+151}+151)}=\frac{1}{\sqrt{x+151}+151}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+151}-151}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+151}+151)} = \frac{1}{\sqrt{151}+151}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{151}+151}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{151}+151}$
+B.$\frac{151}{\sqrt{151}+151}$
+C.$0$
+D.$\sqrt{151}+151$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{151}-151$
+H.$-151$
+I.$151$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 37}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+157}-157}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+157}-157}{x}=\frac{(\sqrt{x+157}-157)(\sqrt{x+157}+157)}{x(\sqrt{x+157}+157)}=\frac{1}{\sqrt{x+157}+157}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+157}-157}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+157}+157)} = \frac{1}{\sqrt{157}+157}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{157}+157}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{157}+157}$
+B.$\frac{157}{\sqrt{157}+157}$
+C.$0$
+D.$\sqrt{157}+157$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{157}-157$
+H.$-157$
+I.$157$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 38}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+163}-163}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+163}-163}{x}=\frac{(\sqrt{x+163}-163)(\sqrt{x+163}+163)}{x(\sqrt{x+163}+163)}=\frac{1}{\sqrt{x+163}+163}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+163}-163}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+163}+163)} = \frac{1}{\sqrt{163}+163}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{163}+163}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{163}+163}$
+B.$\frac{163}{\sqrt{163}+163}$
+C.$0$
+D.$\sqrt{163}+163$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{163}-163$
+H.$-163$
+I.$163$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 39}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+167}-167}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+167}-167}{x}=\frac{(\sqrt{x+167}-167)(\sqrt{x+167}+167)}{x(\sqrt{x+167}+167)}=\frac{1}{\sqrt{x+167}+167}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+167}-167}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+167}+167)} = \frac{1}{\sqrt{167}+167}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{167}+167}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{167}+167}$
+B.$\frac{167}{\sqrt{167}+167}$
+C.$0$
+D.$\sqrt{167}+167$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{167}-167$
+H.$-167$
+I.$167$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 40}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+173}-173}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+173}-173}{x}=\frac{(\sqrt{x+173}-173)(\sqrt{x+173}+173)}{x(\sqrt{x+173}+173)}=\frac{1}{\sqrt{x+173}+173}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+173}-173}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+173}+173)} = \frac{1}{\sqrt{173}+173}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{173}+173}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{173}+173}$
+B.$\frac{173}{\sqrt{173}+173}$
+C.$0$
+D.$\sqrt{173}+173$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{173}-173$
+H.$-173$
+I.$173$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 41}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+179}-179}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+179}-179}{x}=\frac{(\sqrt{x+179}-179)(\sqrt{x+179}+179)}{x(\sqrt{x+179}+179)}=\frac{1}{\sqrt{x+179}+179}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+179}-179}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+179}+179)} = \frac{1}{\sqrt{179}+179}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{179}+179}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{179}+179}$
+B.$\frac{179}{\sqrt{179}+179}$
+C.$0$
+D.$\sqrt{179}+179$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{179}-179$
+H.$-179$
+I.$179$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 42}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+181}-181}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+181}-181}{x}=\frac{(\sqrt{x+181}-181)(\sqrt{x+181}+181)}{x(\sqrt{x+181}+181)}=\frac{1}{\sqrt{x+181}+181}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+181}-181}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+181}+181)} = \frac{1}{\sqrt{181}+181}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{181}+181}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{181}+181}$
+B.$\frac{181}{\sqrt{181}+181}$
+C.$0$
+D.$\sqrt{181}+181$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{181}-181$
+H.$-181$
+I.$181$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 43}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+191}-191}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+191}-191}{x}=\frac{(\sqrt{x+191}-191)(\sqrt{x+191}+191)}{x(\sqrt{x+191}+191)}=\frac{1}{\sqrt{x+191}+191}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+191}-191}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+191}+191)} = \frac{1}{\sqrt{191}+191}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{191}+191}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{191}+191}$
+B.$\frac{191}{\sqrt{191}+191}$
+C.$0$
+D.$\sqrt{191}+191$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{191}-191$
+H.$-191$
+I.$191$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 44}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+193}-193}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+193}-193}{x}=\frac{(\sqrt{x+193}-193)(\sqrt{x+193}+193)}{x(\sqrt{x+193}+193)}=\frac{1}{\sqrt{x+193}+193}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+193}-193}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+193}+193)} = \frac{1}{\sqrt{193}+193}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{193}+193}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{193}+193}$
+B.$\frac{193}{\sqrt{193}+193}$
+C.$0$
+D.$\sqrt{193}+193$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{193}-193$
+H.$-193$
+I.$193$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 45}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+197}-197}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+197}-197}{x}=\frac{(\sqrt{x+197}-197)(\sqrt{x+197}+197)}{x(\sqrt{x+197}+197)}=\frac{1}{\sqrt{x+197}+197}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+197}-197}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+197}+197)} = \frac{1}{\sqrt{197}+197}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{197}+197}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{197}+197}$
+B.$\frac{197}{\sqrt{197}+197}$
+C.$0$
+D.$\sqrt{197}+197$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{197}-197$
+H.$-197$
+I.$197$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 46}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+199}-199}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+199}-199}{x}=\frac{(\sqrt{x+199}-199)(\sqrt{x+199}+199)}{x(\sqrt{x+199}+199)}=\frac{1}{\sqrt{x+199}+199}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+199}-199}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+199}+199)} = \frac{1}{\sqrt{199}+199}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{199}+199}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{199}+199}$
+B.$\frac{199}{\sqrt{199}+199}$
+C.$0$
+D.$\sqrt{199}+199$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{199}-199$
+H.$-199$
+I.$199$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 47}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+211}-211}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+211}-211}{x}=\frac{(\sqrt{x+211}-211)(\sqrt{x+211}+211)}{x(\sqrt{x+211}+211)}=\frac{1}{\sqrt{x+211}+211}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+211}-211}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+211}+211)} = \frac{1}{\sqrt{211}+211}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{211}+211}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{211}+211}$
+B.$\frac{211}{\sqrt{211}+211}$
+C.$0$
+D.$\sqrt{211}+211$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{211}-211$
+H.$-211$
+I.$211$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 48}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+223}-223}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+223}-223}{x}=\frac{(\sqrt{x+223}-223)(\sqrt{x+223}+223)}{x(\sqrt{x+223}+223)}=\frac{1}{\sqrt{x+223}+223}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+223}-223}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+223}+223)} = \frac{1}{\sqrt{223}+223}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{223}+223}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{223}+223}$
+B.$\frac{223}{\sqrt{223}+223}$
+C.$0$
+D.$\sqrt{223}+223$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{223}-223$
+H.$-223$
+I.$223$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 49}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+227}-227}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+227}-227}{x}=\frac{(\sqrt{x+227}-227)(\sqrt{x+227}+227)}{x(\sqrt{x+227}+227)}=\frac{1}{\sqrt{x+227}+227}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+227}-227}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+227}+227)} = \frac{1}{\sqrt{227}+227}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{227}+227}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{227}+227}$
+B.$\frac{227}{\sqrt{227}+227}$
+C.$0$
+D.$\sqrt{227}+227$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{227}-227$
+H.$-227$
+I.$227$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 50}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+229}-229}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+229}-229}{x}=\frac{(\sqrt{x+229}-229)(\sqrt{x+229}+229)}{x(\sqrt{x+229}+229)}=\frac{1}{\sqrt{x+229}+229}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+229}-229}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+229}+229)} = \frac{1}{\sqrt{229}+229}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{229}+229}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{229}+229}$
+B.$\frac{229}{\sqrt{229}+229}$
+C.$0$
+D.$\sqrt{229}+229$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{229}-229$
+H.$-229$
+I.$229$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 51}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+233}-233}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+233}-233}{x}=\frac{(\sqrt{x+233}-233)(\sqrt{x+233}+233)}{x(\sqrt{x+233}+233)}=\frac{1}{\sqrt{x+233}+233}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+233}-233}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+233}+233)} = \frac{1}{\sqrt{233}+233}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{233}+233}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{233}+233}$
+B.$\frac{233}{\sqrt{233}+233}$
+C.$0$
+D.$\sqrt{233}+233$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{233}-233$
+H.$-233$
+I.$233$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 52}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+239}-239}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+239}-239}{x}=\frac{(\sqrt{x+239}-239)(\sqrt{x+239}+239)}{x(\sqrt{x+239}+239)}=\frac{1}{\sqrt{x+239}+239}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+239}-239}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+239}+239)} = \frac{1}{\sqrt{239}+239}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{239}+239}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{239}+239}$
+B.$\frac{239}{\sqrt{239}+239}$
+C.$0$
+D.$\sqrt{239}+239$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{239}-239$
+H.$-239$
+I.$239$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 53}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+241}-241}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+241}-241}{x}=\frac{(\sqrt{x+241}-241)(\sqrt{x+241}+241)}{x(\sqrt{x+241}+241)}=\frac{1}{\sqrt{x+241}+241}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+241}-241}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+241}+241)} = \frac{1}{\sqrt{241}+241}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{241}+241}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{241}+241}$
+B.$\frac{241}{\sqrt{241}+241}$
+C.$0$
+D.$\sqrt{241}+241$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{241}-241$
+H.$-241$
+I.$241$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 54}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+251}-251}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+251}-251}{x}=\frac{(\sqrt{x+251}-251)(\sqrt{x+251}+251)}{x(\sqrt{x+251}+251)}=\frac{1}{\sqrt{x+251}+251}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+251}-251}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+251}+251)} = \frac{1}{\sqrt{251}+251}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{251}+251}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{251}+251}$
+B.$\frac{251}{\sqrt{251}+251}$
+C.$0$
+D.$\sqrt{251}+251$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{251}-251$
+H.$-251$
+I.$251$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 55}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+257}-257}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+257}-257}{x}=\frac{(\sqrt{x+257}-257)(\sqrt{x+257}+257)}{x(\sqrt{x+257}+257)}=\frac{1}{\sqrt{x+257}+257}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+257}-257}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+257}+257)} = \frac{1}{\sqrt{257}+257}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{257}+257}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{257}+257}$
+B.$\frac{257}{\sqrt{257}+257}$
+C.$0$
+D.$\sqrt{257}+257$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{257}-257$
+H.$-257$
+I.$257$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 56}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+263}-263}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+263}-263}{x}=\frac{(\sqrt{x+263}-263)(\sqrt{x+263}+263)}{x(\sqrt{x+263}+263)}=\frac{1}{\sqrt{x+263}+263}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+263}-263}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+263}+263)} = \frac{1}{\sqrt{263}+263}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{263}+263}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{263}+263}$
+B.$\frac{263}{\sqrt{263}+263}$
+C.$0$
+D.$\sqrt{263}+263$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{263}-263$
+H.$-263$
+I.$263$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 57}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+269}-269}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+269}-269}{x}=\frac{(\sqrt{x+269}-269)(\sqrt{x+269}+269)}{x(\sqrt{x+269}+269)}=\frac{1}{\sqrt{x+269}+269}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+269}-269}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+269}+269)} = \frac{1}{\sqrt{269}+269}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{269}+269}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{269}+269}$
+B.$\frac{269}{\sqrt{269}+269}$
+C.$0$
+D.$\sqrt{269}+269$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{269}-269$
+H.$-269$
+I.$269$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 58}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+271}-271}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+271}-271}{x}=\frac{(\sqrt{x+271}-271)(\sqrt{x+271}+271)}{x(\sqrt{x+271}+271)}=\frac{1}{\sqrt{x+271}+271}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+271}-271}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+271}+271)} = \frac{1}{\sqrt{271}+271}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{271}+271}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{271}+271}$
+B.$\frac{271}{\sqrt{271}+271}$
+C.$0$
+D.$\sqrt{271}+271$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{271}-271$
+H.$-271$
+I.$271$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 59}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+277}-277}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+277}-277}{x}=\frac{(\sqrt{x+277}-277)(\sqrt{x+277}+277)}{x(\sqrt{x+277}+277)}=\frac{1}{\sqrt{x+277}+277}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+277}-277}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+277}+277)} = \frac{1}{\sqrt{277}+277}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{277}+277}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{277}+277}$
+B.$\frac{277}{\sqrt{277}+277}$
+C.$0$
+D.$\sqrt{277}+277$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{277}-277$
+H.$-277$
+I.$277$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 60}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+281}-281}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+281}-281}{x}=\frac{(\sqrt{x+281}-281)(\sqrt{x+281}+281)}{x(\sqrt{x+281}+281)}=\frac{1}{\sqrt{x+281}+281}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+281}-281}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+281}+281)} = \frac{1}{\sqrt{281}+281}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{281}+281}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{281}+281}$
+B.$\frac{281}{\sqrt{281}+281}$
+C.$0$
+D.$\sqrt{281}+281$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{281}-281$
+H.$-281$
+I.$281$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 61}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+283}-283}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+283}-283}{x}=\frac{(\sqrt{x+283}-283)(\sqrt{x+283}+283)}{x(\sqrt{x+283}+283)}=\frac{1}{\sqrt{x+283}+283}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+283}-283}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+283}+283)} = \frac{1}{\sqrt{283}+283}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{283}+283}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{283}+283}$
+B.$\frac{283}{\sqrt{283}+283}$
+C.$0$
+D.$\sqrt{283}+283$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{283}-283$
+H.$-283$
+I.$283$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 62}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+293}-293}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+293}-293}{x}=\frac{(\sqrt{x+293}-293)(\sqrt{x+293}+293)}{x(\sqrt{x+293}+293)}=\frac{1}{\sqrt{x+293}+293}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+293}-293}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+293}+293)} = \frac{1}{\sqrt{293}+293}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{293}+293}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{293}+293}$
+B.$\frac{293}{\sqrt{293}+293}$
+C.$0$
+D.$\sqrt{293}+293$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{293}-293$
+H.$-293$
+I.$293$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 63}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+307}-307}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+307}-307}{x}=\frac{(\sqrt{x+307}-307)(\sqrt{x+307}+307)}{x(\sqrt{x+307}+307)}=\frac{1}{\sqrt{x+307}+307}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+307}-307}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+307}+307)} = \frac{1}{\sqrt{307}+307}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{307}+307}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{307}+307}$
+B.$\frac{307}{\sqrt{307}+307}$
+C.$0$
+D.$\sqrt{307}+307$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{307}-307$
+H.$-307$
+I.$307$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 64}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+311}-311}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+311}-311}{x}=\frac{(\sqrt{x+311}-311)(\sqrt{x+311}+311)}{x(\sqrt{x+311}+311)}=\frac{1}{\sqrt{x+311}+311}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+311}-311}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+311}+311)} = \frac{1}{\sqrt{311}+311}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{311}+311}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{311}+311}$
+B.$\frac{311}{\sqrt{311}+311}$
+C.$0$
+D.$\sqrt{311}+311$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{311}-311$
+H.$-311$
+I.$311$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 65}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+313}-313}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+313}-313}{x}=\frac{(\sqrt{x+313}-313)(\sqrt{x+313}+313)}{x(\sqrt{x+313}+313)}=\frac{1}{\sqrt{x+313}+313}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+313}-313}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+313}+313)} = \frac{1}{\sqrt{313}+313}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{313}+313}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{313}+313}$
+B.$\frac{313}{\sqrt{313}+313}$
+C.$0$
+D.$\sqrt{313}+313$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{313}-313$
+H.$-313$
+I.$313$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 66}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+317}-317}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+317}-317}{x}=\frac{(\sqrt{x+317}-317)(\sqrt{x+317}+317)}{x(\sqrt{x+317}+317)}=\frac{1}{\sqrt{x+317}+317}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+317}-317}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+317}+317)} = \frac{1}{\sqrt{317}+317}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{317}+317}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{317}+317}$
+B.$\frac{317}{\sqrt{317}+317}$
+C.$0$
+D.$\sqrt{317}+317$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{317}-317$
+H.$-317$
+I.$317$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 67}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+331}-331}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+331}-331}{x}=\frac{(\sqrt{x+331}-331)(\sqrt{x+331}+331)}{x(\sqrt{x+331}+331)}=\frac{1}{\sqrt{x+331}+331}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+331}-331}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+331}+331)} = \frac{1}{\sqrt{331}+331}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{331}+331}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{331}+331}$
+B.$\frac{331}{\sqrt{331}+331}$
+C.$0$
+D.$\sqrt{331}+331$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{331}-331$
+H.$-331$
+I.$331$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 68}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+337}-337}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+337}-337}{x}=\frac{(\sqrt{x+337}-337)(\sqrt{x+337}+337)}{x(\sqrt{x+337}+337)}=\frac{1}{\sqrt{x+337}+337}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+337}-337}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+337}+337)} = \frac{1}{\sqrt{337}+337}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{337}+337}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{337}+337}$
+B.$\frac{337}{\sqrt{337}+337}$
+C.$0$
+D.$\sqrt{337}+337$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{337}-337$
+H.$-337$
+I.$337$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 69}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+347}-347}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+347}-347}{x}=\frac{(\sqrt{x+347}-347)(\sqrt{x+347}+347)}{x(\sqrt{x+347}+347)}=\frac{1}{\sqrt{x+347}+347}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+347}-347}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+347}+347)} = \frac{1}{\sqrt{347}+347}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{347}+347}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{347}+347}$
+B.$\frac{347}{\sqrt{347}+347}$
+C.$0$
+D.$\sqrt{347}+347$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{347}-347$
+H.$-347$
+I.$347$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 70}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+349}-349}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+349}-349}{x}=\frac{(\sqrt{x+349}-349)(\sqrt{x+349}+349)}{x(\sqrt{x+349}+349)}=\frac{1}{\sqrt{x+349}+349}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+349}-349}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+349}+349)} = \frac{1}{\sqrt{349}+349}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{349}+349}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{349}+349}$
+B.$\frac{349}{\sqrt{349}+349}$
+C.$0$
+D.$\sqrt{349}+349$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{349}-349$
+H.$-349$
+I.$349$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.3 a) moja wersja nr 71}
+Obliczyć granicę funkcji $f(x)=\frac{\sqrt{x+353}-353}{x}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\frac{\sqrt{x+353}-353}{x}=\frac{(\sqrt{x+353}-353)(\sqrt{x+353}+353)}{x(\sqrt{x+353}+353)}=\frac{1}{\sqrt{x+353}+353}$$
+\\
+$$\lim\limits_{x\to0}\frac{\sqrt{x+353}-353}{x}=[\frac{0}{0}]=
+\lim\limits_{x\to0}\frac{x}{x(\sqrt{x+353}+353)} = \frac{1}{\sqrt{353}+353}$$
+\rozwStop
+\odpStart
+$\frac{1}{\sqrt{353}+353}$
+\odpStop
+\testStart
+A.$\frac{1}{\sqrt{353}+353}$
+B.$\frac{353}{\sqrt{353}+353}$
+C.$0$
+D.$\sqrt{353}+353$
+E.$\infty$
+F.$-\infty$
+G.$\sqrt{353}-353$
+H.$-353$
+I.$353$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

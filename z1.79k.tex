@@ -32,38 +32,56 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.79k}
+\zadStart{Zadanie z Wikieł Z 1.79 k) moja wersja nr [nrWersji]}
+%[z]:[1,2,3,4,5,6,7,8,9,10,11]
+%[z1]:[12,13,14,15,16,17,18,19,20]
+%[z2]:[12,13,14,15,16,17,18,19,20]
+%[b]=random.randint(2,20)
+%[a]=random.randint([b]*[b],400)
+%[b2]=2*[b]-1
+%[b3]=-[b]*[b]+[a]
+%[d]=[b2]*[b2]+4*[b3]
+%[dep]=int(math.sqrt([d]))
+%[x1]=int((-[b2]-[dep])/(-2))
+%[x2]=int((-[b2]+[dep])/(-2))
+%[b3]>0 and [d]>0 and [dep]-(math.sqrt([d]))==0 and [x2]<[b] and [x1]<[a]
+Rozwiązać nierówność $\sqrt{[a]-x}>x-[b]$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Barbara Bączek}{}
+Zaczniemy od wyznaczenia dziedziny.
+$$D:[a]-x \geq 0 $$
+$$D: x \in (-\infty, [a]]$$
+\begin{enumerate}
+\item Rozpatrzmy przypadek, gdy $x-[b]<0$, wtedy 
+$$x \in (-\infty,[b]) \hspace{0.1 cm} \wedge \hspace{0.1 cm} x \in (-\infty, [a]]$$
+$$x \in (-\infty,[b])$$
+Nierówność jest tożsamościowa w zbiorze $ x \in (-\infty, [b])$.
+\item Teraz, niech $(x-[b] \geq 0) \hspace{0.1 cm} \wedge \hspace{0.1 cm} (x \in (-\infty, [a]]$, czyli
+$$x \in [[b], [a]]$$
+W powyższym zbiorze obie strony nierówności są nieujemne.
+$$[a]-x>x^2-2[b]+{[b]}^2$$
+$$-x^2 +[b2]x + [b3]>0$$
+$$\Delta = [d] \hspace{0.1 cm} \wedge \hspace{0.1 cm} \sqrt{\Delta}=[dep]$$
+$$x_1=[x1] \hspace{0.1 cm} \wedge \hspace{0.1cm}  x_2=[x2]$$
+Rozwiązaniem $\sqrt{[a]-x}>x-[b]$ w zbiorze $[[b], [a]]$ jest więc $[[b], [x1])$.
+\end{enumerate}
+3. Podsumowując: $x \in (-\infty, [x1])$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in (-\infty, [a]]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x \in [[b],[a])$
+B.$x \in (-\infty, [x1]]$
+C.$x \in ([b], [x1])$
+D.$x \in (-\infty,[b]) \cup ([a], \infty)$
+E.$x \in (-\infty, [x1])$
+G.$x \in (-\infty,[b]] \cup [[a], \infty)$
+H.$x \in [[x1], \infty)$
 \testStop
 \kluczStart
-A
+E
 \kluczStop
 
 

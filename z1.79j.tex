@@ -32,38 +32,37 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.79j}
+\zadStart{Zadanie z Wikieł Z 1.79 j) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12]
+%[c]=random.randint(-100,-14)
+%[a]!=[b] and [a]!=[c] and [b]!=[c] and math.gcd([a],[b])==1
+Rozwiązać nierówność
+$$\sqrt{[a]x^2-[b]x}>[c].$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+Zakładamy, że $[a]x^2-[b]x\geq0$. Zatem:
+$$[a]x^2-[b]x\geq\Leftrightarrow[a]x\bigg(x-\frac{[b]}{[a]}\bigg)\geq0$$
+Zauważamy, że mamy parabolę z ramionami skierowanymi w górę oraz miejscami zerowymi w $x=0$ oraz $x=\frac{[b]}{[a]}$. Stąd $x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$.
+\\Lewa strona rozważanej nierówności jest nieujemna, a prawa ujemna, więc nierówność zachodzi dla każdego $x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$.
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in\big(-\infty,[c]\big]\cup\big[0,\infty\big)$
+B.$x\in\mathbb{R}\setminus\{0\}$
+C.$x\in\mathbb{R}$
+D.$x\in\big(-\infty,0\big)\cup\big(\frac{[b]}{[a]},\infty\big)$
+E.$x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$
+F.$x\in\big(-\infty,0\big]\cup\big(\frac{[b]}{[a]},\infty\big)$
+G.$x\in\big[\frac{[b]}{[a]},\infty\big)$
+H.$x\in\big(-\infty,0\big)\cup\big[\frac{[b]}{[a]},\infty\big)$
+I.$x\in\big(-\infty,0\big]$
 \testStop
 \kluczStart
-A
+E
 \kluczStop
 
 

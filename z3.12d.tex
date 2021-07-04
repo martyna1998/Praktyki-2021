@@ -32,38 +32,47 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.12d}
+\zadStart{Zadanie z Wikieł Z 3.12 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7]
+%[b]:[2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[d]:[2,3,4,5,6,7]
+%[2a]=2*[a]
+%[2c]=2*[c]
+%[e]=[a]+[2a]+[b]
+%[f]=[2a]+[b]
+%[g]=[c]+[2c]
+%math.gcd([a],[c])==1 and math.gcd([b],[d])==1
+Obliczyć granicę ciągu 
+$$a_n=\frac{[a](n+2)!+[b](n+1)!}{[c](n+2)!-[d](n-1)!}.$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\frac{[a](n+2)!+[b](n+1)!}{[c](n+2)!-[d](n-1)!}$$
+$$=\lim_{n\to\infty}\frac{[a](n+2)(n+1)n(n-1)!+[b](n+1)n(n-1)!}{[c](n+2)(n+1)n(n-1)!-[d](n-1)!}$$
+$$=\lim_{n\to\infty}\frac{(n-1)![[a](n+2)(n+1)n+[b](n+1)n]}{(n-1)![[c](n+2)(n+1)n-[d]]}$$
+$$=\lim_{n\to\infty}\frac{[a](n+2)(n+1)n+[b](n+1)n}{[c](n+2)(n+1)n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a](n^2+n+2n+2)n+[b](n^2+n)}{[c](n^2+n+2n+2)n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]n^3+[a]n^2+[2a]n^2+[2a]n+[b]n^2+[b]n}{[c]n^3+[c]n^2+[2c]n^2+[2c]n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]n^3+[e]n^2+[f]n}{[c]n^3+[g]n^2+[2c]n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]+\frac{[e]}{n}+\frac{[f]}{n^2}}{[c]+\frac{[g]}{n}+\frac{[2c]}{n^2}-\frac{[d]}{n^3}}=\frac{[a]}{[c]}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+ $\frac{[a]}{[c]}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$\infty$
+B. $\frac{[c]}{[a]}$
+C.$0$
+D.$\frac{[a]}{[c]}$
+E. $-\frac{[c]}{[a]}$
+F.$-\frac{[a]}{[c]}$
+G.$-\infty$
+H.$-\frac{[b]}{[d]}$
+I.$-\frac{[d]}{[b]}$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

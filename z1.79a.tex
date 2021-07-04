@@ -32,38 +32,39 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.79a}
+\zadStart{Zadanie z Wikieł Z 1.79 a) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[b3]=[b]*[b]*[b]
+%[ab]=[a]+[b3]
+%
+Rozwiązać nierówność
+$$\sqrt[3]{[a]-x}<-[b].$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+Pierwiastek nieparzystego stopnia istnieje dla każdej liczby rzeczywistej, stąd założenie $x\in\mathbb{R}$.
+$$\sqrt[3]{[a]-x}<-[b]\Leftrightarrow[a]-x<(-[b])^3\Leftrightarrow[a]-x<-[b3]$$
+$$\Leftrightarrow[a]+[b3]<x\Leftrightarrow x>[ab]$$
+Zatem otrzymujemy ostatecznie, że 
+$$x\in([ab],\infty).$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in([ab],\infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in(-[ab],\infty)$
+B.$x\in([ab],\infty)$
+C.$x\in\mathbb{R}$
+D.$x\in[[ab],\infty)$
+E.$x\in(-\infty,[ab]]$
+F.$x\in\mathbb{R}\setminus\{0\}$
+G.$x\in(-\infty,[ab])$
+H.$x\in\emptyset$
+I.$x\in[-[ab],\infty)$
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

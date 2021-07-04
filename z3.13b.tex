@@ -32,35 +32,40 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.13b}
+\zadStart{Zadanie z Wikieł Z 3.13 b) moja wersja nr [nrWersji]}
+%[b]:[3,5,7,9,11,13,15,17]
+%[c]:[2,3,4,5,6,7,8,9]
+%math.gcd([b],2)==1
+Obliczyć granicę ciągu 
+$$a_n=\big(\sqrt{n^2+[c]}-\sqrt{n^2+[b]n+[c]}\big).$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\big(\sqrt{n^2+[c]}-\sqrt{n^2+[b]n+[c]}\big)$$
+$$=\lim_{n\to\infty}\frac{\big(\sqrt{n^2+[c]}-\sqrt{n^2+[b]n+[c]}\big)\big(\sqrt{n^2+[c]}+\sqrt{n^2+[b]n+[c]}\big)}{\sqrt{n^2+[c]}+\sqrt{n^2+[b]n+[c]}}=(*)$$
+W liczniku skorzystamy ze wzoru $(a-b)(a+b)=a^2-b^2$.
+$$(*)=\lim_{n\to\infty}\frac{n^2+[c]-n^2-[b]n-[c]}{\sqrt{n^2+[c]}+\sqrt{n^2+[b]n+[c]}}=\lim_{n\to\infty}\frac{-[b]n}{\sqrt{n^2+[c]}+\sqrt{n^2+[b]n+[c]}}$$
+$$=\lim_{n\to\infty}\frac{-[b]n}{\sqrt{n^2(1+\frac{[c]}{n^2})}+\sqrt{n^2(1+\frac{[b]}{n}+\frac{[c]}{n^2})}}=\lim_{n\to\infty}\frac{n\cdot(-[b])}{n\sqrt{1+\frac{[c]}{n^2}}+n\sqrt{1+\frac{[b]}{n}+\frac{[c]}{n^2}}}$$
+$$\lim_{n\to\infty}\frac{-[b]}{\sqrt{1+\frac{[c]}{n^2}}+\sqrt{1+\frac{[b]}{n}+\frac{[c]}{n^2}}}=(**)$$
+Wiemy, że $$\lim_{n\to\infty}\frac{[c]}{n^2}=0$$
+oraz 
+$$\lim_{n\to\infty}\frac{[b]}{n}=0.$$
+Mamy zatem:
+$$(**)=\frac{-[b]}{1+1}=-\frac{[b]}{2}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$-\frac{[b]}{2}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
+A.$-\frac{[b]}{2}$
+B.$-[b]$
+C.$e^{-[b]}$
 D.$0$
+E.$-\infty$
+F.$e^{[b]}$
+G.$1$
+H.$\infty$
+I.$-1$
 \testStop
 \kluczStart
 A

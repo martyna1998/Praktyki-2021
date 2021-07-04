@@ -32,38 +32,36 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.76b}
+\zadStart{Zadanie z Wikieł Z 1.76 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6]
+%[b]:[1,2,3,4,5]
+%[c]:[3,4,5,6,7]
+%[d]:[2,3,4,5,6]
+%[a]<[c]
+Wyznaczyć dziedzinę naturalną funkcji określonej podanym wzorem.
+$$f(x)=(x-[a])^{\frac{3}{2}}(x-[b])^{\frac{2}{3}}-([c]-x)^{\frac{5}{4}}([d]-x)^{\frac{4}{5}}$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+Funkcje potęgowe $f_1(t)=t^{\frac{3}{2}}=\sqrt{t^3}$ oraz $f_3(u)=u^{\frac{5}{4}}=\sqrt[4]{u^5}$ są określone na zbiorze $\mathbb{R}_+\cup\{0\}$. Natomiast funkcje potęgowe $f_2(w)=w^{\frac{2}{3}}=\sqrt[3]{w^2}$ oraz $f_4(z)=z^{\frac{4}{5}}=\sqrt[5]{z^4}$ są określone na zbiorze $\mathbb{R}$. Zatem dziedziną funkcji $f$ jest zbiór
+$$D_{f}=\{x\in\mathbb{R}:x-[a]\geq0 \land [c]-x\geq0\}=\{x\in\mathbb{R}:x\geq[a] \land x\leq[c]\}=[[a],[c]].$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$D_f=[[a],[c]]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$D_f=(-[c],-[a])$
+B.$D_f=\mathbb{R}$
+C.$D_f=[[a],[c]]$
+D.$D_f=[[c],\infty)$
+E.$D_f=([a],[c])$
+F.$D_f=\mathbb{R}\setminus\{0\}$
+G.$D_f=[[a],\infty)]$
+H.$D_f=[-[c],-[a]]$
+I.$D_f=(-\infty,[c]]$
 \testStop
 \kluczStart
-A
+C
 \kluczStop
 
 

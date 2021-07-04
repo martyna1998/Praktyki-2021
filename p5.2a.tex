@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Jacek Jabłoński}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,35 +32,38 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/P5.2a}
+\zadStart{Zadanie z Wikieł P 5.2a) moja wersja nr [nrWersji]}
+%[p1]:[2,4,8,16,32,64,128,256,512,1024]
+%[p2]:[2,4,8,16,32,64,128,256,512,1024]
+%[a]=random.randint(2,8)
+%[b]=random.randint(2,6)
+%[c]=random.randint(2,6)
+%[d]=random.randint(2,6)
+%[w1]=[a]*2
+%[f1]=[b]+[d]
+%[f2]=random.randint(1,14)
+%[f3]=[w1]+[f2]
+Korzystając z podanych wzorów i twierdzeń, wyznacz pochodną funkcji:
+a) $f(x)=[a]x^2 + [b]x + \frac{[c]}{x} + [d]$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Jacek Jabłoński}{}
+$$f'(x) = ([a]x^2 + [b]x + \frac{[c]}{x} + [d])' = [a](x^2)' + [b](x)' + [c](x^{-1})' + ([d])' = $$
+$$= [w1]x + [b] - [c]x^{-2} + 0 = [w1]x - \frac{[c]}{x^2} + [b] $$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$[w1]x - \frac{[c]}{x^2} + [b]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $$[w1]x - \frac{[c]}{x^2} + [b]$$
+B. $$[a]x + \frac{[c]}{x^{-2}} + [f1]$$
+C. $$[w1]x - \frac{[c]}{x^3} + [f1]$$
+D. $$[w1]x^2 + \frac{[c]}{x} + [f2]$$
+E. $$[c]{x^2} + [b]$$
+F. $$[f1]x + [f2]$$
+G. $$[f3]x + \frac{[c]}{x^2} + [b]$$
+H. $$[d]x - \frac{[c]}{x} + [b]$$
+I. $$ [b]x$$
 \testStop
 \kluczStart
 A

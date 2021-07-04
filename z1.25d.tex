@@ -1,0 +1,104 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.25d}
+\zadStart{Zadanie z Wikieł Z 1.25 d) moja wersja nr [nrWersji]}
+%[a]=random.randint(1,10)
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]:[2,3,4,5,6,7,8,9]
+%[d]=random.randint(1,10)
+%[e]=random.randint(1,10)
+%[f]:[2,3,4,5,6,7,8,9]
+%[g]=random.randint(1,10)
+%[h]:[2,3,4,5,6,7,8,9]
+%[i]=random.randint(1,10)
+%[j]=random.randint(1,10)
+%[ed]=-[e]-[d]
+%[ed2]=[e]-[d]
+%[ij]=[i]-[j]
+%[ij2]=[i]+[j]
+%math.gcd([a],[b])==1 and math.gcd([g],[f])==1 and math.gcd([ed],[c])==1 and math.gcd([ed2],[c])==1 and math.gcd([ij],[h])==1 and math.gcd([ij2],[h])==1 and ([ed]/[c]) < (-[g]/[f]) < ([ed2]/[c]) < ([ij]/[h]) < ([ij2]/[h]) < ([a]/[b]) 
+
+Wyznacz dziedzinę funkcji określonej podanym wzorem \\ $f(x)=\frac{\sqrt{[a]-[b]x}}{|[c]x+[d]|-[e]} + \frac{\sqrt{[f]x+[g]}}{\sqrt{|[h]x-[i]|-[j]}}$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\frac{\sqrt{[a]-[b]x}}{|[c]x+[d]|-[e]} + \frac{\sqrt{[f]x+[g]}}{\sqrt{|[h]x-[i]|-[j]}}$$
+\begin{enumerate}
+\item $$[a]-[b]x \geq 0 $$
+$$[b]x \leq [a] $$
+$$x \leq \frac{[a]}{[b]} $$
+$$ x \in \left(-\infty, \frac{[a]}{[b]} \right] $$
+
+\item $$ [f]x+[g] \geq 0 $$
+$$ [f]x \geq -[g] $$
+$$ x \geq -\frac{[g]}{[f]} $$
+$$ x \in \left[ -\frac{[g]}{[f]} , \infty \right) $$
+
+\item $$|[c]x+[d]|-[e] \neq 0$$
+$$|[c]x+[d]| \neq [e]$$
+$$[c]x+[d] \neq -[e] \vee [c]x+[d] \neq [e]$$
+$$[c]x \neq [ed] \vee [c]x \neq [ed2]$$
+$$x \neq \frac{[ed]}{[c]} \vee x \neq \frac{[ed2]}{[c]}$$
+$$x \in \mathbb{R} \backslash \left\{ \frac{[ed]}{[c]}, \frac{[ed2]}{[c]} \right\} $$
+
+\item $$ \sqrt{|[h]x-[i]|-[j]} \neq 0 \land |[h]x-[i]|-[j] \geq 0 $$
+$$ |[h]x-[i]|-[j] \neq 0 \land |[h]x-[i]|-[j] \geq 0 $$
+$$ |[h]x-[i]|-[j] > 0 $$
+$$ |[h]x-[i]| > [j] $$
+$$ [h]x-[i] < -[j]  \vee [h]x-[i] >[j]$$
+$$ [h]x < [ij]  \vee [h]x >[ij2]$$
+$$ x < \frac{[ij]}{[h]}  \vee x >\frac{[ij2]}{[h]}$$
+$$ x \in \left( -\infty , \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \infty \right) $$
+\end{enumerate}
+$$ x \in \left(-\infty, \frac{[a]}{[b]} \right] \land x \in \left[ -\frac{[g]}{[f]} , \infty \right) \land x \in \mathbb{R} \backslash \left\{ \frac{[ed]}{[c]}, \frac{[ed2]}{[c]} \right\} \land x \in \left( -\infty , \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \infty \right) $$
+$$ x \in \left[ -\frac{[g]}{[f]},  \frac{[ed2]}{[c]} \right) \cup \left( \frac{[ed2]}{[c]}, \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \frac{[a]}{[b]} \right] $$
+\rozwStop
+\odpStart
+$ x \in \left[ -\frac{[g]}{[f]},  \frac{[ed2]}{[c]} \right) \cup \left( \frac{[ed2]}{[c]}, \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \frac{[a]}{[b]} \right] $
+\odpStop
+\testStart
+A.$ x \in \left[ -\frac{[g]}{[f]},  \frac{[ed2]}{[c]} \right) \cup \left( \frac{[ed2]}{[c]}, \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \frac{[a]}{[b]} \right] $\\
+B. $ x \in \left[ -\frac{[g]}{[f]},  \frac{[ed2]}{[c]} \right) \cup \left( \frac{[ed2]}{[c]}, \frac{[ij]}{[h]} \right)$ \\
+C. $ x \in \left[ -\frac{[g]}{[f]},  \frac{[ed2]}{[c]} \right) \cup  \left( \frac{[ij2]}{[h]} , \frac{[a]}{[b]} \right] $ \\
+D. $ x \in  \left( \frac{[ed2]}{[c]}, \frac{[ij]}{[h]} \right) \cup \left( \frac{[ij2]}{[h]} , \frac{[a]}{[b]} \right] $\\
+E. $ x \in \mathbb{R} $\\
+F. $ x \in \emptyset $
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

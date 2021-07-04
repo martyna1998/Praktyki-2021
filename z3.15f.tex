@@ -32,38 +32,41 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.15f}
+\zadStart{Zadanie z Wikieł Z 3.15 f) moja wersja nr [nrWersji]}
+%[a]:[8,9,10,11,12]
+%[b]:[8,9,10,11,12]
+%[c]:[8,9,10,11,12]
+%[d]:[8,9,10,11,12]
+%[e]:[8,9,10,11,12]
+%[bc]=[b]-[c]
+%[dbc]=[d]*[bc]
+%[de]=[d]+[e]
+%math.gcd([b],[a])==1 and math.gcd([c],[a])==1 and math.gcd([dbc],[a])==1 and [dbc]!=0 and [dbc]!=1  and [de]!=[dbc] and [de]!=1 and [de]!=0 and [b]!=[c] and math.gcd([b],[c])==1
+Obliczyć granicę ciągu 
+$$a_n=\bigg(\frac{[a]n+[b]}{[a]n+[c]}\bigg)^{[d]n+[e]}.$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\bigg(\frac{[a]n+[b]}{[a]n+[c]}\bigg)^{[d]n+[e]}=\lim_{n\to\infty}\Bigg(\frac{[a]n\big(1+\frac{\frac{[b]}{[a]}}{n}\big)}{[a]n\big(1+\frac{\frac{[c]}{[a]}}{n}\big)}\Bigg)^{[d]n+[e]}=\lim_{n\to\infty}\Bigg(\frac{1+\frac{\frac{[b]}{[a]}}{n}}{1+\frac{\frac{[c]}{[a]}}{n}}\Bigg)^{[d]n+[e]}$$
+$$=\lim_{n\to\infty}\frac{\big(1+\frac{\frac{[b]}{[a]}}{n}\big)^{[d]n}}{\big(1+\frac{\frac{[c]}{[a]}}{n}\big)^{[d]n}}\Bigg(\frac{1+\frac{\frac{[b]}{[a]}}{n}}{1+\frac{\frac{[c]}{[a]}}{n}}\Bigg)^{[e]}=\lim_{n\to\infty}\frac{\big[\big(1+\frac{\frac{[b]}{[a]}}{n}\big)^{\frac{n}{\frac{[b]}{[a]}}}\big]^{\frac{[b]}{[a]}\cdot[d]}}{\big[\big(1+\frac{\frac{[c]}{[a]}}{n}\big)^{\frac{n}{\frac{[c]}{[a]}}}\big]^{\frac{[c]}{[a]}\cdot[d]}}\Bigg(\frac{1+\frac{\frac{[b]}{[a]}}{n}}{1+\frac{\frac{[c]}{[a]}}{n}}\Bigg)^{[e]}$$
+$$=\frac{e^{\frac{[b]}{[a]}\cdot[d]}}{e^{\frac{[c]}{[a]}\cdot[d]}}\cdot1^{[e]}=e^{\frac{[b]}{[a]}\cdot[d]-\frac{[c]}{[a]}\cdot[d]}\cdot1=e^{\frac{[d]}{[a]}([b]-[c])}=e^{\frac{[dbc]}{[a]}}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$e^{\frac{[dbc]}{[a]}}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$0$
+B.$e^{\frac{[b]}{[c]}}$
+C.$\infty$
+D.$\frac{[dbc]}{[a]}$
+E.$1$
+F.$-\infty$
+G.$e^{\frac{[dbc]}{[a]}}$
+H.$e^{[de]}$
+I.$e^{[d]}$
 \testStop
 \kluczStart
-A
+G
 \kluczStop
 
 

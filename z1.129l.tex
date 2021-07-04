@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,35 +46,37 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
+\kategoria{Wikieł/Z1.129l}
+\zadStart{Zadanie z Wikieł Z 1.129 l) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+%[p0]:[0]
+%[p3]=random.randint(2,10)
+
+Wyznaczyć dziedzinę naturalną funkcji.
+$$f(x)=\arcsin([p1]^{x})$$
+
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+
+\rozwStart{Maja Szabłowska}{}
+$$-1\leq [p1]^{x} \leq 1$$
+$$-1\leq [p1]^{x} \quad \land \quad [p1]^{x}\leq 1$$
+$$x\in\mathbb{R} \quad \land \quad [p1]^{x}\leq [p1]^{0}$$
+$$x\leq0$$
+$$x\in[0,\infty)$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in[0,\infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in[0,\infty)$
+B.$x\in[e^{[p2]},\infty)$
+C.$x\in(-\infty, 0)$
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
+E.$x\in[[p1],\infty)$
+F.$x\in([p0],\infty)$
+G.$x\in\emptyset$
+
 \testStop
 \kluczStart
 A

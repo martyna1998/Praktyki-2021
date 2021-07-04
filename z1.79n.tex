@@ -32,38 +32,52 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.79n}
+\zadStart{Zadanie z Wikieł Z 1.79 n) moja wersja nr [nrWersji]}
+%[b]:[2,9,4,3,8,5,16,12,18,49,32,25]
+%[m1]:[8,36,32,18,48,50,80,108,144,12,392,320,150]
+%[d1]=int([m1]/[b])
+%[de]=[b]*[b] + 4*[m1]
+%[dep]=int(math.sqrt([de]))
+%[x1]=int((-[b]-[dep])/(-2))
+%[x2]=int((-[b]+[dep])/(-2))
+%[d1]- ([m1]/[b])==0 and [dep]-(math.sqrt([de]))==0 and [dep]>[b] and [x1]-((-[b]-[dep])/(-2))==0 and [x2]-((-[b]+[dep])/(-2))==0
+Rozwiązać nierówność $\frac{\sqrt{[b]x+[m1]}}{x}<1$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Barbara Bączek}{}
+Zaczniemy od wyznaczenia dziedziny.
+$$D:[b]x+[m1] \geq 0 \hspace{0.2 cm} \wedge \hspace{0.2 cm} x \ne 0$$
+$$D: x \in [ -[d1], 0) \cup (0, \infty)$$
+\begin{enumerate}
+\item Niech $x \in [-[d1], 0)$, wtedy:
+$$\frac{\sqrt{[b]x+[m1]}}{x}<1$$
+$$\sqrt{[b]x+[m1]}>x$$
+Nierówność jest tożsamościowa dla $x \in [-[d1], 0)$.
+\item  Niech $x \in (0, \infty)$, wtedy:
+$$\frac{\sqrt{[b]x+[m1]}}{x}<1$$
+$$\sqrt{[b]x+[m1]}<x$$
+Obie strony są dodatnie.
+$$-x^2 + [b]x+ [m1]<0$$
+$$\Delta = [de] \hspace{0.2 cm} \wedge \hspace{0.2 cm} \sqrt{\Delta}= [dep]$$
+$$x_1 = \frac{-[b]-[dep]}{-2}=[x1]  \hspace{0.2 cm} \wedge \hspace{0.2 cm} x_2 = \frac{-[b]+[dep]}{-2}=[x2]$$
+Rozwiązaniem $-x^2+[b]x+20<0$ w zbiorze $(0, \infty)$ jest więc $([x1], \infty)$.
+\end{enumerate}
+3. Podsumowując: $x \in [-[d1],0) \cup ([x1], \infty)$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in [-[d1],0) \cup ([x1], \infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x \in [-[d1],0)$
+B.$x \in (0,[x1])$
+C.$x \in ([x1], \infty)$
+D.$x \in [-[d1],0) \cup ([x1], \infty)$
+E.$x \in [-[d1],[x1])$
+G.$x \in [-[d1],0) \cup [[x1], \infty)$
+H.$x \in (-[d1],0) \cup ([x1], \infty)$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

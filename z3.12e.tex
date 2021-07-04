@@ -32,38 +32,38 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.12e}
+\zadStart{Zadanie z Wikieł Z 3.12 e) moja wersja nr [nrWersji]}
+%[f]:[1,2,3,4,5,9,10,11,12,13,14,15,16,17,18]
+%[p]:[999,1001,1003,1005,1007,1009,1011,1013,1015,1017,1019,1021,1023,1025,1027,1029,1031]
+%[a]=random.randint(2,60)
+%[b]=-[a]
+%[l1]=random.randint(-60,-2)
+%[l2]=random.randint(2,60)
+%[m1]=random.randint(-60, -1)
+%[m2]=random.randint(1,60)
+%[n2]=-1
+%[o1]=[n2]-1
+Obliczyć granicę ciągu $a_n={(\frac{[a]n^4 [l1]n^2 [m1]}{[b]n^4 + [l2]n +[m2]})}^{[p]}$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Barbara Bączek}{}
+$$\lim_{n \rightarrow \infty} a_n= \lim_{n \rightarrow \infty} {\big{(}\frac{[a]n^4 [l1]n^2 [m1]}{[b]n^4 + [l2]n +[m2]}\big{)}}^{[p]} = {\big{(}\lim_{n \rightarrow \infty} \frac{[a]n^4 [l1]n^2 [m1]}{[b]n^4 + [l2]n +[m2]}\big{)}}^{[p]}= $$\\ 
+$${\Big{(}\lim_{n \rightarrow \infty} \frac{[a]n^4( 1 + \frac{[l1]}{[a]n^2} + \frac{[m1]}{[a]n^4}\big{)}}{[b]n^4 (-1 + \frac{[l2]}{[b]n^3} +\frac{[m2]}{[a]n^4})}\Big{)}}^{[p]}= {([n2])}^{[p]} =[n2]$$ 
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$[n2]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$\infty$
+B.$0$
+C.$-\infty$
+D.$[n2]$
+E.$1$
+G.$[o1]$
+H.$[a]$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

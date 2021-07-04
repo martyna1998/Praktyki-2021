@@ -32,38 +32,67 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.14i}
+\zadStart{Zadanie z Wikieł Z 1.14 i) moja wersja nr [nrWersji]}
+%[a]:[2,4,6,8,10]
+%[b]:[3,5,7,9,11,13]
+%[c]:[5,7,9,11,13,15]
+%[d]:[13,15,17,19]
+%[aa1]=-2*[a]
+%[aa2]=2*[a]
+%[w]=-[b]+[c]
+%[l1]=[d]-[b]-[c]
+%[l2]=[d]+[b]-[c]
+%[l3]=[d]+[b]+[c]
+%[aa12]=-[aa1]
+%[a]<[b]<[c]<[d] and [l1]>0 and math.gcd([b],[a])==1 and math.gcd([c],[a])==1 and math.gcd([l1],[aa1])==1 and math.gcd([l3],[aa2])==1 and [w]!=[d] and [l1]/[aa1]<0
+Rozwiązać równanie $|[a]x-[b]|+|[c]-[a]x|=[d]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$|[a]x-[b]|+|[c]-[a]x|=[d]$$
+Przypadek 1: $x\in\bigg(-\infty,\frac{[b]}{[a]}\bigg)$
+$$-[a]x+[b]+[c]-[a]x=[d]$$
+$$-[a]x-[a]x=[d]-[b]-[c]$$
+$$[aa1]x=[l1]~~\bigg|:[aa1]$$
+$$x=-\frac{[l1]}{[aa12]}$$
+Mamy więc:
+$$x\in\bigg(-\infty,\frac{[b]}{[a]}\bigg)\qquad\land\qquad x=-\frac{[l1]}{[aa12]}$$
+Zatem z przypadku 1 otrzymujemy $x=-\frac{[l1]}{[aa12]}$.
+\\Przypadek 2: $x\in\bigg[\frac{[b]}{[a]}, \frac{[c]}{[a]}\bigg]$
+$$[a]x-[b]+[c]-[a]x=[d]$$
+$$[a]x-[a]x=[d]+[b]-[c]$$
+$$0\ne[l2]$$
+Otrzymujemy sprzeczność, a więc $x\in\emptyset$.
+\\Mamy więc:
+$$x\in\emptyset\qquad\land\qquad x\in\bigg[\frac{[b]}{[a]}, \frac{[c]}{[a]}\bigg]$$
+Zatem z przypadku 2 otrzymujemy $x\in\emptyset$.
+\\Przypadek 3: $x\in\bigg(\frac{[c]}{[a]},\infty\bigg)$
+$$[a]x-[b]-[c]+[a]x=[d]$$
+$$[a]x+[a]x=[d]+[b]+[c]$$
+$$[aa2]x=[l3]~~\bigg|:[aa2]$$
+$$x=\frac{[l3]}{[aa2]}$$
+Mamy więc:
+$$x\in\bigg(\frac{[c]}{[a]},\infty\bigg)\qquad\land\qquad x=\frac{[l3]}{[aa2]}$$
+Zatem z przypadku 3 otrzymujemy $x=\frac{[l3]}{[aa2]}$.
+\\Ostatecznym rozwiązaniem wyjściowego równania jest:
+$$x\in\bigg\{-\frac{[l1]}{[aa12]},\frac{[l3]}{[aa2]}\bigg\}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in\bigg\{-\frac{[l1]}{[aa12]},\frac{[l3]}{[aa2]}\bigg\}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in\mathbb{R}\setminus\{0\}$
+B.$x\in\mathbb{R}$
+C.$x\in\bigg\{-\frac{[l1]}{[aa12]},\frac{[l3]}{[aa2]}\bigg\}$
+D.$x\in\{0,1\}$
+E.$x\in\emptyset$
+F.$x\in\{-\frac{[l3]}{[aa2]},1\}$
+G.$x\in\{[b],[c]\}$
+H.$x\in\{0,[b],[c]\}$
+I.$x\in\{-[c],-[b]\}$
 \testStop
 \kluczStart
-A
+C
 \kluczStop
 
 

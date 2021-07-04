@@ -32,35 +32,46 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.31b}
+\zadStart{Zadanie z Wikieł Z 1.31 b) moja wersja nr [nrWersji]}
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,15,17]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,15,17]
+%[a]=random.randint(2,100)
+%[m]=random.randint(2,100)
+%math.gcd([a],[m])==1
+Wyznaczyć funkcję odwrotną $f^{-1}$ dla funkcji $f$ określonej poniżej. \\
+$f(x)=[m]x^2-[a]$, $x\geq 0$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Katarzyna Filipowicz}{}
+$$
+y=[m]x^2-[a] 
+$$ $$
+y+[a]=[m]x^2
+$$ $$
+\frac{y+[a]}{[m]}=x^2
+$$ $$
+x=\sqrt{\frac{y+[a]}{[m]}}
+$$ $$
+f(x)^{-1}=\sqrt{\frac{x+[a]}{[m]}}
+$$ 
+Dziedzina:
+$$
+0\leq \frac{x+[a]}{[m]} \quad \Rightarrow   \quad  x \geq -[a] \quad \Rightarrow \quad x\in [-[a],\infty)
+$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$f(x)^{-1}=\sqrt{\frac{x+[a]}{[m]}}$, $x\in [-[a],\infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$f(x)^{-1}=\sqrt{x+[a]}$, $x\in [-[a],\infty)$
+B.$0$
+C.$f(x)^{-1}=\sqrt{x+[a]}$, $x \in R$
+D.$f(x)^{-1}=x$
+E.$f(x)^{-1}=\sqrt{x-[a]}$, $x \in  [[a],\infty)$
+F.$f(x)^{-1}=y+[a]$
+G.$f(x)^{-1}=-[a]x$
+H.$f(x)^{-1}=[b]x$
+I.$f(x)^{-1}=\infty$
 \testStop
 \kluczStart
 A

@@ -1,0 +1,819 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z3.12k}
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 1}
+Obliczyć granicę ciągu $a_{n}=\frac{5^{n}}{1+2^{n} + 3^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{5^{n}}{1+2^{n} + 3^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{3^{n}(\frac{5^{n}}{3^{n}} )}{3^{n}(\frac{1}{3^{n}}+\frac{2^{n}}{3^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{5}{2}$
+E.$-\frac{5}{2}$
+F.$\frac{2}{5}$
+G.$-\frac{2}{5}$
+H.$-5$
+I.$5$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 2}
+Obliczyć granicę ciągu $a_{n}=\frac{5^{n}}{1+2^{n} + 4^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{5^{n}}{1+2^{n} + 4^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{4^{n}(\frac{5^{n}}{4^{n}} )}{4^{n}(\frac{1}{4^{n}}+\frac{2^{n}}{4^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{5}{2}$
+E.$-\frac{5}{2}$
+F.$\frac{2}{5}$
+G.$-\frac{2}{5}$
+H.$-5$
+I.$5$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 3}
+Obliczyć granicę ciągu $a_{n}=\frac{5^{n}}{1+3^{n} + 4^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{5^{n}}{1+3^{n} + 4^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{4^{n}(\frac{5^{n}}{4^{n}} )}{4^{n}(\frac{1}{4^{n}}+\frac{3^{n}}{4^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{5}{3}$
+E.$-\frac{5}{3}$
+F.$\frac{3}{5}$
+G.$-\frac{3}{5}$
+H.$-5$
+I.$5$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 4}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+2^{n} + 3^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+2^{n} + 3^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{3^{n}(\frac{7^{n}}{3^{n}} )}{3^{n}(\frac{1}{3^{n}}+\frac{2^{n}}{3^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{2}$
+E.$-\frac{7}{2}$
+F.$\frac{2}{7}$
+G.$-\frac{2}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 5}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+2^{n} + 4^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+2^{n} + 4^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{4^{n}(\frac{7^{n}}{4^{n}} )}{4^{n}(\frac{1}{4^{n}}+\frac{2^{n}}{4^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{2}$
+E.$-\frac{7}{2}$
+F.$\frac{2}{7}$
+G.$-\frac{2}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 6}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+2^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+2^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{7^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{2^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{2}$
+E.$-\frac{7}{2}$
+F.$\frac{2}{7}$
+G.$-\frac{2}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 7}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+2^{n} + 6^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+2^{n} + 6^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{6^{n}(\frac{7^{n}}{6^{n}} )}{6^{n}(\frac{1}{6^{n}}+\frac{2^{n}}{6^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{2}$
+E.$-\frac{7}{2}$
+F.$\frac{2}{7}$
+G.$-\frac{2}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 8}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+3^{n} + 4^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+3^{n} + 4^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{4^{n}(\frac{7^{n}}{4^{n}} )}{4^{n}(\frac{1}{4^{n}}+\frac{3^{n}}{4^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{3}$
+E.$-\frac{7}{3}$
+F.$\frac{3}{7}$
+G.$-\frac{3}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 9}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+3^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+3^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{7^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{3^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{3}$
+E.$-\frac{7}{3}$
+F.$\frac{3}{7}$
+G.$-\frac{3}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 10}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+3^{n} + 6^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+3^{n} + 6^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{6^{n}(\frac{7^{n}}{6^{n}} )}{6^{n}(\frac{1}{6^{n}}+\frac{3^{n}}{6^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{3}$
+E.$-\frac{7}{3}$
+F.$\frac{3}{7}$
+G.$-\frac{3}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 11}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+4^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+4^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{7^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{4^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{4}$
+E.$-\frac{7}{4}$
+F.$\frac{4}{7}$
+G.$-\frac{4}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 12}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+4^{n} + 6^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+4^{n} + 6^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{6^{n}(\frac{7^{n}}{6^{n}} )}{6^{n}(\frac{1}{6^{n}}+\frac{4^{n}}{6^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{4}$
+E.$-\frac{7}{4}$
+F.$\frac{4}{7}$
+G.$-\frac{4}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 13}
+Obliczyć granicę ciągu $a_{n}=\frac{7^{n}}{1+5^{n} + 6^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{7^{n}}{1+5^{n} + 6^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{6^{n}(\frac{7^{n}}{6^{n}} )}{6^{n}(\frac{1}{6^{n}}+\frac{5^{n}}{6^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{7}{5}$
+E.$-\frac{7}{5}$
+F.$\frac{5}{7}$
+G.$-\frac{5}{7}$
+H.$-7$
+I.$7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 14}
+Obliczyć granicę ciągu $a_{n}=\frac{8^{n}}{1+3^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{8^{n}}{1+3^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{8^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{3^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{8}{3}$
+E.$-\frac{8}{3}$
+F.$\frac{3}{8}$
+G.$-\frac{3}{8}$
+H.$-8$
+I.$8$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 15}
+Obliczyć granicę ciągu $a_{n}=\frac{8^{n}}{1+3^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{8^{n}}{1+3^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{8^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{3^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{8}{3}$
+E.$-\frac{8}{3}$
+F.$\frac{3}{8}$
+G.$-\frac{3}{8}$
+H.$-8$
+I.$8$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 16}
+Obliczyć granicę ciągu $a_{n}=\frac{8^{n}}{1+5^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{8^{n}}{1+5^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{8^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{5^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{8}{5}$
+E.$-\frac{8}{5}$
+F.$\frac{5}{8}$
+G.$-\frac{5}{8}$
+H.$-8$
+I.$8$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 17}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+2^{n} + 4^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+2^{n} + 4^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{4^{n}(\frac{9^{n}}{4^{n}} )}{4^{n}(\frac{1}{4^{n}}+\frac{2^{n}}{4^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{2}$
+E.$-\frac{9}{2}$
+F.$\frac{2}{9}$
+G.$-\frac{2}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 18}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+2^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+2^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{9^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{2^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{2}$
+E.$-\frac{9}{2}$
+F.$\frac{2}{9}$
+G.$-\frac{2}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 19}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+2^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+2^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{9^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{2^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{2}$
+E.$-\frac{9}{2}$
+F.$\frac{2}{9}$
+G.$-\frac{2}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 20}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+2^{n} + 8^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+2^{n} + 8^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{8^{n}(\frac{9^{n}}{8^{n}} )}{8^{n}(\frac{1}{8^{n}}+\frac{2^{n}}{8^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{2}$
+E.$-\frac{9}{2}$
+F.$\frac{2}{9}$
+G.$-\frac{2}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 21}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+4^{n} + 5^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+4^{n} + 5^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{5^{n}(\frac{9^{n}}{5^{n}} )}{5^{n}(\frac{1}{5^{n}}+\frac{4^{n}}{5^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{4}$
+E.$-\frac{9}{4}$
+F.$\frac{4}{9}$
+G.$-\frac{4}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 22}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+4^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+4^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{9^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{4^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{4}$
+E.$-\frac{9}{4}$
+F.$\frac{4}{9}$
+G.$-\frac{4}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 23}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+4^{n} + 8^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+4^{n} + 8^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{8^{n}(\frac{9^{n}}{8^{n}} )}{8^{n}(\frac{1}{8^{n}}+\frac{4^{n}}{8^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{4}$
+E.$-\frac{9}{4}$
+F.$\frac{4}{9}$
+G.$-\frac{4}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 24}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+5^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+5^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{9^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{5^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{5}$
+E.$-\frac{9}{5}$
+F.$\frac{5}{9}$
+G.$-\frac{5}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 25}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+5^{n} + 8^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+5^{n} + 8^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{8^{n}(\frac{9^{n}}{8^{n}} )}{8^{n}(\frac{1}{8^{n}}+\frac{5^{n}}{8^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{5}$
+E.$-\frac{9}{5}$
+F.$\frac{5}{9}$
+G.$-\frac{5}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 26}
+Obliczyć granicę ciągu $a_{n}=\frac{9^{n}}{1+7^{n} + 8^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{9^{n}}{1+7^{n} + 8^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{8^{n}(\frac{9^{n}}{8^{n}} )}{8^{n}(\frac{1}{8^{n}}+\frac{7^{n}}{8^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{9}{7}$
+E.$-\frac{9}{7}$
+F.$\frac{7}{9}$
+G.$-\frac{7}{9}$
+H.$-9$
+I.$9$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 27}
+Obliczyć granicę ciągu $a_{n}=\frac{10^{n}}{1+3^{n} + 7^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{10^{n}}{1+3^{n} + 7^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{7^{n}(\frac{10^{n}}{7^{n}} )}{7^{n}(\frac{1}{7^{n}}+\frac{3^{n}}{7^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{10}{3}$
+E.$-\frac{10}{3}$
+F.$\frac{3}{10}$
+G.$-\frac{3}{10}$
+H.$-10$
+I.$10$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 28}
+Obliczyć granicę ciągu $a_{n}=\frac{10^{n}}{1+3^{n} + 9^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{10^{n}}{1+3^{n} + 9^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{9^{n}(\frac{10^{n}}{9^{n}} )}{9^{n}(\frac{1}{9^{n}}+\frac{3^{n}}{9^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{10}{3}$
+E.$-\frac{10}{3}$
+F.$\frac{3}{10}$
+G.$-\frac{3}{10}$
+H.$-10$
+I.$10$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.12 k) moja wersja nr 29}
+Obliczyć granicę ciągu $a_{n}=\frac{10^{n}}{1+7^{n} + 9^{n}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+$$\lim\limits_{n\to\infty}\frac{10^{n}}{1+7^{n} + 9^{n}}=$$
+$$\lim\limits_{n\to\infty}\frac{9^{n}(\frac{10^{n}}{9^{n}} )}{9^{n}(\frac{1}{9^{n}}+\frac{7^{n}}{9^{n}}+1)} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$0$
+D.$\frac{10}{7}$
+E.$-\frac{10}{7}$
+F.$\frac{7}{10}$
+G.$-\frac{7}{10}$
+H.$-10$
+I.$10$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

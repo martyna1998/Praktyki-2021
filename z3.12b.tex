@@ -32,38 +32,36 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.12b}
+\zadStart{Zadanie z Wikieł Z 3.12 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[3,4,5,6,7,8,9,10]
+%[c]:[2,3,4,5,6,7,8,9]
+%[d]=[b]-[c]
+%[a]!=[b] and [b]!=[c] and [a]!=[c] and math.gcd([a],[b])==1 and [d]>0
+Obliczyć granicę ciągu 
+$$a_n=\frac{[a]n!}{[b](n+1)!-[c]n!}.$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\frac{[a]n!}{[b](n+1)!-[c]n!}=\lim_{n\to\infty}\frac{[a]n!}{[b](n+1)n!-[c]n!}=\lim_{n\to\infty}\frac{n!\cdot[a]}{n!([b]n+[b]-[c])}$$
+$$=\lim_{n\to\infty}\frac{n!\cdot[a]}{n!([b]n+[d])}=\lim_{n\to\infty}\frac{[a]}{[b]n+[d]}=\lim_{n\to\infty}\frac{\frac{[a]}{n}}{[b]+\frac{[d]}{n}}=\frac{0}{[b]}=0$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+ $0$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$\frac{[a]}{[b]}$
+B.$[b]$
+C.$[c]$
+D.$[a]$
+E.$0$
+F.$\frac{[b]}{[a]}$
+G.$-\infty$
+H.$-[a]$
+I.$\infty$
 \testStop
 \kluczStart
-A
+E
 \kluczStop
 
 

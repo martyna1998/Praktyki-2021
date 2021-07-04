@@ -32,38 +32,45 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.15m}
+\zadStart{Zadanie z Wikieł Z 1.15 m) moja wersja nr [nrWersji]}
+%[a]:[-11,-9,-7,-5,-3]
+%[b]:[3,5,7,11,13]
+%[c]:[2,4,6,8,10]
+%[d]:[2,4,6,8,10]
+%[dc2]=-[d]-[c]
+%[dc1]=[d]-[c]
+%[odp1]=[d]-[c]
+%[odp2]=[d]+[c]
+%[a]!=[b]!=[c]!=[d]!=[dc1]!=[dc2]!=[odp1]!=[odp2] and [odp1]<[odp2] and math.gcd([dc1],[b])==1 and math.gcd([dc2],[b])==1
+Rozwiąż nierówność $[a]\leq|[b]x+[c]|<[d]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$[a]\leq|[b]x+[c]|<[d]$$
+$$|[b]x+[c]|\geq[a]\qquad\land\qquad|[b]x+[c]|<[d]$$
+$$x\in\mathbb{R}\qquad\land\qquad[b]x+[c]<[d]\land[b]x+[c]>-[d]$$
+$$x\in\mathbb{R}\qquad\land\qquad[b]x<[d]-[c]\land[b]x>-[d]-[c]$$
+$$x\in\mathbb{R}\qquad\land\qquad[b]x<[dc1]\land[b]x>[dc2]$$
+$$x\in\mathbb{R}\qquad\land\qquad x<\frac{[dc1]}{[b]}\land x>\frac{[dc2]}{[b]}$$
+$$x\in\mathbb{R}\qquad\land\qquad x\in\bigg(\frac{[dc2]}{[b]},\frac{[dc1]}{[b]}\bigg)$$
+$$x\in\bigg(\frac{[dc2]}{[b]},\frac{[dc1]}{[b]}\bigg)$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in\bigg(\frac{[dc2]}{[b]},\frac{[dc1]}{[b]}\bigg)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in\mathbb{R}$
+B.$x\in\bigg(\frac{[dc2]}{[b]},\frac{[dc1]}{[b]}\bigg)$
+C.$x\in\emptyset$
+D.$x\in\bigg(-\infty,\frac{[dc1]}{[b]}\bigg)$
+E.$x\in\bigg([odp1],[odp2]\bigg)$
+F.$x\in\bigg[\frac{[dc2]}{[b]},\frac{[dc1]}{[b]}\bigg]$
+G.$x\in\bigg(\frac{[dc2]}{[b]},[dc1]\bigg)$
+H.$x\in\bigg[[odp1],[odp2]\bigg]$
+I.$x\in\bigg[\frac{[dc2]}{[b]},\infty\bigg)$
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

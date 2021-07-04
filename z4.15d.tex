@@ -32,35 +32,37 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z4.15d}
+\zadStart{Zadanie z Wikieł Z 4.15 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71]
+%[xo]=[a]
+%[ad]=2*[a]
+%[at]=3*[a]
+%[ac]=4*[a]
+%[axom]=[a]-[xo]
+Zbadać, czy istnieje następująca granica $\lim\limits_{x\to [xo]}\frac{([a]-x)^{3}}{|x-[a]|}$. Jeśli tak, to obliczyć ją.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Justyna Chojecka}{}
+Obliczamy granice jednostronne w punkcie $x_{0}=[xo]$.
+$$\lim\limits_{x\to [xo]^{-}}\frac{([a]-x)^{3}}{|x-[a]|}=\lim\limits_{x\to [xo]^{-}}\frac{([a]-x)^{3}}{[a]-x}=\lim\limits_{x\to [xo]^{-}}([a]-x)^{2}=([a]-[xo])^{2}=[axom]^{2}=[axom]$$
+$$\lim\limits_{x\to [xo]^{+}}\frac{([a]-x)^{3}}{|x-[a]|}=\lim\limits_{x\to [xo]^{+}}\frac{([a]-x)^{3}}{-([a]-x)}=\lim\limits_{x\to [xo]^{+}}-([a]-x)^{2}=-([a]-[xo])^{2}=-[axom]^{2}=[axom]$$
+Skoro 
+$$\lim\limits_{x\to [xo]^{-}}\frac{([a]-x)^{3}}{|x-[a]|}=\lim\limits_{x\to [xo]^{+}}\frac{([a]-x)^{3}}{|x-[a]|}=[axom],$$
+to granica $\lim\limits_{x\to [xo]}\frac{([a]-x)^{3}}{|x-[a]|}$ istnieje i jest równa $[axom]$.
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$[axom]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$[axom]$
+B.nie istnieje
+C.$[a]$
+D.$-[a]$
+E.$[ad]$
+F.$[at]$
+G.$-[ad]$
+H.$-[ac]$
+I.$-[at]$
 \testStop
 \kluczStart
 A

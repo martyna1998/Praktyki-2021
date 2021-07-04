@@ -32,38 +32,35 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.15b}
+\zadStart{Zadanie z Wikieł Z 3.15 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%math.gcd([a],[b])==1
+Obliczyć granicę ciągu 
+$$a_n=\bigg(\frac{[a]n}{[a]n+[b]}\bigg)^{n}.$$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\bigg(\frac{[a]n}{[a]n+[b]}\bigg)^{n}=\lim_{n\to\infty}\bigg(\frac{[a]\cdot n}{[a](n+\frac{[b]}{[a]})}\bigg)^{n}=\lim_{n\to\infty}\bigg(\frac{n}{n+\frac{[b]}{[a]}}\bigg)^{n}$$
+$$=\lim_{n\to\infty}\bigg(\frac{n+\frac{[b]}{[a]}}{n}\bigg)^{-n}=\lim_{n\to\infty}\bigg(1+\frac{\frac{[b]}{[a]}}{n}\bigg)^{-n}$$
+$$=\lim_{n\to\infty}\bigg[\bigg(1+\frac{\frac{[b]}{[a]}}{n}\bigg)^{\frac{n}{\frac{[b]}{[a]}}}\bigg]^{-\frac{[b]}{[a]}}=e^{-\frac{[b]}{[a]}}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$e^{-\frac{[b]}{[a]}}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$0$
+B.$1$
+C.$e^{-\frac{[b]}{[a]}}$
+D.$e^{\frac{[a]}{[b]}}$
+E.$-\infty$
+F.$\frac{[b]}{[a]}$
+G.$\infty$
+H.$e^{-\frac{[a]}{[b]}}$
+I.$e^{\frac{[b]}{[a]}}$
 \testStop
 \kluczStart
-A
+C
 \kluczStop
 
 

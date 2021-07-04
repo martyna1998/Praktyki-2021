@@ -32,38 +32,46 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.93g}
+\zadStart{Zadanie z Wikieł Z 1.93 g) moja wersja nr [nrWersji]}
+%[p]:[2,3,4,5,6]
+%[r]:[1,2,3,4,5]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11,12]
+%[c]:[2,4,5,7]
+%[d]:[1,2,3,4,5,6,7,8,9,10,11,12]
+%[r2]=(pow([p],[r]))
+%[b2]=[b]*[d]
+%[a]=[d]-[b]*[c]
+%[b3]=[r2]-[b2]
+%[delta]=[a]**2-4*[c]*[b3]
+%[pr2]=(pow([delta],(1/2)))
+%[pr1]=[pr2].real
+%[pr]=int([pr1])
+%[z1]=round(([a]-[pr])/(2*[c]),2)
+%[z2]=round(([b]+[pr])/(2*[c]),2)
+%[r2]<50 and [r2]>[b2] and [delta]>0 and [pr2].is_integer()==True
+Rozwiązać równanie $\log_{\frac{1}{[p]}}{(x+[b])} + \log_{\frac{1}{[p]}}{([d]-[c]x)} = -[r]$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Małgorzata Ugowska}{}
+$$\log_{\frac{1}{[p]}}{(x+[b])} + \log_{\frac{1}{[p]}}{([d]-[c]x)} = -[r] \quad \Longleftrightarrow \quad \log_{\frac{1}{[p]}}{(x+[b])([d]-[c]x)}= -[r]$$
+$$\Longleftrightarrow \quad (x+[b])([d]-[c]x)= \Big(\frac{1}{[p]}\Big)^{-[r]} \quad \Longleftrightarrow \quad [d]x-[c]x^2+[b] \cdot [d]-[b] \cdot [c]x= [p]^{[r]} $$
+$$\Longleftrightarrow \quad [a]x-[c]x^2+[b2]= [r2] \quad \Longleftrightarrow \quad -[c]x^2+[a]x-[b3]= 0 \quad \Longleftrightarrow \quad [c]x^2-[a]x+[b3]= 0$$
+Szukamy miejsc zerowych funkcji $[c]x^2-[a]x+[b3]$:
+$$ \bigtriangleup = [a]^2-4 \cdot [c] \cdot [b3] = [delta] \quad  \Longrightarrow \quad x_1=\frac{[a]-\sqrt{\bigtriangleup}}{2\cdot [c]} = [z1], \quad x_2=\frac{[a]+\sqrt{\bigtriangleup}}{2\cdot [c]} = [z2]$$
+$$ \quad \Longleftrightarrow \quad x \in \{[z1],[z2]\}$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in \{[z1],[z2]\}$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A. $x \in \{[delta],[c]\}$\\
+B. $x \in \{-1,1\}$\\
+C. $x \in \{[z1],[z2]\}$\\
+D. $[z1]$\\
+E. $x \in \{4,5\}$
 \testStop
 \kluczStart
-A
+C
 \kluczStop
 
 

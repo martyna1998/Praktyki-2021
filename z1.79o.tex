@@ -32,38 +32,51 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.79o}
+\zadStart{Zadanie z Wikieł Z 1.79 o) moja wersja nr [nrWersji]}
+%[z]:[5,6,7,8,9,10,11,12,13]
+%[z1]:[1,2,3,4,5,6,7,8,9,10]
+%[a]=random.randint(2,40)
+%[b]=random.randint(int([a]+1),50)
+%[b1]=[b]*[b]
+%[b2]=2*[b]
+%[b3]=[b2]-[a]
+%[b4]=[b1]/[b3]
+%math.gcd([b1],[b3])==1 and [b4]<[b]
+Rozwiązać nierówność $\sqrt{x^2-[a]x}>[b]-x$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Barbara Bączek}{}
+Zaczniemy od wyznaczenia dziedziny.
+$$D:x^2 - [a]x \geq 0$$
+$$D:x(x-[a]) \geq 0$$
+$$D: x \in (-\infty,0] \cup [[a], \infty)$$
+Powróćmy do nierówności:
+$$\sqrt{x^2-[a]x}>[b]-x$$
+\begin{enumerate}
+\item Niech $x \in ([b], \infty)$, wtedy nierówność wyjściowa jest tożsamościowa, bo w zbiorze liczb rzeczywistych pierwiastek kwadratowy jest nieujemny. Zatem dla $x \in ([b], \infty)$ nierówność zachodzi.
+\item  Niech $x \in (-\infty, 0] \cup [[a],[b]]$, wtedy obie strony nierówności są nieujemne.
+$$\sqrt{x^2-[a]x}>[b]-x$$
+$$x^2 -[a]x>x^2 -[b2]x +[b1] $$
+$$[b3]x>[b1]$$
+$$x>\frac{[b1]}{[b3]}$$
+Zatem uwzględniając założenie $x \in (-\infty, 0] \cup [[a],[b]]$ otrzymujemy, że dla $x \in (\frac{[b1]}{[b3]},[b]]$ nierówność zachodzi.
+\end{enumerate}
+3. Podsumowując: $x \in (\frac{[b1]}{[b3]}, \infty)$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x \in (\frac{[b1]}{[b3]}, \infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x \in [-\frac{[b1]}{[b3]}, \infty)$
+B.$x \in [\frac{[b1]}{[b3]}, \infty)$
+C.$x \in (-\frac{[b1]}{[b3]}, \infty)$
+D.$x \in (\frac{[b1]}{[b3]}, \infty)$
+E.$x \in (\frac{[b1]}{[b3]}, [b])$
+G.$x \in (\frac{[b3]}{[b1]}, \infty)$
+H.$x \in [\frac{[b3]}{[b1]}, \infty)$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

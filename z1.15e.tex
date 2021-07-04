@@ -32,38 +32,50 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z1.15e}
+\zadStart{Zadanie z Wikieł Z 1.15 e) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6]
+%[b]:[2,4,6,8,10]
+%[c]:[3,5,7,11,13]
+%[d]:[2,3,4,5,6]
+%[ca]=[c]*[a]
+%[cb]=[c]*[b]
+%[cd]=[c]*[d]
+%[cdcb1]=[cd]-[cb]
+%[cdcb2]=-[cd]-[cb]
+%[ca1]=[ca]-1
+%[ca2]=[ca]+1
+%[w1]=-[cdcb1]
+%[w2]=-[cdcb2]
+%[cd]>[cb] and math.gcd([cdcb2],[ca2])==1 and math.gcd([cdcb2],[ca2])==1
+Rozwiąż nierówność $|[a]x+[b]|\leq\frac{x}{[c]}+[d]$.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Adrianna Stobiecka}{}
+$$|[a]x+[b]|\leq\frac{x}{[c]}+[d]$$
+$$[a]x+[b]\leq\frac{x}{[c]}+[d]~~\bigg|\cdot[c]\qquad\land\qquad[a]x+[b]\geq-\frac{x}{[c]}-[d]~~\bigg|\cdot[c]$$
+$$[c]\cdot[a]x+[c]\cdot[b]\leq[c]\cdot\frac{x}{[c]}+[c]\cdot[d]\qquad\land\qquad[c]\cdot[a]x+[c]\cdot[b]\geq-[c]\cdot\frac{x}{[c]}-[c]\cdot[d]$$
+$$[ca]x+[cb]\leq x+[cd]\qquad\land\qquad[ca]x+[cb]\geq-x-[cd]$$
+$$[ca]x-x\leq[cd]-[cb]\qquad\land\qquad[ca]x+x\geq-[cd]-[cb]$$
+$$[ca1]x\leq[cdcb1]~~\bigg|:[ca1]\qquad\land\qquad[ca2]x\geq[cdcb2]~~\bigg|:[ca2]$$
+$$x\leq\frac{[cdcb1]}{[ca1]}\qquad\land\qquad x\geq\frac{[cdcb2]}{[ca2]}$$
+$$x\in\bigg[\frac{[cdcb2]}{[ca2]},\frac{[cdcb1]}{[ca1]}\bigg]$$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$x\in\bigg[\frac{[cdcb2]}{[ca2]},\frac{[cdcb1]}{[ca1]}\bigg]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$x\in([w1],[w2])$
+B.$x\in\emptyset$
+C.$x\in\mathbb{R}$
+D.$x\in\bigg[\frac{[cdcb2]}{[ca2]},\frac{[cdcb1]}{[ca1]}\bigg]$
+E.$x\in[[w1],[w2]]$
+F.$x\in\bigg(\frac{[cdcb2]}{[ca2]},\frac{[cdcb1]}{[ca1]}\bigg)$
+G.$x\in[[cdcb2],[cdcb1]]$
+H.$x\in\bigg(-\infty,\frac{[cdcb1]}{[ca1]}\bigg]$
+I.$x\in([cdcb2],[cdcb1])$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

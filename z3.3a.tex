@@ -32,35 +32,60 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+\kategoria{Wikieł/Z3.3a}
+\zadStart{Zadanie z Wikieł Z 3.3 a)  moja wersja nr [nrWersji]}
+%[p1]:[3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[p2]=random.randint(2,10)
+%[p3]=random.randint(2,100)
+%[p4]=random.randint(2,10)
+%[p5]=random.randint(2,10)
+%[p6]=random.randint(1,100)
+%[p0]:[1]
+%[a]=[p1]-[p0]
+%[b]=[p2]-[p0]
+%[c]=[p4]-[p0]
+%[d]=[p5]-[p0]
+%[ab]=[a]-[b]
+%[r]=round([p3]/([ab]+0.0000001),2)
+%[cr]=round([c]*[r],2)
+%[dr]=round([d]*[r],2)
+%[cd]=round([cr]*[dr],2)
+%[cdd]=round([cr]+[dr],2)
+%[cdp3]=round([cd]-[p6],2)
+%[del]=round([cdd]*[cdd]-4*[cdp3],2)
+%[pdel]=round(math.sqrt([del]),2)
+%[a1]=round((-[cdd]-[pdel])/2,2)
+%[a2]=round((-[cdd]+[pdel])/2,2)
+%[ab]!=0 and [del]>0 and [p1]!=[p2] and [p4]!=[p5]
+
+
+Znaleźć wyraz pierwszy $a_{1}$ oraz różnicę $r$ ciągu arytmicznego $(a_{n})$, w którym $a_{[p1]}-a_{[p2]}=[p3]$ oraz $a_{[p4]}\cdot a_{[p5]}=[p6].$
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Maja Szabłowska}{}
+Z pierwszego równania otrzymujemy:
+$$a_{[p1]}-a_{[p2]}=[p3] \Rightarrow a_{1}+[a]r-a_{1}-[b]r=[p3]$$
+$$[ab]r=[p3] \Rightarrow r=[r]$$
+Korzystamy z wyliczonej zmiennej:
+$$a_{[p4]}\cdot a_{[p5]}=[p6] \Rightarrow (a_{1}+[c]r)(a_{1}+[d]r)=[p6] $$
+$$(a_{1}+[cr])(a_{1}+[dr])=[p6] \Rightarrow a_{1}^{2}+[cr]a_{1}+[dr]a_{1}+[cd]=[p6] $$
+
+$$a_{1}^{2}+[cdd]a_{1}+[cdp3]=0 $$
+$$\Delta=[cdd]^{2}-4\cdot1\cdot([cdp3]) \Rightarrow \Delta=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$a_{1}=\frac{-([cdd])-[pdel]}{2}=[a1]$$ $$\lor$$ $$ a_{1}=\frac{-([cdd])+[pdel]}{2}=[a2] $$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$r=[r], a_{1}=[a1] \lor a_{1}=[a2]$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$r=[r], a_{1}=[a1] \lor a_{1}=[a2]$
+B.$r=[r], a_{1}=[dr] \lor a_{1}=[a2]$
+C.$r=[r], a_{1}=[a1] \lor a_{1}=[cr]$
+D.$r=[r], a_{1}=[p6] \lor a_{1}=[a2]$
+E.$r=[p3], a_{1}=[a1] \lor a_{1}=[a2]$
+F.$r=[cdd], a_{1}=[a1] \lor a_{1}=[a2]$
+G.$r=[r], a_{1}=[a1] \lor a_{1}=[del]$
+H.$r=[pdel], a_{1}=[a1] \lor a_{1}=[r]$
+I.$r=[r], a_{1}=[p5] \lor a_{1}=[a2]$
 \testStop
 \kluczStart
 A

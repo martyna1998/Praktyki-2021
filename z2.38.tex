@@ -32,35 +32,63 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.33}
-\zadStart{Zadanie z Wikieł P 1.33) moja wersja nr [nrWersji]}
-%[p1]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
+\kategoria{Wikieł/Z2.38}
+\zadStart{Zadanie z Wikieł Z 2.38  moja wersja nr [nrWersji]}
+%[p1]=random.randint(-10,-2)
 %[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[-2,-3,-4,-5,-6,-7,-8,-9,-10,2,3,4,5,6,7,8,9,10]
-%[w2]:[2]
-%[w4]:[4]
-%[p4]=[p1]*[w2]
-%[del]=[p2]*[p2]-[w4]*[p1]*[p3]
-%[pier]=math.sqrt(abs([del]))
-%[int]=int([pier])
-%[x1]=round((-[p2]-[pier])/[p4],2)
-%[x2]=round((-[p2]+[pier])/[p4],2)
-%[del]>0 and [pier].is_integer()==True
-Rozwiązać równanie $[p1]x^2 + [p2]x +([p3]) = 0$
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p4]:[2,3,4,5,6,7,8,9,10]
+%[p5]=random.randint(2,10)
+%[p24]=[p2]*[p4]
+%[p52]=[p5]*[p2]
+%[p23]=[p2]*[p3]
+%[p15]=[p1]*[p5]
+%[m]=round([p24]/[p1],2)
+%[m1]=round([p23]/[p15],2)
+%[wx]=[p3]-[p52]
+%math.gcd([p24],[p1])==1 and math.gcd([p23],[p15])==1 and [m]<[m1]
+
+
+Podać wartości parametru $m$, dla których rozwiązaniem układu
+$$\left\{\begin{array}{rcl}
+[p1]x+[p2]y&=&[p3]\\
+[p4]x+my&=&[p5]m
+\end{array} \right.$$
+jest para liczb dodatnich.
 \zadStop
-\rozwStart{Jakub Janik}{}
-$$\Delta = [p2]^2 - 4*([p1])*([p3]) = [del] > 0$$
-$$x_1 = \frac{-[p2]-[int]}{[p4]}=[x1]$$
-$$x_2 = \frac{-[p2]+[int]}{[p4]}=[x2]$$
+\rozwStart{Maja Szabłowska}{}
+$$W=\left| \begin{array}{lccr} [p1] & [p2]  \\ [p4] & m \end{array}\right| = [p1]\cdot m - [p2]\cdot [p4]=[p1]m-[p24] \neq 0$$
+
+$$[p1]m-[p24] \neq 0 \Rightarrow [p1]m\neq [p24] \Rightarrow m\neq [m]$$
+
+$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2] \\ [p5]m & m \end{array}\right| = [p3]\cdot m - [p5]m\cdot [p2]=[p3]m-[p52]m=[wx]m$$
+
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]  \\ [p4] & [p5]m \end{array}\right| = [p1]\cdot[p5]m - [p2]\cdot[p3]=[p15]m-[p23]$$
+
+$$x=\frac{W_{x}}{W}=\frac{[wx]m}{[p1]m-[p24]}>0$$
+$$([wx]m)([p1]m-[p24])>0$$ 
+$$m_{1}=0 \land m_{2}=\frac{[p24]}{[p1]}=[m] $$
+$$m\in(-\infty,[m])\cup(0,\infty)$$
+
+$$y=\frac{W_{y}}{W}=\frac{[p15]m-[p23]}{[p1]m-[p24]}>0$$
+$$([p15]m-[p23])([p1]m-[p24])>0$$ 
+$$m_{1}=\frac{[p23]}{[p15]}=[m1] \land m_{2}=\frac{[p24]}{[p1]}=[m] $$
+$$m\in(-\infty,[m])\cup([m1],\infty)$$
+Zatem $m\in(-\infty,[m])\cup(0,\infty).$
 \rozwStop
 \odpStart
-$[x1], [x2]$
+$m\in(-\infty,[m])\cup(0,\infty)$
 \odpStop
 \testStart
-A.$[x1],[x2]$
-B.$[x1]$
-C.$[x2]$
-D.$0$
+A.$m\in(-\infty,[m])\cup(0,\infty)$
+B.$m\in(-\infty,[m])\cup([m1],\infty)$
+C.$m\in(-\infty,[m])\cup([p23],\infty)$
+D.$m\in(-\infty,[m1])\cup(0,\infty)$
+E.$m\in(-\infty,[m])\cup([p15],\infty)$
+F.$m\in(-\infty,[p23])\cup(0,\infty)$
+G.$m\in(-\infty,[m])$
+H.$m\in(0,\infty)$
+I.$m=2$
 \testStop
 \kluczStart
 A
