@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.6g}
+\zadStart{Zadanie z Wikieł Z 5.6g) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[a]!=[b]
+Obliczyć pochodną funkcji $f$ oraz określić dziedzinę funkcji $f$ i funkcji pochodnej $f'$.\\
+$f(x)=\log_{[b]}{(\log_{[b]}([a]x))}$
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+Dziedzina $D_f: $
+$$[a]x>0 \land \log_{[b]}([a]x)>0 $$
+$$x>0 \land [a]x>1$$
+$$x\in \left(\frac{1}{[a]},\infty \right) $$
+$$ f'(x)=\left(\log_{[b]}{(\log_{[b]}([a]x))}\right)'=\frac{1}{\log_{[b]}([a]x)\ln([b])}\left( \log_{[b]} ([a]x) \right)'= $$
+$$ = \frac{1}{\log_{[b]}([a]x)\ln([b])}\frac{1}{([a]x)ln([b])}\left([a]x\right)' =$$ 
+$$ = \frac{[a]}{([a]x)\ln^2([b])\log_{[b]}([a]x)} =$$ 
+$$ = \frac{1}{x\ln^2([b])\log_{[b]}([a]x)}$$ 
+Dziedzina $D_{f'}:$
+$$ [a]x> 0 \land {x\ln^2([b])\log_{[b]}([a]x)} \neq 0 $$
+$$ x> 0 \land x \neq 0 \land \log_{[b]}([a]x) \neq 0 $$
+$$ x> 0 \land [a]x \neq 1 $$
+$$ x> 0 \land x \neq \frac{1}{[a]} $$
+$$x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right) $$
+\rozwStop
+\odpStart
+$f'(x)= \frac{1}{x\ln^2([b])\log_{[b]}([a]x)} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$
+\odpStop
+\testStart
+A. $f'(x)= \frac{1}{x\ln^2([b])\log_{[b]}([a]x)} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$\\
+B. $f'(x)= \frac{1}{x\ln([b])\log_{[b]}([a]x)} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$\\
+C. $f'(x)= \frac{1}{x\ln^2([b])} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$\\
+D. $f'(x)= \frac{1}{x\ln^2([b])\log_{[b]}([a]x)} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$\\
+E. $f'(x)= \frac{1}{x\ln^2([b])\log_{[b]}([a]x)} , D_f: x\in \left(\frac{1}{[a]},\infty \right), D_{f'}: x \in \left(0,-\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$\\
+F. $f'(x)= \frac{1}{\ln^2([b])\log_{[b]}([a]x)} , D_f: x\in \left(-\frac{1}{[a]}, \frac{1}{[a]} \right), D_{f'}: x \in \left(0,\frac{1}{[a]}\right) \cup \left( \frac{1}{[a]}, \infty \right)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
