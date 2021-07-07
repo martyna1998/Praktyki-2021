@@ -1,0 +1,72 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.55g}
+\zadStart{Zadanie z Wikieł Z 5.55g) moja wersja nr [nrWersji]}
+%[a]=random.randint(0,10)
+%[b]:[1,2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[d]:[2,3,4,5,6,7]
+%[bd]=[b]*[d]
+%[bdp]=2*[bd] 
+%[bd]!=[b] and [bd]!=[d] and [bd]!=[c] and [b]!=[d] and [b]!=[c] and [d]!=[c] and [c]!=[bdp]
+Na podstawie podanych wartości $f'([a])=[b],$ $f([a])=[c],$ $g'([c])=[d]$ obliczyć wartość następującej pochodnej $\left[g(f(x))\right]'|_{x=[a]}$.
+\zadStop
+\rozwStart{Justyna Chojecka}{}
+Zauważmy, że 
+$$\left[g(f(x))\right]'=g'(f(x))\cdot f'(x).$$
+Obliczamy wartość pochodnej $\left[g(f(x))\right]'$ dla $x=[a]$.
+$$\left[g(f([a]))\right]'=g'(f([a]))\cdot f'([a])=g'([c])\cdot [b]=[d]\cdot [b]=[bd]$$
+\rozwStop
+\odpStart
+$[bd]$
+\odpStop
+\testStart
+A.$[bd]$
+B.$[b]$
+C.$-[d]$
+D.$-[bdp]$
+E.$-[b]$
+F.$-[bd]$
+G.$-[c]$
+H.$[bdp]$
+I.$[d]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
