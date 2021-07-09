@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.93f}
+\zadStart{Zadanie z Wikieł Z 1.93 f) moja wersja nr [nrWersji]}
+%[r]:[2,3,4,5]
+%[a]:[2,3,4,5,6]
+%[b]:[2,3,4,5,6]
+%[c]:[2,4,5,8,10]
+%[d]:[2,4]
+%[p]=pow([a],[r])
+%[jj]=[c]*[d]
+%[ldelta]=(([b]**2)*[p]-(4*[d])*([c]**2))
+%[mdelta]=([p]*([c]**2))
+%[p1]=(pow([ldelta],1/2))
+%[p2]=(pow([mdelta],1/2))
+%[pp1]=int([p1].real)
+%[pp2]=int([p2].real)
+%[z1]=([b]*[pp2]-[c]*[pp1])
+%[z2]=([b]*[pp2]+[c]*[pp1])
+%[mianownik]=((2*[d])*([c]*[pp2]))
+%[k1]=math.gcd([mianownik],[z1])
+%[k2]=math.gcd([mianownik],[z2])
+%[e1]=int([z1]/[k1])
+%[f1]=int([mianownik]/[k1])
+%[e2]=int([z2]/[k2])
+%[f2]=int([mianownik]/[k2])
+%math.gcd([b],[c])==1 and [ldelta]>0 and [mdelta]>0 and [p1].is_integer()==True and [p2].is_integer()==True and ([mdelta]/[ldelta]).is_integer()==False and ([ldelta]/[mdelta]).is_integer()==False
+Rozwiązać równanie $\log_{\frac{1}{[a]}}{x} + \log_{\frac{1}{[a]}}{(\frac{[b]}{[c]}-[d]x)} = [r]$
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+Dziedzina:
+$$ x>0 \quad \land \quad \frac{[b]}{[c]}-[d]x >0 \quad \Longrightarrow \quad D = \Big(0, \frac{[b]}{[jj]}\Big) $$
+$$\log_{\frac{1}{[a]}}{x} + \log_{\frac{1}{[a]}}{(\frac{[b]}{[c]}-[d]x)} = [r] \quad \Longleftrightarrow \quad \log_{\frac{1}{[a]}}{(\frac{[b]}{[c]}x-[d]x^2)} = [r] \quad \Longleftrightarrow \quad \frac{1}{[a]^{[r]}} = \frac{[b]}{[c]}x-[d]x^2$$
+$$\Longleftrightarrow \quad [d]x^2 - \frac{[b]}{[c]}x + \frac{1}{[p]} = 0 $$
+$$ \bigtriangleup = \Big( \frac{[b]}{[c]} \Big)^2-4 \cdot [d] \cdot \frac{1}{[p]} = \frac{[ldelta]}{[mdelta]} \qquad \sqrt{\bigtriangleup} = \frac{[pp1]}{[pp2]}$$
+$$ x_1=\frac{\frac{[b]}{[c]}-\sqrt{\bigtriangleup}}{2 \cdot [d]} = \frac{[z1]}{[mianownik]} = \frac{[e1]}{[f1]} $$
+$$ x_2=\frac{\frac{[b]}{[c]}+\sqrt{\bigtriangleup}}{2 \cdot [d]} = \frac{[z2]}{[mianownik]} = \frac{[e2]}{[f2]}$$
+\rozwStop
+\odpStart
+$x \in \{\frac{[e1]}{[f1]}, \frac{[e2]}{[f2]}\}$
+\odpStop
+\testStart
+A. $x \in \{-\frac{1}{8}, \frac{1}{8}\}$\\
+B. $x \in \{0, 1\}$\\
+C. $x \in \{\frac{1}{4}, \frac{1}{11}\}$\\
+D. $x \in \{\frac{[e1]}{[f1]}, \frac{[e2]}{[f2]}\}$\\
+E. $x \in \{-\frac{3}{[f1]}, \frac{[e2]}{[f2]}\}$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}
