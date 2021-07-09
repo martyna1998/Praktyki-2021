@@ -1,0 +1,135 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/1.62d}
+
+
+\zadStart{Zadanie z Wikieł Z 1.62 d) moja wersja nr 1}
+
+Rozwiązać nierówności $(x^{2}-9)^{2}(x+1)(x^{2}-2x-3)(x-0)\le0$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+Wejściową nierówność możemy zapisać w innej postaci.\\
+Zauważmy, że wyrażenie $(x^{2}-2x-3)$ ma następujące miejsca zerowe: -1 i 3.\\
+Pierwszy człon z kolei, $(x^{2}-9)^{2}$ ma 2 dwukrotne pierwiastki: -3 i 3.\\
+Ostatecznie, nierówność do rozwiązania wygląda następująco:\\ $(x-3)^{3}(x+3)^{2}(x+1)^{2}(x-0)\le0$.\\
+Miejsca zerowe naszego wielomianu to: $-3,-1,0,3$, przy czym niektóre z nich są wielokrotne.\\
+Wielomian jest stopnia parzystego, ponadto znak współczynnika przy\linebreak najwyższej potędze x jest dodatni.\\ W związku z tym wykres wielomianu zaczyna się od lewej strony powyżej osi OX.\\
+Ponadto w punktach -3 i -1 wykres odbija się od osi poziomej.\\
+A więc $$x \in \{-3,-1\} \cup [0,3].$$
+\rozwStop
+\odpStart
+$x \in \{-3,-1\} \cup [0,3]$
+\odpStop
+\testStart
+A.$x \in \{-3,-1\} \cup [0,3]$\\
+B.$x \in \{-3,-1\} \cup [0,3)$\\
+C.$x \in \{-3,-1\} \cup (0,3]$\\
+D.$x \in \{-3,-1\} \cup (0,3)$\\
+E.$x \in \{0,3\} \cup [-3,-1]$\\
+F.$x \in \{0,3\} \cup [-3,-1)$\\
+G.$x \in \{0,3\} \cup (-3,-1]$\\
+H.$x \in \{0,3\} \cup (-3,-1)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 1.62 d) moja wersja nr 2}
+
+Rozwiązać nierówności $(x^{2}-9)^{2}(x+1)(x^{2}-2x-3)(x-1)\le0$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+Wejściową nierówność możemy zapisać w innej postaci.\\
+Zauważmy, że wyrażenie $(x^{2}-2x-3)$ ma następujące miejsca zerowe: -1 i 3.\\
+Pierwszy człon z kolei, $(x^{2}-9)^{2}$ ma 2 dwukrotne pierwiastki: -3 i 3.\\
+Ostatecznie, nierówność do rozwiązania wygląda następująco:\\ $(x-3)^{3}(x+3)^{2}(x+1)^{2}(x-1)\le0$.\\
+Miejsca zerowe naszego wielomianu to: $-3,-1,1,3$, przy czym niektóre z nich są wielokrotne.\\
+Wielomian jest stopnia parzystego, ponadto znak współczynnika przy\linebreak najwyższej potędze x jest dodatni.\\ W związku z tym wykres wielomianu zaczyna się od lewej strony powyżej osi OX.\\
+Ponadto w punktach -3 i -1 wykres odbija się od osi poziomej.\\
+A więc $$x \in \{-3,-1\} \cup [1,3].$$
+\rozwStop
+\odpStart
+$x \in \{-3,-1\} \cup [1,3]$
+\odpStop
+\testStart
+A.$x \in \{-3,-1\} \cup [1,3]$\\
+B.$x \in \{-3,-1\} \cup [1,3)$\\
+C.$x \in \{-3,-1\} \cup (1,3]$\\
+D.$x \in \{-3,-1\} \cup (1,3)$\\
+E.$x \in \{1,3\} \cup [-3,-1]$\\
+F.$x \in \{1,3\} \cup [-3,-1)$\\
+G.$x \in \{1,3\} \cup (-3,-1]$\\
+H.$x \in \{1,3\} \cup (-3,-1)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 1.62 d) moja wersja nr 3}
+
+Rozwiązać nierówności $(x^{2}-9)^{2}(x+1)(x^{2}-2x-3)(x-2)\le0$.
+\zadStop
+\rozwStart{Patryk Wirkus}{}
+Wejściową nierówność możemy zapisać w innej postaci.\\
+Zauważmy, że wyrażenie $(x^{2}-2x-3)$ ma następujące miejsca zerowe: -1 i 3.\\
+Pierwszy człon z kolei, $(x^{2}-9)^{2}$ ma 2 dwukrotne pierwiastki: -3 i 3.\\
+Ostatecznie, nierówność do rozwiązania wygląda następująco:\\ $(x-3)^{3}(x+3)^{2}(x+1)^{2}(x-2)\le0$.\\
+Miejsca zerowe naszego wielomianu to: $-3,-1,2,3$, przy czym niektóre z nich są wielokrotne.\\
+Wielomian jest stopnia parzystego, ponadto znak współczynnika przy\linebreak najwyższej potędze x jest dodatni.\\ W związku z tym wykres wielomianu zaczyna się od lewej strony powyżej osi OX.\\
+Ponadto w punktach -3 i -1 wykres odbija się od osi poziomej.\\
+A więc $$x \in \{-3,-1\} \cup [2,3].$$
+\rozwStop
+\odpStart
+$x \in \{-3,-1\} \cup [2,3]$
+\odpStop
+\testStart
+A.$x \in \{-3,-1\} \cup [2,3]$\\
+B.$x \in \{-3,-1\} \cup [2,3)$\\
+C.$x \in \{-3,-1\} \cup (2,3]$\\
+D.$x \in \{-3,-1\} \cup (2,3)$\\
+E.$x \in \{2,3\} \cup [-3,-1]$\\
+F.$x \in \{2,3\} \cup [-3,-1)$\\
+G.$x \in \{2,3\} \cup (-3,-1]$\\
+H.$x \in \{2,3\} \cup (-3,-1)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}
