@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.21b}
+\zadStart{Zadanie z Wikieł Z 3.21 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]:[2,3,4,5,6,7,8,9]
+%[d]=math.gcd([a],99)
+%[a2]=int([a]/[d])
+%[m]=int((99)/[d])
+%[mb]=[m]*[b]
+%[a2c]=[c]*[a2]
+%[d2]=math.gcd([mb],[a2c])
+%[mb2]=int([mb]/[d2])
+%[a2c2]=int([a2c]/[d2])
+%[calosci]=[mb2]//[a2c2]
+%[reszta]=[mb2]%[a2c2]
+%math.gcd([b],[c])==1 and [a2]!=1 and [a2c2]!=1 and [m]!=1 and [mb2]!=1
+Rozwiązać równanie, którego lewa strona jest sumą nieskończonego ciągu geometrycznego.
+$$0,0[a]x+0,000[a]x+0,00000[a]x+\dots=\frac{[b]}{[c]}$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zapiszemy powyższe równanie w inny sposób.
+$$\frac{[a]x}{100}+\frac{[a]x}{10000}+\frac{[a]x}{1000000}+\dots=\frac{[b]}{[c]}$$
+Lewa strona równania jest sumą nieskończonego ciągu geometrycznego o pierwszym wyrazie $a_1=\frac{[a]x}{100}$ oraz ilorazie $q=\frac{1}{100}$. Widzimy, że 
+$$|q|=\bigg|\frac{1}{100}\bigg|=\frac{1}{100}<1.$$
+Mamy zatem:
+$$S=\frac{a_1}{1-q}=\frac{\frac{[a]x}{100}}{1-\frac{1}{100}}=\frac{[a]x}{100}\cdot\frac{100}{99}=\frac{[a2]x}{[m]}$$
+Obliczoną sumę wstawiamy do równania.
+$$\frac{[a2]x}{[m]}=\frac{[b]}{[c]}\Leftrightarrow [c]\cdot[a2]x=[m]\cdot[b]\Leftrightarrow[a2c]x=[mb]\Leftrightarrow x=\frac{[mb2]}{[a2c2]}\Leftrightarrow x=[calosci]\frac{[reszta]}{[a2c2]}$$
+Rozwiązaniem równania jest $x=[calosci]\frac{[reszta]}{[a2c2]}$.
+\rozwStop
+\odpStart
+$x=[calosci]\frac{[reszta]}{[a2c2]}$
+\odpStop
+\testStart
+A.$x=-[calosci]$
+B.$x=[calosci]\frac{[reszta]}{[a2c2]}$
+C.$x=-1$
+D.$x=[calosci]$
+E.$x=0$
+F.$x=-\frac{[reszta]}{[a2c2]}$
+G.$x=\frac{[reszta]}{[a2c2]}$
+H.$x=1$
+I.$x=-[calosci]\frac{[reszta]}{[a2c2]}$
+\testStop
+\kluczStart
+B
+\kluczStop
+
+
+
+\end{document}
