@@ -1,0 +1,125 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.55}
+\zadStart{Zadanie z Wikieł Z 2.55 moja wersja nr [nrWersji]}
+%[a1]:[2,3,4,5,6,7,8,9]
+%[a2]:[1,2,3,4,5,6,7,8]
+%[b1]=[a1]+1
+%[b2]=[a2]+1
+%[c1]=[b1]+1
+%[c2]=[b2]+1
+%[2a1]=2*[a1]
+%[2a2]=2*[a2]
+%[2b1]=2*[b1]
+%[2b2]=2*[b2]
+%[2c1]=2*[c1]
+%[2c2]=2*[c2]
+%[ka1]=[a1]*[a1]
+%[ka2]=[a2]*[a2]
+%[kb1]=[b1]*[b1]
+%[kb2]=[b2]*[b2]
+%[kc1]=[c1]*[c1]
+%[kc2]=[c2]*[c2]
+%[aa12]=[ka1]+[ka2]
+%[bb12]=[kb1]+[kb2]
+%[cc12]=[kc1]+[kc2]
+%[2bb]=[2b1]-[2a1]
+%[2b]=[2b2]-[2a2]
+%[b12]=[bb12]-[aa12]
+%[b]=[b12]/2
+%[cb]=int([b])
+%[2cc]=[2c1]-[2b1]
+%[2c]=[2c2]-[2b2]
+%[c12]=[cc12]-[bb12]
+%[x]=[2cc]*[2b]
+%[xx]=[x]-[2c]
+%[y]=[2cc]*[cb]
+%[yy]=[c12]-[y]
+%[bb]=[yy]/2
+%[cbb]=int([bb])
+%[a]=[2b]*[cbb]
+%[aa]=[cb]+[a]
+%[q]=[aa]-[a1]
+%[p]=[a2]+[cbb]
+%[s]=[p]*[aa]
+%[t]=[cbb]*[q]
+%[u]=[s]-[t]
+%[2bb]>0 and [2b]>0 and [b12]>0 and [2cc]>0 and [2c]>0 and [c12]>0 and [aa]>0 and math.gcd([p],[q])==1
+Podać równanie jednej z prostych, do której należy środek okręgu opisanego na trójkącie o wierzchołkach A([a1],[a2]),B([b1],[b2]),C([c1],[c2]).
+\zadStop
+\rozwStart{Aleksandra Pasińska}{}
+1) $$([a1]-a)^2+([a2]-b)^2=r^2$$
+$$a^2+b^2-[2a1]a-[2a2]b+[aa12]=r^2$$
+2) $$([b1]-a)^2+([b2]-b)^2=r^2$$
+$$a^2+b^2-[2b1]a-[2b2]b+[bb12]=r^2$$
+3) $$([c1]-a)^2+([c2]-b)^2=r^2$$
+$$a^2+b^2-[2c1]a-[2c2]b+[cc12]=r^2$$
+1)-2)$$[2bb]a+[2b]b-[b12]=0$$
+$$a=-[2b]b+[cb]$$
+2)-3)$$[2cc]a+[2c]b-[c12]=0$$
+$$[2cc](-[2b]b+[cb])+[2c]b-[c12]=0$$
+$$b=-[cbb], a=[aa]$$
+$$S([aa],-[cbb])$$
+$$\left\{ \begin{array}{ll}
+-[cbb]=[aa]a+b\\ 
+.[a2]=[a1]a+b 
+\end{array} \right.$$
+$$b=-[cbb]-[aa]a$$
+$$[a2]=[a1]a-[cbb]-[aa]a$$
+$$[q]a=-[p]$$
+$$a=-\frac{[p]}{[q]}, b=\frac{[u]}{[q]}$$
+$$y=-\frac{[p]}{[q]}x+\frac{[u]}{[q]}$$
+\rozwStop
+\odpStart
+$y=-\frac{[p]}{[q]}x+\frac{[u]}{[q]}$\\
+\odpStop
+\testStart
+A.$y=2x+\frac{[u]}{[q]}$
+B.$y=-\frac{[p]}{[q]}x-1$
+C.$y=x+\frac{[u]}{[q]}$
+D.$y=-x+\frac{[u]}{[q]}$
+E.$y=\frac{[p]}{[q]}x+\frac{[u]}{[q]}$
+F.$y=-\frac{[p]}{[q]}x-\frac{[u]}{[q]}$
+G.$y=\frac{[u]}{[q]}$
+H.$ y=-\frac{[u]}{[q]}$
+I.$y=-\frac{[p]}{[q]}x$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
