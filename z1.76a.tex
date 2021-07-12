@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.76a}
+\zadStart{Zadanie z Wikieł Z 1.76 a) moja wersja nr [nrWersji]}
+%[a]:[3,5,7,9]
+%[b]:[3,5,7,9]
+%[d]:[2,3,4,5,6,7,8,9]
+%[d1]=[d]+1
+%math.gcd([a],[b])==1 and [a]>[d1]
+Wyznaczyć dziedzinę naturalną funkcji określonej podanym wzorem.
+$$f(x)=x^2(x^2-[a]x)^{-\frac{[a]}{[b]}}+\sqrt{1-\frac{1}{x-[d]}}$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Funkcję potęgową $f_1(x)=(x^2-[a]x)^{-\frac{[a]}{[b]}}$ możemy zapisać w postaci $f_1(x)=\big(\frac{1}{x^2-[a]x}\big)^{\frac{[a]}{[b]}}$. Zatem musi być spełniony warunek $x^2-[a]x\ne0$. Funkcja $f_2(x)=1-\frac{1}{x-[d]}$ znajdująca się pod pierwiastkiem musi spełniać nierówność $f_2(x)\geq0$. Mianownik $x-[d]$ musi być różny od $0$. Zatem dziedziną funkcji $f$ jest zbiór
+$$D_{f}=\bigg\{x\in\mathbb{R}:x^2-[a]x\ne0 \land 1-\frac{1}{x-[d]}\geq0 \land x-[d]\ne0\bigg\}.$$
+Zacznijmy od pierwszego warunku.
+$$x^2-[a]x\ne0\qquad\Leftrightarrow\qquad x(x-[a])\ne0\qquad\Leftrightarrow\qquad x\ne0~~\land~~ x\ne[a]$$
+Rozwiążemy teraz drugi warunek.
+$$1-\frac{1}{x-[d]}\geq0\Leftrightarrow\frac{-1+x-[d]}{x-[d]}\geq0\Leftrightarrow\frac{x-[d1]}{x-[d]}\geq0\Leftrightarrow(x-[d1])(x-[d])\geq0$$
+Lewa strona nierówności to parabola z ramionami skierowanymi do góry oraz pierwiastkami w $x_1=[d]$ i $x_2=[d1]$. Nierówność jest spełniona zatem dla $x\in(-\infty,[d]]\cup[[d1],\infty)$.
+\\Z warunku $x-[d]\ne0$. Otrzymujemy, że $x$ musi być różne od $[d]$.
+\\Łącząc wszystkie warunki otrzymujemy, że 
+$$D_{f}=(-\infty,0)\cup(0,[d])\cup[[d1],[a])\cup([a],\infty).$$
+\rozwStop
+\odpStart
+$D_{f}=(-\infty,0)\cup(0,[d])\cup[[d1],[a])\cup([a],\infty)$
+\odpStop
+\testStart
+A.$D_{f}=(-\infty,0)\cup(0,[d])\cup([d],[a])\cup([a],\infty)$
+B.$D_{f}=(-\infty,0)\cup(0,[d])\cup[[d1],[a])\cup([a],\infty)$
+C.$D_{f}=(-\infty,0)\cup(0,[d1])\cup([d1],[a])\cup([a],\infty)$
+D.$D_{f}=(-\infty,0)\cup(0,[d])\cup[[d1],\infty)$
+E.$D_{f}=(-\infty,[d])\cup[[d1],\infty)$
+F.$D_{f}=(-\infty,0)\cup(0,[a])\cup([a],\infty)$
+G.$D_{f}=\mathbb{R}\setminus\{0\}$
+H.$D_{f}=(-\infty,[d])\cup[[d1],[a])\cup([a],\infty)$
+I.$D_{f}=[[d],[d1]]$
+\testStop
+\kluczStart
+B
+\kluczStop
+
+
+
+\end{document}
