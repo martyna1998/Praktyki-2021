@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.93l}
+\zadStart{Zadanie z Wikieł Z 1.93 l) moja wersja nr [nrWersji]}
+%[a]:[2,3,5,6,7,8,11,13]
+%[b]:[1,3,5,7,9,11]
+%[c]=[b]/2
+%[aa]=[a]**2
+%[delta]=[b]**2-16
+%[pr2]=(pow([delta],(1/2)))
+%[pr1]=[pr2].real
+%[pr]=int([pr1])
+%[z1]=([b]-[pr])/4
+%[z2]=([b]+[pr])/4
+%[delta]>0 and [pr2].is_integer()==True
+Rozwiązać równanie $\log_{x}{[a]} + \log_{[a]}{x} = [c]$
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+Dziedzina: $D = (0, \infty)$
+$$\log_{x}{[a]} + \log_{[a]}{x} = [c] \quad \Longleftrightarrow \quad \frac{1}{\log_{[a]}{x}} + \log_{[a]}{x} = \frac{[b]}{2} $$
+$$\Longleftrightarrow \quad \frac{\log^2_{[a]}{x}+1}{\log_{[a]}{x}} = \frac{[b]}{2} \quad \Longleftrightarrow \quad 2\log^2_{[a]}{x}+2 = [b] \log_{[a]}{x} $$
+Podstawiamy $y=\log_{[a]}{x}$ i mamy:
+$$2y^2 -[b]y+2=0$$
+$$ \bigtriangleup = [b]^2 - 4 \cdot 2 \cdot 2 = [delta] \quad  \Longrightarrow \quad \sqrt{\bigtriangleup} = [pr]$$
+$$y_1=\frac{[b]-\sqrt{\bigtriangleup}}{2\cdot 2} = \frac{1}{2} \quad \land \quad y_2=\frac{[b]+\sqrt{\bigtriangleup}}{2\cdot 2} = 2$$
+dla $y=\frac{1}{2}$:
+$$\log_{[a]}{x} = \frac{1}{2} \quad  \Longrightarrow \quad x = \sqrt{[a]}$$
+dla $y=2$:
+$$\log_{[a]}{x} = 2 \quad  \Longrightarrow \quad x = [a]^2 = [aa]$$
+\rozwStop
+\odpStart
+$x \in \{\sqrt{[a]},[aa]\}$
+\odpStop
+\testStart
+A. $x \in \{[delta], [c]\}$\\
+B. $x \in \{-1, 1\}$\\
+C. $x \in \{\sqrt{[a]}, [aa]\}$\\
+D. $x \in \{\frac{1}{2}, 2\}$\\
+E. $x \in \{4, 5\}$
+\testStop
+\kluczStart
+C
+\kluczStop
+
+
+
+\end{document}

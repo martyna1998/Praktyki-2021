@@ -1,0 +1,73 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.18 e}
+\zadStart{Zadanie z Wikieł Z 5.18 e) moja wersja nr [nrWersji]}
+%[a]:[3,5,7,9,11,13,17,15]
+%[c]:[3,4,5,6,7,8,9]
+%[b]=[a]*[c]
+%[a]!=0
+Oblicz granicę $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right)$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \lim_{x \rightarrow 1}  \frac{[a]\cdot[c]x\ln(x)-[b]x+[b]}{(x-1)[c]\ln(x)} $$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$ = \lim_{x \rightarrow 1}  \frac{[a]\cdot[c]\ln(x)+[a]\cdot[c]x\frac{1}{x}-[b]}{[c]\ln(x)+(x-1)\frac{[c]}{x}} =  
+ \lim_{x \rightarrow 1}  \frac{[a]\cdot[c]\ln(x)+[a]\cdot[c]-[b]}{[c]\ln(x)+[c]-\frac{[c]}{x}} =$$
+$$ = \lim_{x \rightarrow 1}  \frac{[a]\cdot[c]}{[c]+\frac{[c]-\frac{[c]}{x}}{\ln(x)}} $$
+Policzmy $ \lim_{x \rightarrow 1}  \frac{1-\frac{1}{x}}{\ln(x)} $.
+$$ \lim_{x \rightarrow 1}  \frac{1-\frac{1}{x}}{\ln(x)} = \lim_{x \rightarrow 1}  \frac{x-1}{x\ln(x)} =$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$ \lim_{x \rightarrow 1}  \frac{1}{x\frac{1}{x}+\ln(x)} = \lim_{x \rightarrow 1}  \frac{1}{1+\ln(x)} =1$$
+Podstawmy do początkowego przykładu.
+$$\lim_{x \rightarrow 1}  \frac{[a]\cdot[c]}{[c]+\frac{[c]-\frac{[c]}{x}}{\ln(x)}} =\lim_{x \rightarrow 1}  \frac{[a]}{1+\frac{1-\frac{1}{x}}{\ln(x)}} =\lim_{x \rightarrow 1}  \frac{[a]}{1+\frac{1-\frac{1}{x}}{\ln(x)}} =  \frac{[a]}{1+1} = \frac{[a]}{2}$$
+\rozwStop
+\odpStart
+$\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \frac{[a]}{2} $
+\odpStop
+\testStart
+A. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \frac{[a]}{2} $\\
+B. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \frac{1}{2} $\\
+C. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = [a] $\\
+D. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \frac{[a]}{[b]} $\\
+E. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = 2 $\\
+F. $\lim_{x \rightarrow 1} \left( \frac{[a]x}{x-1}-\frac{[b]}{[c]\ln(x)} \right) = \infty $
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.78c}
+\zadStart{Zadanie z Wikieł Z 1.78 c) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[b]:[3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]
+%[2b]=2*[b]
+%[b2]=[b]*[b]
+%[2b1]=[2b]+1
+%[c]=[b2]-[a]
+%[delta1]=[2b1]*[2b1]
+%[delta2]=4*[c]
+%[delta]=[delta1]-[delta2]
+%[pdelta]=int(math.sqrt(abs([delta])))
+%[lx1]=[2b1]-[pdelta]
+%[lx2]=[2b1]+[pdelta]
+%[x1]=int([lx1]/2)
+%[x2]=int([lx2]/2)
+%[a]<[b] and [delta]>0 and int([pdelta])**2==[delta] and math.gcd([lx1],2)==2 and math.gcd([lx2],2)==2 and [x2]>[b] and [x1]<[b] and [x1]>0
+Rozwiązać równanie
+$$x-\sqrt{x+[a]}=[b].$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zakładamy, że $x+[a]\geq0$, zatem $x\geq-[a]$, więc $x\in[-[a],\infty)$. Powyższe równanie możemy zapisać w postaci:
+$$\sqrt{x+[a]}=x-[b]$$
+Lewa strona rozważanego równiania jest nieujemna, żeby zatem równanie nie było sprzeczne, musimy dodatkowo założyć $x-[b]\geq0$. Stąd otrzymujemy założenie: $x\in[[b],\infty)$.
+\\Wiemy, że dla $a\geq0$, $b\geq0$ oraz $n\in\mathbb{N}$ zachodzi własność
+$$a=b\Leftrightarrow a^n=b^n.$$ 
+Korzystając z tej własności otrzymujemy:
+$$\sqrt{x+[a]}=x-[b]\Leftrightarrow(\sqrt{x+[a]})^2=(x-[b])^2\Leftrightarrow x+[a]=x^2-2\cdot[b]x+[b]^2$$
+$$\Leftrightarrow x+[a]=x^2-[2b]x+[b2]\Leftrightarrow x^2-[2b]x-x+[b2]-[a]=0$$
+$$\Leftrightarrow x^2-[2b1]x+[c]=0$$
+Dla równania $ax^2+bx+c=0$, deltę oblicza się ze wzoru $\Delta=b^2-4\cdot a\cdot c$. Obliczamy deltę dla naszego równania:
+$$\Delta=(-[2b1])^2-4\cdot[c]=[delta1]-[delta2]=[delta]$$
+Otrzymujemy stąd, że $\sqrt{\Delta}=[pdelta]$. Pierwiastki funkcji kwadratowej obliczamy ze wzorów
+$$x_1=\frac{-b-\sqrt{\Delta}}{2a},\qquad x_2=\frac{-b+\sqrt{\Delta}}{2a}.$$ 
+Mamy zatem
+$$x_1=\frac{[2b1]-[pdelta]}{2}=\frac{[lx1]}{2}=[x1],\qquad x_2=\frac{[2b1]+[pdelta]}{2}=\frac{[lx2]}{2}=[x2].$$
+Uwzględniając założenie $x\in[[b],\infty)$, otrzymujemy, że rozwiązaniem równania jest $x=[x2].$
+\rozwStop
+\odpStart
+$x=[x2]$
+\odpStop
+\testStart
+A.$x=-[x2]$
+B.$x=[x2]$
+C.$x=[x1]$
+D.$x=0$
+E.$x\in\emptyset$
+F.$x=-[x1]$
+G.$x=[b]$
+H.$x=-[b]$
+I.$-1$
+\testStop
+\kluczStart
+B
+\kluczStop
+
+
+
+\end{document}

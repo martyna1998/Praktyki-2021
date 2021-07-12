@@ -1,0 +1,97 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.35}
+\zadStart{Zadanie z Wikieł Z 3.35 moja wersja nr [nrWersji]}
+%[a]:[2,4,6,8,9]
+%[b]:[2,3,4,5,6]
+%[c]:[2,3,4,5,6]
+%[d]:[2,3,4,5,6]
+%[e]:[2,3,4,6]
+%[f]=int([a]/[e])
+%[delta1]=[f]**2
+%[delta2]=4*[f]
+%[delta]=[delta1]+[delta2]
+%[x1]=(-[f]-math.sqrt([delta]))/2
+%[x2]=(-[f]+math.sqrt([delta]))/2
+%[x11]=round([x1], 2)
+%[x22]=round([x2], 2)
+%[f2]=int([f]/2)
+%math.gcd([a],[e])==[e] and [x1]<-1 and [x2]>-1 and [x2]<1 and [delta]==12 and math.gcd([f],2)==2 and [b]!=[c] and [b]!=[d] and [c]!=[d] 
+Rozwiązać równanie 
+$$x+1+\frac{1}{x}+\frac{1}{x^2}+\dots=\lim_{n\to\infty}\frac{[a]n^2-[b]n+[c]}{[d]+n-[e]n^2},$$ 
+którego lewa strona jest sumą nieskończonego ciągu geometrycznego.
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Na początku zajmiemy się lewą stroną równania. Jest to suma nieskończonego ciągu geometrycznego o pierwszym wyrazie $a_1=x$ oraz $q=\frac{1}{x}$. Zakładamy $|q|<1$. Zatem:
+$$|q|<1\qquad\Leftrightarrow\qquad\bigg|\frac{1}{x}\bigg|<1\qquad\leftrightarrow\qquad\frac{1}{x}<1~~\land~~\frac{1}{x}>-1$$
+$$\Leftrightarrow\qquad\frac{1-x}{x}<0~~\land~~\frac{1+x}{x}>0\qquad\Leftrightarrow\qquad(1-x)x<0~~\land~~(1+x)x>0$$
+Pierwsza z nierówności jest spełniona dla $x\in(-\infty,0)\cup(1,\infty)$, a druga dla $x\in(-\infty,-1)\cup(0,\infty)$. Otrzymujemy założenie, że $x\in(-\infty,-1)\cup(1,\infty)$.
+\\Obliczamy lewą stronę równania:
+$$x+1+\frac{1}{x}+\frac{1}{x^2}+\dots=\frac{x}{1-\frac{1}{x}}=\frac{x}{\frac{x-1}{x}}=\frac{x^2}{x-1}$$
+Mianownik ułamka nie może być równy $0$, a zatem zakładamy, że $x\ne1$.
+\\Przejdziemy teraz do obliczenia prawej strony równania.
+$$\lim_{n\to\infty}\frac{[a]n^2-[b]n+[c]}{[d]+n-[e]n^2}=\lim_{n\to\infty}\frac{n^2([a]-\frac{[b]}{n}+\frac{[c]}{n^2})}{n^2(\frac{[d]}{n^2}+\frac{1}{n}-[e])}\lim_{n\to\infty}\frac{[a]-\frac{[b]}{n}+\frac{[c]}{n^2}}{\frac{[d]}{n^2}+\frac{1}{n}-[e]}=(*)$$
+Wiemy, że:
+$$\lim_{n\to\infty}\frac{[b]}{n}=0,\qquad\lim_{n\to\infty}\frac{[c]}{n^2}=0,\qquad\lim_{n\to\infty}\frac{[d]}{n^2}=0\qquad\lim_{n\to\infty}\frac{1}{n}=0$$
+Mamy zatem:
+$$(*)=-\frac{[a]}{[e]}=-[f]$$
+Wstawiamy otrzymane wyniki do równania.
+$$\frac{x^2}{x-1}=-[f]\Leftrightarrow\frac{x^2+[f]x-[f]}{x-1}=0\Leftrightarrow x^2+[f]x-[f]=0$$
+Otrzymaliśmy równanie kwadratowe. Obliczamy jego pierwiastki.
+$$\Delta=[f]^2-4\cdot(-[f])=[delta1]+[delta2]=[delta]\Rightarrow\sqrt{\Delta}=\sqrt{[delta]}=2\sqrt{3}$$
+$$x_1=\frac{-[f]-2\sqrt{3}}{2}=-[f2]-\sqrt{3}\approx[x11],\qquad x_2=\frac{-[f]+2\sqrt{3}}{2}=-[f2]+\sqrt{3}=\approx[x22]$$
+Zauważamy, że $x_2$ nie spełnia założenia, natomiast $x_1$ spełnia założenie. Zatem rozwiązaniem jest $x=-[f2]-\sqrt{3}$.
+\rozwStop
+\odpStart
+$x=-[f2]-\sqrt{3}$
+\odpStop
+\testStart
+A.$x=[f2]-\sqrt{3}$
+B.$x=-[f2]+\sqrt{3}$
+C.$x=-[f2]-\sqrt{3}$
+D.$x=[f2]$
+E.$x=-\sqrt{3}$
+F.$x=[f2]+\sqrt{3}$
+G.$x=-[f2]$
+H.$x=0$
+I.$x=\sqrt{3}$
+\testStop
+\kluczStart
+C
+\kluczStop
+
+
+
+\end{document}

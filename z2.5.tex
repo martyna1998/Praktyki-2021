@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.5}
+\zadStart{Zadanie z Wikieł Z 2.5) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11]
+%[c]:[-9,-8,-7,-6,-5,-4,-3,-2,-1]
+%[d]:[1,2,3,4,5,6,7,8]
+%[e]=-[c]
+%[f]=[b]*[d]
+%[ac]=-[a]*[c]
+%[acfm]=[ac]-[f]
+%math.gcd([c],[acfm])==1 and [ac]>[f] and [acfm]<[e] and math.gcd([a],[e])==1 and math.gcd([b],[e])==1 and [a]!=[b] and [acfm]!=[b] and [acfm]!=[a]
+Dany jest punkt $A([a],[b])$ oraz wektor $\overrightarrow{v}=[[c],[d]]$. Wyznaczyć na osi $Ox$ taki punkt $B$, by wektor $\overrightarrow{AB}$ był prostopadły do wektora $\overrightarrow{v}$.
+\zadStop
+\rozwStart{Justyna Chojecka}{}
+Niech $B(x,y)$. Ponieważ punkt $B$ ma leżeć na osi $Ox$, to współrzędna $y=0$. Zatem mamy, że $B(x,0)$. Wyznaczymy teraz wektor $\overrightarrow{AB}$
+$$\overrightarrow{AB}=(x,0)-([a],[b])=[x-[a],0-[b]]=[x-[a],-[b]].$$
+Z warunku prostopadłości wektorów mamy, że
+$$\overrightarrow{AB}\perp\overrightarrow{v}\iff\overrightarrow{AB}\circ\overrightarrow{v}=0.$$
+Zatem
+$$[x-[a],-[b]]\circ [[c],[d]]=0$$
+$$(x-[a])\cdot([c])+(-[b])\cdot [d]=0$$
+$$[c]x+[ac]-[f]=0$$
+$$[c]x=-[acfm]$$
+$$x=\frac{[acfm]}{[e]}.$$
+Stąd $B\left(\frac{[acfm]}{[e]},0\right)$.
+\rozwStop
+\odpStart
+$B\left(\frac{[acfm]}{[e]},0\right)$
+\odpStop
+\testStart
+A.$B\left(\frac{[acfm]}{[e]},0\right)$
+B.$B\left(0,\frac{[acfm]}{[e]}\right)$
+C.$B\left(0,\frac{[a]}{[e]}\right)$
+D.$B\left(\frac{[a]}{[e]},0\right)$
+E.$B\left(\frac{[b]}{[e]},0\right)$
+F.$B\left(0,-\frac{[acfm]}{[e]}\right)$
+G.$B\left(-\frac{[a]}{[e]},0\right)$
+H.$B\left(0,-\frac{[a]}{[e]}\right)$
+I.$B\left(-\frac{[acfm]}{[e]},0\right)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
