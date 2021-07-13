@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.4}
+\zadStart{Zadanie z Wikieł Z 3.4 ) moja wersja nr [nrWersji]}
+%[p1]:[10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40]
+%[a]=random.randint(50,100)
+%[b]=random.randint(40,80)
+%[abc]=random.randint(70,100)
+%[p2]=int([p1]/2)
+%[p3]=[p2]-1
+%[p2p2]=[p2]*[p2]
+%[p2p3]=[p2]*[p3]
+%[c]=[a]-[b]
+%[c2]=round([c]/[p2],2)
+%[d]=round([c2]*[p2p3],2)
+%[du]=round(([b]-[d])/[p2],2)
+%[e]=int((([du]*2+([abc]-1)*[c2])/2*[abc]))
+%[nawias]=round(2*[du]-[c2],2)
+%[e2]=[e]*2
+%[delta]=round([nawias]*[nawias]+4*[c2]*[e2],2)
+%[pierdelta]=round(math.sqrt(abs([delta])),2)
+%[n1]=round((abs([nawias])-[pierdelta])/(2*[c2]),2)
+%[n2]=round((abs([nawias])+[pierdelta])/(2*[c2]),2)
+%[absnawias]=abs([nawias])
+%[n2sufit]=math.ceil([n2])
+%[a]>[b] and [nawias]<0
+Dany jest ciąg arytmetyczny, w którym $a_{1}+a_{3}+a_{5},\ldots,a_{p3}=[b]$ oraz $a_{2}+a_{4}+a_{6},\ldots,a_{p1}=[a]$. Wyznaczyć wyraz pierwszy $a_{1}$ oraz różnicę $r$ tego ciągum a następnie $n$, dla której $S_{n}=[e]$.
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$S_{n}=\frac{a_{1}+a_{n}}{2}\cdot n $$
+$$S_{2n}=\frac{a_{1}+a_{1}+([p1]-1)r}{2}\cdot \frac{[p1]}{2}=(a_{1}+[p3]\cdot r)\cdot[p2]=[b]$$
+$$S_{2n+1}=\frac{a_{1}+r+a_{1}+([p1]-1)r}{2}\cdot \frac{[p1]}{2}=(a_{1}+[p2]\cdot r)\cdot[p2]=[a]$$
+$$
+ \left\{ \begin{array}{ll}
+a_{1}\cdot [p2]+[p2p3]\cdot r=[b] & \\
+a_{1}\cdot [p2]+[p2p2]\cdot r=[a] &
+\end{array} \right.
+$$
+$$[p2]\cdot r=[c] \rightarrow r=[c2]$$
+$$[p2]\cdot a_{1}+[c2]\cdot[p2p3]=[b] \rightarrow a_{1}=\frac{[b]-[d]}{[p2]}$$
+$$
+ \left\{ \begin{array}{ll}
+r=[c2] & \\
+a_{1}=[du] &
+\end{array} \right.
+$$
+$$2\cdot [e]=(2a_{1}+r\cdot n-r)\cdot n$$
+$$0=r\cdot n^{2}+ (2a_{1}-r)\cdot n-2\cdot[e]$$
+$$0=[c2]\cdot n^{2}+(2\cdot[du]-[c2])\cdot n-2\cdot[e]$$
+$$0=[c2]\cdot n^{2}+[nawias]\cdot n-[e2]$$
+$$\Delta=([nawias])^{2}+4\cdot[c2]\cdot[e2]=[delta]\Rightarrow\sqrt{\Delta}\approx[pierdelta]$$
+$$n_{1}=\frac{[absnawias]-[pierdelta]}{2\cdot[c2]}\approx[n1] \vee n_{2}=\frac{[absnawias]+[pierdelta]}{2\cdot[c2]}\approx[n2] $$
+$$\mbox{Liczba n jest liczbą dodatnią, więc wybieramy}\hspace{3mm} n=[n2sufit]$$
+\rozwStop
+\odpStart
+$a_{1}=[du]$, $r=[c2]$, natomiast dla $S_{n}=[e]$ liczba $n=[n2sufit]$
+\odpStop
+\testStart
+A. $a_{1}=[du]$, $r=[c2]$, natomiast dla $S_{n}=[e]$ liczba $n=[n2sufit]$.\\
+B. $a_{1}=[du]$, $r=[c2]$, natomiast dla $S_{n}=[e]$ liczba $n=[n1]$.\\
+C. $a_{1}=[c2]$, $r=[du]$, natomiast dla $S_{n}=[e]$ liczba $n=[n2sufit]$.\\
+D. $a_{1}=[c2]$, $r=[du]$, natomiast dla $S_{n}=[e]$ liczba $n=[n1]$.\\
+E. $a_{1}=[n1]$, $r=[n2sufit]$, natomiast dla $S_{n}=[e]$ liczba $n=[e]$.
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

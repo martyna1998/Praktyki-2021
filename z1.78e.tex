@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.78e}
+\zadStart{Zadanie z Wikieł Z 1.78 e) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[c2]=[c]**2
+%[2c]=2*[c]
+%[2ca]=[2c]+[a]
+%[d]=[c2]-[b]
+%[delta1]=[2ca]**2
+%[delta2]=4*[d]
+%[delta]=[delta1]-[delta2]
+%[pdelta]=int(math.sqrt(abs([delta])))
+%[lx1]=[2ca]-[pdelta]
+%[lx2]=[2ca]+[pdelta]
+%[x1]=int([lx1]/2)
+%[x2]=int([lx2]/2)
+%[delta]>0 and int([pdelta])**2==[delta] and math.gcd([lx1],2)==2 and math.gcd([lx2],2)==2 and [x2]>[c] and [x1]>=-[b]/[a] and [x1]<=[c] and math.gcd([b],[a])==1 and [x1]>0 
+Rozwiązać równanie
+$$x+\sqrt{[a]x+[b]}=[c].$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zakładamy, że $[a]x+[b]\geq0$.
+$$[a]x+[b]\geq0\Leftrightarrow [a]x\geq-[b]\Leftrightarrow x\geq-\frac{[b]}{[a]}$$
+Więc $x\in\big[-\frac{[b]}{[a]},\infty\big)$. Powyższe równanie możemy zapisać w postaci
+$$\sqrt{[a]x+[b]}=[c]-x.$$
+Lewa strona rozważanego równiania jest nieujemna, żeby zatem równanie nie było sprzeczne, musimy dodatkowo założyć $[c]-x\geq0$. Otrzymujemy więc założenie: $x\in\big[-\frac{[b]}{[a]},[c]\big]$.
+\\Wiemy, że dla $a\geq0$, $b\geq0$ oraz $n\in\mathbb{N}$ zachodzi własność
+$$a=b\Leftrightarrow a^n=b^n.$$ 
+Korzystając z tej własności otrzymujemy:
+$$\sqrt{[a]x+[b]}=[c]-x\Leftrightarrow\big(\sqrt{[a]x+[b]}\big)^2=([c]-x)^2\Leftrightarrow [a]x+[b]=[c2]-[2c]x+x^2$$
+$$\Leftrightarrow x^2-[2c]x-[a]x+[c2]-[b]=0\Leftrightarrow x^2-[2ca]x+[d]=0$$
+Dla równania $ax^2+bx+c=0$, deltę oblicza się ze wzoru $\Delta=b^2-4\cdot a\cdot c$. Obliczamy deltę dla naszego równania:
+$$\Delta=(-[2ca])^2-4\cdot[d]=[delta1]-[delta2]=[delta]$$
+Otrzymujemy stąd, że $\sqrt{\Delta}=[pdelta]$. Pierwiastki funkcji kwadratowej obliczamy ze wzorów
+$$x_1=\frac{-b-\sqrt{\Delta}}{2a},\qquad x_2=\frac{-b+\sqrt{\Delta}}{2a}.$$ 
+Mamy zatem
+$$x_1=\frac{[2ca]-[pdelta]}{2}=\frac{[lx1]}{2}=[x1],\qquad x_2=\frac{[2ca]+[pdelta]}{2}=\frac{[lx2]}{2}=[x2].$$
+Uwzględniając założenie $x\in\big[-\frac{[b]}{[a]},[c]\big]$, otrzymujemy, że rozwiązaniem równania jest $x=[x1].$
+\rozwStop
+\odpStart
+$x=[x1]$
+\odpStop
+\testStart
+A.$x=-[x2]$
+B.$x=-[x1]$
+C.$x=0$
+D.$x=[x2]$
+E.$x\in\emptyset$
+F.$x=[x1]$
+G.$-\frac{[b]}{[a]}$
+H.$x=-1$
+I.$-\frac{[a]}{[b]}$
+\testStop
+\kluczStart
+F
+\kluczStop
+
+
+
+\end{document}

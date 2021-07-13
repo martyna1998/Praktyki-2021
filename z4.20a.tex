@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z4.20a}
+\zadStart{Zadanie z Wikieł Z 4.20a) moja wersja nr [nrWersji]}
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+%[c]:[3,8,15,24,35,48,63,80,99]
+%[d]=1+[c]
+%[e]=int(math.sqrt([d]))
+Wyznaczyć wartości parametru tak, aby funkcja $
+f(x) = \left\{ \begin{array}{ll}
+[b]^{x}+[c] & \textrm{dla $x\leq 0$}\\
+(x-a)^{2} & \textrm{dla $x>0$}
+\end{array} \right.
+$ była ciągła.
+\zadStop
+\rozwStart{Justyna Chojecka}{}
+Dla dowolnej wartości parametru $a$ funkcja jest ciągła w przedziałach $(-\infty,0)$ i $(0,\infty)$. Jedynym punktem, w którym funkcja mogłaby być nieciągła, jest punkt $x_{0}=0$.\\
+Wartość funkcji w tym punkcie jest równa $f(0)=[b]^{0}+[c]=1+[c]=[d]$.\\
+Granice jednostronne są równe odpowiednio:
+$$\lim\limits_{x\to 0^{-}}f(x)=\lim\limits_{x\to 0^{-}}[b]^{x}+[c]=[d],$$
+$$\lim\limits_{x\to 0^{+}}f(x)=\lim\limits_{x\to 0^{+}}(x-a)^{2}=a^{2}.$$
+A zatem
+$$\lim\limits_{x\to 0^{-}}f(x)=\lim\limits_{x\to 0^{+}}f(x)\iff [d]=a^{2} \iff a=[e] \lor a=-[e].$$
+Stąd dla wartości parametru $a\in\{-[e],[e]\}$ funkcja jest ciągła dla wszystkich $x\in\mathbb{R}.$
+\rozwStop
+\odpStart
+$a\in\{-[e],[e]\}$
+\odpStop
+\testStart
+A.$a\in\{-[e],[e]\}$
+B.$a=-[e]$
+C.$a=[d]$
+D.$a=[e]$
+E.$a\in\{-[c],[c]\}$
+F.$a=-[c]$
+G.$a\in\{-[d],[d]\}$
+H.$a=-[d]$
+I.$a=[c]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5w}
+\zadStart{Zadanie z Wikieł Z 5.5 w) moja wersja nr [nrWersji]}
+%[x]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[y]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[z]:[2,3,4,5,6,7,8]
+%[a]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[f]=random.randint(2,10)
+%[m]=3*[a]*[d]
+%[n]=4*[a]*[e]
+%[u]=5*[a]*[f]
+%[p]=[d]*[b]
+%[r]=2*[c]*[d]
+%[s]=([b]*[f])-([c]*[e])
+%[t]=5*[a]*[d]
+%[w]=5*[a]*[e]
+%[h]=[b]*[e]
+%[l]=[b]*[f]
+%[k1]=2*[a]*[d]
+%[k2]=2*[d]*[b]
+%[k3]=[e]*[a]
+%[k4]=[e]*[c]
+%[s]>0
+Korzystając z podstawowych twierdzeń i wzorów, wyznaczyć pochodną funkcji (bez określania zakresu zmienności $x$).\\ 
+$f(x)=\frac{[a]x^5-[b]x+[c]}{[d]x^2+[e]x-[f]}$.
+\zadStop
+\rozwStart{Katarzyna Filipowicz}{}
+$$f(x)=\frac{[a]x^5-[b]x+[c]}{[d]x^2+[e]x-[f]}$$
+$$f'(x)=\left(\frac{[a]x^5-[b]x+[c]}{[d]x^2+[e]x-[f]}\right)' = $$
+$$ =\frac{(5\cdot [a]\cdot x^4-[b])([d]\cdot x^2+[e]\cdot x-[f])-([a]\cdot x^5-[b]\cdot x+[c])(2\cdot [d]\cdot x+[e])}{([d]x^2+[e]x-[f])^2}=
+$$ $$
+=\frac{5\cdot [a]\cdot [d]\cdot x^6+5\cdot [a]\cdot [e]\cdot x^5-5\cdot [a]\cdot [f]\cdot x^4-[b]\cdot [d]\cdot x^2-[b]\cdot [e]\cdot x+[b]\cdot [f]}{([d]x^2+[e]x-[f])^2}-
+$$ $$
+-\frac{([a]\cdot 2\cdot [d]\cdot x^6-2\cdot[d]\cdot [b]x^2+[c]\cdot 2\cdot [d]\cdot x+[e]\cdot [a]\cdot x^5-[e]\cdot [b]\cdot x+[e]\cdot [c])}{([d]x^2+[e]x-[f])^2}=
+$$ $$
+=\frac{[t] x^6+[w] x^5-[u] x^4-[p] x^2-[h] x+[l]-[k1] x^6+[k2] x^2-[r] x-[k3] x^5+[h] x-[k4]}{([d]x^2+[e]x-[f])^2}=
+$$ $$
+=\frac{[m]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}
+$$
+\rozwStop
+\odpStart
+$ f'(x)=\frac{[m]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}$
+\odpStop
+\testStart
+A. $ f'(x)=\frac{[m]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}$\\
+B. $ f'(x)=\frac{[m]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])}$\\
+C. $ f'(x)=\frac{[a]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}$ \\
+D. $ f'(x)=\frac{[m]x^6+[n]x^5-[u]x^4+[p]x^2-[r]x-[s]}{([d]x^2+[e]x-[f])^2}$\\
+E. $ f'(x)=\frac{[m]x^6+[n]x^5-[u]x^4+[k1]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}$\\
+F. $ f'(x)=\frac{[m]x^6+[k3]x^5-[u]x^4+[p]x^2-[r]x+[s]}{([d]x^2+[e]x-[f])^2}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

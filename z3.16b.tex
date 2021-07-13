@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.16b}
+\zadStart{Zadanie z Wikieł Z 3.16 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]:[2,3,4,5,6,7,8,9]
+%[d]:[2,3,4,5,6,7,8,9]
+%[da]=[d]*[a]
+%[delta1]=[d]**2
+%[delta2]=4*[da]
+%[delta]=[delta1]+[delta2]
+%[pdelta]=int(math.sqrt(abs([delta])))
+%[lx1]=[d]-[pdelta]
+%[lx2]=[d]+[pdelta]
+%[x1]=int([lx1]/2)
+%[x11]=-[x1]
+%[x2]=int([lx2]/2)
+%[pdelta]**2==[delta] and math.gcd([lx1],2)==2 and math.gcd([lx2],2)==2 and [b]!=[c] and [x1]<0 and [x2]>0 and [x2]>[x11]
+Wyznaczyć wartość parametru $p\in\mathbb{R}$ tak, aby ciąg o wyrazie ogólnym $a_n$ miał granicę równą $g$, jeśli
+$$a_n=\frac{(p+[a])n+[b]}{p^2n+[c]},\qquad g=\frac{1}{[d]}.$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zaczniemy od obliczenia granicy ciągu $a_n$.
+$$\lim_{n\to\infty}\frac{(p+[a])n+[b]}{p^2n+[c]}=\lim_{n\to\infty}\frac{n(p+[a]+\frac{[b]}{n})}{n(p^2+\frac{[c]}{n})}=\lim_{n\to\infty}\frac{p+[a]+\frac{[b]}{n}}{p^2+\frac{[c]}{n}}=(*)$$
+Wiemy, że
+$$\lim_{n\to\infty}\frac{[b]}{n}=0$$
+oraz
+$$\lim_{n\to\infty}\frac{[c]}{n}=0.$$
+Zatem:
+$$(*)=\frac{p+[a]}{p^2}$$
+Mianownik nie może być równy $0$, a zatem $p\ne0$. Wiemy, że granica ciągu $a_n$ jest równa $g=\frac{1}{[d]}$. Zatem mamy:
+$$\frac{p+[a]}{p^2}=\frac{1}{[d]}\Leftrightarrow[d](p+[a])=p^2\Leftrightarrow p^2-[d]p-[da]=0$$
+Otrzymaliśmy równanie kwadratowe. Szukamy zatem jego pierwiastków.
+$$\Delta=(-[d])^2-4\cdot(-[da])=[delta1]+[delta2]=[delta]\qquad\Rightarrow\qquad\sqrt{\Delta}=[pdelta]$$
+$$p_1=\frac{[d]-[pdelta]}{2}=\frac{[lx1]}{2}=[x1],\qquad p_2=\frac{[d]+[pdelta]}{2}=\frac{[lx2]}{2}=[x2]$$
+Otrzymujemy stąd, że $p=[x1]$ lub $p=[x2]$.
+\rozwStop
+\odpStart
+ $p=[x1]$ lub $p=[x2]$
+\odpStop
+\testStart
+A.$p=[x1]$ lub $p=0$
+B.$p=-[x2]$
+C.$p=[x1]$
+D.$p=[x1]$ lub $p=[x2]$
+E.$p=[x11]$ lub $p=[x2]$
+F.$p=0$
+G.$p=[x2]$
+H.$p=[x11]$
+I.$p=[x2]$ lub $p=0$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}

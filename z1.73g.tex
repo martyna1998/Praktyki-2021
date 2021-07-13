@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.73g}
+\zadStart{Zadanie z Wikieł Z 1.73 g) moja wersja nr [nrWersji]}
+%[a]:[2,4,6,8]
+%[2a]=2*[a]
+%[2apa]=[2a]+[a]
+%[ap2]=int([a]/2)
+Rozwiązać nierówność: $\frac{1}{|x+[a]|}\geq\frac{1}{|x-[2a]|}$
+\zadStop
+\rozwStart{Pascal Nawrocki}{}
+Pamiętamy aby wyznaczyć dziedzinę: $x\in\mathbb{R}\symbol{92}\{-[a],[2a]\}$.
+Przerzucamy i sprowadzamy do wspólnego mianownika:
+$$\frac{1}{|x+[a]|}\geq\frac{1}{|x-[2a]|}$$
+$$\frac{1}{|x+[a]|}-\frac{1}{|x-[2a]|}\geq0$$
+$$\frac{|x-[2a]|-|x+[a]|}{|x+[a]||x-[2a]|}\geq0$$
+Wyznaczamy sobie przedziały na podstawie miejsc zerowych w wartościach bezwględnych:
+\begin{enumerate}
+\item $x\in(-\infty,-[a])$ (obie wartości bezwględne zmieniają znaki)
+$$\frac{-x+[2a]+x+[a]}{(-x-[a])(-x+[2a])}\geq0$$
+$$\frac{[2apa]}{(-x-[a])(-x+[2a])}\geq0$$
+Zauważmy, że licznik nie będzie grał żadnej roli w tej nierówności (bo nie ma x), więc rozpatrujemy co się dzieje w mianowniku. Zauważmy, że interesuje nas tylko przedział, w którym to mianownik będzie dodatni (bo licznik jest dodatni). Nasza parabolka się uśmiecha, więc:
+$$x\in(-\infty,-[a])\cup([2a],\infty)$$
+Pamiętamy teraz w jakim przedziale operujemy, stąd interesuje nas tylko:
+$$x\in(-\infty,-[a])$$
+\item $x\in[-[a],[2a])$ (znak tylko zmienia $|x-[2a]|$)
+$$\frac{-x+[2a]-x-[a]}{(x+[a])(-x+[2a])}\geq0$$
+$$\frac{-2x+[a]}{(x+[a])(-x+[2a])}\geq0$$
+W tym wypadku będzie na interesować znak licznika oraz mianownika. Zauważmy, że są tylko 2 przypadki kiedy to cały ułamek będzie spełniał nierówność.
+\begin{itemize}
+\item licznik nieujemny i mianownik dodatni:
+$$-2x+[a]\geq0 \wedge (x+[a])(-x+[2a])>0$$
+$$x\leq[ap2] \wedge x\in(-[a],[2a])\Rightarrow x\in(-[a],[ap2]]$$
+\item licznik niedodatni i mianownik ujemny:
+$$-2x+[a]\leq0 \wedge (x+[a])(-x+[2a])<0$$
+$$x\geq[ap2] \wedge x\in(-\infty,-[a])\cup([2a],\infty)\Rightarrow x\in([2a],\infty)$$
+\end{itemize}
+Czyli mamy: $x\in(-[a],[ap2]]\cup([2a],\infty)$
+Pamiętamy na jakim przedziale operujemy, stąd:
+$$x\in(-[a],[ap2]]$$
+\item $x\in[[2a],\infty)$ (bez zmiany znaków)
+$$\frac{x-[2a]-x-[a]}{(x+[a])(x-[2a])}\geq0$$
+$$\frac{-[2apa]}{(x+[a])(x-[2a])}\geq0$$
+$$\frac{[2apa]}{(x+[a])(x-[2a])}\leq0$$
+Interesuje nas w tym wypadku przedział, w którym to mianownik jest ujemny. Stąd:
+$$x\in(-[a],[2a])$$
+Jako, że rozwiązanie to nie wpada w nasz przedział stąd: $x\in\emptyset$.
+\end{enumerate}
+Na koniec sumujemy otrzymane rozwiązania i uwzględnieniamy początkowe założenie. Stąd naszym rozwiązaniem jest: 
+$$x\in(-\infty,-[a])\cup([2a],\infty)$$
+\odpStop
+\testStart
+A. $x\in(-\infty,-[a])\cup([2a],\infty)$
+B.$x\in([2a],\infty)$
+C.$x\in\emptyset$
+D.$x\in(-\infty,-[a])$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

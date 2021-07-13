@@ -1,0 +1,90 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.79r}
+\zadStart{Zadanie z Wikieł Z 1.79 r) moja wersja nr [nrWersji]}
+%[a]:[5,10,13,35,65,85,55,60,26,74,73,68,53,25,45,52]
+%[b]:[4,2,3,14,26,34,22,21,24,6,33,15,20,18,10,12]
+%[b1]=2*[b]
+%[b2]=[b]*[b]
+%[b3]=[b1]+[a]
+%[de]=abs([b3]*[b3] -8*[b2])
+%[dep]=int(math.sqrt([de]))
+%[x1]=(-[b3]-[dep])/(-4)
+%[x2]=(-[b3]+[dep])/(-4)
+%[de]>0 and [dep]-(math.sqrt([de]))==0 and [x2]<[b] and [x1] <[a] and [x1]>[b] and [b]<[a] and [b3]*[b3]!=8*[b2] and [de]-([b3]*[b3] -8*[b2])==0
+Rozwiązać nierówność $\sqrt{[a]x- x^2}>x-[b]$
+\zadStop
+\rozwStart{Barbara Bączek}{}
+Zaczniemy od wyznaczenia dziedziny.
+$$D: [a]x- x^2 \geq 0$$
+$$D: x([a]-x) \geq 0$$
+$$D: x \in [0, [a]]$$
+\begin{enumerate}
+\item Niech $x -[b] <0$, wtedy uzwględniając dziedzinę:
+$$x \in (-\infty,[b]) \wedge x \in [0,[a]]$$
+$$x \in [0, [b])$$
+Nierówność jest tożsamościowa dla $x \in [0, [b]]$, bo $\displaystyle\mathop{\forall}_{x \in \mathbb{R}} \sqrt{x} \geq 0$.
+\item  Niech $x -[b] \geq 0$, wtedy uwzględniając dziedzinę:
+$$x \in [[b], \infty) \wedge x \in [0,[a]]$$
+$$x \in [[b], [a]]$$
+Obie strony nierówności są nieujemne.
+$$[a]x - x^2 > x^2 -[b1]x +[b2]$$
+$$-2x^2 +[b3]x -[b2]>0$$
+$$\Delta = [de] \hspace{0.2 cm} \wedge \hspace{0.2 cm} \sqrt{\Delta}= [dep]$$
+$$x_1 = \frac{-[b3]-[dep]}{-4}=[x1]  \hspace{0.2 cm} \wedge \hspace{0.2 cm} x_2 = \frac{-[b]+[dep]}{-4}=[x2]$$
+
+Rozwiązaniem $\sqrt{[a]x- x^2}>x-[b]$ w zbiorze $[[b], [a]]$ jest więc $[[b],[x1])$.
+\end{enumerate}
+3. Podsumowując: $x \in [0,[x1]).$
+\rozwStop
+\odpStart
+$x \in [0,[x1])$
+\odpStop
+\testStart
+A.$x \in (0,[x1])$
+B.$x \in [[x1],\infty)$
+C.$x \in \emptyset$
+D.$x \in ([a],\infty)$
+E.$x \in  ([b],[a])$
+G.$x \in (0,[x2]]$
+H.$x \in [0,[x1])$
+\testStop
+\kluczStart
+H
+\kluczStop
+
+
+
+\end{document}

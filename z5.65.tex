@@ -1,0 +1,84 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.65}
+\zadStart{Zadanie z Wikieł Z 5.65 ) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[e]:[2,3,4,5,6,7,8,9]
+%[c]=random.randint(2,20)
+%[d]=random.randint(2,20)
+%[a3]=[a]*3
+%[b2]=[b]*2
+%[ea3]=[e]*[a3]
+%[ce]=int([c]/[e])
+%[p]=int(([ce]+[ea3])/[b2])
+%[b2p]=[b2]*[p]
+%[x1]=[e]-1
+%[x2]=[e]+1
+%[f1]=[a3]*[x1]*[x1]-[b2p]*[x1]+[c]
+%[f2]=[a3]*[x2]*[x2]-[b2p]*[x2]+[c]
+%math.gcd([c],[e])==[e] and math.gcd(([ce]+[ea3]),[b2])==[b2] 
+Wyznaczyć takie $p$, aby funkcja $f(x)=[a]x^{3}-[b]px^{2}+[c]x-[d]$ osiągała ekstremum w $x=[e]$. Zbadać, czy jest to minimum czy maksimum.
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$ f(x)=[a]x^{3}-[b]px^{2}+[c]x+[d]\hspace{5mm} \mathcal{D}_{f}=\mathbb{R}$$
+$$ f'(x)=[a3]x^{2}-[b2]px+[c]$$
+$$\mbox{ wiemy że } x=[e] \mbox{, więc otrzymujemy równanie z niewiadomą "z" }$$
+$$f'(x)=(x-[e])([a3]x-z)=[a3]x^{2}-zx-[ea3]x+[e]z$$
+$$[e]z=[c]\Rightarrow z=[ce]$$
+$$-[ce]-[ea3]=-[b2]p \Rightarrow p=[p]$$
+$$f'(x)=[a3]x^{2}-[b2p]x+[c],\hspace{3mm}x_{1}=[e]-1=[x1],\hspace{2mm} x_{2}=[e]+1=[x2]$$
+$$f'([x1])=[a3]\cdot[x1]^{2}-[b2p]\cdot[x1]+[c]=[f1]<0$$
+$$f'([x2])=[a3]\cdot[x2]^{2}-[b2p]\cdot[x2]+[c]=[f2]>0$$
+Parametr $p=[p]$ natomiast ekstremum w $x=[e]$ jest minimum.
+\rozwStop
+\odpStart
+Parametr $p=[p]$, natomiast ekstremum w $x=[e]$ jest minimum.
+\odpStop
+\testStart
+A. Parametr $p=[p]$, natomiast ekstremum w $x=[e]$ jest minimum.\\
+B. Parametr $p=[p]$, natomiast ekstremum w $x=[e]$ jest maksimum.\\
+C. Parametr $p=[ce]$, natomiast ekstremum w $x=[e]$ jest minimum.\\
+D. Parametr $p=[ce]$, natomiast ekstremum w $x=[e]$ jest maksimum.\\
+E. Parametr $p=[e]$, natomiast ekstremum w $x=[e]$ jest minimum.\\
+F. Nie istnieje taki parametr $p$, który by pasował do tej funkcji.
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

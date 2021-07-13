@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.51d}
+\zadStart{Zadanie z Wikieł Z 1.51 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6]
+%[b]:[2,3,5,6,7,8,10]
+%[c]=random.randint(1,10)
+%[d]=random.randint(2,10)
+%[e]=random.randint(2,10)
+%[aar]=[a]*[a]
+%[abr]=[a]*[b]
+%[acr]=[a]*[c]
+%[bbr]=[b]*[b]
+%[bcr]=[b]*[c]
+%[cbr]=[c]*[b]
+%[ccr]=[c]*[c]
+%[x2]=[acr]+[acr]-[bbr]
+%[daar]=[d]*[aar]
+%[dx2]=[d]*[x2]
+%[dccr]=[d]*[ccr]
+%[eaar]=[e]*[aar]
+%[ex2]=[e]*[x2]
+%[eccr]=[e]*[ccr]
+%[caar]=[c]*[aar]
+%[cccr]=[c]*[ccr]
+%[x4]=[caar]-[eccr]
+%[absx4]=abs([x4])
+%[x6]=[dccr]-[ex2]
+%[x8]=[dx2]-[eaar]
+%[cx2]=[c]*[x2]
+%[x2]>0 and [x2]!=1 and [x4]<0 and [x4]!=-1 and [x6]>0 and [x6]!=1 and [cx2]>0 and [x4]!=1
+Obliczyć iloczyn wielomianów $([d]x^{6}-[e]x^{4}+[c])([a]x^{2}+[b]x+[c])([a]x^{2}-[b]x+[c])$.
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$([d]x^{6}-[e]x^{4}+[c])([a]x^{2}+[b]x+[c])([a]x^{2}-[b]x+[c])=$$
+$$=([d]x^{6}-[e]x^{4}+[c])([aar]x^{4}-[abr]x^{3}+[acr]x^{2}+$$
+$$+[abr]x^{3}-[bbr]x^{2}+[cbr]x+[acr]x^{2}-[cbr]x+[ccr])=$$
+$$=([d]x^{6}-[e]x^{4}+[c])([aar]x^{4}+[x2]x^{2}+[ccr])=$$
+$$=[daar]x^{10}+[dx2]x^{8}+[dccr]x^{6}-[eaar]x^{8}+$$
+$$-[ex2]x^{6}-[eccr]x^{4}+[caar]x^{4}+[cx2]x^{2}+[cccr]=$$
+$$=[daar]x^{10}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]$$
+\rozwStop
+\odpStart
+$[daar]x^{10}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]$
+\odpStop
+\testStart
+A. $[daar]x^{10}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]$\\
+B. $[aar]x^{10}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]$\\
+C. $[daar]x^{10}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]x$\\
+D. $[aar]x^{10}+[x6]x^{8}+[x6]x^{6}-[x6]x^{4}+[cx2]x^{2}+[cccr]x$\\
+E. $[aar]x^{9}+[x8]x^{8}+[x6]x^{6}-[absx4]x^{4}+[cx2]x^{2}+[cccr]$\\
+F. $[daar]x^{9}+[x8]x^{7}+[x6]x^{5}-[absx4]x^{3}+[cx2]x+[cccr]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
