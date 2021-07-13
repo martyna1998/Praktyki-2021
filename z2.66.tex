@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.66}
+\zadStart{Zadanie z Wikieł Z 2.66 moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+%[c]:[2,3,5,6,7,10,11,13,14,15,17,19,21,22,23,26,29,30,31,33,34,35,37,38,39,41]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+%[d]:[2,3,4,5,6,7,8,9,10]
+%[cc]=[c]*[c]
+%[2c]=2*[c]
+%[acc]=[a]*[cc]
+%[2ca]=[2c]*[a]
+%[1a]=[acc]-1
+%[k2ba1]=[2ca]*[2ca]
+%[41aa]=4*[1a]*[a]
+%[41ab]=4*[1a]*[b]
+%[k]=[k2ba1]-[41aa]
+%[ka]=[41ab]/[k]
+%[cka]=int([ka])
+%[bb1]=math.sqrt([cka])
+%[cbb1]=int([bb1])
+%[ka].is_integer()==True and [bb1].is_integer()==True and [k]>0
+Napisać równania stycznych do hiperboli $x^2-[a]y^2=[b]$ równoległych do prostej $y=[c]x-[d]$.
+\zadStop
+\rozwStart{Aleksandra Pasińska}{}
+$$y=ax+b$$
+$$a_1=a_2=[c]$$
+$$y=[c]x+b$$
+$$x^2-[a]([c]x+b)^2=[b]$$
+$$x^2-[a]([cc]x^2+[2c]bx+b^2)-[b]=0$$
+$$x^2-[acc]x^2-[2ca]bx-[a]b^2-[b]=0$$
+$$-[1a]x^2-[2ca]bx-[a]b^2-[b]=0$$
+$$[1a]x^2+[2ca]bx+[a]b^2+[b]=0$$
+$$\Delta=[k2ba1]b^2-4\cdot[1a]([a]b^2+[b])$$
+$$[k2ba1]b^2-[41aa]b^2-[41ab]=0$$
+$$[k]b^2=[41ab]$$
+$$b^2=[cka]$$
+$$b=\pm \sqrt{[cka]}$$
+$$b_1=-[cbb1],b_2=[cbb1]$$
+$$ y=[c]x-[cbb1], y=[c]x+[cbb1]$$
+\rozwStop
+\odpStart
+$ y=[c]x-[cbb1], y=[c]x+[cbb1]$\\
+\odpStop
+\testStart
+A.$ y=[c]x-[cbb1], y=[c]x+[cbb1]$
+B.$ y=-x-[bb1], y=-x-[bb1]$
+C.$ y=[bb1], y=[bb1]$
+D.$ y=x-[bb1], y=0$
+E.$ y=0, y=-x+[bb1]$
+F.$ y=-[bb1], y=-x+[bb1]$
+G.$ y=x, y=[bb1]$
+H.$ y=x-[bb1], y=-x$
+I.$ y=x, y=x+[bb1]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
