@@ -46,39 +46,86 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129a}
-\zadStart{Zadanie z Wikieł Z 1.129 a) moja wersja nr [nrWersji]}
-%[p1]:[2,3,5,6,7,8,10]
-%[p2]:[2,3,5,6,7,8,10]
+\kategoria{Wikieł/Z1.46}
+\zadStart{Zadanie z Wikieł Z 1.46 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9]
+%[p2]:[2,3,4,5,6,7,8,9]
 %[p3]=random.randint(2,10)
-%math.gcd([p1],[p2])==1
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{\sqrt{[p1]-[p2]x^{2}}}{[p3]|x|}$$
+%[2p2]=2*[p2]
+%[kp2]=[p2]*[p2]
+%[4p1]=4*[p1]
+%[4p1p3]=4*[p1]*[p3]
+%[m4p1]=1-[4p1]
+%[r]=[kp2]+[4p1p3]
+%[del]=[2p2]*[2p2]-4*[m4p1]*[r]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2a]=2*[m4p1]
+%[m1]=round((-[2p2]-[pdel])/[2a],2)
+%[m2]=round((-[2p2]+[pdel])/[2a],2)
+%[2p1]=2*[p1]
+%[2p1p2]=[2p1]-[p2]
+%[m2p21]=-1-[2p2]
+%[r2]=[2p1p2]-[r]
+%[2p21]=-1+[2p2]
+%[r3]=[2p1p2]+[r]
+%[dm4p1]=-[m4p1]
+%[del2]=[m2p21]*[m2p21]-4*[dm4p1]*[r2]
+%[pdel2]=round(math.sqrt(abs([del2])),2)
+%[del3]=[2p21]*[2p21]-4*[m4p1]*[r3]
+%[pdel3]=round(math.sqrt(abs([del3])),2)
+%[2dm4p1]=2*[dm4p1]
+%[2m4p1]=2*[m4p1]
+%[m11]=round((-[m2p21]-[pdel2])/[2dm4p1],2)
+%[m12]=round((-[m2p21]+[pdel2])/[2dm4p1],2)
+%[m21]=round((-[2p21]-[pdel3])/[2m4p1],2)
+%[m22]=round((-[2p21]+[pdel3])/[2m4p1],2)
+%[del]>0 and [del2]>0 and [del3]>0 and [m22]<[m11] and [m11]>[m2] and [m21]<[m1]
+
+Wyznaczyć wartość parametru $m$, dla których pierwiastki rzeczywiste $x_{1}, x_{2}$ równania $[p1]x^{2}-(m+[p2])x+m^{2}-[p3]=0$ spełniają warunek $x_{1}<1<x_{2}.$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p1]-[p2]x^{2}\geq 0 \quad \land \quad [p3]|x|\neq0$$
+Aby równanie posiadało dwa różne pierwiastki powinien być spełniony warunek $\Delta>0.$
+$$\Delta=(m+[p2])^{2}-4\cdot[p1]\cdot(m^{2}-[p3])=m^{2}+[2p2]m+[kp2]-[4p1]m^{2}+[4p1p3]$$
+$$=[m4p1]m^{2}+[2p2]m+[r]>0$$
 
-$$[p2]x^{2}-[p1]\leq 0 \quad \land \quad x\neq0$$
+$$[m4p1]m^{2}+[2p2]m+[r]>0$$
+$$\Delta=[2p2]^{2}-4\cdot([m4p1])\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$m_{1}=\frac{-[2p2]-[pdel]}{[2a]}=[m1], \quad m_{2}=\frac{-[2p2]+[pdel]}{[2a]}=[m2]$$
+Zatem $m\in([m2], [m1])$
 
-$$(\sqrt{[p2]}x-\sqrt{[p1]})(\sqrt{[p2]}x+\sqrt{[p1]})\leq 0 \quad \land \quad x\neq0$$
+Przejdźmy do warunku:
+$$x_{1}<1<x_{2}$$
+$$\frac{m+[p2]-\sqrt{[m4p1]m^{2}+[2p2]m+[r]}}{[2p1]}<1<\frac{m+[p2]+\sqrt{[m4p1]m^{2}+[2p2]m+[r]}}{[2p1]}$$
+$$m+[p2]-\sqrt{[m4p1]m^{2}+[2p2]m+[r]}<[2p1]<m+[p2]+\sqrt{[m4p1]m^{2}+[2p2]m+[r]}$$
+$$-\sqrt{[m4p1]m^{2}+[2p2]m+[r]}<[2p1]-m-[p2]<\sqrt{[m4p1]m^{2}+[2p2]m+[r]}$$
+$$-\sqrt{[m4p1]m^{2}+[2p2]m+[r]}<[2p1p2]-m<\sqrt{[m4p1]m^{2}+[2p2]m+[r]}$$
 
-$$x_{1}=\sqrt{\frac{[p1]}{[p2]}},\quad x_{2}=-\sqrt{\frac{[p1]}{[p2]}}$$
+$$([2p1p2]-m-([m4p1]m^{2}+[2p2]m+[r]))([2p1p2]-m+[m4p1]m^{2}+[2p2]m+[r])<0$$
+$$([dm4p1]m^{2}+[m2p21]m+[r2])([m4p1]m^{2}+[2p21]m+[r3])<0$$
+$$\Delta_{1}=([m2p21])^{2}-4\cdot[dm4p1]\cdot([r2])=[del2], \Rightarrow \sqrt{\Delta_{1}}=[pdel2]$$
+$$m_{1}=\frac{-([m2p21])-[pdel2]}{[2dm4p1]}=[m11], \quad m_{2}=\frac{-([m2p21])+[pdel2]}{[2dm4p1]}=[m12]$$
 
-$$x\in\left[-\sqrt{\frac{[p1]}{[p2]}},\sqrt{\frac{[p1]}{[p2]}} \right]\quad \land \quad x\neq0$$
+$$\Delta_{2}=[2p21]^{2}-4\cdot([m4p1])\cdot[r3]=[del3], \Rightarrow \sqrt{\Delta_{2}}=[pdel3]$$
+$$m_{1}=\frac{-[2p21]-[pdel3]}{[2m4p1]}=[m21], \quad m_{2}=\frac{-[2p21]+[pdel3]}{[2m4p1]}=[m22]$$
+Zatem $m\in(-\infty,[m22])\cup([m11],[m21])\cup([m12],\infty).$
 
+Odpowiedzią jest część wspólna wyznaczonych przedziałów:
+$$m\in([m11],[m21]).$$
 \rozwStop
+
+
 \odpStart
-$x\in\left[-\sqrt{\frac{[p1]}{[p2]}},\sqrt{\frac{[p1]}{[p2]}} \right]\setminus\{0\}$
+$m\in([m11],[m21])$
 \odpStop
 \testStart
-A.$x\in\left[-\sqrt{\frac{[p1]}{[p2]}},\sqrt{\frac{[p1]}{[p2]}} \right]\setminus\{0\}$
-B.$x\in\left[-\sqrt{\frac{[p1]}{[p2]}},\sqrt{\frac{[p1]}{[p2]}} \right]$
-C.$x\in\left[-\frac{[p1]}{[p2]},\frac{[p1]}{[p2]} \right]\setminus\{0\}$
-D.$x\in\left(-\frac{[p1]}{[p2]},\frac{[p1]}{[p2]} \right]$
-E.$x\in\left(-\sqrt{\frac{[p2]}{[p1]}},\sqrt{\frac{[p1]}{[p2]}} \right]\setminus\{0\}$
-F.$x\in\left(\frac{[p1]}{[p2]},\frac{[p2]}{[p1]} \right)\setminus\{0\}$
-G.$x\in\emptyset$
+A.$m\in([m11],[m21])$
+B.$m\in([m2],[m1])$
+C.$m\in(-\infty,[m22])$
+D.$m\in([m21],[m12])$
+E.$m\in([m22],[m12])$
+F.$m\in[[m1],\infty)$
+
 
 \testStop
 \kluczStart

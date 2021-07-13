@@ -46,36 +46,70 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.150}
+\zadStart{Zadanie z Wikieł Z 1.150  moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p1k]=[p1]*[p1]
+%[2p1p2]=2*[p1]*[p2]
+%[p2k]=[p2]*[p2]
+%[a]=-4*[p1k]*[p2k]
+%[c]=[2p1p2]*[2p1p2]+[a]
+%[b]=2*[2p1p2]
+%[bk]=[b]*[b]
+%[del]=[bk]
+%[pdel]=round(math.sqrt([del]),2)
+%[m1]=round(([b]-[pdel])/2,2)
+%[m2]=round(([b]+[pdel])/2,2)
+%math.gcd([p1],[p2])==1 and [del]>0 
 
+
+Zbadać ilość rozwiązań równania $\frac{\log(mx)}{\log([p1]x+[p2])}=2 $ w zależności od parametru $m$.
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+Początkowo sprawdzamy dziedzinę rozwiązań.
+$$mx>0 \quad \land \quad [p1]x+[p2]>0$$
+$$(m>0 \land x>0) \quad \lor \quad  (m<0 \land x<0) \quad \land \quad x>-\frac{[p2]}{[p1]}$$
+
+$$\frac{\log(mx)}{\log([p1]x+[p2])}=2 $$
+$$\log(mx)=2\cdot \log([p1]x+[p2])$$
+$$mx=([p1]x+[p2])^{2}$$
+$$mx=[p1k]x^{2}+[2p1p2]x+[p2k]$$
+$$[p1k]x^{2}+([2p1p2]-m)x+[p2k]=0$$
+$$\Delta=([2p1p2]-m)^{2}-4\cdot[p1k]\cdot[p2k]=([2p1p2]-m)^{2}[a]$$
+
+\begin{enumerate}
+    \item $\Delta<0$, czyli brak rozwiązań w zbiorze liczb rzeczywistych.
+    $$([2p1p2]-m)^{2}[a]<0$$
+    $$[c]-[b]m+m^{2}<0$$
+    $$\Delta=(-[b])^{2}-4\cdot[c]\cdot1=[bk]-0=
+    [del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+    $$m_{1}=\frac{[b]-[pdel]}{2}=[m1], \quad m_{2}=\frac{[b]+[pdel]}{2}=[m2]$$
+    $$m\in([m1],[m2])$$
+    
+    \item $\Delta=0$, czyli jedno podwójne rozwiązanie w zbiorze liczb rzeczywistych.
+    $$([2p1p2]-m)^{2}[a]=0$$
+    $$m_{1}=0  \quad \lor \quad m_{2}=[m2]$$
+    Gdzie $m_{1}=0$ jest niezgodne z początkowymi założeniami.
+    
+    \item $\Delta>0$, czyli dwa różne rozwiązania w zbiorze liczb rzeczywistych.
+    $$([2p1p2]-m)^{2}[a]>0$$
+    $$m\in(-\infty,0)\cup([m2],\infty)$$
+\end{enumerate}
 \rozwStop
 \odpStart
-$x\in(0,\infty)$
+Brak rozwiązań dla $m\in([m1],[m2])$, jedno rozwiązanie dla $m=[m2]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.Brak rozwiązań dla $m\in([m1],[m2])$, jedno rozwiązanie dla $m=[m2]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
+B.Brak rozwiązań dla $m\in(-\infty,0)\cup([m2],\infty)$, jedno rozwiązanie dla $m=[m2]$, dwa rozwiązania dla $m\in([m1],[m2])$.
+C.Brak rozwiązań dla $m\in\mathbb{R}$.
+D.Brak rozwiązań dla $m\in(-[m2],[m2])$, jedno rozwiązanie dla $m=[m2]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
+E.Brak rozwiązań dla $m\in([m1],[m2])$, jedno rozwiązanie dla $m=[m1]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
+F.Brak rozwiązań dla $m\in([m1],[m2])$, jedno rozwiązanie dla $m=[m1]$ oraz  $m=[m2]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
+G.Brak rozwiązań dla $m\in(-[b],[c])$, jedno rozwiązanie dla $m=[m1]$, dwa rozwiązania dla $m\in(-\infty,0)\cup([m2],\infty)$.
 
 \testStop
 \kluczStart

@@ -46,36 +46,80 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+\kategoria{Wikieł/Z1.47}
+\zadStart{Zadanie z Wikieł Z 1.47 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9]
+%[p2]:[2,3,4,5,6,7,8,9]
+%[p3]=random.randint(2,10)
+%[2p2]=2*[p2]
+%[kp2]=[p2]*[p2]
+%[4p1]=4*[p1]
+%[4p1p3]=4*[p1]*[p3]
+%[m4p1]=1-[4p1]
+%[r]=[kp2]-[4p1p3]
+%[del]=[2p2]*[2p2]-4*[r]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2a]=2*1
+%[m1]=round((-[2p2]-[pdel])/[2a],2)
+%[m2]=round((-[2p2]+[pdel])/[2a],2)
+%[2p1]=2*[p1]
+%[2p1p2]=[2p1]-[p2]
+%[22p1p2]=2*[2p1p2]
+%[2p1p2k]=[2p1p2]*[2p1p2]
+%[m11]=[2p2]+[22p1p2]
+%[r1]=[r]-[2p1p2k]
+%[pr1]=-[r1]
+%[d]=math.gcd([pr1],[m11])
+%[nl]=int([pr1]/[d])
+%[nm]=int([m11]/[d])
+%[del]>0 and ([nl]/[nm])>[m2]
 
+Wyznaczyć wartość parametru $m$, dla których oba pierwiastki równania $[p1]x^{2}-(m+[p2])x+[p3]=0$ są większe od 1.
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+Aby równanie posiadało dwa pierwiastki powinien być spełniony warunek $\Delta\geq0.$
+$$\Delta=(m+[p2])^{2}-4\cdot[p1]\cdot[p3]=m^{2}+[2p2]m+[kp2]-[4p1p3]$$
+$$=m^{2}+[2p2]m+[r]\geq0$$
+
+$$m^{2}+[2p2]m+[r]\geq0$$
+$$\Delta=[2p2]^{2}-4\cdot1\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$m_{1}=\frac{-[2p2]-[pdel]}{[2a]}=[m1], \quad m_{2}=\frac{-[2p2]+[pdel]}{[2a]}=[m2]$$
+Zatem $m\in[[m1], [m2]]$
+
+Przejdźmy do warunku:
+$$x_{1}>1 \quad \land \quad x_{2}>1$$
+$$\frac{m+[p2]-\sqrt{m^{2}+[2p2]m+[r]}}{[2p1]}>1\quad \land \quad\frac{m+[p2]+\sqrt{m^{2}+[2p2]m+[r]}}{[2p1]}>1$$
+$$m+[p2]-\sqrt{m^{2}+[2p2]m+[r]}>[2p1]\quad \land \quad m+[p2]+\sqrt{m^{2}+[2p2]m+[r]}>[2p1]$$
+
+$$-\sqrt{m^{2}+[2p2]m+[r]}>-m+[2p1p2] \quad \land \quad \sqrt{m^{2}+[2p2]m+[r]}>-m+[2p1p2]$$
+$$m^{2}+[2p2]m+[r]>(-m+[2p1p2])^{2} \quad \land \quad 
+m^{2}+[2p2]m+[r]>(-m+[2p1p2])^{2}$$
+
+$$m^{2}+[2p2]m+[r]-m^{2}+[22p1p2]m-[2p1p2k]>0 \quad \land \quad m^{2}+[2p2]m+[r]-m^{2}+[22p1p2]m-[2p1p2k]>0$$
+
+$$[m11]m+[r1]>0 \quad \land \quad [m11]m+[r1]>0$$
+Równania zatem sprowadzają się do jednego.
+$$[m11]m-[pr1]>0$$
+$$[m11]m>[pr1]$$
+$$m>\frac{[pr1]}{[m11]}$$
+$$m\in\left(\frac{[nl]}{[nm]}, \infty\right)$$
+
+Odpowiedzią jest część wspólna obu wyznaczonych zbiorów, zatem jest to zbiór pusty.
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$m\in\emptyset$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.$m\in\emptyset$
+B.$m\in([m2],[m1])$
+C.$m\in(-\infty,[m2])$
+D.$m\in([p1],[p2])$
+E.$m\in([m11],[pr1])$
+F.$m\in[[m1],\infty)$
+
 
 \testStop
 \kluczStart

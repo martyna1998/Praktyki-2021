@@ -46,36 +46,64 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+\kategoria{Wikieł/Z1.39}
+\zadStart{Zadanie z Wikieł Z 1.39 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9]
+%[p2]:[2,3,4,5,6,7,8,9]
+%[p3]=random.randint(2,10)
+%[p4]:[2,3,4,5,6,7,8,9]
+%[p5]=random.randint(2,10)
+%[p6]=random.randint(2,10)
+%[p7]=random.randint(2,10)
+%[p1p4m]=[p1]-[p4]
+%[p3p5m]=[p3]-[p5]
+%[p5p7m]=[p5]-[p7]
+%[del]=[p2]*[p2]-4*[p1p4m]*[p3p5m]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2p1p4m]=2*[p1p4m]
+%[del2]=[p6]*[p6]-4*[p4]*[p5p7m]
+%[pdel2]=round(math.sqrt(abs([del2])),2)
+%[2p4]=2*[p4]
+%[x11]=round(-[p2]-[pdel],2)
+%[x12]=round(-[p2]+[pdel],2)
+%[x21]=round([p6]-[pdel2],2)
+%[x22]=round([p6]+[pdel2],2)
+%[p1]>[p4] and [del]>0 and [del2]>0 and ([x21]/[2p4])<([x12]/[2p1p4m]) and ([x12]/[2p1p4m])<([x22]/[2p4])
 
+Rozwiązać nierówność podwójną.
+$$[p1]x^{2}+[p2]x+[p3]\leq [p4]x^{2}+[p5] \leq [p6]x+[p7]$$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+Rozdzielamy nierówność na dwie nierówności pojedyncze.
+$$[p1]x^{2}+[p2]x+[p3]\leq [p4]x^{2}+[p5] $$
+$$[p1p4m]x^{2}+[p2]x+[p3p5m]\leq0$$
+$$\Delta_{1}=[p2]^{2}-4\cdot[p1p4m]\cdot[p3p5m]=[del] \Rightarrow \sqrt{\Delta_{1}}=[pdel]$$
+$$x_{11}=\frac{-[p2]-[pdel]}{[2p1p4m]}=\frac{[x11]}{[2p1p4m]}, \quad x_{12}=\frac{-[p2]+[pdel]}{[2p1p4m]}=\frac{[x12]}{[2p1p4m]}$$
+$$x\in\left[\frac{[x11]}{[2p1p4m]},\frac{[x12]}{[2p1p4m]}\right]$$
+
+$$[p4]x^{2}+[p5] \leq [p6]x+[p7]$$
+$$[p4]x^{2}-[p6]x+[p5p7m]\leq0$$
+$$\Delta_{2}=(-[p6])^{2}-4\cdot[p4]\cdot[p5p7m]=[del2] \Rightarrow \sqrt{\Delta_{2}}=[pdel2]$$
+$$x_{21}=\frac{[p6]-[pdel2]}{[2p4]}=\frac{[x21]}{[2p4]}, \quad x_{22}=\frac{[p6]+[pdel2]}{[2p4]}=\frac{[x22]}{[2p4]}$$
+$$x\in\left[\frac{[x21]}{[2p4]}, \frac{[x22]}{[2p4]}\right]$$
+
+Zatem odpowiedzią jest część wspólna obu zbiorów.
+$$x\in\left[\frac{[x21]}{[2p4]},\frac{[x12]}{[2p1p4m]}\right]$$
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$W([np1],-\frac{[ndel]}{[m]})$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.$W([np1],-\frac{[ndel]}{[m]})$
+B.$W([np1],\frac{[ndel]}{[m]})$
+C.$W([np1],0)$
+D.$W([p1],-[p2])$
+E.$W(0,-\frac{[ndel]}{[m]})$
+F.$W([np1],-\frac{[ndel]}{[p2]})$
+
 
 \testStop
 \kluczStart

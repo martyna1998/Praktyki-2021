@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,42 +46,56 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.30b}
-\zadStart{Zadanie z Wikieł Z 1.30 b)  moja wersja nr [nrWersji]}
-%[p1]:[3,5,6,7,8,2,10,11,12]
-%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]=random.randint(1,13)
-%[p1p2m]=[p1]*[p2]
-%[p1p3m]=[p1]*[p3]
+\kategoria{Wikieł/Z2.2}
+\zadStart{Zadanie z Wikieł Z 2.32  moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p4]:[2,3,4,5]
+%[p5]=random.randint(2,10)
+%[p2p4]=[p2]-[p4]
+%[p1p3]=[p1]-[p3]
+%[a]=round([p2p4]/([p1p3]+0.0000001),2)
+%[ab]=[p1]*[a]
+%[b]=[p2]-[ab]
+%[p5b]=[p5]-[b]
+%[x]=round([a]/([p5b]+0.0000001),2)
+%[p2p4]!=0 and [p1p3]!=0 and math.gcd([p2p4],[p1p3])==1 
 
-Podać wzór określający złożenie funkcji $f(g(x))$ oraz $g(f(x))$ dla funkcji $f(x)=\sqrt{[p1]x},\quad g(x)=[p2]x-[p3].$
+Punkty $A([p1],[p2]), B([p3],[p4]), C(x,[p5])$ są współliniowe. Wyznaczyć $x$.
 \zadStop
+
 \rozwStart{Maja Szabłowska}{}
-$$(f\circ g)(x)=f(g(x))=f([p2]x-[p3])=\sqrt{[p1p2m]x-[p1p3m]}$$
-$$(g\circ f)(x)=g(f(x))=g(\sqrt{[p1]x})=[p2]\sqrt{[p1]x}-[p3]$$
+$$\left\{ \begin{array}{ll}
+[p2]=[p1]a+b\\
+[p4]=[p3]a+b
+\end{array} \right.$$
+$$[p2]-[p4]=[p1]a-[p3]a$$
+$$[p2p4]=[p1p3]a$$
+$$a=\frac{[p2p4]}{[p1p3]}=[a]$$
+
+$$[p2]=[p1]\cdot\frac{[p2p4]}{[p1p3]}+b $$
+$$b=[p2]-([ab])=[b]$$
+
+Zatem $y=[a]x+[b].$ Punkt $C$ również należy do tej prostej, wówczas:
+$$[p5]=[a]x+[b]$$
+$$[p5b]=[a]x$$
+$$x=\frac{[a]}{[p5b]}=[x]$$
+
 \rozwStop
+
+
 \odpStart
-$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
+$x=[x]$
 \odpStop
 \testStart
-
-A.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-B.$(f\circ g)(x)=\sqrt{[p1]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-C.$(f\circ g)(x)=\sqrt{[p2]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-D.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p2]x}-[p3]$
-
-E.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1p2m]$
-
-F.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}$
-
-G.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=\sqrt{[p1]x}-[p3]$
-
-H.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1]$
-
-I.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p2]$
+A.$x=[x]$
+B.$x=\frac{[p1]}{[p2]}$
+D.$x=[b]$
+E.$x=[ab]$
+F.$x=[p2p4]$
+G.$x=[p5b]$
+H.$x=\frac{[p5]}{[p3]}$
 
 \testStop
 \kluczStart

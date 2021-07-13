@@ -46,37 +46,85 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z2.35a}
+\zadStart{Zadanie z Wikieł Z 2.35a moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+%[p3]=random.randint(2,10)
+%[p4]:[2,3,4,5,6,7,8,9,10]
+%[p5]=random.randint(1,10)
+%[p6]=random.randint(1,10)
+%[p2p5]=[p2]*[p5]
+%[d]=math.gcd([p2p5],[p4])
+%[np4]=int([p4]/[d])
+%[np2p5]=int([p2p5]/[d])
+%[p6np4]=[p6]*[np4]
+%[b]=[p6np4]-[np2p5]
+%math.gcd([p4],[p2])==1 and math.gcd([p1],[p2])==1 and [b]>0 and [np4]!=1
+
+Dana jest prosta $l:\left\{ \begin{array}{ll}
+x=[p1]+[p2]t \\
+y=[p3]-[p4]t  
+\end{array} \right  t\in\mathbb{R}.$ Napisać w postaci parametrycznej równanie prostej przechodzącej przez $A([p5],[p6])$ i prostopadłej do prostej $l.$
 
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+$$x=[p1]+[p2]t \iff x-[p1]=[p2]t \iff t=\frac{x-[p1]}{[p2]}$$
+$$ y=[p3]-[p4]\cdot\frac{x-[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+[p3]-\frac{[p1]}{[p2]}$$
+Szukamy prostej prostopadłej do $l$, zatem:
+$$-\frac{[p4]}{[p2]}\cdot a_{2}=-1$$
+$$a_{2}=\frac{[p2]}{[p4]}$$
+Szukana prosta $k: y=\frac{[p2]}{[p4]}x+b$ powinna przechodzić przez punkt $A([p5],[p6])$, zatem:
+$$[p6]=\frac{[p2]}{[p4]}\cdot[p5]+b$$
+$$b=[p6]-\frac{[np2p5]}{[np4]}=\frac{[p6np4]-[np2p5]}{[np4]}=\frac{[b]}{[np4]}$$
+
+$$k: y=\frac{[p2]}{[p4]}x+\frac{[b]}{[np4]}$
+Postać parametryczna:
+$$t=y-\frac{[b]}{[np4]}=\frac{[p2]}{[p4]}x$$
+$$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p2]}t\\
+y=t+\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$$
+
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p2]}t\\
+y=t+\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
-
+A.$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p2]}t\\
+y=t+\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
+B.$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p2]}\\
+y=t
+\end{array} \right  t\in\mathbb{R}.$
+D.$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p3]}t\\
+y=\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
+E.$l:\left\{ \begin{array}{ll}
+x=\frac{[p3]}{[p2]}t\\
+y=t-\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
+F.$l:\left\{ \begin{array}{ll}
+x=[p4]t\\
+y=-t-\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
+G.$l:\left\{ \begin{array}{ll}
+x=\frac{[p4]}{[p2]}\\
+y=t-\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
+H.$l:\left\{ \begin{array}{ll}
+x=[p1]t+[p2]\\
+y=t+\frac{[b]}{[np4]}
+\end{array} \right  t\in\mathbb{R}.$
 \testStop
 \kluczStart
 A

@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,42 +46,34 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.30b}
-\zadStart{Zadanie z Wikieł Z 1.30 b)  moja wersja nr [nrWersji]}
-%[p1]:[3,5,6,7,8,2,10,11,12]
+\kategoria{Wikieł/Z3.2c}
+\zadStart{Zadanie z Wikieł Z 3.2c moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10,11,12]
 %[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]=random.randint(1,13)
-%[p1p2m]=[p1]*[p2]
-%[p1p3m]=[p1]*[p3]
 
-Podać wzór określający złożenie funkcji $f(g(x))$ oraz $g(f(x))$ dla funkcji $f(x)=\sqrt{[p1]x},\quad g(x)=[p2]x-[p3].$
+
+Zbadać ograniczoność ciągu $a_{n}=\cos(n^{3}-n^{2}+n)\frac{[p1]n+[p2]}{n}$.
+
 \zadStop
+
 \rozwStart{Maja Szabłowska}{}
-$$(f\circ g)(x)=f(g(x))=f([p2]x-[p3])=\sqrt{[p1p2m]x-[p1p3m]}$$
-$$(g\circ f)(x)=g(f(x))=g(\sqrt{[p1]x})=[p2]\sqrt{[p1]x}-[p3]$$
+Zauważamy, że funkcja $\cos$ jest ograniczona z góry przez 1 oraz z dołu przez -1. 
+Zauważamy również, że $\frac{[p1]n+[p2]}{n}=[p1]+\frac{[p2]}{n}.$ Zatem ciąg jest ogarniczony przez -[p1] oraz [p1].
+
 \rozwStop
+
+
 \odpStart
-$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
+$a_{n}$ ograniczony z góry przez $[p1]$ i z dołu przez -[p1].
 \odpStop
 \testStart
+A.$a_{n}$ ograniczony z góry przez $[p1]$ i z dołu przez -[p1].
+B.$a_{n}$ ograniczony z góry przez 1 i z dołu przez 0.
+C.$a_{n}$ ograniczony z góry przez $[p2]$.
+D.$a_{n}$ ograniczony z dołu przez 0.
+E.$a_{n}$ ograniczony z góry przez 3 i z dołu przez 0.
+F.$a_{n}$ ograniczony z góry przez 2 i z dołu przez 0.
 
-A.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-B.$(f\circ g)(x)=\sqrt{[p1]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-C.$(f\circ g)(x)=\sqrt{[p2]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-D.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p2]x}-[p3]$
-
-E.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1p2m]$
-
-F.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}$
-
-G.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=\sqrt{[p1]x}-[p3]$
-
-H.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1]$
-
-I.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p2]$
 
 \testStop
 \kluczStart
