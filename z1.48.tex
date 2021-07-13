@@ -46,36 +46,82 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+\kategoria{Wikieł/Z1.48}
+\zadStart{Zadanie z Wikieł Z 1.48 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9]
+%[p2]:[2,3,4,5,6,7,8,9]
+%[p3]=random.randint(2,10)
+%[p4]=random.randint(2,10)
+%[p2k]=[p2]*[p2]
+%[2p2p3]=2*[p2]*[p3]
+%[p3k]=[p3]*[p3]
+%[4p1]=4*[p1]
+%[4p1p4]=4*[p1]*[p4]
+%[m]=[2p2p3]-[4p1]
+%[r]=[p3k]-[4p1p4]
+%[del]=[m]*[m]-4*[p2k]*[r]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2p2k]=2*[p2k]
+%[m1]=round((-[m]-[pdel])/[2p2k],2)
+%[m2]=round((-[m]+[pdel])/[2p2k],2)
+%[p1k]=[p1]*[p1]
+%[2p4]=2*[p4]
+%[2p1]=2*[p1]
+%[2p4p1]=[2p4]*[p1]
+%[mr]=[2p2p3]+[2p1]
+%[r2]=[p3k]-[2p4p1]
+%[r3]=[r2]-[p1k]
+%[2p2k]=2*[p2k]
+%[del2]=[mr]*[mr]-4*[p2k]*[r3]
+%[pdel2]=round(math.sqrt(abs([del2])),2)
+%[m11]=round(([mr]-[pdel2])/[2p2k],2)
+%[m22]=round(([mr]+[pdel2])/[2p2k],2)
+%[del]>0 and [m1]<[m2] and [del2]>0 and [m11]<[m22] and [m1]<[m11] and [m2]<[m22]
 
+Wyznaczyć wartość parametru $m$, dla których pierwiastki rzeczywiste $x_{1}$ i $x_{2}$ równania $[p1]x^{2}+([p2]m-[p3])x+m+[p4]=0$ spełniają warunek $x_{1}^{2}+x_{2}^{2}>1.$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+Aby równanie posiadało dwa pierwiastki powinien być spełniony warunek $\Delta\geq0.$
+$$\Delta=([p2]m+[p3])^{2}-4\cdot[p1]\cdot(m+[p4])=[p2k]m^{2}+[2p2p3]m+[p3k]-[4p1]m-[4p1p4]=$$
+$$=[p2k]m^{2}+[m]m+[r]\geq0$$
+
+$$[p2k]m^{2}+[m]m+[r]\geq0$$
+$$\Delta=[m]^{2}-4\cdot[p2k]\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$m_{1}=\frac{-[m]-[pdel]}{[2p2k]}=[m1], \quad m_{2}=\frac{-[m]+[pdel]}{[2p2k]}=[m2]$$
+Zatem $m\in(-\infty,[m1]]\cup[[m2],\infty)$
+
+Przejdźmy do warunku:
+$$x_{1}^{2}+x_{2}^{2}>1$$
+Korzystamy ze wzorów Viete'a:
+$$(x_{1}+x_{2})^{2}=x_{1}^{2}+x_{2}^{2}+2x_{1}x_{2}$$
+$$x_{1}^{2}+x_{2}^{2}=(x_{1}+x_{2})^{2}-2x_{1}x_{2}>1$$
+
+$$\left(\frac{-[p2]m+[p3]}{[p1]}\right)^{2}-2\cdot \frac{m+[p4]}{[p1]}>1$$
+$$\frac{[p2k]m^{2}-[2p2p3]m+[p3k]}{[p1k]}-\frac{2m+[2p4]}{[p1]}>1$$
+$$\frac{[p2k]m^{2}-[2p2p3]m+[p3k]}{[p1k]}-\frac{[2p1]m+[2p4p1]}{[p1k]}>1$$
+$$\frac{[p2k]m^{2}-[mr]m+([r2])}{[p1k]}>1$$
+$$[p2k]m^{2}-[mr]m+([r2])>[p1k]$$
+$$[p2k]m^{2}-[mr]m+([r3])>0$$
+$$\Delta=(-[mr])^{2}-4\cdot[p2k]\cdot([r3])=[del2] \Rightarrow \sqrt{\Delta}=[pdel2]$$
+$$m_{1}=\frac{[mr]-[pdel2]}{[2p2k]}=[m11], \quad m_{2}=\frac{[mr]+[pdel2]}{[2p2k]}=[m22]$$
+$$m\in(-\infty, [m11])\cup([m22],\infty)$$
+Zatem ostatecznie:
+$$m\in(-\infty, [m11])\cup([m22],\infty)$$
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$m\in(-\infty, [m11])\cup([m22],\infty)$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.$m\in(-\infty, [m11])\cup([m22],\infty)$
+B.$m\in([m2],[m1])$
+C.$m\in(-\infty,[m22])$
+D.$m\in([m1],[m2])$
+E.$m\in([p2k],[p1])$
+F.$m\in[[m1],\infty)$
+
 
 \testStop
 \kluczStart

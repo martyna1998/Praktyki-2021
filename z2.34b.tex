@@ -46,37 +46,69 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z2.34b}
+\zadStart{Zadanie z Wikieł Z 2.34b  moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p4]=random.randint(2,10)
+%[p5]=random.randint(2,10)
+%[p6]:[2,3,4,5,6,7,8,9,10]
+%[p7]:[2,3,4,5,6,7,8,9,10]
+%[p8]=random.randint(2,10)
+%[p9]:[2,3,4,5,6,7,8,9,10]
+%[p10]=random.randint(2,10)
+%[p1p8]=[p1]*[p8]
+%[p1p9]=[p1]*[p9]
+%[p2p8]=[p2]*[p8]
+%[p2p9]=[p2]*[p9]
+%[p3p6]=[p3]*[p6]
+%[p3p7]=[p3]*[p7]
+%[p4p6]=[p4]*[p6]
+%[p4p7]=[p4]*[p7]
+%[m2]=[p1p8]+[p4p6]
+%[m]=[p1p9]+[p2p8]-[p3p6]-[p4p7]
+%[r]=[p2p9]+[p3p7]
+%[del]=[m]*[m]-4*[m2]*[r]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2m2]=2*[m2]
+%[mp]=-[m]
+%[m1]=round((-[m]-[pdel])/([2m2]+0.0000001),2)
+%[m22]=round((-[m]+[pdel])/([2m2]+0.0000001),2)
+%[del]>0 and [m2]>0 and [m]<0
 
+Podać wartość parametru $m$, dla których proste 
+$$([p1]m+[p2])x+([p3]-[p4]m)y+[p5]=0, \quad ([p6]m-[p7])x+([p8]m+[p9])y-[p10]=0 $$są równoległe.
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+$$([p1]m+[p2])x+([p3]-[p4]m)y+[p5]=0 \iff ([p3]-[p4]m)y=-([p1]m+[p2])x-[p5]$$
+$$y=-\frac{[p1]m+[p2]}{[p3]-[p4]m}x-\frac{[p5]}{[p3]-[p4]m}$$
+
+$$([p6]m-[p7])x+([p8]m+[p9])y-[p10]=0 \iff ([p8]m+[p9])y=-([p6]m-[p7])x+[p10]$$
+$$y=-\frac{[p6]m-[p7]}{[p8]m+[p9]}x+\frac{[p10]}{[p8]m+[p9]}$$
+
+$$-\frac{[p1]m+[p2]}{[p3]-[p4]m}=-\frac{[p6]m-[p7]}{[p8]m+[p9]}$$
+$$([p1]m+[p2])([p8]m+[p9])=([p3]-[p4]m)([p6]m-[p7])$$
+$$[p1p8]m^{2}+[p1p9]m+[p2p8]m+[p2p9]=[p3p6]m-[p3p7]-[p4p6]m^{2}+[p4p7]m$$
+$$[m2]m^{2}+([m])m+[r]=0$$
+$$\Delta=([m])^{2}-4\cdot[m2]\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$m_{1}=\frac{[mp]-[pdel]}{[2m2]}=[m1], \quad m_{2}=\frac{[mp]+[pdel]}{[2m2]}=[m22]$$
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$m_{1}=[m1], \quad m_{2}=[m22]$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
-
+A.$m_{1}=[m1], \quad m_{2}=[m22]$
+B.$m_{1}=[m], \quad m_{2}=[m22]$
+C.$m_{1}=[m1], \quad m_{2}=[m2]$
+D.$m_{1}=[del], \quad m_{2}=[m22]$
+E.$m_{1}=[del], \quad m_{2}=[pdel]$
+F.$m_{1}=[p1], \quad m_{2}=[p2]$
+G.$m_{1}=[p3], \quad m_{2}=[p3p7]$
+H.$m_{1}=0, \quad m_{2}=[m22]$
 \testStop
 \kluczStart
 A

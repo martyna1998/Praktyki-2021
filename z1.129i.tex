@@ -51,6 +51,7 @@
 %[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
 %[p3]=random.randint(2,10)
+%[p0]:[0]
 %math.gcd([p1],[p2])==1
 
 Wyznaczyć dziedzinę naturalną funkcji.
@@ -66,15 +67,15 @@ $$t([p1]+[p2]t)>0$$
 $$t_{1}=0, \quad t_{2}=-\frac{[p1]}{[p2]}$$
 $$t\in (-\infty,0)\cup\left(-\frac{[p1]}{[p2]},\infty\right)$$
 $$\ln x_{1}=0 \Rightarrow x_{1}=1 \quad \ln x_{2}=-\frac{[p1]}{[p2]} \Rightarrow x_{2}=e^{-\frac{[p1]}{[p2]}}$$
-$$x\in (-\infty,1)\cup\left(e^{-\frac{[p1]}{[p2]}},\infty\right)$$
+$$x\in \left(0,e^{-\frac{[p1]}{[p2]}}\right)\cup(1,\infty)$$
 
 \rozwStop
 \odpStart
-$x\in (-\infty,1)\cup\left(e^{-\frac{[p1]}{[p2]}},\infty\right)$
+$x\in \left(0,e^{-\frac{[p1]}{[p2]}}\right)\cup(1,\infty)$
 \odpStop
 \testStart
-A.$x\in (-\infty,1)\cup\left(e^{-\frac{[p1]}{[p2]}},\infty\right)$
-B.$x\in[e[p2],\infty)$
+A.$x\in \left(0,e^{-\frac{[p1]}{[p2]}}\right)\cup(1,\infty)$
+B.$x\in[e^{[p2]},\infty)$
 C.$x\in(-\infty, 0)$
 D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
 E.$x\in[[p1],\infty)$

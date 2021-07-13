@@ -12,6 +12,20 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
+\date{}\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -32,42 +46,54 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.30b}
-\zadStart{Zadanie z Wikieł Z 1.30 b)  moja wersja nr [nrWersji]}
-%[p1]:[3,5,6,7,8,2,10,11,12]
-%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]=random.randint(1,13)
-%[p1p2m]=[p1]*[p2]
-%[p1p3m]=[p1]*[p3]
+\kategoria{Wikieł/Z2.48}
+\zadStart{Zadanie z Wikieł Z 2.48 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8]
+%[p2]:[1,2,4,9,16,25,36,49,64]
+%[p1k]=[p1]*[p1]
+%[2p1]=2*[p1]
+%[1p1k]=1+[p1k]
+%[2p1k]=[2p1]*[2p1]
+%[a]=4*[1p1k]
+%[b]=-4*[1p1k]*(-[p2])
+%[m2]=[2p1k]-[a]
+%[dm2]=-[m2]
+%[d]=math.gcd([b],[dm2])
+%[l]=int([b]/[d])
+%[m]=int([dm2]/[d])
+%[w]=round([l]/[m],2)
+%[m2]<0 
 
-Podać wzór określający złożenie funkcji $f(g(x))$ oraz $g(f(x))$ dla funkcji $f(x)=\sqrt{[p1]x},\quad g(x)=[p2]x-[p3].$
+
+Podać dla jakieś wartości parametru $m$ prosta $y=[p1]x+m$ jest styczna do okręgu danego równaniem $x^{2}+y^{2}=[p2].$
+
 \zadStop
+
 \rozwStart{Maja Szabłowska}{}
-$$(f\circ g)(x)=f(g(x))=f([p2]x-[p3])=\sqrt{[p1p2m]x-[p1p3m]}$$
-$$(g\circ f)(x)=g(f(x))=g(\sqrt{[p1]x})=[p2]\sqrt{[p1]x}-[p3]$$
+$$ \left\{ \begin{array}{ll}
+y=[p1]x+m \\
+x^{2}+y^{2}=[p2]
+\end{array} \right.$$
+$$x^{2}+([p1]x+m)^{2}=[p2]$$
+$$x^{2}+[p1k]x^{2}+[2p1]xm+m^{2}-[p2]=0$$
+$$[1p1k]x^{2}+[2p1]xm+m^{2}-[p2]=0$$
+$$\Delta=([2p1]m)^{2}-4\cdot[1p1k]\cdot(m^{2}-[p2])=[2p1k]m^{2}-[a]m^{2}+[b]=[m2]m^{2}+[b]$$
+$$[m2]m^{2}+[b]=0 \iff [m2]m^{2}=-[b] \iff m^{2}=\frac{[b]}{[dm2]}=\frac{[l]}{[m]}=[w]$$
+$$m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$$
 \rozwStop
+
+
 \odpStart
-$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
+$m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$
 \odpStop
 \testStart
-
-A.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-B.$(f\circ g)(x)=\sqrt{[p1]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-C.$(f\circ g)(x)=\sqrt{[p2]x-[p3]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p3]$
-
-D.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p2]x}-[p3]$
-
-E.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1p2m]$
-
-F.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}$
-
-G.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=\sqrt{[p1]x}-[p3]$
-
-H.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p1]$
-
-I.$(f\circ g)(x)=\sqrt{[p1p2m]x-[p1p3m]}, \quad (g\circ f)(x)=[p2]\sqrt{[p1]x}-[p2]$
+A.$m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$
+B.$m_{1}=1, \quad m_{2}=-1$
+C.$m_{1}=-\sqrt{[p1k]}, \quad m_{2}=0$
+D.$m_{1}=[p1], \quad m_{2}=-\sqrt{\frac{[l]}{[m]}}$
+E.$m_{1}=\sqrt{\frac{[a]}{[m]}}, \quad m_{2}=-[p2]$
+F.$m_{1}=[1p1k], \quad m_{2}=-\sqrt{\frac{[l]}{[b]}}$
+G.$m_{1}=\sqrt{[a]}, \quad m_{2}=-\sqrt{[a]}$
 
 \testStop
 \kluczStart

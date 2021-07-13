@@ -51,8 +51,8 @@
 %[p1]:[2,3,4,5,6,7,8,9,10]
 %[p2]:[2,3,4,5,6,7,8,9,10]
 %[p0]:[0]
-%[del]=[p1]*[p1]-4*[p2]
-%[pdel]=math.sqrt(abs([del]))
+%[del]=round([p1]*[p1]-4*[p2],2)
+%[pdel]=round(math.sqrt(abs([del])),2)
 %[t1]=round(([p1]-[pdel])/2,2)
 %[t2]=round(([p1]+[pdel])/2,2)
 %[x1]=round(math.log(abs([t1])+0.0000001),2)

@@ -46,36 +46,72 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+\kategoria{Wikieł/Z2.4}
+\zadStart{Zadanie z Wikieł Z 2.32  moja wersja nr [nrWersji]}
+%[p1]:[1,2,3,4,5,6,7,8,9,10]
+%[p2]:[1,2,3,4,5,6,7,8,9,10]
+%[p3]:[1,2,3,4,5,6,7,8,9,10]
+%[p4]:[1,2,3,4,5,6,7,8,9,10]
+%[p0]:[0]
+%[p1p2]=[p1]*[p2]
+%[p1p4]=[p1]*[p4]
+%[m1]=[p1p4]+[p1p2]
+%[p2k]=[p2]*[p2]
+%[p1k]=[p1]*[p1]
+%[p1p3]=[p1]*[p3]
+%[m2]=[p2k]+[p1k]
+%[m2g]=[p1p2]+[p1p3]
+%[w1]=[m1]/[p1p2]
+%[w2]=[m2g]/[m2]
+%[p2p4]=[p2]*[p4]
+%[m3]=[p2p4]-[p1p3]-[p1k]
+%[r3]=[p1p4]-[p1p3]
+%([p1p4]+[p1p2])==([p1p2]+[p1p3]) and [p1p2]==[m2]
 
+Wyznaczyć wartości parametru $m$, dla których wektory $\vec{d}+m\vec{b}$ oraz $\vec{c}$ są równoległe, gdy $\vec{a}=[[p1],[p1],[p1]], \vec{b}=[[p2],[p1],[p0]], \vec{c}=[[p1]m+[p3],[p4],-[p2]].$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+$$\vec{a}+m\vec{b}=[[p1],[p1],[p1]]+m[[p2],[p1],[p0]]=[[p2]m+[p1], [p1]m+[p1], [p1]]$$
+
+$$[[p2]m+[p1], [p1]m+[p1], [p1]] \times [[p1]m+[p3],[p4],-[p2]]=$$
+$$\left| \begin{array}{ccc}
+\vec{i} & \vec{j} & \vec{k}\\
+[p2]m+[p1] & [p1]m+[p1] & [p1] \\
+[p1]m+[p3] & [p4] & -[p2]
+\end{array} \right|=$$
+$$=\vec{i}(([p1]m+[p1])\cdot(-[p2])-[p1]\cdot[p4])-\vec{j}(([p2]m+[p1])\cdot(-[p2])-([p1]m+[p3])\cdot[p1])+$$
+$$+\vec{k}(([p2]m+[p1])\cdot[p4]-([p1]m+[p1])\cdot([p1]m+[p3]))=0$$
+
+$$([p1]m+[p1])\cdot(-[p2])-[p1]\cdot[p4]=0 $$
+$$-[p1p2]m-[p1p2]-[p1p4]=0$$
+$$-[p1p2]m=[p1p4]+[p1p2]$$
+$$m=-\frac{[m1]}{[p1p2]}$$
+
+$$([p2]m+[p1])\cdot(-[p2])-([p1]m+[p3])\cdot[p1]=0$$
+$$-[p2k]m-[p1p2]-[p1k]m-[p1p3]=0$$
+$$-[m2]m=[p1p2]+[p1p3]$$
+$$m=-\frac{[m2g]}{[m2]}$$
+
+$$([p2]m+[p1])\cdot[p4]-([p1]m+[p1])\cdot([p1]m+[p3])=0$$
+$$[p2p4]m+[p1p4]-[p1k]m^{2}-[p1p3]m-[p1k]m-[p1p3]=0$$
+$$[p1k]m^{2}+[m3]m+[r3]=0$$
+
+
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$x=\frac{[a]}{[p5b]}$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.$x=\frac{[a]}{[p5b]}$
+B.$x=\frac{[a]}{[p5]}$
+D.$x=[b]$
+E.$x=[ab]$
+F.$x=[p2p4]$
+G.$x=[p5b]$
+H.$x=\frac{[p5b]}{[a]}$
 
 \testStop
 \kluczStart
