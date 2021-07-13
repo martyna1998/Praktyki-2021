@@ -32,27 +32,38 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.138c}
-\zadStart{Zadanie z Wikieł Z 1.138 c) moja wersja nr [nrWersji]}
-%[a]:[2,3,5,6,7,8,10,11]
-Wyznaczyć funckję odwrotną do danej funkcji $f$ określonej na zbiorze $\mathcal{D}_{f}$.\\
-c) $f(x)=\sqrt{[a]+e^{-x}}\hspace{5mm}\mathcal{D}_{f}=\mathbb{R}$
+\kategoria{Wikieł/Z1.21}
+\zadStart{Zadanie z Wikieł Z 1.21  moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8]
+%[b]:[1,2,3]
+%[n]:[8,10,12,14]
+%[dn]=int((math.perm([n],5)/math.perm(5,4)))
+%[ap]=[a]*([n]-5)
+%[b5]=(-[b])**(5)
+%[dnb5]=[dn]*[b5]
+%[absdnb5]=abs([dnb5])
+%[dnblad]=int((math.perm([n],6)/math.perm(6,5)))
+%[apblad]=[a]*([n]-6)
+%[dnb5blad]=[dnblad]*[b5]
+%[absdnb5blad]=abs([dnb5blad])
+Obliczyć wyraz szósty rozwinięcia dwumianu $(x^{[a]}-[b])^{[n]}$.
 \zadStop
 \rozwStart{Wojciech Przybylski}{}
-$$f(x)=\sqrt{[a]+e^{-x}}\hspace{5mm} \mathcal{D}_{f}=[ln\big(\frac{1}{[a]}\big),\infty),\quad f(\mathcal{D}_{f})=(\sqrt{[a]},\infty)$$
-$$y=\sqrt{[a]+e^{-x}} \Rightarrow y^{2}-[a]=\frac{1}{e^{x}} \Rightarrow ln(\frac{1}{y^{2}-[a]})=x$$
-$$y=f^{-1}(x)=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla } x\in (-\infty,-\sqrt{[a]})\cup (\sqrt{[a]},\infty) $$
+Wzór na k-ty wyraz:
+$$A_{k}={n\choose k-1}\cdot a^{n-k+1}\cdot b^{k-1}$$
+$$A_{6}={[n]\choose 6}\cdot \big(x^{[a]}\big)^{[n]-6+1}\cdot (-[b])^{6-1}=[dn]\cdot x^{[ap]}\cdot ([b5])^{5}=$$
+$$=[dnb5]\cdot x^{[ap]}$$
 \rozwStop
 \odpStart
-Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in (\sqrt{[a]},\infty)$
+$[dnb5]\cdot x^{[ap]}$.
 \odpStop
 \testStart
-A. Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in(\sqrt{[a]},\infty)$\\
-B. Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in\mathbb{R}$\\
-C. Funkcja odwrotna jest postaci $y=y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in[\sqrt{[a]},\infty)$\\
-D. Funkcja odwrotna jest postaci $y=y=\frac{1}{x^{3}-[a]} \mbox{ dla }x\in[0,\infty)$\\
-E. Funkcja odwrotna jest postaci $y=y=ln(\frac{1}{x^{3}-[a]}) \mbox{ dla }x\in \mathbb{R}$\\
-F. Funkcja odwrotna jest postaci $y=ln(x^{2}-[a])\mbox{ dla }x\in[[a],\infty)$
+A. $[dnb5]\cdot x^{[ap]}$
+B. $[absdnb5]\cdot x^{[ap]}$
+C. $[absdnb5blad]\cdot x^{[apblad]}$
+D. $[dnb5blad]\cdot x^{[apblad]}$
+E. $0$
+F. $1$
 \testStop
 \kluczStart
 A

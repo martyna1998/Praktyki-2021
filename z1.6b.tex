@@ -32,27 +32,35 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.138c}
-\zadStart{Zadanie z Wikieł Z 1.138 c) moja wersja nr [nrWersji]}
-%[a]:[2,3,5,6,7,8,10,11]
-Wyznaczyć funckję odwrotną do danej funkcji $f$ określonej na zbiorze $\mathcal{D}_{f}$.\\
-c) $f(x)=\sqrt{[a]+e^{-x}}\hspace{5mm}\mathcal{D}_{f}=\mathbb{R}$
+\kategoria{Wikieł/Z1.6b}
+\zadStart{Zadanie z Wikieł Z 1.6 b) moja wersja nr [nrWersji]}
+%[p1]:[2,5,8,11,13]
+%[p2]:[3,7,10,12,14]
+%[a]=random.randint(2,16)
+%[p11]=[p1]-1
+%[p21]=[p2]-1
+%[p2p1]=[p2]+1
+%[c]=[p21]*[a]-[p11]*[p2p1]
+%[d]=([p21]*[a])**(2)*[p1]
+%[e]=([p11]*2)**(2)*[p2]
+%[c]>0 and [p1]!=[p2] and [d]>[e]
+Sprawdzić, która z liczb jest większa: $A$ czy $B$.
+b) $A=\frac{[a]}{\sqrt{[p1]}-1}$, $B=\frac{\sqrt{[p2]}+1}{\sqrt{[p2]}-1}$
 \zadStop
 \rozwStart{Wojciech Przybylski}{}
-$$f(x)=\sqrt{[a]+e^{-x}}\hspace{5mm} \mathcal{D}_{f}=[ln\big(\frac{1}{[a]}\big),\infty),\quad f(\mathcal{D}_{f})=(\sqrt{[a]},\infty)$$
-$$y=\sqrt{[a]+e^{-x}} \Rightarrow y^{2}-[a]=\frac{1}{e^{x}} \Rightarrow ln(\frac{1}{y^{2}-[a]})=x$$
-$$y=f^{-1}(x)=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla } x\in (-\infty,-\sqrt{[a]})\cup (\sqrt{[a]},\infty) $$
+$$A=\frac{[a]}{\sqrt{[p1]}-1}\cdot \frac{\sqrt{[p1]}+1}{\sqrt{[p1]}+1}=\frac{(\sqrt{[p1]}+1)\cdot [a]}{[p11]}=\frac{[a]\sqrt{[p1]}+[a]}{[p11]}$$
+$$B=\frac{\sqrt{[p2]}+1}{\sqrt{[p2]}-1}\cdot \frac{\sqrt{[p2]}+1}{\sqrt{[p2]}+1}=\frac{(\sqrt{[p2]}+1)^{2}}{[p21]}=\frac{[p2p1]+2\sqrt{[p2]}}{[p21]}$$
+$$A-B=[p21]\cdot([a]\sqrt{[p1]}+[a])-[p11]\cdot([p2p1]+2\sqrt{[p2]})=$$
+$$=[c]+(\sqrt{[d]}-\sqrt{[e]})>0 \mbox{ stąd wiemy że }A>B$$
 \rozwStop
 \odpStart
-Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in (\sqrt{[a]},\infty)$
+$A>B$
 \odpStop
 \testStart
-A. Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in(\sqrt{[a]},\infty)$\\
-B. Funkcja odwrotna jest postaci $y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in\mathbb{R}$\\
-C. Funkcja odwrotna jest postaci $y=y=ln(\frac{1}{x^{2}-[a]}) \mbox{ dla }x\in[\sqrt{[a]},\infty)$\\
-D. Funkcja odwrotna jest postaci $y=y=\frac{1}{x^{3}-[a]} \mbox{ dla }x\in[0,\infty)$\\
-E. Funkcja odwrotna jest postaci $y=y=ln(\frac{1}{x^{3}-[a]}) \mbox{ dla }x\in \mathbb{R}$\\
-F. Funkcja odwrotna jest postaci $y=ln(x^{2}-[a])\mbox{ dla }x\in[[a],\infty)$
+A. $A>B$
+B. $B>A$
+C. $A=B$
+D. Nie da się sprawdzić, co jest większe.
 \testStop
 \kluczStart
 A
