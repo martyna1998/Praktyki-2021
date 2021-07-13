@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Jacek Jabłoński}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/P5.2f}
+\zadStart{Zadanie z Wikieł P 5.2f) moja wersja nr [nrWersji]}
+%[p1]:[2,4,8,16,32,64,128,256,512,1024]
+%[p2]:[2,4,8,16,32,64,128,256,512,1024]
+%[a]=random.randint(2,12)
+%[b]=random.randint(2,12)
+%[c]=random.randint(2,12)
+%[d]=random.randint(2,10)
+%[f]=random.randint(2,10)
+%[g]=random.randint(2,10)
+%[w1]=2 * [a]
+%[w2]=[a]*[b]
+%[w3]=[a]-[w1]
+Korzystając z podanych wzorów i twierdzeń, wyznacz pochodną funkcji:
+f) $$f(x)=\frac{[a]x}{x^2+[b]}$$
+\zadStop
+\rozwStart{Jacek Jabłoński}{}
+$$f'(x) = (\frac{[a]x}{x^2+[b]})' = \frac{([a]x)' (x^2+[b]) - [a]x (x^2+[b])'}{(x^2+[b])^2} =$$
+$$= \frac{[a](x^2+[b]) - [a]x (2x)}{(x^2+[b])^2} = \frac{[a](x^2+[b]) - [w1]x^2}{(x^2+[b])^2} =$$
+$$= \frac{[a]x^2 + [w2] - [w1]x^2}{(x^2+[b])^2} = \frac{[w3]x^2 + [w2]}{(x^2 + [b])^2}$$
+\rozwStop
+\odpStart
+$$\frac{[w3]x^2 + [w2]}{(x^2 + [b])^2}$$
+\odpStop
+\testStart
+A. $$\frac{[w3]x^2 + [w2]}{(x^2 + [b])^2}$$
+B. $$\frac{[w3]x^2 - [w2]}{(x^2 + [b])^2}$$
+C. $$\frac{[w3]x^2}{(x^2 + [b])^2} + \frac{[w2]x}{(x^2 + [a])^2}$$
+D. $$\frac{[w3]x^2}{(x^2 + [b])^2} - \frac{[w2]x}{(x^2 + [a])^2}$$
+E. $$\frac{[g]x^2 + [w2]}{(x^2 + [a])^2}$$
+F. $$\frac{[g]x^2 + [a]}{(x^3 + [b])^2}$$
+G. $$\frac{[g]x^2 + [b]}{(x^2 + [c])^2}$$
+H. $$\frac{[w3]x^2}{(x^2 + [d])^2} + \frac{[w2]}{x^2 + [f]}$$
+I. $$\frac{[w3]x^2}{(x^2 + [d])^2} - \frac{[w2]}{x^2 + [f]}$$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
