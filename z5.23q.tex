@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Radosław Grzyb}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.23q}
+\zadStart{Zadanie z Wikieł Z 5.23 q) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12]
+%[c]=2*[a]
+%[d]=-([b]**2)
+%[e]=4*[a]
+%math.gcd([b],[c])==1
+Znaleźć ekstrema lokalne funkcji:
+$$f(x)=[a]ln^2(x)-[b]ln(x)=ln(x)([a]ln(x)-[b])$$
+\zadStop
+\rozwStart{Klaudia Klejdysz}{}
+Funkcja $f(x)$ jest różniczkowalna w swojej dziedzinie, czyli w zbiorze $D_f=\mathbb{R}^{+}$. Obliczamy pochodną:
+$$f'(x)=\frac{1}{x}([a]ln(x)-[b])+ln(x)(\frac{[a]}{x})=\frac{[a]}{x}ln(x)-\frac{[b]}{x}+\frac{[a]}{x}ln(x)=$$
+$$=\frac{[c]}{x}ln(x)-\frac{[b]}{x}=\frac{1}{x}([c]ln(x)-[b])$$
+\noindent Z warunku koniecznego istnienia ekstremum mamy do rozwiązania równanie $f'(x)=0$. Stąd otrzymujemy tylko jeden punkt stacjonarny:
+$$\frac{1}{x}([c]ln(x)-[b])=0\Leftrightarrow[c]ln(x)-[b]=0\Leftrightarrow ln(x)=\frac{[b]}{[c]}\Leftrightarrow e^{ln(x)}=e^{\frac{[b]}{[c]}}\Leftrightarrow x=e^{\frac{[b]}{[c]}}$$
+Na podstawie twierdzenia Fermata wnioskujemy, że funkcja $f(x)$ może mieć ekstremum tylko w punkcie $x_0=e^{\frac{[b]}{[c]}}$.\\
+Aby zbadać znak pochodnej, rozwiązujemy nierówności $f'(x)>0$ i $f'(x)<0$:
+$$f'(x)>0\Leftrightarrow\frac{1}{x}([c]ln(x)-[b])>0\Leftrightarrow x>e^{\frac{[b]}{[c]}}\Leftrightarrow x\in(e^{\frac{[b]}{[c]}},\infty)$$
+$$f'(x)<0\Leftrightarrow\frac{1}{x}([c]ln(x)-[b])<0\Leftrightarrow x<e^{\frac{[b]}{[c]}}\Leftrightarrow x\in(-\infty,e^{\frac{[b]}{[c]}})$$
+
+\noindent Ustalamy znaki pochodnych w otoczeniu punktu $x_0=e^{\frac{[b]}{[c]}}$. Zestawimy wyniki w tabeli:
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+x     & $(-\infty,e^{\frac{[b]}{[c]}})$ & $e^{\frac{[b]}{[c]}}$ & $(e^{\frac{[b]}{[c]}},\infty)$ \\ \hline
+$f'(x)$ & -                          & 0 & +                         \\ \hline
+$f(x)$  & $\searrow$    & $\frac{[d]}{[e]}$ & $\nearrow$   \\ \hline
+\end{tabular}
+\end{table}\\
+Zgodnie z twierdzeniem funkcja osiąga minimum lokalne w punkcie $x_0=e^{\frac{[b]}{[c]}}$.
+\rozwStop
+\odpStart
+Minimum lokalne w punkcie $x_0=e^{\frac{[b]}{[c]}}$.
+\odpStop
+\testStart
+A. Minimum lokalne w punkcie $x_0=e^{\frac{[b]}{[c]}}$.\\
+B. Maksimum lokalne w punkcie $x_0=-e^{\frac{[b]}{[c]}}$.\\
+C. Minimum lokalne w punkcie $x_0=[a]$.\\
+D. Maksimum lokalne w punkcie $x_0=e^{\frac{[b]}{[c]}}$.\\
+E. Maksimum lokalne w punkcie $x_0=-e^{\frac{[b]}{[c]}}$.\\
+F. Minimum lokalne w punkcie $x_0=[b]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+\end{document}
