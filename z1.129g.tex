@@ -52,6 +52,7 @@
 %[p2]:[2,3,4,5,6,7]
 %[p0]:[0]
 %[x]=pow([p1],[p2])
+%[p1]!=[p2]
 
 Wyznaczyć dziedzinę naturalną funkcji.
 $$f(x)=(\log_{\frac{1}{[p1]}}x-[p2])^{\frac{3}{2}}$$
@@ -62,14 +63,14 @@ $$f(x)=(\log_{\frac{1}{[p1]}}x-[p2])^{\frac{3}{2}}$$
 $$x>0 \quad \land \quad \log_{\frac{1}{[p1]}}x-[p2]\geq 0$$
 $$\log_{\frac{1}{[p1]}}x\geq [p2]$$
 $$\log_{\frac{1}{[p1]}}x\geq \log_{\frac{1}{[p1]}}\left(\frac{1}{[p1]}\right)^{[p2]}$$
-$$x\geq\left(\frac{1}{[p1]}\right)^{[p2]} $$
-$$x\geq \frac{1}{[x]}$$
+$$x\leq\left(\frac{1}{[p1]}\right)^{[p2]} $$
+$$x\leq \frac{1}{[x]}$$
 \rozwStop
 \odpStart
-$x\in[[x],\infty)$
+$x\in(0,\frac{1}{[x]}]$
 \odpStop
 \testStart
-A.$x\in[[x],\infty)$
+A.$x\in(0,\frac{1}{[x]}]$
 B.$x\in[[p2],\infty)$
 C.$x\in(-\infty, 0)$
 D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
