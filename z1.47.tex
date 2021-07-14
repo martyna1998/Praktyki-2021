@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -82,23 +68,23 @@ Aby równanie posiadało dwa pierwiastki powinien być spełniony warunek $\Delt
 $$\Delta=(m+[p2])^{2}-4\cdot[p1]\cdot[p3]=m^{2}+[2p2]m+[kp2]-[4p1p3]$$
 $$=m^{2}+[2p2]m+[r]\geq0$$
 
-$$m^{2}+[2p2]m+[r]\geq0$$
-$$\Delta=[2p2]^{2}-4\cdot1\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$m^{2}+[2p2]m+([r])\geq0$$
+$$\Delta=[2p2]^{2}-4\cdot1\cdot([r])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
 $$m_{1}=\frac{-[2p2]-[pdel]}{[2a]}=[m1], \quad m_{2}=\frac{-[2p2]+[pdel]}{[2a]}=[m2]$$
 Zatem $m\in[[m1], [m2]]$
 
 Przejdźmy do warunku:
 $$x_{1}>1 \quad \land \quad x_{2}>1$$
-$$\frac{m+[p2]-\sqrt{m^{2}+[2p2]m+[r]}}{[2p1]}>1\quad \land \quad\frac{m+[p2]+\sqrt{m^{2}+[2p2]m+[r]}}{[2p1]}>1$$
-$$m+[p2]-\sqrt{m^{2}+[2p2]m+[r]}>[2p1]\quad \land \quad m+[p2]+\sqrt{m^{2}+[2p2]m+[r]}>[2p1]$$
+$$\frac{m+[p2]-\sqrt{m^{2}+[2p2]m+([r])}}{[2p1]}>1\quad \land \quad\frac{m+[p2]+\sqrt{m^{2}+[2p2]m+([r])}}{[2p1]}>1$$
+$$m+[p2]-\sqrt{m^{2}+[2p2]m+([r])}>[2p1]\quad \land \quad m+[p2]+\sqrt{m^{2}+[2p2]m+([r])}>[2p1]$$
 
-$$-\sqrt{m^{2}+[2p2]m+[r]}>-m+[2p1p2] \quad \land \quad \sqrt{m^{2}+[2p2]m+[r]}>-m+[2p1p2]$$
-$$m^{2}+[2p2]m+[r]>(-m+[2p1p2])^{2} \quad \land \quad 
-m^{2}+[2p2]m+[r]>(-m+[2p1p2])^{2}$$
+$$-\sqrt{m^{2}+[2p2]m+([r])}>-m+[2p1p2] \quad \land \quad \sqrt{m^{2}+[2p2]m+([r])}>-m+[2p1p2]$$
+$$m^{2}+[2p2]m+([r])>(-m+[2p1p2])^{2} \quad \land \quad 
+m^{2}+[2p2]m+([r])>(-m+[2p1p2])^{2}$$
 
 $$m^{2}+[2p2]m+[r]-m^{2}+[22p1p2]m-[2p1p2k]>0 \quad \land \quad m^{2}+[2p2]m+[r]-m^{2}+[22p1p2]m-[2p1p2k]>0$$
 
-$$[m11]m+[r1]>0 \quad \land \quad [m11]m+[r1]>0$$
+$$[m11]m+([r1])>0 \quad \land \quad [m11]m+([r1])>0$$
 Równania zatem sprowadzają się do jednego.
 $$[m11]m-[pr1]>0$$
 $$[m11]m>[pr1]$$
@@ -119,8 +105,6 @@ C.$m\in(-\infty,[m2])$
 D.$m\in([p1],[p2])$
 E.$m\in([m11],[pr1])$
 F.$m\in[[m1],\infty)$
-
-
 \testStop
 \kluczStart
 A

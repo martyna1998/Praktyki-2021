@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -82,19 +68,19 @@
 Podać, dla jakich wartości parametru $m$ rozwiązaniem układu równań
 $$\left\{\begin{array}{ccc}
 [p1]x-[p2]y&=&[p3]m-[p4]\\
-[p5]x-[p6]y&=&-[p7]m+[p8]
+\ [p5]x-[p6]y&=&-[p7]m+[p8]
 \end{array} \right.$$
 jest para liczb ujemnych. 
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
 Powyższemu układowi równań odpowiadają wyznaczniki:
-$$W=\left| \begin{array}{lccr} [p1] & -[p2] \\ [p5] & -[p6] \end{array}\right| = [p1]\cdot(-[p6]) - (-[p2])\cdot[p5]=-[p1p6]+[p2p5]=[w]$$
+$$W=\left| \begin{array}{lccr} [p1] & -[p2] \\ \ [p5] & -[p6] \end{array}\right| = [p1]\cdot(-[p6]) - (-[p2])\cdot[p5]=-[p1p6]+[p2p5]=[w]$$
 
-$$W_{x}=\left| \begin{array}{lccr} [p3]m -[p4] & -[p2] \\ -[p7]m+[p8] & -[p6] \end{array}\right| = ([p3]m-[p4])\cdot(-[p6]) - (- [p2])\cdot(-[p7]m+[p8])=$$
+$$W_{x}=\left| \begin{array}{lccr} [p3]m -[p4] & -[p2] \\ \ -[p7]m+[p8] & -[p6] \end{array}\right| = ([p3]m-[p4])\cdot(-[p6]) - (- [p2])\cdot(-[p7]m+[p8])=$$
 $$=-[p3p6]m+[p4p6]-[p2p7]m+[p2p8]=[wx]m+[wx1]$$
 
-$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m-[p4] \\ [p5] & -[p7]m+[p8] \end{array}\right| = [p1]\cdot(-[p7]m+[p8]) - ([p3]m-[p4])\cdot[p5]=-[p1p7]m+[p1p8]-[p3p5]m+[p4p5]=[wy]m+[wy1]$$
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m-[p4] \\ \ [p5] & -[p7]m+[p8] \end{array}\right| = [p1]\cdot(-[p7]m+[p8]) - ([p3]m-[p4])\cdot[p5]=-[p1p7]m+[p1p8]-[p3p5]m+[p4p5]=[wy]m+[wy1]$$
 
 $$W\neq 0 \iff [w] \neq 0, m\in\mathbb{R} $$
 

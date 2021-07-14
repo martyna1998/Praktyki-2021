@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -66,17 +52,17 @@
 Rozwiązać układ równań, w którym $m$ jest parametrem.
 $$\left\{\begin{array}{ccc}
 [p1]x+[p2]my&=&[p3]\\
-[p4]mx+[p5]y&=&[p6]m
+\ [p4]mx+[p5]y&=&[p6]m
 \end{array} \right.$$
 
 \zadStop
 \rozwStart{Maja Szabłowska}{}
 Powyższemu układowi równań odpowiadają wyznaczniki:
-$$W=\left| \begin{array}{lccr} [p1] & [p2]m \\ [p4]m & [p5] \end{array}\right| = [p1]\cdot[p5] - [p2]m\cdot[p4]m=[p1p5]-[p2p4]m^{2}$$
+$$W=\left| \begin{array}{lccr} [p1] & [p2]m \\ \ [p4]m & [p5] \end{array}\right| = [p1]\cdot[p5] - [p2]m\cdot[p4]m=[p1p5]-[p2p4]m^{2}$$
 
-$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2]m \\ [p6]m & [p5] \end{array}\right| = [p3]\cdot[p5] - [p2]m\cdot[p6]m=[p3p5]-[p2p6]m^{2}$$
+$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2]m \\ \ [p6]m & [p5] \end{array}\right| = [p3]\cdot[p5] - [p2]m\cdot[p6]m=[p3p5]-[p2p6]m^{2}$$
 
-$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3] \\ [p4] & [p6]m \end{array}\right| = [p1]\cdot[p6]m - [p3]\cdot[p4]=[p1p6]m-[p3p4]$$
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3] \\ \ [p4] & [p6]m \end{array}\right| = [p1]\cdot[p6]m - [p3]\cdot[p4]=[p1p6]m-[p3p4]$$
 
 $$W\neq 0 \iff [p1p5]-[p2p4]m^{2} \neq 0  \iff
 m^{2}\neq -\frac{[p1p5]}{[p2p4]}, m\in\mathbb{R} $$

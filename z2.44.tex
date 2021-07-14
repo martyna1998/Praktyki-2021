@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -72,18 +58,18 @@
 Podać, dla jakich wartości parametru $m$ rozwiązaniem układu równań
 $$\left\{\begin{array}{ccc}
 [p1]x+[p2]y&=&[p3]m\\
-[p4]x-[p5]y&=&-[p6]m+[p7]
+\ [p4]x-[p5]y&=&-[p6]m+[p7]
 \end{array} \right.$$
 jest para liczb: dodatnich, ujemnych,o różnych znakach. 
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
 Powyższemu układowi równań odpowiadają wyznaczniki:
-$$W=\left| \begin{array}{lccr} [p1] & [p2] \\ [p4] & -[p5] \end{array}\right| = [p1]\cdot(-[p5]) - [p2]\cdot[p4]=-[p1p5]-[p2p4]=[w]$$
+$$W=\left| \begin{array}{lccr} [p1] & [p2] \\ \ [p4] & -[p5] \end{array}\right| = [p1]\cdot(-[p5]) - [p2]\cdot[p4]=-[p1p5]-[p2p4]=[w]$$
 
-$$W_{x}=\left| \begin{array}{lccr} [p3]m & [p2] \\ -[p6]m+[p7] & -[p5] \end{array}\right| = [p3]m\cdot(-[p5]) - [p2]\cdot(-[p6]m+[p7])=-[p3p5]m+[p2p6]m-[p2p7]=[wx]m-[p2p7]$$
+$$W_{x}=\left| \begin{array}{lccr} [p3]m & [p2] \\ \ -[p6]m+[p7] & -[p5] \end{array}\right| = [p3]m\cdot(-[p5]) - [p2]\cdot(-[p6]m+[p7])=-[p3p5]m+[p2p6]m-[p2p7]=[wx]m-[p2p7]$$
 
-$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m \\ [p4] & -[p6]m+[p7] \end{array}\right| = [p1]\cdot(-[p6]m+[p7]) - [p3]m\cdot[p4]=-[p1p6]m+[p1p7]-[p3p4]m=[p1p7][wy]m$$
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m \\ \ [p4] & -[p6]m+[p7] \end{array}\right| = [p1]\cdot(-[p6]m+[p7]) - [p3]m\cdot[p4]=-[p1p6]m+[p1p7]-[p3p4]m=[p1p7][wy]m$$
 
 $$W\neq 0 \iff [w] \neq 0, m\in\mathbb{R} $$
 
