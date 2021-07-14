@@ -32,56 +32,52 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.2}
-\zadStart{Zadanie z Wikieł Z 2.2  moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.70k}
+\zadStart{Zadanie z Wikieł Z 1.70 k)  moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]=random.randint(2,10)
+%[p2]:[2,3,4,5,6,7,8,9,10]
 %[p3]:[2,3,4,5,6,7,8,9,10]
-%[p4]:[2,3,4,5]
-%[p5]=random.randint(2,10)
-%[p2p4]=[p2]-[p4]
-%[p1p3]=[p1]-[p3]
-%[a]=round([p2p4]/([p1p3]+0.0000001),2)
-%[ab]=[p1]*[a]
-%[b]=[p2]-[ab]
-%[p5b]=[p5]-[b]
-%[x]=round([a]/([p5b]+0.0000001),2)
-%[p2p4]!=0 and [p1p3]!=0 and math.gcd([p2p4],[p1p3])==1 
+%[p4]=random.randint(2,10)
+%[a]=[p4]*[p4]
+%[del1]=[p1]*[p1]+4*[p4]
+%[pdel1]=round(math.sqrt([del1]),2)
+%[x1]=round((-[p1]-[pdel1])/2,2)
+%[x2]=round((-[p1]+[pdel1])/2,2)
+%[del2]=[p1]*[p1]-4*[p4]
+%[del1]>0 and [del2]<0 and math.gcd([p3],[p2])==1 and [x1]<-[p1] and [p1]>([p3]/[p2]) 
 
-Punkty $A([p1],[p2]), B([p3],[p4]), C(x,[p5])$ są współliniowe. Wyznaczyć $x$.
+
+Rozwiązać nierówność $$(x^{2}+[p1]x)([p2]x+[p3])-[a]\frac{[p2]x+[p3]}{x^{2}+[p1]x}\geq0.$$
+
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$\left\{ \begin{array}{ll}
-[p2]=[p1]a+b\\
-[p4]=[p3]a+b
-\end{array} \right.$$
-$$[p2]-[p4]=[p1]a-[p3]a$$
-$$[p2p4]=[p1p3]a$$
-$$a=\frac{[p2p4]}{[p1p3]}=[a]$$
-
-$$[p2]=[p1]\cdot\frac{[p2p4]}{[p1p3]}+b $$
-$$b=[p2]-([ab])=[b]$$
-
-Zatem $y=[a]x+[b].$ Punkt $C$ również należy do tej prostej, wówczas:
-$$[p5]=[a]x+[b]$$
-$$[p5b]=[a]x$$
-$$x=\frac{[a]}{[p5b]}=[x]$$
-
+$$(x^{2}+[p1]x)([p2]x+[p3])-[a]\frac{[p2]x+[p3]}{x^{2}+[p1]x})\geq0$$
+$$(x^{2}+[p1]x)^{3}([p2]x+[p3])-[a]([p2]x+[p3])(x^{2}+[p1]x)\geq 0$$
+$$(x^{2}+[p1]x)[(x^{2}+[p1]x)^{2}([p2]x+[p3])-[a]([p2]x+[p3])]\geq 0$$
+$$(x^{2}+[p1]x)[([p2]x+[p3])((x^{2}+[p1]x)^{2}-[a])]\geq 0$$
+$$(x^{2}+[p1]x)([p2]x+[p3])(x^{2}+[p1]x-[p4])(x^{2}+[p1]x+[p4])\geq 0$$
+$$x(x+[p1])([p2]x+[p3])(x^{2}+[p1]x-[p4])(x^{2}+[p1]x+[p4])\geq 0$$
+$$\Delta_{1}=[p1]^{2}-4\cdot1\cdot(-[p4])=[del1] \Rightarrow \sqrt{\Delta_{1}}=[pdel1]$$
+$$x_{1}=\frac{-[p1]-[pdel1]}{2}=[x1], \quad x_{2}=\frac{-[p1]+[pdel1]}{2}=[x2]$$
+$$\Delta_{2}=[p1]^{2}-4\cdot 1 \cdot [p4] =[del2]<0$$
+Miejsca zerowe w nierówności to: $ 0,-[p1], -\frac{[p3]}{[p2]}, [x1], [x2].$
+Rozwiązaniem nierówności zatem jest zbiór:
+$$x\in[[x1],-[p1]]\cup\left[-\frac{[p3]}{[p2]},0\right]\cup[[x2],\infty)$$
 \rozwStop
 
 
 \odpStart
-$x=[x]$
+$x\in[[x1],-[p1]]\cup\left[-\frac{[p3]}{[p2]},0\right]\cup[[x2],\infty)$
 \odpStop
 \testStart
-A.$x=[x]$
-B.$x=\frac{[p1]}{[p2]}$
-D.$x=[b]$
-E.$x=[ab]$
-F.$x=[p2p4]$
-G.$x=[p5b]$
-H.$x=\frac{[p5]}{[p3]}$
+A.$x\in[[x1],-[p1]]\cup\left[-\frac{[p3]}{[p2]},0\right]\cup[[x2],\infty)$
+B.$x\in[[x1],-[p1]]\cup[[x2],\infty)$
+D.$x\in[[x2],\infty)$
+E.$x\in[[x1],-[p1]]$
+F.$x\in[[del2],-[p2]]$
+G.$x\in\mathbb{R}$
+H.$x\in\emptyset$
 \testStop
 \kluczStart
 A

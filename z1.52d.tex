@@ -32,56 +32,58 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.2}
-\zadStart{Zadanie z Wikieł Z 2.2  moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.52d}
+\zadStart{Zadanie z Wikieł Z 1.52 d)  moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]=random.randint(2,10)
+%[p2]:[2,3,4,5,6,7,8,9,10]
 %[p3]:[2,3,4,5,6,7,8,9,10]
-%[p4]:[2,3,4,5]
+%[p4]=random.randint(2,10)
 %[p5]=random.randint(2,10)
-%[p2p4]=[p2]-[p4]
-%[p1p3]=[p1]-[p3]
-%[a]=round([p2p4]/([p1p3]+0.0000001),2)
-%[ab]=[p1]*[a]
-%[b]=[p2]-[ab]
-%[p5b]=[p5]-[b]
-%[x]=round([a]/([p5b]+0.0000001),2)
-%[p2p4]!=0 and [p1p3]!=0 and math.gcd([p2p4],[p1p3])==1 
+%[p6]:[2,3,4,5,6,7,8,9,10]
+%[p7]=random.randint(2,10)
+%[a]=round([p1]/[p6],2)
+%[b]=round([a]*[p7],2)
+%[p2b]=round(-[p2]+[b],2)
+%[c]=round([p2b]/[p6],2)
+%[d]=round([c]*[p7],2)
+%[p3d]=round(-[p3]+[d],2)
+%[e]=round([p3d]/[p6],2)
+%[f]=round([e]*[p7],2)
+%[p4f]=round([p4]+[f],2)
+%[g]=round([p4f]/[p6],2)
+%[p7g]=round([g]*[p7],2)
+%[r]=-[p5]+[p7g]
+%(-[p5]+[p7g])==0 and [a]!=0 and [c]!=0 and [e]!=0 and [g]!=0 
+Obliczyć iloraz wielomianów $$([p1]x^{4}-[p2]x^{3}-[p3]x^{2}+[p4]x-[p5]):([p6]x-[p7]).$$
 
-Punkty $A([p1],[p2]), B([p3],[p4]), C(x,[p5])$ są współliniowe. Wyznaczyć $x$.
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$\left\{ \begin{array}{ll}
-[p2]=[p1]a+b\\
-[p4]=[p3]a+b
-\end{array} \right.$$
-$$[p2]-[p4]=[p1]a-[p3]a$$
-$$[p2p4]=[p1p3]a$$
-$$a=\frac{[p2p4]}{[p1p3]}=[a]$$
-
-$$[p2]=[p1]\cdot\frac{[p2p4]}{[p1p3]}+b $$
-$$b=[p2]-([ab])=[b]$$
-
-Zatem $y=[a]x+[b].$ Punkt $C$ również należy do tej prostej, wówczas:
-$$[p5]=[a]x+[b]$$
-$$[p5b]=[a]x$$
-$$x=\frac{[a]}{[p5b]}=[x]$$
-
+$$\begin{array}{lll}
+([p1]x^{4}-[p2]x^{3}-[p3]x^{2}+[p4]x-[p5]):([p6]x-[p7])  =  [a]x^3 +([c])x^2 + ([e])x +[g] \\
+\underline{-[p1]x^4 + [b]x^3} & &  \\
+\qquad [p2b]x^3  -[p3]x^2 +[p4]x -[p5] & & \\
+\qquad \ \ \underline{-([p2b])x^3 +[d]x^2} & &\\
+\qquad \qquad \qquad [p3d]x^2 + [p4]x - [p5] & & \\
+\qquad \qquad \quad \underline{-([p3d])x^2 + [f]x}  & & \\
+\qquad \qquad \qquad \qquad [p4f]x - [p5] & & \\
+\qquad \qquad \qquad \qquad \ \ \underline{-([p4f])x + [p7g]} & & \\
+\qquad \qquad \qquad \qquad \quad R = [r] & &
+\end{array}$$
 \rozwStop
 
 
 \odpStart
-$x=[x]$
+$[a]x^3 +([c])x^2 + ([e])x +[g]$
 \odpStop
 \testStart
-A.$x=[x]$
-B.$x=\frac{[p1]}{[p2]}$
-D.$x=[b]$
-E.$x=[ab]$
-F.$x=[p2p4]$
-G.$x=[p5b]$
-H.$x=\frac{[p5]}{[p3]}$
+A.$[a]x^3 +([c])x^2 + ([e])x +[g]$
+B.$[a]x^3 - ([e])x +[g]$
+D.$[a]x^3 +([c])x^2 +[p1]$
+E.$([c])x^2 + [p3]x +[g]$
+F.$[p3]x^3 $
+G.$[p2]x^2 + ([e])x +[g]$
+H.$[p1]x^3 +[p2]x^2 + [p3]x +[p4]$
 \testStop
 \kluczStart
 A
