@@ -32,29 +32,24 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.3d}
-\zadStart{Zadanie z Wikieł Z 4.3d) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[a]=4+3*[p1]
-%[p2]=[p1]*[p1]
-%[b]=3*[p1]
-%[down1]=8*[p1]
-%[down2]=[p1]+1
-%math.gcd(3,[p1])==1 and math.sqrt([down2]).is_integer()==False
-Obliczyć granicę funkcji $\lim_{x \to [p1]} \frac{2\sqrt{x+1}-\sqrt{x+[a]}}{x^2-[p2]}$
+\kategoria{Wikieł/Z4.21d}
+\zadStart{Zadanie z Wikieł Z 4.21d) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]=2*[p1]
+Obliczyć granicę funkcji $\lim_{x \to 1} ([p1]-[p1]x)\tg{\frac{\Pi x}{2}}$
 \zadStop
 \rozwStart{Jakub Janik}{}
-$$\lim_{x \to [p1]} \frac{2\sqrt{x+1}-\sqrt{x+[a]}}{x^2-[p2]}=\lim_{x \to [p1]} \frac{(2\sqrt{x+1}-\sqrt{x+[a]})(2\sqrt{x+1}+\sqrt{x+[a]})}{(x-[p1])(x+[p1])(2\sqrt{x+1}+\sqrt{x+[a]})}=$$
-$$\lim_{x \to [p1]} \frac{4(x+1)-(x+[a])}{(x-[p1])(x+[p1])(2\sqrt{x+1}+\sqrt{x+[a]})}=\lim_{x \to [p1]} \frac{3x-[b]}{(x-[p1])(x+[p1])(2\sqrt{x+1}+\sqrt{x+[a]})}=$$
-$$\lim_{x \to [p1]} \frac{3}{(x+[p1])(2\sqrt{x+1}+\sqrt{x+[a]})}=\frac{3}{[down1]\sqrt{[down2]}}$$
-\rozwStop
+Zaczynamy od podstawienia $t=1-x, \quad x=1-t$, wtedy mamy $x \to 1 \Rightarrow t \to 0$.
+$$\lim_{t \to 0} [p1]t\tg{(\frac{\Pi}{2}(1-t))}=\lim_{t \to 0} [p1]t\tg{(\frac{\Pi}{2}-\frac{\Pi}{2}t)}=$$
+$$\lim_{t \to 0} [p1]t\ctg{(\frac{\Pi}{2}t)}=\lim_{t \to 0} [p1]\frac{t}{\tg{(\frac{\Pi}{2}t)}}=$$
+$$\lim_{t \to 0} \frac{[p2]}{\Pi}\frac{\frac{\Pi}{2}t}{\frac{\sin{(\frac{\Pi}{2}t)}}{\cos{(\frac{\Pi}{2}t)}}}=\lim_{t \to 0} \frac{[p2]}{\Pi}\frac{\cos{(\frac{\Pi}{2}t)}}{\frac{\sin{(\frac{\Pi}{2}t)}}{\frac{\Pi}{2}t}}=\frac{[p2]}{\Pi}$$
 \odpStart
-$\frac{3}{[down1]\sqrt{[down2]}}$
+$\frac{[p2]}{\Pi}$
 \odpStop
 \testStart
-A.$\frac{3}{[down1]\sqrt{[down2]}}$
+A.$\frac{[p2]}{\Pi}$
 B.$0$
-C.$-\frac{3}{[down1]\sqrt{[down2]}}$
+C.$-\frac{[p2]}{\Pi}$
 D.$\infty$
 \testStop
 \kluczStart

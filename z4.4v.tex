@@ -41,14 +41,14 @@
 %[down]!=1 and [up]!=1
 Obliczyć granicę funkcji $\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1-\tg{x})}{\cos{2x}}$
 \zadStop
-\rozwStart{Jakub Janik}{}
+\rozwStart{Jakub Janik}{Patryk Wirkus}
 Zaczniemy od udowodnienia tożsamości $\cos{2x}=\frac{1-\tg^2{x}}{1+\tg^2{x}}$
 $$\cos{2x}=\cos^2{x}-\sin^2{x}=\frac{\cos^2{x}-\sin^2{x}}{\cos^2{x}+\sin^2{x}}=$$
-$$\frac{\frac{\cos^2{x}-\sin^2{x}}{\cos^2{x}}}{\frac{\cos^2{x}+\sin^2{x}}{\cos^2{x}}}=\frac{1-\tg^2{x}}{1+\tg^2{x}}$$
+$$=\frac{\frac{\cos^2{x}-\sin^2{x}}{\cos^2{x}}}{\frac{\cos^2{x}+\sin^2{x}}{\cos^2{x}}}=\frac{1-\tg^2{x}}{1+\tg^2{x}}$$
 Możemy przejść do zadania
 $$\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1-\tg{x})}{\cos{2x}}=\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1-\tg{x})}{\frac{1-\tg^2{x}}{1+\tg^2{x}}}=$$
-$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1-\tg{x})}{\frac{(1-\tg{x})(1+\tg{x})}{1+\tg^2{x}}}=\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x}{\frac{1+\tg{x}}{1+\tg^2{x}}}=$$
-$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1+\tg^2{x})}{1+\tg{x}}=\frac{[up]\Pi}{[down]}$$
+$$=\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1-\tg{x})}{\frac{(1-\tg{x})(1+\tg{x})}{1+\tg^2{x}}}=\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x}{\frac{1+\tg{x}}{1+\tg^2{x}}}=$$
+$$=\lim_{x \to \frac{\Pi}{4}} \frac{[p1]x(1+\tg^2{x})}{1+\tg{x}}=\frac{[up]\Pi}{[down]}$$
 \rozwStop
 \odpStart
 $\frac{[up]\Pi}{[down]}$
