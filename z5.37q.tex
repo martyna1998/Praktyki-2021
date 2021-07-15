@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z5.37q}
+
+\zadStart{Zadanie z Wikieł Z 5.37 q) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11]
+%[b]:[2,3,4,5,6,7,8,9,10,11]
+%[c]=2*[b]
+%[d]=2*[c]
+%[e]=[a]+[c]
+%[delta]=[d]**2 - 4*[b]*[e]
+%[f]=abs([delta])
+%[k]=math.sqrt([f])
+%[k2]=round([k],2)
+%[x1]=(-[d]-[k2])/(2*[b])
+%[x2]=(-[d]+[k2])/(2*[b])
+%[x12]=round([x1],2)
+%[x22]=round([x2],2)
+%[fx1]=([a] + [b]*([x12])**2)*math.exp([x12])
+%[fx2]=([a] + [b]*([x22])**2)*math.exp([x22])
+%[fx12]=round([fx1],2)
+%[fx22]=round([fx2],2)
+%[g1]=([a] + [b]*([x12])**2)
+%[g2]=([a] + [b]*([x22])**2)
+%[g12]=round([g1],2)
+%[g22]=round([g2],2)
+%[delta]>0
+Wyznaczyć współrzędne punktów przegięcia wykresu podanej funkcji.
+$$y = ([a] + [b]x^2) exp(x)$$
+\zadStop
+
+\rozwStart{Natalia Danieluk}{}
+Dziedzina funkcji: $\quad \mathcal{D}_f=\mathbb{R}$. \\
+Postępujemy według schematu:
+\begin{enumerate}
+\item Obliczamy pochodne: 
+$$f'(x) = ([a] + [b]x^2)' exp(x) + (exp(x))'([a] + [b]x^2) = $$
+$$= [c]x exp(x) + exp(x)([a] + [b]x^2) = $$
+$$= ([b]x^2 + [c]x + [a])exp(x), $$ 
+$$f''(x) = ([b]x^2 + [c]x + [a])'exp(x) + (exp(x))'([b]x^2 + [c]x + [a]) = $$
+$$= ([c]x + [c])exp(x) + exp(x)([b]x^2 + [c]x + [a]) = $$
+$$= ([b]x^2 + [d]x + [e])exp(x)$$
+i określamy ich dziedziny: $\quad \mathcal{D}_{f'}=\mathcal{D}_{f''}=\mathbb{R}$. \\
+\item Znajdujemy miejsca zerowe $f''$: \\
+Zauważmy, że dla każdego $x \in \mathcal{D}_f$ mamy $exp(x) > 0$. \\
+Wystarczy zatem zbadać znak czynnika $([b]x^2 + [d]x + [e])$. \\
+$$\Delta = [delta], \quad \sqrt{\Delta} \approx [k2], \quad x_1 \approx [x12], \quad x_2 \approx [x22]$$
+\item Badamy znak $f''$ po obu stronach miejsc zerowych. \\
+	\begin{enumerate}
+	\item $f''(x) > 0 \Leftrightarrow x \in (-\infty,[x12]) \cup ([x22],\infty)$\\
+	\item $f''(x) < 0 \Leftrightarrow x \in ([x12],[x22])$
+	\end{enumerate}
+\end{enumerate}
+Tym samym w sąsiedztwie punktów $x=[x12]$ i $x=[x22]$ druga pochodna zmienia znak, a więc wykres funkcji ma punkty przegięcia w punktach o współrzędnych $(x_1,f(x_1)) = ([x12],[g12] exp([x12])) \approx ([x12],[fx12])$ i $(x_2,f(x_2)) = ([x22],[g22] exp([x22])) \approx ([x22],[fx22])$.
+\rozwStop
+
+\odpStart
+Współrzędne punktów przegięcia to: $([x12],[fx12]), ([x22],[fx22])$.
+\odpStop
+
+\testStart
+A. Funkcja nie ma punktów przegięcia.
+B. Współrzędne punktów przegięcia to: $(0,0)$.
+C. Współrzędne punktów przegięcia to:  $([x12],[g12]), ([x22],[g22])$.
+D. Współrzędne punktów przegięcia to:  $([x12],[fx12]), ([x22],[fx22])$.
+\testStop
+
+\kluczStart
+D
+\kluczStop
+
+\end{document}
