@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,55 +32,39 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.57}
-\zadStart{Zadanie z Wikieł Z 2.57 moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[c]:[14,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
-%[bb]=2*[b]
-%[ab]=[a]+[b]
-%[kbb]=[bb]*[bb]
-%[4ab]=4*[ab]
-%[4abb]=[4ab]*[b]
-%[4abc]=[4ab]*[c]
-%[x]=[4abb]-[kbb]
-%[mm]=[4abc]/[x]
-%[cmm]=int([mm])
-%[m]=math.sqrt([cmm])
-%[cm]=int([m])
-%[x]>0 and [m].is_integer()==True and [mm].is_integer()==True
-Podać, dla jakiej wartości m prosta $y=-x+m$ jest styczna do elipsy $[a]x^2+[b]y^2=[c]$.
+\kategoria{Wikieł/Z1.42}
+\zadStart{Zadanie z Wikieł Z 1.42) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[b]:[2,3,4,5,6,7,8,9,10]
+%[c]:[3,4,5,6,7,8,9,10]
+%[d]=[b]*[c]
+%[e]=[b]-[c]
+%[b]>[c]
+%[f]=[e]**2+4*[d]
+%[g]=[e]**2
+%[i]=([g]-[f])/-4
+%[h]=int([i])
+Wyznaczyć wartości parametru $a$, dla których równanie $([b]-x)(x+[c])=a$ ma tylko pierwiastki dodatnie.
 \zadStop
-\rozwStart{Aleksandra Pasińska}{}
-$$\left\{ \begin{array}{ll}
-[a]x^2+[b]y^2=[c]\\ 
-y=-x+m
-\end{array} \right.$$
-$$[a]x^2+[b](-x+m)^2=[c]$$
-$$[a]x^2+[b]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$[ab]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$\Delta=[kbb]m^2-4\cdot [ab]([b]m^2-[c])=0$$
-$$[kbb]m^2-[4abb]m^2+[4abc]=0$$
-$$-[x]m^2=-[4abc]$$
-$$m^2=[cmm]$$
-$$m=\pm [cm]$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$([b]-x)(x+[c])=a$$
+$$[b]x+[d]-x^2-[c]x-a=0$$ 
+$$-x^2-[e]x+[d]-a=0$$
+$$\triangle=[e]^2+4\cdot([d]-a)=[f]-4a\geq0 \Rightarrow a\leq\frac{[f]}{4}$$
+$$x=\frac{[e]-\sqrt{[f]-4a}}{-2}>0 \Rightarrow [e]-\sqrt{[f]-4a}<0 \Rightarrow [e]<\sqrt{[f]-4a} \Rightarrow$$
+$$[g]<[f]-4a \Rightarrow \frac{[g]-[f]}{-4}>a \Rightarrow [h]>a$$
+$$a\in\bigg[[h];\frac{[f]}{4}\bigg)$$
 \odpStart
-$m=\pm [cm]$\\
+$a\in[[h];\frac{[f]}{4})$
 \odpStop
 \testStart
-A.$m=\pm [cm]$
-B.$m=[cm]$
-C.$m=-[cm]$
-D.$m=-99$
-E.$m=99$
-F.$m=2000$
-G.$m=1$
-H.$ m=0$
-I.$m=-1$
+A. $a=0$ \\
+B. $a\in[\frac{[f]}{4};\infty)$ \\
+C. $a\in\emptyset$ \\
+D. $a\in[[h];\frac{[f]}{4})$ 
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 

@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,55 +32,65 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.57}
-\zadStart{Zadanie z Wikieł Z 2.57 moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[c]:[14,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
-%[bb]=2*[b]
-%[ab]=[a]+[b]
-%[kbb]=[bb]*[bb]
-%[4ab]=4*[ab]
-%[4abb]=[4ab]*[b]
-%[4abc]=[4ab]*[c]
-%[x]=[4abb]-[kbb]
-%[mm]=[4abc]/[x]
-%[cmm]=int([mm])
-%[m]=math.sqrt([cmm])
-%[cm]=int([m])
-%[x]>0 and [m].is_integer()==True and [mm].is_integer()==True
-Podać, dla jakiej wartości m prosta $y=-x+m$ jest styczna do elipsy $[a]x^2+[b]y^2=[c]$.
+\kategoria{Wikieł/Z1.151j}
+\zadStart{Zadanie z Wikieł Z 1.151 j) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10]
+%[b]:[2,3,4,5,6,7,8,9,10]
+%[c]=([a]**2)*3
+%[d]=3*[a]
+%[e]=[a]**3
+%[f]=abs([e]-[b])
+%[ckw]=[c]**2
+%[4df]=4*[d]*[f]
+%[delta]=[ckw]+[4df]
+%[pierw1]=math.sqrt([delta])
+%[pierw]=int([pierw1])
+%[m]=2*[d]
+%[l1]=[c]+[pierw]
+%[l2]=-[c]+[pierw]
+%[ulamek1]=[l1]/[m]
+%[ulamek]=int([ulamek1])
+%[ulamek3]=[l2]/[m]
+%[ulamek2]=int([ulamek3])
+%[w1]=[a]-[ulamek]
+%[w2]=[a]+[ulamek2]
+%[pierw1].is_integer()==True and [ulamek1].is_integer()==True and [ulamek3].is_integer()==True
+Rozwiązać układ równań $\left\{ \begin{array}{l}
+x-y=[a]\\
+x^3-y^3=[b]
+\end{array} \right.$
 \zadStop
-\rozwStart{Aleksandra Pasińska}{}
-$$\left\{ \begin{array}{ll}
-[a]x^2+[b]y^2=[c]\\ 
-y=-x+m
+\rozwStart{Laura Mieczkowska}{}
+$$\left\{ \begin{array}{l}
+x-y=[a]\\
+x^3-y^3=[b] 
+\end{array} \right.
+\Rightarrow
+\left\{ \begin{array}{l}
+x=[a]+y\\
+([a]+y)^3-y^3=[b]
 \end{array} \right.$$
-$$[a]x^2+[b](-x+m)^2=[c]$$
-$$[a]x^2+[b]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$[ab]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$\Delta=[kbb]m^2-4\cdot [ab]([b]m^2-[c])=0$$
-$$[kbb]m^2-[4abb]m^2+[4abc]=0$$
-$$-[x]m^2=-[4abc]$$
-$$m^2=[cmm]$$
-$$m=\pm [cm]$$
-\rozwStop
+$$([a]+y)^3-y^3=[b]$$
+$$[a]^3+3\cdot[a]^2\cdot y+3\cdot[a]\cdot y^2+y^3-y^3=[b]$$
+$$[e]+[c]y+[d]y^2=[b]$$
+$$[d]y^2+[c]y-[f]=0$$
+$$\Delta=[c]^2-4\cdot[d]\cdot(-[f])=[delta]\Rightarrow \sqrt{\Delta}=[pierw]$$
+$$y_1=\frac{-[c]-[pierw]}{[m]} \vee y_2=\frac{-[c]+[pierw]}{[m]}$$
+$$y_1=-\frac{[l1]}{[m]} \vee y_2=\frac{[l2]}{[m]}$$
+$$y_1=-[ulamek] \vee y_2=[ulamek2]$$
+$$x_1=[a]-[ulamek] \vee x_2=[a]+[ulamek2]$$
+$$x_1=[w1] \vee x_2=[w2]$$
 \odpStart
-$m=\pm [cm]$\\
+$x_1=[w1], y_1=-[ulamek] \vee x_2=[w2], y_2=[ulamek2]$
 \odpStop
 \testStart
-A.$m=\pm [cm]$
-B.$m=[cm]$
-C.$m=-[cm]$
-D.$m=-99$
-E.$m=99$
-F.$m=2000$
-G.$m=1$
-H.$ m=0$
-I.$m=-1$
+A. $x_1=0, y_1=-[ulamek] \vee x_2=1, y_2=[ulamek2]$ \\
+B. $x_1=[w1], y_1=[ulamek] \vee x_2=[w2], y_2=-[ulamek2]$ \\
+C. $x_1=[w2], y_1=-[ulamek] \vee x_2=[w1], y_2=[ulamek2]$ \\
+D. $x_1=[w1], y_1=-[ulamek] \vee x_2=[w2], y_2=[ulamek2]$ 
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 
