@@ -16,7 +16,7 @@
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
 \newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
-\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+	\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
 %Makra opcjonarne (nie muszą występować):
 \newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
 \newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
@@ -30,18 +30,18 @@
 
 \begin{document}
 \maketitle
-
-
+	
+	
 \kategoria{Wikieł/Z1.89b}
 \zadStart{Zadanie z Wikieł Z1.89 b) moja wersja nr [nrWersji]}
-%[a]:[6,7,8,9,10,27]
-%[x]:[2,3,4,5,6,10]
-%[y]=round(math.log([x],[a]),2)
+%[a]=3
+%[x]:[3,9,27,81,243,729]
+%[y]=int(math.log([x],[a]))
 Obliczyć wartości podanych wyrażeń.\\
 Podane wyrażenie $ \log_{[a]} [x] $\\
 \zadStop
 \rozwStart{Martyna Czarnobaj}{}
-Wzór do rozwiązania zadania: $ \log_a x = y \iff a^{y} = x $.\\
+Wzór do rozwiązania zadania: $ \log_{a} x = y \iff a^{y} = x $.\\
 \begin{center}
 	$ [a]^{y}=[x] $\\
 	$ [a]^{[y]}=[x] $\\
@@ -60,7 +60,7 @@ C.$ [x] $\\
 \kluczStart
 A
 \kluczStop
-
-
-
+	
+	
+	
 \end{document}

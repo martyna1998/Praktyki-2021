@@ -1,7 +1,6 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
-
 \usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
 \usepackage{amsmath} %pakiet do niektórych symboli matematycznych
 \usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
@@ -32,36 +31,33 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.89e}
-\zadStart{Zadanie z Wikieł Z1.89 e) moja wersja nr [nrWersji]}
-%[z]:[2,3,4,5,6,7,8,9]
-%[x]=[z]/10
-%[a]=4
-%[y]=round(math.log(1/[x],[a]),2)
-Obliczyć wartości podanych wyrażeń.\\
-Podane wyrażenie $ \log_{[a]} [x] $\\
+\kategoria{Wikieł/Z4.1b}
+\zadStart{Zadanie z Wikieł Z4.1 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[d]=([a]*25)+6
+%[p]=int(math.sqrt([d]))
+Obliczyć granicę funkcji.\\
+$ \displaystyle \lim_{x \to 5} \sqrt{\frac{x^{2} - 9}{[a]x^{2} + 6}}  $\\
 \zadStop
 \rozwStart{Martyna Czarnobaj}{}
-Wzór do rozwiązania zadania: $ \log_a x = y \iff a^{y} = x $.\\
 \begin{center}
-	$ [a]^{y}=[x] $\\
-	$ [a]^{[y]}=[x] $\\
-	$ y = [y] $\\
+	$ \displaystyle \lim_{x \to 5} \sqrt{\frac{x^{2} - 9}{[a]x^{2} + 6}} =  
+	\displaystyle \lim_{x \to 5} \sqrt{\frac{x^{2} (1 - \frac{9}{x^{2}})}{x^{2} ([a] + \frac{6}{x^{2}})}} = \displaystyle \lim_{x \to 5} \sqrt{\frac{ 1 - \frac{9}{x^{2}}}{[a] + \frac{6}{x^{2}}}} $\\
+	$ \sqrt{\frac{ 1 - \frac{9}{25}}{[a] + \frac{6}{25}}} = \sqrt{\frac{16}{25} * \frac{25}{[d]}} = \sqrt{\frac{16}{[d]}} = \frac{4}{[p]} $\\
 \end{center}
+
 Koniec rozwiązania.\\
 \rozwStop
 \odpStart
-$  [y]  $\\
+$ \frac{4}{[p]} $\\
 \odpStop
 \testStart
-A.$ [y]  $
-B.$ [a] $
-C.$ [x] $\\
+A.$ \frac{4}{[p]} $\\
+B.$ \frac{4}{[d]} $\\
+C.$ \frac{3}{[p]} $\\
+.
 \testStop
 \kluczStart
 A
 \kluczStop
-
-
-
 \end{document}

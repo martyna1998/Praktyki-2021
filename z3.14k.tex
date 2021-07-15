@@ -1,7 +1,6 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
-
 \usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
 \usepackage{amsmath} %pakiet do niektórych symboli matematycznych
 \usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
@@ -32,36 +31,29 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.89e}
-\zadStart{Zadanie z Wikieł Z1.89 e) moja wersja nr [nrWersji]}
-%[z]:[2,3,4,5,6,7,8,9]
-%[x]=[z]/10
-%[a]=4
-%[y]=round(math.log(1/[x],[a]),2)
-Obliczyć wartości podanych wyrażeń.\\
-Podane wyrażenie $ \log_{[a]} [x] $\\
+\kategoria{Wikieł/Z3.14k}
+\zadStart{Zadanie z Wikieł Z3.14 k) moja wersja nr [nrWersji]}
+%[a]:[3,5,7,11,13,17,19]
+Obliczyć granicę ciągu.\\
+$ a_{n} = \sqrt[n]{[a]n^{2} + n} $\\
 \zadStop
 \rozwStart{Martyna Czarnobaj}{}
-Wzór do rozwiązania zadania: $ \log_a x = y \iff a^{y} = x $.\\
 \begin{center}
-	$ [a]^{y}=[x] $\\
-	$ [a]^{[y]}=[x] $\\
-	$ y = [y] $\\
+	$ \displaystyle \lim_{n \to \infty} \sqrt[n]{[a]n^{2} + n} = \displaystyle \lim_{n \to \infty} \sqrt[n]{n^{2} ([a] + \frac{1}{n})} = (\displaystyle \lim_{n \to \infty} \sqrt[n]{n ([a] + \frac{1}{n})^{\frac{1}{2}}})^{2} = (\displaystyle \lim_{n \to \infty} \sqrt[n]{n} * (\sqrt[n]{[a]})^{\frac{1}{2}})^{2} = |\displaystyle \lim_{n \to \infty} \sqrt[n]{n} \to 1, \displaystyle \lim_{n \to \infty} \sqrt[n]{[a]} \to 1| = 1  $\\
 \end{center}
+
 Koniec rozwiązania.\\
 \rozwStop
 \odpStart
-$  [y]  $\\
+$ 1 $\\
 \odpStop
 \testStart
-A.$ [y]  $
-B.$ [a] $
-C.$ [x] $\\
+A.$ 1 $\\
+B.$ 0 $\\
+C.$ \infty $\\
+.
 \testStop
 \kluczStart
 A
 \kluczStop
-
-
-
 \end{document}

@@ -1,7 +1,6 @@
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{polski}
-
 \usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
 \usepackage{amsmath} %pakiet do niektórych symboli matematycznych
 \usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
@@ -32,36 +31,31 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.89e}
-\zadStart{Zadanie z Wikieł Z1.89 e) moja wersja nr [nrWersji]}
-%[z]:[2,3,4,5,6,7,8,9]
-%[x]=[z]/10
-%[a]=4
-%[y]=round(math.log(1/[x],[a]),2)
-Obliczyć wartości podanych wyrażeń.\\
-Podane wyrażenie $ \log_{[a]} [x] $\\
+\kategoria{Wikieł/Z4.1c}
+\zadStart{Zadanie z Wikieł Z4.1 c) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[d]=2+[a]
+Obliczyć granicę funkcji.\\
+$ \displaystyle \lim_{x \to 2} \frac{|2x - 4|}{\sqrt{2x} + [a]}  $\\
 \zadStop
 \rozwStart{Martyna Czarnobaj}{}
-Wzór do rozwiązania zadania: $ \log_a x = y \iff a^{y} = x $.\\
 \begin{center}
-	$ [a]^{y}=[x] $\\
-	$ [a]^{[y]}=[x] $\\
-	$ y = [y] $\\
+	$ \displaystyle \lim_{x \to 2} \frac{|2x - 4|}{\sqrt{2x} + [a]}  $\\
+	$ \frac{2 * 2 - 4}{\sqrt{2*2} + [a]} = \frac{4-4}{\sqrt{4} + [a]} = \frac{0}{2+[a]} = \frac{0}{[d]} = 0 $\\
 \end{center}
+
 Koniec rozwiązania.\\
 \rozwStop
 \odpStart
-$  [y]  $\\
+$ 0 $\\
 \odpStop
 \testStart
-A.$ [y]  $
-B.$ [a] $
-C.$ [x] $\\
+A.$ 0 $\\
+B.$ 1 $\\
+C.$ 2 $\\
+.
 \testStop
 \kluczStart
 A
 \kluczStop
-
-
-
 \end{document}
