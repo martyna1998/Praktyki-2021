@@ -42,6 +42,9 @@
 %[p31]=[p3]-[pp]
 %[u]=[p2]-[p1]
 %[pr]=[p31]*[p2]+[u]
+%[a]=[p4]*[p1]
+%[b]=[p2]*[p3]-[a]
+%[pb]=-[b]
 %math.gcd([p4],[p2])==1 and math.gcd([p1],[p2])==1 and [p1]<[p2]
 
 Dana jest prosta w postaci parametrycznej $\left\{ \begin{array}{ll}
@@ -54,27 +57,26 @@ y=[p3]-[p4]t
 \rozwStart{Maja Szabłowska}{}
 Równanie kierunkowe:
 $$x=-[p1]+[p2]t \iff x+[p1]=[p2]t \iff t=\frac{x+[p1]}{[p2]}$$
-$$y=[p3]-[p4]\cdot \frac{x+[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+[p3]-\frac{[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}$$
-$$y=-\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}$$
+$$y=[p3]-[p4]\cdot \frac{x+[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+[p3]-\frac{[a]}{[p2]}=-\frac{[p4]}{[p2]}x+\frac{[b]}{[p2]}$$
+$$y=-\frac{[p4]}{[p2]}x+\frac{[b]}{[p2]}$$
 
 Równanie ogólne:
-$$y=-\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]} \iff [p2]y=-[p4]x+[pr]$$
-$$[p2]y+[p4]x-[pr]=0$$
-
+$$y=-\frac{[p4]}{[p2]}x+\frac{[b]}{[p2]} \iff [p2]y=-[p4]x+([b])$$
+$$[p2]y+[p4]x+[pb]=0$$
 \rozwStop
 
 
 \odpStart
-$y=-\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}, \quad [p2]y+[p4]x-[pr]=0$
+$y=-\frac{[p4]}{[p2]}x+\frac{[b]}{[p2]}, \quad [p2]y+[p4]x+[pb]=0$
 \odpStop
 \testStart
-A.$y=-\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}, \quad [p2]y+[p4]x-[pr]=0$
-B.$y=[p4]x+[p31]\frac{[u]}{[p2]}, \quad [p2]y+[p4]x-[pr]=0$
-D.$y=\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}, \quad [p2]y-[p4]x+[pr]=0$
-E.$y=\frac{[p1]}{[p2]}x-[p3]\frac{[u]}{[p2]}, \quad -[p2]y-[p4]x+[pr]=0$
-F.$y=-\frac{[p4]}{[p2]}x+[p31], \quad [p2]y+[p4]x-[pr]=0$
-G.$y=-\frac{[p4]}{[p2]}x, \quad [p2]y+[p4]x-[pr]=0$
-H.$y=-\frac{[p4]}{[p2]}x-\frac{[u]}{[p2]}, \quad -[p2]y+[p4]x-[pr]=0$
+A.$y=-\frac{[p4]}{[p2]}x+\frac{[b]}{[p2]}, \quad [p2]y+[p4]x+[pb]=0$\\
+B.$y=[p4]x+[p31]\frac{[u]}{[p2]}, \quad [p2]y+[p4]x-[pr]=0$\\
+C.$y=\frac{[p4]}{[p2]}x+[p31]\frac{[u]}{[p2]}, \quad [p2]y-[p4]x+[pr]=0$\\
+D.$y=\frac{[p1]}{[p2]}x-[p3]\frac{[u]}{[p2]}, \quad -[p2]y-[p4]x+[pr]=0$\\
+E.$y=-\frac{[p4]}{[p2]}x+[p31], \quad [p2]y+[p4]x-[pr]=0$\\
+F.$y=-\frac{[p4]}{[p2]}x, \quad [p2]y+[p4]x-[pr]=0$\\
+G.$y=-\frac{[p4]}{[p2]}x-\frac{[u]}{[p2]}, \quad -[p2]y+[p4]x-[pr]=0$\\
 \testStop
 \kluczStart
 A

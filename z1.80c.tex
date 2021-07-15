@@ -32,69 +32,49 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.21}
-\zadStart{Zadanie z Wikieł Z 2.21  moja wersja nr [nrWersji]}
-%[p1]=random.randint(2,10)
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[2,3,4,5,6,7,8,9,10]
-%[p4]:[2,3,4,5,6,7,8,9,10]
-%[p5]=random.randint(2,10)
-%[p4p1]=[p4]*[p1]
-%[p2p3]=[p2]*[p3]
-%[b]=[p2p3]-[p4p1]
-%[p4k]=[p4]*[p4]
-%[p4b]=-[p4]*[b]
-%[x]=[p3]*[p3]+[p4k]
-%[xw]=-([p4b]-[p5]*[p3])
-%[xp]=round([xw]/([x]+0.0000001),2)
-%[y]=round((-[p4]*[xw])/([p3]*[x]+0.0000001)+[b]/[p3],2)
-%[2xp]=2*[xp]
-%[2y]=2*[y]
-%[xs]=round([2xp]+[p1],2)
-%[ys]=round([2y]-[p2],2)
-%math.gcd([p4],[p3])==1 and math.gcd([p4p1],[p3])==1 and math.gcd([b],[p3])==1 and math.gcd([xw],[x])==1  and [b]<0
+\kategoria{Wikieł/Z1.80c}
+\zadStart{Zadanie z Wikieł Z 1.80 c)  moja wersja nr [nrWersji]}
 
-Znaleźć punkt symetryczny do punktu $B(-[p1],[p2])$ względem prostej $[p3]x-[p4]y+[p5]=0.$
+%[p1]:[2,3,4,5,6,7,8,9]
+%[p2]=random.randint(1,20)
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[ak]=pow([a],2)
+%[a4]=pow([a],4)
+%[u]=[a4]/[ak]
+%[d]=-[p2]-[u]
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[del]=[p1]*[p1]-4*[d]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[x1]=round((-[p1]-[pdel])/2,2)
+%[x2]=round((-[p1]+[pdel])/2,2)
+%([a4]/[ak])==[c] and [del]>0
+
+
+Rozwiązać równanie 
+$$(x^{2}+[p1]x-[p2])^{-\frac{1}{4}}=\frac{\sqrt{[a]}}{[a]}$$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p3]x-[p4]y+[p5]=0 \Rightarrow [p4]y=[p3]x+[p5] \Rightarrow y=\frac{[p3]}{[p4]}x+\frac{[p5]}{[p4]}$$
-Prosta prostopadła do podanej:
-$$\frac{[p3]}{[p4]}\cdot a_{2}=-1 \Rightarrow a_{2}=-\frac{[p4]}{[p3]}$$
- $$y=-\frac{[p4]}{[p3]}x+b$$
- Prosta powinna przechodzić przez punkt $B(-[p1],[p2])$, zatem:
- $$[p2]=\frac{[p4]}{[p3]}\cdot [p1] +b$$
- $$\frac{[p2p3]}{[p3]}-\frac{[p4p1]}{[p3]}=b$$
- $$b=\frac{[b]}{[p3]}$$
- Zatem ostatecznie prosta przyjmuje postać $y=-\frac{[p4]}{[p3]}x+\frac{[b]}{[p3]}.$
- 
-Kolejno znajdujemy punkt przecięcia się tych dwóch prostych, czyli podstawiamy za $y$ wyliczoną prostą.
-
-$$[p3]x-[p4]\left(-\frac{[p4]}{[p3]}x+\frac{[b]}{[p3]}\right)+[p5]=0$$
-$$[p3]x+\frac{[p4k]}{[p3]}x+\frac{[p4b]}{[p3]}+[p5]=0$$
-$$[x]x=[xw] \iff x=\frac{[xw]}{[x]}=[xp]$$
-$$y=-\frac{[p4]}{[p3]}\cdot\frac{[xw]}{[x]}+\frac{[b]}{[p3]}=[y]$$
-
-Zatem punkt $S([xp],[y])$ jest środkiem odcinka AB, gdzie A jest szukanym punktem.
-
-$$[xp]=\frac{-[p1]+x}{2}, \quad [y]=\frac{[p2]+y}{2}$$
-$$[2xp]=-[p1]+x, \quad [2y]=[p2]+y$$
-$$x=[xs], \quad y=[ys]$$
-
+$$(x^{2}+[p1]x-[p2])^{-\frac{1}{4}}=\frac{\sqrt{[a]}}{[a]}$$
+$$x^{2}+[p1]x-[p2]=\left(\frac{\sqrt{[a]}}{[a]}\right)^{-4}$$
+$$x^{2}+[p1]x-[p2]=\left(\frac{[a]}{\sqrt{[a]}}\right)^{4}$$
+$$x^{2}+[p1]x-[p2]=\frac{[a4]}{[ak]}$$
+$$x^{2}+[p1]x-[p2]=[u]$$
+$$x^{2}+[p1]x+([d])=0$$
+$$\Delta=[p1]^2 - 4\cdot1\cdot([d])=[del]\Rightarrow \sqrt{\Delta}=[pdel]$$
+$$x_{1}=\frac{-[p1]-[pdel]}{2}=[x1], \quad x_{2}=\frac{-[p1]+[pdel]}{2}=[x2]$$
 \rozwStop
-
-
 \odpStart
-$A([xs],[ys])$
+$x_{1}=[x1], \quad x_{2}=[x2]$
 \odpStop
 \testStart
-A.$A([xs],[ys])$\\
-B.$A([x],[xw])$\\
-C.$A([y],[p1])$\\
-D.$A([p1],0)$\\
-E.$A([2xp],[ys])$\\
-F.$A([b],[p4])$\\
-G.$A([p3],[p2])$\\
+A.$x_{1}=[x1], \quad x_{2}=[x2]$\\
+B.$x_{1}=[d], \quad x_{2}=[x2]$\\
+D.$x_{1}=[del], \quad x_{2}=[pdel]$\\
+E.$x_{1}=[a4], \quad x_{2}=0$\\
+F.$x_{1}=[ak], \quad x_{2}=[del]$\\
+G.$x_{1}=[x1], \quad x_{2}=[d]$\\
+H.$x_{1}=[a], \quad x_{2}=[c]$\\
 \testStop
 \kluczStart
 A
