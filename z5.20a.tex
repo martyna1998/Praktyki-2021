@@ -1,0 +1,86 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Radosław Grzyb}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.20a}
+\zadStart{Zadanie z Wikieł Z 5.20 a) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[b]:[1,2,3,4,5,6,7,8,9,10]
+%[c]:[2,3,4,5,6,7,8,9,10,11,12]
+%[d]=[a]*[b]
+%[f]=[c]*[b]
+%math.gcd([a],[c])==1
+%math.gcd([a],[f])==1
+Znaleźć równania asymptot wykresu funkcji $f$ danej wzorem:
+$$f(x)=\frac{[c]x^2}{[a](x-[b])}$$
+\zadStop
+\rozwStart{Klaudia Klejdysz}{}
+\begin{enumerate}
+    \item Badamy istnienie asymptot pionowych.
+    Ustalamy dziedzinę funkcji: $D_f=\mathbb{R}\backslash{[b]}$.\\
+    Obliczamy granicę jednostronną funkcji w punkcie $x=[b]$.
+    $$\lim_{x \rightarrow [b]^{-}} \frac{[c]x^2}{[a](x-[b])}=\lim_{x \rightarrow [b]^{-}} \frac{x([c]x)}{x([a]-\frac{[d]}{x})}=\lim_{x \rightarrow [b]^{-}} \frac{[c]x}{[a]-\frac{[d]}{x}}=\frac{[f]}{0^{-}}=-\infty$$
+    $$\lim_{x \rightarrow [b]^{+}} \frac{[c]x^2}{[a](x-[b])}=\lim_{x \rightarrow [b]^{+}} \frac{x([c]x)}{x([a]-\frac{[d]}{x})}=\lim_{x \rightarrow [b]^{+}} \frac{[c]x}{[a]-\frac{[d]}{x}}=\frac{[f]}{0^{+}}=\infty$$
+    Nie otrzymaliśmy granicy właściwej, więc prosta o równaniu $x=[b]$ jest asymptotą pionową obustronną wykresu funkcji $f$.
+    \item Badamy istnienie asymptot ukośnych.
+     $$\lim_{x \rightarrow -\infty} \frac{[c]x^2}{[a](x-[b])}\frac{1}{x}=\lim_{x \rightarrow -\infty} \frac{[c]x^2}{x^2([a]-\frac{[d]}{x})}=\lim_{x \rightarrow -\infty} \frac{[c]}{[a]-\frac{[d]}{x}}=\lim_{x \rightarrow -\infty} \frac{[c]}{[a]-0}=\frac{[c]}{[a]}$$
+     i
+     $$\lim_{x \rightarrow -\infty} \frac{[c]x^2}{[a](x-[b])}-\frac{[c]}{[a]}x=\lim_{x \rightarrow -\infty} \frac{[c]x^2}{[a](x-[b])}-\frac{[c]x(x-[b])}{[a](x-[b])}=\lim_{x \rightarrow -\infty}\frac{[c]x^2-[c]x^2+[f]x}{[a](x-[b])}=$$
+     $$=\lim_{x \rightarrow -\infty}\frac{[f]x}{[a](x-[b])}=\lim_{x \rightarrow -\infty}\frac{[f]x}{x([a]-\frac{[f]}{x})}=\lim_{x \rightarrow -\infty}\frac{[f]}{[a]-\frac{[f]}{x}}=\frac{[f]}{[a]}$$
+     oraz
+      $$\lim_{x \rightarrow \infty} \frac{[c]x^2}{[a](x-[b])}\frac{1}{x}=\lim_{x \rightarrow \infty} \frac{[c]x^2}{x^2([a]-\frac{[d]}{x})}=\lim_{x \rightarrow \infty} \frac{[c]}{[a]-\frac{[d]}{x}}=\lim_{x \rightarrow \infty} \frac{[c]}{[a]-0}=\frac{[c]}{[a]}$$
+      i
+      $$\lim_{x \rightarrow \infty} \frac{[c]x^2}{[a](x-[b])}-\frac{[c]}{[a]}x=\lim_{x \rightarrow \infty} \frac{[c]x^2}{[a](x-[b])}-\frac{[c]x(x-[b])}{[a](x-[b])}=\lim_{x \rightarrow \infty}\frac{[c]x^2-[c]x^2+[f]x}{[a](x-[b])}=$$
+     $$=\lim_{x \rightarrow \infty}\frac{[f]x}{[a](x-[b])}=\lim_{x \rightarrow \infty}\frac{[f]x}{x([a]-\frac{[f]}{x})}=\lim_{x \rightarrow \infty}\frac{[f]}{[a]-\frac{[f]}{x}}=\frac{[f]}{[a]}$$
+     Zatem prosta o równaniu $y=\frac{[c]}{[a]}x+\frac{[f]}{[a]}$ jest asymptotą ukośną obustronną wykresu funkcji $f$.
+\end{enumerate}
+\rozwStop
+\odpStart
+asymptota pionowa: $x=[b]$, asymptota ukośna: $y=\frac{[c]}{[a]}x+\frac{[f]}{[a]}$
+\odpStop
+\testStart
+A. asymptota pionowa: $x=[b]$, asymptota ukośna: $y=\frac{[c]}{[a]}x+\frac{[f]}{[a]}$\\
+B. asymptota pionowa: $x=[a]$, asymptota ukośna: $y=\frac{[c]}{[a]}x+\frac{[f]}{[a]}$\\
+C. asymptota pionowa: $x=[b]$, asymptota ukośna: $y=\frac{[f]}{[a]}x+\frac{[b]}{[a]}$\\
+D. asymptota pionowa: $y=\frac{[c]}{[a]}x+\frac{[f]}{[a]}$, asymptota ukośna: $x=[b]$\\
+E. asymptota pionowa: $y=\frac{[c]}{[a]}x$, asymptota ukośna: $x=[b]$\\
+F. asymptota pionowa: $y=\frac{[f]}{[a]}$, asymptota ukośna: $x=[b]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
+
