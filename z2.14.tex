@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -71,50 +57,48 @@ Kombinacją liniową wektorów $\vec{u}$ i $\vec{v}$ nazywamy wektor $\vec{w}=t\
 $$
 \left\{ \begin{array}{ll}
 [p1]= t\cdot [p3] + s \cdot ([p5])\\
-[p2]= t \cdot [p4] + s \cdot [p6]
+\ [p2]= t \cdot [p4] + s \cdot [p6]
 \end{array} \right.
 $$
 
 $$
 W=\left| \begin{array}{ccc}
 [p3] & [p5] \\
-[p4] & [p6] 
+\[p4] & [p6] 
 \end{array} \right| = [p3]\cdot[p6]-([p5])\cdot[p4]=[p3p6]-([p5p4])=[w]
 $$
 
 $$
 W_{t}=\left| \begin{array}{ccc}
 [p1] & [p5] \\
-[p2] & [p6] 
+\ [p2] & [p6] 
 \end{array} \right| =[p1]\cdot[p6]-([p5])\cdot[p2]=[wt]
 $$
 
 $$
 W_{s}=\left| \begin{array}{ccc}
 [p3] & [p1] \\
-[p4] & [p2] 
+\ [p4] & [p2] 
 \end{array} \right| =[p3]\cdot[p2]-[p1]\cdot[p4]=[ws]
 $$
 
 $$t=\frac{W_{t}}{W}=\frac{[wt]}{[w]}$$
 $$s=\frac{W_{s}}{W}=\frac{[ws]}{[w]}$$
-$$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{u}+\frac{[ws]}{[w]}\cdot\vec{v}$$
-
+$$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{e_{1}}+\frac{[ws]}{[w]}\cdot\vec{e_{2}}$$
 \rozwStop
 
 
 \odpStart
-$t=\frac{[wt]}{[w]}, s=\frac{[ws]}{[w]}$
+$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{e_{1}}+\frac{[ws]}{[w]}\cdot\vec{e_{2}}$
 \odpStop
 \testStart
-A.$t=\frac{[wt]}{[w]}, s=\frac{[ws]}{[w]}$
-B.$t=\frac{[ws]}{[w]}, s=0$
-D.$t=\frac{[wt]}{[p1]}, s=\frac{[ws]}{[p2]}$
-E.$t=2, s=3$
-F.$t=[p3p2], s=\frac{[ws]}{[w]}$
-G.$t=[p1p6], s=[p1p4]$
-H.$t=[p5], s=\frac{[ws]}{[w]}$
-
+A.$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{e_{1}}+\frac{[ws]}{[w]}\cdot\vec{e_{2}}$\\
+B.$\vec{a}=[w]\cdot\vec{e_{1}}+\frac{[ws]}{[w]}\cdot\vec{e_{2}}$\\
+D.$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{e_{1}}+[w]\cdot\vec{e_{2}}$\\
+E.$\vec{a}=\vec{e_{1}}+\vec{e_{2}}$\\
+F.$\vec{a}=\vec{e_{1}}+\frac{[ws]}{[w]}\cdot\vec{e_{2}}$\\
+G.$\vec{a}=\frac{[wt]}{[w]}\cdot\vec{e_{1}}+\vec{e_{2}}$\\
+H.$\vec{a}=[wt]\cdot\vec{e_{1}}+[ws]\cdot\vec{e_{2}}$\\
 \testStop
 \kluczStart
 A

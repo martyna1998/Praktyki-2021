@@ -38,22 +38,20 @@
 %[p2]:[2,3,4,5,6,7,8,9,10]
 %[p3]:[2,3,4,5,6,7,8,9,10]
 %[p4]=random.randint(2,10)
+%[a]=[p4]*[p1]
 %math.gcd([p4],[p2])==1 and math.gcd([p1],[p2])==1 and [p1]!=[p2] and [p2]!=[p3] and [p3]!=[p4]
 
 Podać wartość parametru $m$, dla której prosta $y=mx+[p1]$ będzie równoległa do prostej $\left\{ \begin{array}{ll}
 x=[p1]+[p2]t & \quad \quad t\in\mathbb{R}\\
 y=[p3]-[p4]t
 \end{array} \right.$
-
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
 Na początku należy zapisać równanie prostej w postaci kierunkowej.
 $$x=[p1]+[p2]t \iff x-[p1]=[p2]t \iff t=\frac{x-[p1]}{[p2]}$$
-$$y=[p3]-[p4]\cdot\frac{x-[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+\frac{[p1]}{[p2]}+[p3]$$
+$$y=[p3]-[p4]\cdot\frac{x-[p1]}{[p2]}=-\frac{[p4]}{[p2]}x+\frac{[a]}{[p2]}+[p3]$$
 Zatem $a=-\frac{[p4]}{[p2]}$, tym samym $m=-\frac{[p4]}{[p2]}.$
-
-
 \rozwStop
 
 
@@ -63,12 +61,11 @@ $m=-\frac{[p4]}{[p2]}$
 \testStart
 A.$m=-\frac{[p4]}{[p2]}$
 B.$m=\frac{[p1]}{[p2]}$
-D.$m=[p1]$
-E.$m=[p2]$
-F.$m=[p3]$
-G.$m=[p4]$
-H.$m=0$
-
+C.$m=[p1]$
+D.$m=0$
+E.$m=1$
+F.$m=54$
+G.$m=-9$
 \testStop
 \kluczStart
 A
