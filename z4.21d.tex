@@ -32,26 +32,24 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.4w}
-\zadStart{Zadanie z Wikieł Z 4.4w) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z4.21d}
+\zadStart{Zadanie z Wikieł Z 4.21d) moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-Obliczyć granicę funkcji $\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}$
+%[p2]=2*[p1]
+Obliczyć granicę funkcji $\lim_{x \to 1} ([p1]-[p1]x)\tg{\frac{\Pi x}{2}}$
 \zadStop
-\rozwStart{Jakub Janik}{Patryk Wirkus}
-$$\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})}{2(1-2\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})(\sin{x}+\sqrt{3}\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin^2{x}-3\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-4\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-2\cos{x})(1+2\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1+2\cos{x})}{2(\sin{x}+\sqrt{3}\cos{x})}=\frac{[p1]}{\sqrt{3}}$$
-\rozwStop
+\rozwStart{Jakub Janik}{}
+Zaczynamy od podstawienia $t=1-x, \quad x=1-t$, wtedy mamy $x \to 1 \Rightarrow t \to 0$.
+$$\lim_{t \to 0} [p1]t\tg{(\frac{\Pi}{2}(1-t))}=\lim_{t \to 0} [p1]t\tg{(\frac{\Pi}{2}-\frac{\Pi}{2}t)}=$$
+$$\lim_{t \to 0} [p1]t\ctg{(\frac{\Pi}{2}t)}=\lim_{t \to 0} [p1]\frac{t}{\tg{(\frac{\Pi}{2}t)}}=$$
+$$\lim_{t \to 0} \frac{[p2]}{\Pi}\frac{\frac{\Pi}{2}t}{\frac{\sin{(\frac{\Pi}{2}t)}}{\cos{(\frac{\Pi}{2}t)}}}=\lim_{t \to 0} \frac{[p2]}{\Pi}\frac{\cos{(\frac{\Pi}{2}t)}}{\frac{\sin{(\frac{\Pi}{2}t)}}{\frac{\Pi}{2}t}}=\frac{[p2]}{\Pi}$$
 \odpStart
-$\frac{[p1]}{\sqrt{3}}$
+$\frac{[p2]}{\Pi}$
 \odpStop
 \testStart
-A.$\frac{[p1]}{\sqrt{3}}$
+A.$\frac{[p2]}{\Pi}$
 B.$0$
-C.$-\frac{[p1]}{\sqrt{3}}$
+C.$-\frac{[p2]}{\Pi}$
 D.$\infty$
 \testStop
 \kluczStart

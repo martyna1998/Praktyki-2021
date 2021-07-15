@@ -32,26 +32,29 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.4w}
-\zadStart{Zadanie z Wikieł Z 4.4w) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z4.21a}
+\zadStart{Zadanie z Wikieł Z 4.21a) moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-Obliczyć granicę funkcji $\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}$
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[g]=math.gcd([p1],[p2])
+%[up]=int([p1]/[g])
+%[down]=int([p2]/[g])
+%[down]!=1
+Obliczyć granicę funkcji $\lim_{x \to 0} \frac{[p1](\sin{(a+x)}-\sin{(a-x)})}{[p2](\tg{(a+x)}-\tg{(a-x)})}$
 \zadStop
-\rozwStart{Jakub Janik}{Patryk Wirkus}
-$$\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})}{2(1-2\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})(\sin{x}+\sqrt{3}\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin^2{x}-3\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-4\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-2\cos{x})(1+2\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1+2\cos{x})}{2(\sin{x}+\sqrt{3}\cos{x})}=\frac{[p1]}{\sqrt{3}}$$
+\rozwStart{Jakub Janik}{}
+$$\lim_{x \to 0} \frac{[p1](\sin{(a+x)}-\sin{(a-x)})}{[p2](\tg{(a+x)}-\tg{(a-x)})}=$$
+$$\lim_{x \to 0} \frac{[p1]\cdot 2\cos{(a)}\sin{(x)}}{[p2]\frac{\sin{(2x)}}{\cos{(a+x)}\cos{(a-x)}}}=\lim_{x \to 0} \frac{[p1]\cdot 2\cos{(a)}\sin{(x)}}{[p2]\frac{2\sin{(x)}\cos{(x)}}{\frac{1}{2}(\cos{(2x)}+\cos{(2a)})}}=$$
+$$\lim_{x \to 0} \frac{[p1]\cos{(a)}(\cos{(2x)}+\cos{(2a)})}{[p2]\cdot2\cos{(x)}}=\frac{[p1]\cos{(a)}(1+\cos{(2a)})}{[p2]\cdot2}=$$
+$$\frac{[p1]\cos{(a)}(1+2\cos^2{(a)}-1)}{[p2]\cdot2}=\frac{[up]}{[down]}\cos^3{(a)}$$
 \rozwStop
 \odpStart
-$\frac{[p1]}{\sqrt{3}}$
+$\frac{[up]}{[down]}\cos^3{(a)}$
 \odpStop
 \testStart
-A.$\frac{[p1]}{\sqrt{3}}$
+A.$\frac{[up]}{[down]}\cos^3{(a)}$
 B.$0$
-C.$-\frac{[p1]}{\sqrt{3}}$
+C.$-\frac{[up]}{[down]}\cos^3{(a)}$
 D.$\infty$
 \testStop
 \kluczStart

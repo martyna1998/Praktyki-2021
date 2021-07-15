@@ -32,26 +32,30 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.4w}
-\zadStart{Zadanie z Wikieł Z 4.4w) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z4.21b}
+\zadStart{Zadanie z Wikieł Z 4.21b) moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-Obliczyć granicę funkcji $\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}$
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p3]=4*[p2]
+%[g]=math.gcd([p1],[p3])
+%[up]=int([p1]/[g])
+%[down]=int([p3]/[g])
+%[down]!=1
+Obliczyć granicę funkcji $\lim_{x \to \frac{\Pi}{4}} \frac{[p1]\sqrt{2}\cos{(x)}-[p1]}{[p2]-[p2]\tg^2{(x)}}$
 \zadStop
-\rozwStart{Jakub Janik}{Patryk Wirkus}
-$$\lim_{x \to \frac{\Pi}{3}} \frac{[p1]\sin({x-\frac{\Pi}{3}})}{1-2\cos{x}}=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})}{2(1-2\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin{x}-\sqrt{3}\cos{x})(\sin{x}+\sqrt{3}\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](\sin^2{x}-3\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-4\cos^2{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1-2\cos{x})(1+2\cos{x})}{2(1-2\cos{x})(\sin{x}+\sqrt{3}\cos{x})}=$$
-$$=\lim_{x \to \frac{\Pi}{3}} \frac{[p1](1+2\cos{x})}{2(\sin{x}+\sqrt{3}\cos{x})}=\frac{[p1]}{\sqrt{3}}$$
-\rozwStop
+\rozwStart{Jakub Janik}{}
+$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1]\sqrt{2}\cos{(x)}-[p1]}{[p2]-[p2]\tg^2{(x)}}=$$
+$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1](\sqrt{2}\cos{(x)}-1)(\sqrt{2}\cos{(x)}+1)}{[p2](1-\tg^2{(x)})(\sqrt{2}\cos{(x)}+1)}=$$
+$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1](2\cos^2{(x)}-1)}{[p2](1-\tg^2{(x)})(\sqrt{2}\cos{(x)}+1)}=$$
+$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1](\cos^2{(x)}-\sin^2{(x)})}{[p2](\frac{\cos^2{(x)}-\sin^2{(x)}}{\cos^2{(x)}})(\sqrt{2}\cos{(x)}+1)}=$$
+$$\lim_{x \to \frac{\Pi}{4}} \frac{[p1]\cos^2{(x)}}{[p2](\sqrt{2}\cos{(x)}+1)}=\frac{[up]}{[down]}$$
 \odpStart
-$\frac{[p1]}{\sqrt{3}}$
+$\frac{[up]}{[down]}$
 \odpStop
 \testStart
-A.$\frac{[p1]}{\sqrt{3}}$
+A.$\frac{[up]}{[down]}$
 B.$0$
-C.$-\frac{[p1]}{\sqrt{3}}$
+C.$-\frac{[up]}{[down]}$
 D.$\infty$
 \testStop
 \kluczStart
