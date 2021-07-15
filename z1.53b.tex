@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -46,36 +32,61 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129c}
-\zadStart{Zadanie z Wikieł Z 1.129 c) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z1.53b}
+\zadStart{Zadanie z Wikieł Z 1.53 b)  moja wersja nr [nrWersji]}
 %[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p2p1d]=[p2]+[p1]
-%[p2p1o]=-[p2]+[p1]
-%[p2p1o]<[p2p1d]
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\frac{[p1]}{\sqrt[4]{[p2]^{x}-1}}$$
+%[p2]=random.randint(2,20)
+%[p3]=random.randint(2,20)
+%[p4]=random.randint(2,20)
+%[p5]=random.randint(1,20)
+%[p6]=random.randint(2,20)
+%[p7]:[2,3,4,5,6,7,8,9,10]
+%[p8]=random.randint(1,20)
+%[a]=round([p1]/[p6],2)
+%[ap7]=round([a]*[p7],2)
+%[ap8]=round([a]*[p8],2)
+%[b]=round(-[p2]+[ap7],2)
+%[c]=round([p3]-[ap8],2)
+%[d]=round([b]/[p6],2)
+%[dp7]=round([d]*[p7],2)
+%[dp8]=round([d]*[p8],2)
+%[e]=round([c]+[dp7],2)
+%[f]=round(-[p4]-[dp8],2)
+%[g]=round([e]/[p6],2)
+%[gp7]=round([g]*[p7],2)
+%[gp8]=round([g]*[p8],2)
+%[r]=round([f]+[gp7],2)
+%[r1]=round([p5]-[gp8],2)
+%[a]!=0 and [d]!=0 and [g]!=0
+
+Obliczyć iloraz wielomianów $$([p1]x^{4}-[p2]x^{3}+[p3]x^{2}-[p4]x+[p5]):([p6]x^{2}-[p7]x+[p8]).$$
 
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p2]^{x}-1\geq 0 \quad \land \quad \sqrt[4]{[p2]^{x}-1} \neq 0$$
-$$[p2]^{x}-1> 0 $$
-$$[p2]^{x}>1$$
-$$[p2]^{x}>[p2]^{0}$$
-$$x>0$$
+$$\begin{array}{lll}
+([p1]x^{4}-[p2]x^{3}+[p3]x^{2}-[p4]x+[p5]):([p6]x^{2}-[p7]x+[p8])  =   [a]x^2  +([d])x +[g] \\
+\underline{-[p1]x^4 +[ap7]x^3-[ap8]x^{2}} & &  \\
+\qquad [b]x^3 + ([c])x^2 -[p4]x +[p5] & & \\
+\qquad \ \ \underline{-([b])x^3 +([dp7])x^2 -([dp8])x} & &\\
+\qquad \qquad \qquad [e]x^2 + [f]x + [p5] & & \\
+\qquad \qquad \quad \underline{-([e])x^2 + [gp7]x - [gp8]}  & & \\
+\qquad \qquad \qquad \qquad \quad R = [r]x+[r1] & &
+\end{array}$$
 \rozwStop
+
+
 \odpStart
-$x\in(0,\infty)$
+$[a]x^2  +([d])x +[g], \quad R = [r]x+[r1]$
 \odpStop
 \testStart
-A.$x\in(0,\infty)$
-B.$x\in([p2],\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [[p1],\infty)$
-E.$x\in(-\infty, 0] \cup [[p2p1d],\infty)$
-F.$x\in(-\infty, -[p2p1d]) \cup ([p2p1o],\infty)$
-G.$x\in\emptyset$
+A.$[a]x^2  +([d])x +[g], \quad R = [r]x+[r1]$
+B.$[a]x^3 - ([e])x +[g], \quad R = [r1]$
+D.$[a]x^3 +([c])x^2 +[p1], \quad R = 0$
+E.$([c])x^2 + [p3]x +[g], \quad R = [p1]$
+F.$[p3]x^3 , \quad R = 0$
+G.$[p2]x^2 + ([e])x +[g], \quad R = [p1]x+[p2]$
+H.$[p1]x^3 +[p2]x^2 + [p3]x +[p4], \quad R = [p3]x^{2}+[r1]$
 \testStop
 \kluczStart
 A

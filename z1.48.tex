@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -76,7 +62,7 @@
 %[pdel2]=round(math.sqrt(abs([del2])),2)
 %[m11]=round(([mr]-[pdel2])/[2p2k],2)
 %[m22]=round(([mr]+[pdel2])/[2p2k],2)
-%[del]>0 and [m1]<[m2] and [del2]>0 and [m11]<[m22] and [m1]<[m11] and [m2]<[m22]
+%[del]>0 and [m1]<[m2] and [del2]>0 and [m11]<[m22] and [m1]<[m11] and [m2]<[m22] and [r]<0
 
 Wyznaczyć wartość parametru $m$, dla których pierwiastki rzeczywiste $x_{1}$ i $x_{2}$ równania $[p1]x^{2}+([p2]m-[p3])x+m+[p4]=0$ spełniają warunek $x_{1}^{2}+x_{2}^{2}>1.$
 \zadStop
@@ -84,10 +70,10 @@ Wyznaczyć wartość parametru $m$, dla których pierwiastki rzeczywiste $x_{1}$
 \rozwStart{Maja Szabłowska}{}
 Aby równanie posiadało dwa pierwiastki powinien być spełniony warunek $\Delta\geq0.$
 $$\Delta=([p2]m+[p3])^{2}-4\cdot[p1]\cdot(m+[p4])=[p2k]m^{2}+[2p2p3]m+[p3k]-[4p1]m-[4p1p4]=$$
-$$=[p2k]m^{2}+[m]m+[r]\geq0$$
+$$=[p2k]m^{2}+[m]m+([r])\geq0$$
 
-$$[p2k]m^{2}+[m]m+[r]\geq0$$
-$$\Delta=[m]^{2}-4\cdot[p2k]\cdot[r]=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$[p2k]m^{2}+[m]m+([r])\geq0$$
+$$\Delta=[m]^{2}-4\cdot[p2k]\cdot([r])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
 $$m_{1}=\frac{-[m]-[pdel]}{[2p2k]}=[m1], \quad m_{2}=\frac{-[m]+[pdel]}{[2p2k]}=[m2]$$
 Zatem $m\in(-\infty,[m1]]\cup[[m2],\infty)$
 
@@ -121,8 +107,6 @@ C.$m\in(-\infty,[m22])$
 D.$m\in([m1],[m2])$
 E.$m\in([p2k],[p1])$
 F.$m\in[[m1],\infty)$
-
-
 \testStop
 \kluczStart
 A
