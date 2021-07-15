@@ -43,12 +43,13 @@
 %[i]=[cd]+1 
 %[bb1]=[i]/2
 %[bb3]=int([bb1])
-Zbadać, czy istnieje $\lim_{x\rightarrow x_{0}}f(x)$. Jeśli tak, to obliczyć tę granicę. $$x_{0}=[a],f(x)= \left\{ \begin{array}{ll}
+Zbadać, czy istnieje $\lim_{x\rightarrow x_{0}}f(x)$. Jeśli tak, to obliczyć tę granicę $$x_{0}=[a],f(x)= \left\{ \begin{array}{ll}
 \frac{1-cos[bb]x}{[b]x^2} & \textrm{dla $x<[a]$}\\
 \frac{cos[c]x-cos[bb]x}{x^2}+\frac{1}{2} & \textrm{dla $x>[a]$}
-\end{array} \right.$$.
+\end{array} \right.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
+Korzystamy z twierdzenia de l'Hospitala:\\
 $$\lim_{x\rightarrow [a]^-}\frac{1-cos[bb]x}{[b]x^2}=\lim_{x\rightarrow [a]^-}\frac{\frac{d}{dx}(1-cos[bb]x)}{\frac{d}{dx}([b]x^2)}=$$
 $$=\lim_{x\rightarrow [a]^-}\frac{[bb]sin([bb]x)}{[bb]x}=\lim_{x\rightarrow [a]^-}\frac{\frac{d}{dx}(sin([bb]x))}{\frac{d}{dx}(x)}=$$
 $$=\lim_{x\rightarrow [a]^-}[bb]cos([bb]x)=[bb]cos([bb]\cdot [a])=[bb]$$
