@@ -37,7 +37,9 @@
 %[c]:[11,27,44,72]
 %[d]:[11,27,44,72]
 %[a]=round(random.uniform(0,1),2)
+%[k]=int([a]*100)
 %[b]=round(random.uniform(0,1),2)
+%[k2]=int([b]*100)
 %[a]!= [b]
 %[c] != [d]
 %[a]!=0
@@ -51,7 +53,7 @@
 %[x2]= [z2] - [a]
 %[x3]=int(100*[x2])
 
-Zamienić ułamki dziesiętnie okresowe $[a]$ i $[b]$ na ułamki zwykłe.
+Zamienić ułamki dziesiętnie okresowe $0.0([k])$ i $0.([k2])$ na ułamki zwykłe.
 \zadStop
 \rozwStart{Martyna Czarnobaj}{}
 Przyjmijmy $a = [a]$.\\

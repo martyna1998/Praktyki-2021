@@ -32,35 +32,34 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.22}
-\zadStart{Zadanie z Wikieł P 1.22) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-%[b]:[3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-%[abm]=[b]-[a]
-%[ap]=[a]+[a]
-%[ak]=[a]*[a]
-%[akbm]=[ak]-[b]
-%[b]>[a] and [abm]!=0 and [akbm]!=0 and [ak]>[b] and [ap]!=[abm]
-Niech funkcje $f:\mathbb{R}\rightarrow\mathbb{R}$ i $g:\mathbb{R}\rightarrow\mathbb{R}$ określone będą wzorami: $f(x)=x+[a]$ oraz $g(x)=x^{2}-[b]$. Wyznaczyć złożenia $f\circ g$ i $g\circ f$.
+\kategoria{Wikieł/Z1.29a}
+\zadStart{Zadanie z Wikieł Z 1.29 a) moja wersja nr [nrWersji]}
+%[p1]:[2,4,6,8,10,12]
+%[p2]:[2,4,6,8,10,12]
+%[p3]:[2,4,6,8,10,12]
+%[p4]:[2,4,6,8,10,12]
+%[a]=random.randint(2,25)
+%[b]=random.randint(1,25)
+%[c]=random.randint(2,25)
+%[d]=random.randint(2,25)
+%[e]=random.randint(2,25)
+%[p1]!=[p2]
+
+Zbadać parzystość (nieparzystość) funkcji:\\ $ f(x)=[c]x^{[p1]}+[d]x^{[p2]}+\frac{[a]x^{[p3]}}{[e]x^{[p4]}+[b]} $.
 \zadStop
-\rozwStart{Justyna Chojecka}{}
-Dla $x\in \mathbb{R}$ mamy
-$$(f\circ g)(x)=f(g(x))=f(x^{2}-[b])=(x^{2}-[b])+[a]=x^2-[abm]$$
-$$(g\circ f)(x)=g(f(x))=g(x+[a])=(x+[a])^{2}-[b]=x^{2}+[ap]x+[ak]-[b]$$$$=x^{2}+[ap]x+[akbm]$$
+\rozwStart{Wojciech Przybylski}{}
+$$f(-x)=[c](-x)^{[p1]}+[d](-x)^{[p2]}+\frac{[a](-x)^{[p3]}}{[e](-x)^{[p4]}+[b]}=$$
+$$=[c]x^{[p1]}+[d]x^{[p2]}+\frac{[a]x^{[p3]}}{[e]x^{[p4]}+[b]}=f(x) $$
 \rozwStop
 \odpStart
-$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$
+f(x) jest parzysta
 \odpStop
 \testStart
-A.$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-B.$(f\circ g)(x)=x^2+[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-C.$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}-[ap]x+[akbm]$\\
-D.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[ap]x+[abm]$\\
-E.$(f\circ g)(x)=x^2+[ap], (g\circ f)(x)=x^{2}-[ap]x+[akbm]$\\
-F.$(f\circ g)(x)=x^2+[ap], (g\circ f)(x)=x^{2}+[ap]x-[abm]$\\
-G.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-H$(f\circ g)(x)=x^2+[akbm], (g\circ f)(x)=x^{2}+[ap]x+[abm]$\\
-I.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[akbm]x+[abm]$
+A. f(x) jest parzysta\\
+B. f(x) jest nieparzysta\\
+C. f(x) jest parzysta i nieparzysta jednocześnie\\
+D. f(x) nie jest parzysta i nie jest nieparzysta\\
+E. nie da się określić, czy f(x) jest parzysta lub nieparzysta\\
 \testStop
 \kluczStart
 A

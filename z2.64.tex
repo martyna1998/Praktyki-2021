@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -46,56 +32,55 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.129t}
-\zadStart{Zadanie z Wikieł Z 1.129 t) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]=random.randint(2,10)
-%[p3]:[2,3,4,5,6,7,8,9,10]
-%[p3k]=[p3]*[p3]
-%[2p3p1]=2*[p3]*[p1]
-%[p1k]=[p1]*[p1]
-%[xk]=-1-[p1k]
-%[x]=[p2]+[2p3p1]
-%[del]=[x]*[x]+4*[x]*[p3k]
-%[pdel]=round(math.sqrt([del]),2)
-%[2xk]=2*[xk]
-%[x1]=round((-[x]-[pdel])/[2xk],2)
-%[x2]=round((-[x]+[pdel])/[2xk],2)
-%[del]>0 and [x2]<[x1]
-
-Wyznaczyć dziedzinę naturalną funkcji.
-$$f(x)=\log \left([p1]x+\sqrt{[p2]x-x^{2}}-[p3]\right)$$
+\kategoria{Wikieł/Z2.64}
+\zadStart{Zadanie z Wikieł Z 2.64 moja wersja nr [nrWersji]}
+%[a1]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+%[a2]=1
+%[b1]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+%[b2]=[a2]*2
+%[aa1]=[a1]*[a1]
+%[aa2]=[a2]*[a2]
+%[bb1]=[b1]*[b1]
+%[bb2]=[b2]*[b2]
+%[4aa1]=[aa1]*4
+%[a]=[bb1]-[4aa1]
+%[a3]=3*[aa1]
+%[d]=[a]+[a3]
+%[aae2]=[aa2]*[a]
+%[a]>0
+Napisać równanie hiperboli, której osiami symetrii są osie układu, mając dane współrzędne dwóch punktów A([a1],[a2]), B(-[b1],-[b2]) należących do tej hiperboli.
 \zadStop
-
-\rozwStart{Maja Szabłowska}{}
-$$[p2]x-x^{2}\geq 0$$
-$$x([p2]-x)\geq 0$$
-$$x\in[0,[p2]]$$
-
-$$[p1]x+\sqrt{[p2]x-x^{2}}-[p3]>0$$
-$$\sqrt{[p2]x-x^{2}}>[p3]-[p1]x$$
-$$[p2]x-x^{2}>([p3]-[p1]x)^{2}$$
-$$[p2]x-x^{2}>[p3k]-[2p3p1]x+[p1k]x^{2} $$
-$$[xk]x^{2}+[x]x-[p3k]>0$$
-$$\Delta=[x]^{2}-4\cdot([xk])\cdot(-[p3k])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
-$$x_{1}=\frac{-[x]-[pdel]}{[2xk]}=[x1], \quad x_{2}=\frac{-[x]+[pdel]}{[2xk]}=[x2]$$
-$$x\in([x2], [x1])$$
-
-Zatem ostatecznie 
-$$x\in[0,[x1])$$
+\rozwStart{Aleksandra Pasińska}{}
+$$-\frac{x^2}{a^2}+\frac{y^2}{b^2}=1$$
+$$\left\{ \begin{array}{ll}
+-\frac{[aa1]}{a^2}+\frac{[aa2]}{b^2}=1/\cdot4\\
+-\frac{[bb1]}{a^2}+\frac{[bb2]}{b^2}=1
+\end{array} \right.$$
+$$\left\{ \begin{array}{ll}
+-\frac{[4aa1]}{a^2}+\frac{[bb2]}{b^2}=4\\
+-\frac{[bb1]}{a^2}+\frac{[bb2]}{b^2}=1
+\end{array} \right.$$
+$$-\frac{[4aa1]}{a^2}+\frac{[bb2]}{b^2}+\frac{[bb1]}{a^2}-\frac{[bb2]}{b^2}=3$$
+$$\frac{[a]}{a^2}=3,a^2=\frac{[a]}{3}$$
+$$-\frac{[a3]}{[a]}+\frac{[aa2]}{b^2}=1$$
+$$\frac{[aa2]}{b^2}=\frac{[d]}{[a]}$$
+$$b^2=\frac{[aae2]}{[d]}$$
+$$-\frac{3}{[a]}x^2+\frac{[d]}{[aae2]}y^2=1$$
+$$-3x^2+[d]y^2=[aae2]$$
 \rozwStop
 \odpStart
-$x\in[0,[x1])$
+$-3x^2+[d]y^2=[aae2]$\\
 \odpStop
 \testStart
-A.$x\in[0,[x1])$
-B.$x\in[e^{[p2]},\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
-E.$x\in[[p1],\infty)$
-F.$x\in([p2],\infty)$
-G.$x\in\emptyset$
-
+A.$-3x^2+[d]y^2=[aae2]$
+B.$ 3x^2+[d]y^2=[aae2]$
+C.$-3x^2+y^2=[aae2]$
+D.$x^2+[d]y^2=[aae2]$
+E.$-x^2+[d]y^2=[aae2]$
+F.$-3x^2+[d]y=[aae2]$
+G.$-3x+[d]y^2=[aae2]$
+H.$-3x^2+[d]y^3=[aae2]$
+I.$-3x^3+[d]y^2=[aae2]$
 \testStop
 \kluczStart
 A

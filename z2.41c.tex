@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -67,17 +53,17 @@
 Rozwiązać układ równań, w którym $m$ jest parametrem.
 $$\left\{\begin{array}{ccc}
 [p1]x+[p2]y&=&[p3]\\
-[p4]x+[p5]my&=&[p6]m
+\ [p4]x+[p5]my&=&[p6]m
 \end{array} \right.$$
 
 \zadStop
 \rozwStart{Maja Szabłowska}{}
 Powyższemu układowi równań odpowiadają wyznaczniki:
-$$W=\left| \begin{array}{lccr} [p1] & [p2] \\ [p4] & [p5]m \end{array}\right| = [p1]\cdot[p5]m - [p2]\cdot[p4]=[p1p5]m-[p2p4]$$
+$$W=\left| \begin{array}{lccr} [p1] & [p2] \\ \ [p4] & [p5]m \end{array}\right| = [p1]\cdot[p5]m - [p2]\cdot[p4]=[p1p5]m-[p2p4]$$
 
-$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2] \\ [p6]m & [p5]m \end{array}\right| = [p3]\cdot[p5]m - [p2]\cdot[p6]m=[p3p5]m-[p2p6]m=[wx]m$$
+$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2] \\ \ [p6]m & [p5]m \end{array}\right| = [p3]\cdot[p5]m - [p2]\cdot[p6]m=[p3p5]m-[p2p6]m=[wx]m$$
 
-$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3] \\ [p4] & [p6]m \end{array}\right| = [p1]\cdot[p6]m - [p3]\cdot[p4]=[p1p6]m-[p3p4]$$
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3] \\ \ [p4] & [p6]m \end{array}\right| = [p1]\cdot[p6]m - [p3]\cdot[p4]=[p1p6]m-[p3p4]$$
 
 $$W\neq 0 \iff [p1p5]m-[p2p4] \neq 0 \iff [p1p5]m\neq[p2p4] \iff
 m\neq \frac{[p2p4]}{[p1p5]} $$
@@ -90,15 +76,15 @@ $$y=\frac{W_{y}}{W}=\frac{[p1p6]m-[p3p4]}{[p1p5]m-[p2p4]}$$
 $x=\frac{[wx]m}{[p1p5]m-[p2p4]}, y=\frac{[p1p6]m-[p3p4]}{[p1p5]m-[p2p4]}$
 \odpStop
 \testStart
-A.$x=\frac{[wx]m}{[p1p5]m-[p2p4]}, y=\frac{[p1p6]m-[p3p4]}{[p1p5]m-[p2p4]}$
-B.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]+[p2p4]m^{2}}$
-C.$x=\frac{[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]+[p3p4]m}{[p1p5]+[p2p4]m^{2}}$
-D.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m}$
-E.$x=\frac{-[p3p5]m+[p2p6]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m^{2}}$
-F.$x=\frac{-[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]}$
-G.$x=\frac{[p3p5]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]}{-[p1p5]+[p2p4]m^{2}}$
-H.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=[p1p6]-[p3p4]m$
-I.$x=[p1], y=-[p5]$
+A.$x=\frac{[wx]m}{[p1p5]m-[p2p4]}, y=\frac{[p1p6]m-[p3p4]}{[p1p5]m-[p2p4]}$\\
+B.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]+[p2p4]m^{2}}$\\
+C.$x=\frac{[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]+[p3p4]m}{[p1p5]+[p2p4]m^{2}}$\\
+D.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m}$\\
+E.$x=\frac{-[p3p5]m+[p2p6]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m^{2}}$\\
+F.$x=\frac{-[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]}$\\
+G.$x=\frac{[p3p5]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]}{-[p1p5]+[p2p4]m^{2}}$\\
+H.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=[p1p6]-[p3p4]m$\\
+I.$x=[p1], y=-[p5]$\\
 \testStop
 \kluczStart
 A

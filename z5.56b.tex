@@ -1,0 +1,82 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.56b}
+\zadStart{Zadanie z Wikieł Z 5.56 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14]
+%[a2]=[a]*2
+Wyznaczyć równania asymptot wykresu funkcji:\\
+b) $f(x)=(x-[a])e^{\frac{x}{[a]-x}}$
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+1. Wyznaczamy dziedzinę funkcji.
+$$[a]-x\neq0 \Rightarrow x\neq[a] \Rightarrow x\in\mathbb{R}\backslash\{[a]\}$$
+$$D_{f}=(-\infty,[a])\cup([a],\infty)$$
+$$
+f(x)=(x-[a])e^{\frac{x}{[a]-x}}=(x-[a])e^{\frac{-([a]-x)+[a]}{[a]-x}}=(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}
+$$
+2. Wyznaczamy granicę. 
+$$\lim_{x\to\infty}(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}=\lim_{x\to\infty}\infty\cdot e^{-1}\cdot e^{0}=\infty$$
+$$\lim_{x\to-\infty}(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}=\lim_{x\to-\infty}-\infty\cdot e^{-1}\cdot e^{0}=-\infty$$
+$$\lim_{x\to[a]^{-}}(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}=0^{-}\cdot e^{-1}\cdot e^{\frac{[a]}{0^{+}}}=0^{-}\cdot e^{-1}\cdot e^{\infty}=-\infty$$
+$$\lim_{x\to[a]^{+}}(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}=0^{+}\cdot e^{-1}\cdot e^{\frac{[a]}{0^{-}}}=0^{+}\cdot e^{-1}\cdot e^{-\infty}=0$$
+Istnieje asymptota pionowa lewostronna w $x=[a]$, nie ma asymptot poziomych.\\
+3.Sprawdzamy, czy istnieje asymtota ukośna.
+$$y=ax+b,\hspace{3mm}a=\lim_{x\to\pm\infty}\frac{f(x)}{x},\hspace{3mm}b=\lim_{x\to\pm\infty}[f(x)-ax]$$
+$$a=\lim_{x\to\pm\infty}\frac{(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}}{x}=e^{-1}\cdot e^{0}=e^{-1}$$
+$$b=\lim_{x\to\pm\infty}(x-[a])\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}}-xe^{-1}=$$
+$$=\lim_{x\to\pm\infty}\frac{x\cdot e^{\frac{[a]}{[a]-x}}-x-[a]\cdot e^{\frac{[a]}{[a]-x}}}{e^{1}}=$$
+$$=\lim_{x\to\pm\infty}(-[a]\cdot e^{-1}\cdot e^{\frac{[a]}{[a]-x}})+e^{-1}\cdot\lim_{x\to\pm\infty}\frac{e^{\frac{[a]}{[a]-x}}-1}{\frac{1}{x}}\stackrel{\text{H}}{=}$$
+$$--\lim_{x\to\pm\infty}\frac{e^{\frac{[a]}{[a]-x}}-1}{\frac{1}{x}}\stackrel{\text{H}}{=}\lim_{x\to\pm\infty}\frac{[a]\cdot e^{\frac{-[a]}{[a]-x}}}{([a]-x)^{2}}\cdot-x^{2}=\lim_{x\to\pm\infty}\frac{x^{2}(-[a]\cdot e^{\frac{-[a]}{[a]-x}})}{x^{2}(\frac{[a]}{x^{2}}-1)^{2}}--$$
+$$\stackrel{\text{H}}{=}\frac{-[a]}{e^{1}}+e^{-1}\cdot\lim_{x\to\pm\infty}\frac{-[a]\cdot e^{\frac{-[a]}{[a]-x}}}{(\frac{[a]}{x}-1)^{2}}=\frac{-[a]}{e^{1}}-\frac{[a]}{e^{1}}=-\frac{[a2]}{e}$$
+Istnieje asymptota obustronna $y=\frac{x}{e}-\frac{[a2]}{e}$.
+\rozwStop
+\odpStart
+pionowa lewostronna $x=[a]$; ukośna obustronna: $y=\frac{x}{e}-\frac{[a2]}{e}$.
+\odpStop
+\testStart
+A. pionowa lewostronna $x=[a]$; ukośna obustronna: $y=\frac{x}{e}-\frac{[a2]}{e}$.\\
+B. pionowa prawostronna $x=[a]$; ukośna obustronna: $y=\frac{x}{e}-\frac{[a]}{e}$.\\
+C. pionowa lewostronna $x=[a]$; ukośna obustronna: $y=\frac{x}{e}$.\\
+D. pionowa prawostronna $x=0$; pozioma: $y=0$.\\
+E. pionowa lewostronna $x=[a]$; pozioma: $y=0$.\\
+F. Wykres funkcji $f(x)$ nie ma asymptot.
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

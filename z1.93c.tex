@@ -49,13 +49,13 @@
 %[m]=[a]+[prc]
 %[l]=[prd]-[b]
 %[w]=[l]/[m]
-%[pr]<30 and [m]!=0 and (([a]*[w]+[b])/([d]-[c]*[w]))>0 and math.gcd([a],[b])==1
+%[pr]<30 and [m]!=0 and (([a]*[w]+[b])/([d]-[c]*[w]))>0 and math.gcd([a],[b])==1 and [b]!=[e]
 Rozwiązać równanie $\log_{[p]}{([a]x+[b])} - \log_{[p]}{([d]-[c]x)} = [r]$
 \zadStop
 \rozwStart{Małgorzata Ugowska}{}
-$$\log_{[p]}{([a]x+[b])} - \log_{[p]}{([d]-[c]x)} = [r] \quad \Longleftrightarrow \quad \log_{[p]}{\frac{[a]x+[b]}{[d]-[c]x}}= [r]$$
-$$\Longleftrightarrow \quad \frac{[a]x+[b]}{[d]-[c]x}=[p]^{[r]} \quad \Longleftrightarrow \quad  [a]x+[b]=[pr]([d]-[c]x)$$
-$$\Longleftrightarrow \quad [a]x+[b]=[prd]-[prc]x \quad \Longleftrightarrow \quad [m]x=[l] \quad \Longleftrightarrow \quad x=\frac{[l]}{[m]}$$
+$$\log_{[p]}{([a]x+[b])} - \log_{[p]}{([d]-[c]x)} = [r] \Longleftrightarrow \log_{[p]}{\frac{[a]x+[b]}{[d]-[c]x}}= [r]$$
+$$\Longleftrightarrow \frac{[a]x+[b]}{[d]-[c]x}=[p]^{[r]} \Longleftrightarrow  [a]x+[b]=[pr]([d]-[c]x)$$
+$$\Longleftrightarrow [a]x+[b]=[prd]-[prc]x \Longleftrightarrow [m]x=[l] \Longleftrightarrow x=\frac{[l]}{[m]}$$
 \rozwStop
 \odpStart
 $x=\frac{[l]}{[m]}$

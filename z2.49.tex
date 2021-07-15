@@ -1,0 +1,98 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.49}
+\zadStart{Zadanie z Wikieł Z 2.49 moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8]
+%[p2]:[2,3,4,5,6,7,8]
+%[p3]=random.randint(2,10)
+%[p4]=random.randint(2,10)
+%[p5]:[2,3,4,5,6,7,8]
+%[p6]=random.randint(2,10)
+%[p12]=[p1]/2
+%[p22]=[p2]/2
+%[p12k]=[p12]*[p12]
+%[p22k]=[p22]*[p22]
+%[r]=[p12k]+[p22k]-[p3]
+%[dl]=abs([p4]*[p12]-[p5]*[p22]+[p6])
+%[dm]=round(math.sqrt([p4]*[p4]+[p5]*[p5]),2)
+%[d]=round([dl]/[dm],2)
+%[dk]=round([d]*[d],2)
+%[dkr]=[dk]-[r]
+%[dkr]>0
+
+
+Podać, dla jakich wartości parametru $m$ równanie
+$$x^{2}+y^{2}-[p1]x+[p2]y-m^{2}+[p3]=0$$
+przedstawia okrąg, który nie ma punktów wspólnych z prostą $k: [p4]x+[p5]y+[p6]=0.$
+
+\zadStop
+
+\rozwStart{Maja Szabłowska}{}
+$$r^{2}=\left(\frac{[p1]}{2}\right)^{2}+\left(-\frac{[p2]}{2}\right)^{2}-([p3]-m^{2})$$
+$$r^{2}=[p12k]+[p22k]-[p3]+m^{2}=[r]+m^{2}$$
+$$r=\sqrt{[r]+m^{2}}$$
+$$S(a,b)=([p12],-[p22])$$
+
+Obliczamy odległość środka okręgu od prostej:
+$$d=\frac{|[p4]\cdot[p12]+[p5]\cdot(-[p22])+[p6]|}{\sqrt{[p4]^{2}+[p5]^{2}}}=\frac{[dl]}{[dm]}\approx [d]$$
+
+Aby prosta nie miała punktów wspólnych z okręgiem musi być spełniony warunek $d(S,k)>r.$
+$$[d]>\sqrt{[r]+m^{2}}$$
+$$[dk]>[r]+m^{2}$$
+$$m^{2}<[dkr]$$
+$$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$$
+\rozwStop
+
+
+\odpStart
+$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$
+\odpStop
+\testStart
+A.$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$
+B.$m=\sqrt{[dkr]}$
+C.$m\in(-\sqrt{[dk]}, \sqrt{[dk]})$
+D.$m\in[-\sqrt{[p12]}, \sqrt{[dkr]}]$
+E.$m\in(-[p4], [p5])$
+F.$m=[p22]$
+G.$m\in\emptyset$
+
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

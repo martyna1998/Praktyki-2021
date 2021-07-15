@@ -34,27 +34,32 @@
 
 \kategoria{Wikieł/Z1.92i}
 \zadStart{Zadanie z Wikieł Z 1.92 i) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12]
-%[b]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[b]=random.randint(1,15)
 %[c]:[1,2,3,4,5,6,7]
 %[d]=random.randint(2,25)
-%[a2]=[a]*[c]
+%[aa2]=[a]*[c]
 %[b2]=[b]*[c]
-%[e]=[d]-[b2]
-%(([d]-[c]*[b])/[c])+[b]>0 and (([d]-[c]*[b])/[c])+[b] != 1 and math.gcd([c],[d])==1 and math.gcd([e],[a2])==1
+%[ee]=[d]-[b2]
+%[e2]=[ee]+[aa2]
+%[k]=math.gcd([ee],[aa2])
+%[e]=int([ee]/[k])
+%[a2]=int([aa2]/[k])
+%(([d]-[c]*[b])/[c])+[b]>0 and (([d]-[c]*[b])/[c])+[b] != 1 and math.gcd([c],[d])==1 and [a2]!=1
 Rozwiązać równanie $\log_{[a]x+[b]}{\frac{[c]}{[d]}}=-1$
 \zadStop
 \rozwStart{Małgorzata Ugowska}{}
-$$\log_{[a]x+[b]}{\frac{[c]}{[d]}}=-1 \quad \Longleftrightarrow \quad {([a]x+[b])}^{-1}=\frac{[c]}{[d]} \quad \Longleftrightarrow \quad \frac{1}{[a]x+[b]}=\frac{[c]}{[d]}$$
-$$\Longleftrightarrow \quad ([a]x+[b])[c]=[d] \quad \Longleftrightarrow \quad [a2]x+[b2]=[d] \quad \Longleftrightarrow \quad [a2]x=[e] \quad \Longleftrightarrow \quad x=\frac{[e]}{[a2]}$$
+$$\log_{[a]x+[b]}{\frac{[c]}{[d]}}=-1 \quad \Longleftrightarrow \quad {([a]x+[b])}^{-1}=\frac{[c]}{[d]} $$
+$$ \Longleftrightarrow \quad \frac{1}{[a]x+[b]}=\frac{[c]}{[d]} \quad \Longleftrightarrow \quad ([a]x+[b])[c]=[d] \quad \Longleftrightarrow \quad [a2]x+[b2]=[d] $$
+$$ \Longleftrightarrow \quad [a2]x=[e] \quad \Longleftrightarrow \quad x=\frac{[e]}{[a2]}$$
 \rozwStop
 \odpStart
 $x=\frac{[e]}{[a2]}$
 \odpStop
 \testStart
 A. $\frac{[e]}{[a2]}$
-B. $\frac{[a]}{[a2]}$
-C. $\frac{[b]}{[d]}$
+B. $\frac{[e2]}{[a2]}$
+C. $[e2]$
 D. $[b2]$
 E. $[e]$
 \testStop
