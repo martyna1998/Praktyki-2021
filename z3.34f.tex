@@ -32,52 +32,32 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z2.57}
-\zadStart{Zadanie z Wikieł Z 2.57 moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-%[c]:[14,15,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
-%[bb]=2*[b]
-%[ab]=[a]+[b]
-%[kbb]=[bb]*[bb]
-%[4ab]=4*[ab]
-%[4abb]=[4ab]*[b]
-%[4abc]=[4ab]*[c]
-%[x]=[4abb]-[kbb]
-%[mm]=[4abc]/[x]
-%[cmm]=int([mm])
-%[m]=math.sqrt([cmm])
-%[cm]=int([m])
-%[x]>0 and [m].is_integer()==True and [mm].is_integer()==True
-Podać, dla jakiej wartości m prosta $y=-x+m$ jest styczna do elipsy $[a]x^2+[b]y^2=[c]$.
+\kategoria{Wikieł/Z3.34f}
+\zadStart{Zadanie z Wikieł Z 3.34 f) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
+Obliczyć granicę ciągu $$a_n=sin^2\sqrt{([a]n^2+[a]n)}.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
-$$\left\{ \begin{array}{ll}
-[a]x^2+[b]y^2=[c]\\ 
-y=-x+m
-\end{array} \right.$$
-$$[a]x^2+[b](-x+m)^2=[c]$$
-$$[a]x^2+[b]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$[ab]x^2-[bb]xm+[b]m^2-[c]=0$$
-$$\Delta=[kbb]m^2-4\cdot [ab]([b]m^2-[c])=0$$
-$$[kbb]m^2-[4abb]m^2+[4abc]=0$$
-$$-[x]m^2=-[4abc]$$
-$$m^2=[cmm]$$
-$$m=\pm [cm]$$
+$$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}$$\\
+Z twierdzenia o trzech ciągach mamy:
+$$ (-1)^2 \leqslant sin^2\sqrt{\pi([a]n^2+[a]n)} \leqslant 1^2$$
+$$\lim_{n\rightarrow \infty}(-1)^2=1$$
+$$\lim_{n\rightarrow \infty}1^2=1$$\\
+Czyli $$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}$$
 \rozwStop
 \odpStart
-$m=\pm [cm]$\\
+$1$\\
 \odpStop
 \testStart
-A.$m=\pm [cm]$
-B.$m=[cm]$
-C.$m=-[cm]$
-D.$m=-99$
-E.$m=99$
-F.$m=2000$
-G.$m=1$
-H.$ m=0$
-I.$m=-1$
+A.$1$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$9$
+F.$e$
+G.$4$
+H.$7$
+I.$-7$
 \testStop
 \kluczStart
 A
