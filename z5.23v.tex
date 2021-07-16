@@ -1,0 +1,74 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Laura Mieczkowska}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.23v}
+\zadStart{Zadanie z Wikieł Z 5.23 v) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]=[a]-1
+%[2a]=[a]+1
+%[l]=[a]-[2a]
+%[2akw]=[2a]**2
+%[d]=[2akw]*[l]
+Znaleźć ekstrema lokalne funkcji $y=\frac{e^{[a]x}}{x}$.
+\zadStop
+\rozwStart{Laura Mieczkowska}{}
+$$y=\frac{e^{[a]x}}{x}$$
+$$y'=\frac{(e^{[a]x})'x-e^{[a]x}(x)'}{x^2}=\frac{[a]e^{[a]x}\cdot x-e^{[a]x}}{x^2}=\frac{e^{[a]x}([a]x-1)}{x^2}$$
+$$\frac{e^{[a]x}([a]x-1)}{x^2}=0 \Rightarrow e^{[a]x}([a]x-1)=0 \Rightarrow [a]x-1=0 \Rightarrow x=\frac{1}{[a]}$$
+Otrzymujemy punkt, w którym może znajdować się ekstremum. Ten punkt (wraz z dziedziną funkcji) wyznacza dwa przedziały, w których należy zbadać znak funkcji:
+\\\\1. $\big(0;\frac{1}{[a]}\big)$
+$$y'\bigg(\frac{1}{[2a]}\bigg)=\frac{e^{\frac{[a]}{[2a]}}(\frac{[a]}{[2a]}-1)}{\big(\frac{1}{[2a]}\big)^2}=[2akw]\bigg(e^{\frac{[a]}{[2a]}}\cdot\frac{[l]}{[2a]}\bigg)=-[2a]e^{\frac{[a]}{[2a]}}$$
+$-[2a]e^{\frac{[a]}{[2a]}}$ ma ujemny znak, więc funkcja na tym przedziale jest malejąca.
+\\\\2. $\big(\frac{1}{[a]};\infty\big)$
+$$y'(1)=\frac{e^{[a]\cdot 1}([a]\cdot1-1)}{1^2}=[b]e^{[a]}$$
+$[b]e^{[a]}$ ma dodatni znak, więc funkcja na tym przedziale jest rosnąca.
+\\Podsumowując, funkcja na przedziale $(0;\frac{1}{[a]})$ maleje, a następnie rośnie na przedziale $(\frac{1}{[a]};\infty)$, wobec tego w punkcie $x=\frac{1}{[a]}$ istnieje minimum lokalne.
+$$y\bigg(\frac{1}{[a]}\bigg)=\frac{e^{[a]\cdot\frac{1}{[a]}}}{\frac{1}{[a]}}=\frac{e}{\frac{1}{[a]}}=[a]e$$
+
+\odpStart
+$y_{min}=y(\frac{1}{[a]})=[a]e$
+\odpStop
+\testStart
+A. $y_{min}=y(\frac{1}{[a]})=-[a]e$\\
+B. $y_{min}=y(\frac{1}{[a]})=[a]e$ \\
+C. $y_{min}=y(-\frac{1}{[a]})=-[a]e$ \\
+D. $y_{min}=y(\frac{1}{[a]})=e$ 
+\testStop
+\kluczStart
+B
+\kluczStop
+
+
+
+\end{document}
