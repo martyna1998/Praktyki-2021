@@ -33,27 +33,23 @@
 
 
 \kategoria{Wikieł/Z1.5d}
-\zadStart{Zadanie z Wikieł Z 1.5 d) moja wersja nr 1}
-%[p1]:[4,5,6,7,8,9,10,11,12]
-%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
-%[a]=random.randint(2,10)
-%[e]=random.randint(2,10)
-%[c]=random.randint(2,10)
+\zadStart{Zadanie z Wikieł Z 1.5 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[c]:[2,3,4,5,6,7,8,9]
+%[e]:[2,3,4,5,6,7,8,9]
 %[f]=random.randint(2,100)
 %[d]=random.randint(2,10)
-%[p1p2m]=[p1]-[p2]
-%[p1p3m]=[p1]-[p3]
 %[3c]=3*[c]
 %[a3]=[a]*3
 %[3e]=3*[e]
 %[ec]=[e]*[c]
 %[3ec]=[3e]*[3c]
 %[w]=[a]*3*[c]
-%[p1]>[p2] and [p1]>[p3] and [p2]!=[p3] and math.gcd([a],[d])==1 and [p1p2m]>1 and [p1p3m]>1 and ([c]+3-[e])==0 and [c]!=4 and [c]!=9 and [e]!=4 and [e]!=9
+%[p3c]=pow([3c],1/2)
+%([c]+3-[e])==0 and [c]!=4 and [c]!=9 and [e]!=4 and [e]!=9 and [3c]!=0 and [3c]!=1 and [p3c].is_integer()==False
 Usunąć niewymierność z mianownika $\frac{[a]\sqrt{3}}{\sqrt{[c]}+\sqrt{3}+\sqrt{[e]}}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\frac{[a]\sqrt{3}}{\sqrt{[c]}+\sqrt{3}+\sqrt{[e]}}$$
 $$\frac{[a]\sqrt{3}}{\sqrt{[c]}+\sqrt{3}+\sqrt{[e]}}*\frac{\sqrt{[c]}+\sqrt{3}-\sqrt{[e]}}{\sqrt{[c]}+\sqrt{3}-\sqrt{[e]}}$$
 $$\frac{[a]\sqrt{[3c]}+[a3]-[a]\sqrt{[3e]}}{2\sqrt{[3c]}}$$
