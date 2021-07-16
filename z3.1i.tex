@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z3.1i}
-\zadStart{Zadanie z Wikieł Z 3.1 i) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 3.1 i) moja wersja nr [nrWersji]}
 %[a]:[1, 2, 3, 4, 5, 6]
 %[b]:[1, 2, 3, 4, 5, 6]
 %[c]:[1, 2, 3, 4, 5, 6]
@@ -41,16 +41,16 @@
 %[b]=random.randint(2,30)
 %[c]=random.randint(2,30)
 %math.gcd([a],[b])==1
-Zbadać monotoniczność ciągu $a_{n}$.\\ $a_{n}=-\frac{[a]}{[b]}[c]^{n-1}$
+Zbadać monotoniczność ciągu $a_{n}$.\\ $a_{n}=-\frac{[a]}{[b]}\cdot[c]^{n-1}$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-$$a_{n+1}=-\frac{[a]}{[b]}[c]^{(n+1)-1}=-\frac{[a]}{[b]}[c]^{n}$$
-$$a_{n+1}-a_{n}=-\frac{[a]}{[b]}[c]^{n}+\frac{[a]}{[b]}[c]^{n-1}$$
-$$-\frac{[a]}{[b]}[c]^{n}+\frac{[a]}{[b]}[c]^{n}\cdot[c]^{-1}$$
-$$-\frac{[a]}{[b]}[c]^{n}\big(1-[c]^{-1}\big)$$
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
+$$a_{n+1}=-\frac{[a]}{[b]}\cdot[c]^{(n+1)-1}=-\frac{[a]}{[b]}\cdot[c]^{n}$$
+$$a_{n+1}-a_{n}=-\frac{[a]}{[b]}\cdot[c]^{n}+\frac{[a]}{[b]}\cdot[c]^{n-1}$$
+$$-\frac{[a]}{[b]}\cdot[c]^{n}+\frac{[a]}{[b]}\cdot[c]^{n}\cdot[c]^{-1}$$
+$$-\frac{[a]}{[b]}\cdot[c]^{n}\cdot\big(1-[c]^{-1}\big)$$
 dla każdego $n\in\mathbb{N}$ zachodzi
-$$-\frac{[a]}{[b]}[c]^{n}<0\land 1-[c]^{-1}>0$$więc
-$$-\frac{[a]}{[b]}[c]^{n}\big(1-[c]^{-1}\big)<0\Rightarrow \text{Ciąg jest malejący}$$
+$$-\frac{[a]}{[b]}\cdot[c]^{n}<0\land 1-[c]^{-1}>0$$więc
+$$-\frac{[a]}{[b]}\cdot[c]^{n}\cdot\big(1-[c]^{-1}\big)<0\Rightarrow \text{Ciąg jest malejący}$$
 \rozwStop
 \odpStart
 $$\text{Ciąg jest malejący}$$

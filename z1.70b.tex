@@ -46,20 +46,23 @@
 %[a]>[c] and [c]>[b] and [b]>[d] and [d]>[-c]
 Rozwiązać nierówność $\frac{(x+[a])^{4}([b]-x)^{3}}{(x+[c])(x-[d])^{2}}\geq0$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-$$\frac{(x+[a])^{4}([b]-x)^{3}}{(x+[c])(x-[d])^{2}}\geq0$$
-założenie: $$x+[c]\neq0\land x-[d]]\neq0$$
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
+założenie: $$x+[c]\neq0\land x-[d]\neq0$$
 $$x\neq-[c]\land x\neq[d]$$
 dziedzina:$$x\in \mathbb{R}-\{-[c],[d]\}$$
 rozwiązanie:$$\frac{(x+[a])^{4}([b]-x)^{3}}{(x+[c])(x-[d])^{2}}\geq0$$
+Podzielimy rozwiązanie na 2 przypadki:
 $$\textbf{1a)}(x+[a])^{4}([b]-x)^{3}\geq0 \land \textbf{1b)}(x+[c])(x-[d])^{2}\geq0$$ $$\vee$$ $$\textbf{2a)}(x+[a])^{4}([b]-x)^{3}\leq0 \land \textbf{2b)}(x+[c])(x-[d])^{2}\leq0$$
+Pierwszy przypadek:
 $$\textbf{1a)}(x+[a])^{4}([b]-x)^{3}\geq0\Leftrightarrow x\leq[b]$$
 $$\textbf{1b)}(x+[c])(x-[d])^{2}\geq0\Leftrightarrow x\geq-[c]$$
+$$\textbf{1a)}\land\textbf{1b)}\Rightarrow x\in[-[c],[b]]$$
+Drugi przypadek:
 $$\textbf{2a)}(x+[a])^{4}([b]-x)^{3}\leq0\Leftrightarrow x\geq[b] \vee x=-[a]$$
 $$\textbf{2b)}(x+[c])(x-[d])^{2}\leq0\Leftrightarrow x\leq-[c]\vee x=[d]$$
-$$\textbf{1a)}\land\textbf{1b)}\Rightarrow x\in[-[c],[b]]$$
 $$\textbf{2a)}\land\textbf{2b)}\Rightarrow x\in\{-[a]\}$$
-$$(\textbf{1a)}\land\textbf{1b)}\vee\textbf{2a)}\land\textbf{2b)})\land \text{dziedzina}\Rightarrow x\in(-[c],[b]]\cup\{-[a]\}-\{[d]\}$$
+Suma obu przypadków oraz uwzględnienie dziedziny:
+$$(\textbf{1a)}\land\textbf{1b)}\vee(\textbf{2a)}\land\textbf{2b)})\land \text{dziedzina}\Rightarrow x\in(-[c],[b]]\cup\{-[a]\}-\{[d]\}$$
 \rozwStop
 \odpStart
 $$x\in(-[c],[b]]\cup\{-[a]\}-\{[d]\}$$

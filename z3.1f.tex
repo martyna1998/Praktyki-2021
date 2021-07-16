@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z3.1f}
-\zadStart{Zadanie z Wikieł Z 3.1 f) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 3.1 f) moja wersja nr [nrWersji]}
 %[a]:[1, 2, 3, 4, 5, 6]
 %[b]:[1, 2, 3, 4, 5, 6]
 %[a]=random.randint(2,25)
@@ -42,13 +42,15 @@
 %[amb]=[a]-[b]
 Zbadać monotoniczność ciągu $a_{n}$.\\ $a_{n}=\frac{[a]n^{2}-[b]}{n}$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$a_{n+1}=\frac{[a](n+1)^{2}-[b]}{n+1}=\frac{[a]n^{2}+[2a]n+([amb])}{n+1}$$
 $$a_{n+1}-a_{n}=\frac{[a]n^{2}+[2a]n+([amb])}{n+1}-\frac{[a]n^{2}-[b]}{n}$$
 $$\frac{([a]n^{2}+[2a]n+([amb]))n-([a]n^{2}-[b])(n+1)}{(n+1)n}$$
 $$\frac{[a]n^{3}+[2a]n^{2}+([amb])n-[a]n^{3}-[a]n^{2}+[b]n+[b]}{(n+1)n}$$
 $$\frac{[a]n^{2}+[a]n+[b]}{(n+1)n}$$
 dla każdego $n\in\mathbb{N}$ zachodzi
+$$[a]n^{2}+[a]n+[b]>0 \text{ oraz } (n+1)n>0\text{,  ponieważ jest to dodawanie liczb dodatnich,}$$
+czyli
 $$\frac{[a]n^{2}+[a]n+[b]}{(n+1)n}>0\Rightarrow \text{Ciąg jest rosnący}$$
 \rozwStop
 \odpStart
