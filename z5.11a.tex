@@ -1,0 +1,196 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.11a}
+\zadStart{Zadanie z Wikieł Z 5.11 a) moja wersja nr [nrWersji]}
+%[a]:[11,12,13]
+%[b]:[11,12,13,14,15,16,17,18]
+%[c]:[8,10]
+%[d]:[7,8,9]
+%[e]:[2,3,4,5,6,7,8,9]
+%[f]=2
+%[da]=[a]-[d]
+%[db]=(-1)*[b]+[e]
+%[dc]=[c]-[f]
+%[delta]= ([db]*[db])-(4*[da]*[dc])
+%[delta2]=abs([delta])
+%[delta3]=int(math.sqrt([delta2]))
+%[l1]=(-[db]-[delta3])
+%[l2]=(-[db]+[delta3])
+%[m]=2*[da]
+%[x1]=[l1]/[m]
+%[x2]=[l2]/[m]
+%[ix1]=int([l1]/[m])
+%[ix2]=int([l2]/[m])
+%[a1]=2*[a]
+%[a2]=[a1]*[ix1]
+%[a3]=[a2]-[b]
+%[a4]=[a1]*[ix2]
+%[a5]=[a4]-[b]
+%[d1]=2*[d]
+%[d2]=[d1]*[ix1]
+%[d3]=[d2]-[e]
+%[d4]=[d1]*[ix2]
+%[d5]=[d4]-[e]
+%[fx1]=[ix1]*[ix1]
+%[fx2]=[ix2]*[ix2]
+%[bx1]=[b]*[ix1]
+%[bx2]=[b]*[ix2]
+%[ax1]=[a]*[fx1]
+%[ax2]=[a]*[fx2]
+%[x1c]=[c]-[bx1]
+%[x2c]=[c]-[bx2]
+%[ax1c]=[ax1]+[x1c]
+%[ax2c]=[ax2]+[x2c]
+%[ex1]=[e]*[ix1]
+%[ex2]=[e]*[ix2]
+%[dx1]=[d]*[fx1]
+%[dx2]=[d]*[fx2]
+%[x1f]=[f]-[ex1]
+%[x2f]=[f]-[ex2]
+%[dx1f]=[dx1]+[x1f]
+%[dx2f]=[dx2]+[x2f]
+%[a3x1]=[a3]*[ix1]
+%[a5x2]=[a5]*[ix2]
+%[d3x1]=[d3]*[ix1]
+%[d5x2]=[d5]*[ix2]
+%[a3x1c]=-[a3x1]+[ax1c]
+%[a5x2c]=-[a5x2]+[ax2c]
+%[d3x1f]=-[d3x1]+[dx1f]
+%[d5x2f]=-[d5x2]+[dx2f]
+%[a3d3]=[a3]-[d3]
+%[a3d3m]=[a3]*[d3]
+%[1a3d3m]=1+[a3d3m]
+%[a5d5]=[a5]-[d5]
+%[a5d5m]=[a5]*[d5]
+%[1a5d5m]=1+[a5d5m]
+%[a3d33]=-1*[a3d3]
+%[dzie1]=math.gcd([a3d33],[1a3d3m])
+%[dzie2]=math.gcd([a5d5],[1a5d5m])
+%[o1]=int([a3d33]/[dzie1])
+%[r1]=int([1a3d3m]/[dzie1])
+%[o2]=int([a5d5]/[dzie2])
+%[r2]=int([1a5d5m]/[dzie2])
+%([delta] ==4 or [delta] ==9 or [delta] ==16) and [x1].is_integer()==True and [x2].is_integer()==True and [x2f]<0 and [x2c]<0 and [x1c]<0 and [x1f]<0 and [a3d3]<0 and [a5d5]>0 and [a3x1c]<0 and [d3x1f]<0 and [a5x2c]<0 and [d5x2f]<0
+Wyznaczyć równania stycznych do krzywych $y=f(x)$ i $y=g(x)$ w punktach ich przecięcia, a następnie obliczyć tangens kąta ostrego między tymi krzywymi, jeżeli:\\
+$f(x)=[a]x^2-[b]x+[c], \ \ \ \ \ g(x)=[d]x^2-[e]x+[f]$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=[a]x^2-[b]x+[c] \ \ \ \ \ g(x)=[d]x^2-[e]x+[f]$$
+$$[a]x^2-[b]x+[c]=[d]x^2-[e]x+[f]$$
+$$([a]-[d])x^2+(-[b]+[e])x+[c]-[f]=0$$
+$$[da]x^2 [db] x+[dc]=0$$
+$$\Delta = ([db])^2-4\cdot[da]\cdot[dc]$$
+$$\Delta = [delta] $$ 
+$$\sqrt{\Delta}=[delta3]$$
+$$x_1=[ix1] \ \ \ \ \ \ \ x_2=[ix2]$$
+\\
+Równanie stycznej do wykresu funkcji $y=f(x)$ w punkcie $P(x_0,f(x_0))$:
+$$
+y-f(x_0)=f'(x_0)(x-x_0)
+$$
+Wzór na tangens kąta między krzywymi $f$ i $g$:
+$$\tg(\alpha)=\Big|\frac{f'(x_0)-g'(x_0)}{1+f'(x_0)g'(x_0)}\Big| $$ \\
+\begin{enumerate}
+\item $x_1=[ix1]$:
+\begin{itemize}
+\item $f(x)$:
+$$f'(x)=2\cdot[a]x-[b]=[a1]x-[b]$$
+$$f'([ix1])=[a1]\cdot[ix1]-[b]=[a2]-[b]=[a3]$$
+$$f([ix1])=[a]([ix1])^2-[b]\cdot[ix1]+[c]=$$
+$$=[a]\cdot[fx1]-[bx1]+[c]=[ax1] [x1c]=[ax1c]$$
+$$y_1=[a3](x-[ix1])+[ax1c]=[a3]x-[a3]\cdot[ix1]+[ax1c]=$$
+$$=[a3]x-[a3x1]+[ax1c]=[a3]x [a3x1c]$$
+\item $g(x)$:
+$$g'(x)=2\cdot[d]x-[e]=[d1]x-[e]$$
+$$g'([ix1])=[d1]\cdot[ix1]-[e]=[d2]-[e]=[d3]$$
+$$g([ix1])=[d]([ix1])^2-[e]\cdot[ix1]+[f]=$$
+$$=[d]\cdot[fx1]-[ex1]+[f]=[dx1] [x1f]=[dx1f]$$
+$$y_2=[d3](x-[ix1])+[dx1f]=[d3]x-[d3]\cdot[ix1]+[dx1f]=$$
+$$=[d3]x-[d3x1]+[dx1f]=[d3]x [d3x1f]$$
+\end{itemize}
+$$y_1'=[a3]$$
+$$y_2'=[d3]$$
+$$\tg(\alpha)=\Big|\frac{f'(x_0)-g'(x_0)}{1+f'(x_0)g'(x_0)}\Big| = \Big|\frac{[a3]-[d3]}{1+[a3]\cdot [d3]}\Big| = \Big|\frac{[a3d3]}{1+[a3d3m]}\Big|=
+ \Big|\frac{[a3d3]}{[1a3d3m]}\Big| =\frac{[o1]}{[r1]} $$
+\item $x_2=[ix2]$:
+\begin{itemize}
+\item $f(x)$:
+$$f'(x)=[a1]x-[b]$$
+$$f'([ix2])=[a1]\cdot[ix2]-[b]=[a4]-[b]=[a5]$$
+$$f([ix2])=[a]([ix2])^2-[b]\cdot[ix2]+[c]=$$
+$$=[a]\cdot[fx2]-[bx2]+[c]=[ax2] [x2c]=[ax2c]$$
+$$y_1=[a5](x-[ix2])+[ax2c]=[a5]x-[a5]\cdot[ix2]+[ax2c]=$$
+$$=[a5]x-[a5x2]+[ax2c]=[a5]x [a5x2c]$$
+\item $g(x)$:
+$$g'(x)=[d1]x-[e]$$
+$$g'([ix2])=[d1]\cdot[ix2]-[e]=[d4]-[e]=[d5]$$
+$$g([ix2])=[d]([ix2])^2-[e]\cdot[ix2]+[f]=$$
+$$=[d]\cdot[fx2]-[ex2]+[f]=[dx2] [x2f]=[dx2f]$$
+$$y_2=[d5](x-[ix2])+[dx2f]=[d5]x-[d5]\cdot[ix2]+[dx2f]=$$
+$$=[d5]x-[d5x2]+[dx2f]=[d5]x [d5x2f]$$
+\end{itemize}
+$$y_1'=[a5]$$
+$$y_2'=[d5]$$
+$$\tg(\alpha)=\Big|\frac{f'(x_0)-g'(x_0)}{1+f'(x_0)g'(x_0)}\Big| = \Big|\frac{[a5]-[d5]}{1+[a5]\cdot [d5]}\Big| = \Big|\frac{[a5d5]}{1+[a5d5m]}\Big|=
+ \Big|\frac{[a5d5]}{[1a5d5m]}\Big| =\frac{[o2]}{[r2]}$$
+\end{enumerate}
+Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+\rozwStop
+\odpStart
+Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+\odpStop
+\testStart
+A. Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+B. Dla $x=[ix2]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix1]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+C. Dla $x=[ix1]$ mamy $y_1=x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+D. Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+E. Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=[d5]x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+F. Dla $x=[ix1]$ mamy $y_1=[a3]x [a3x1c]$ i $y_2=[d3]x [d3x1f]$, a $\tg(\alpha)= \frac{[o1]}{[r1]} $,\\
+dla $x=[ix2]$ mamy $y_1=[a5]x [a5x2c]$ i $y_2=x [d5x2f]$, a $\tg(\alpha)= \frac{[o2]}{[r2]} $.\\
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

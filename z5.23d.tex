@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,42 +32,51 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z5.23d}
+\zadStart{Zadanie z Wikieł Z 5.23 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7]
+%[b]=2*[a]
+%[bkw]=[b]**2
+%[ab]=abs([a]-[b])
+%[nwd]=math.gcd([a],[bkw])
+%[licz1]=[a]/[nwd]
+%[licz]=int([licz1])
+%[mian1]=[bkw]/[nwd]
+%[mian]=int([mian1])
+%[aa]=[a]-1
+%[nmian]=2*[bkw]
+%[pierw]=round(math.sqrt([nmian]),2)
+%[u1]=round((2/[pierw]),2)
+%[u2]=round((1/[u1]),2)
+%[w1]=round([a]-[u2],2)
+%[l]=2*[a]-1
+%[licz1].is_integer()==True and [mian1].is_integer()==True
+Znaleźć ekstrema lokalne funkcji $y=[a]x-\sqrt{x}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$y=[a]x-\sqrt{x}$$
+$$y'=[a]-\frac{1}{2\sqrt{x}}=\frac{[b]\sqrt{x}-1}{2\sqrt{x}}$$
+$$\frac{[b]\sqrt{x}-1}{2\sqrt{x}}=0 \Rightarrow [b]\sqrt{x}-1=0 \Rightarrow \sqrt{x}=\frac{1}{[b]} \Rightarrow x=\frac{1}{[bkw]}$$
+Otrzymujemy punkt, w którym może znajdować się ekstremum. Ten punkt (wraz z dziedziną funkcji) wyznacza dwa przedziały, w których należy zbadać znak funkcji:
+\\\\1. $\bigg[0;\frac{1}{[bkw]}\bigg)$
+$$y'\bigg(\frac{1}{[nmian]}\bigg)=[a]-\frac{1}{2\sqrt{\frac{1}{[nmian]}}}=[a]-\frac{1}{[u1]}=[a]-[u2]=[w1]$$
+[w1] ma ujemny znak, więc funkcja na tym przedziale jest malejąca.
+\\\\2. $\bigg(\frac{1}{[bkw]};\infty\bigg)$
+$$y'(1)=[a]-\frac{1}{2\sqrt{1}}=[a]-\frac{1}{2}=\frac{[l]}{2}$$
+$\frac{[l]}{2}$ ma dodatni znak, więc funkcja na tym przedziale jest rosnąca.
+\\Podsumowując, funkcja na przedziale $\bigg[0;\frac{1}{[bkw]}\bigg)$ maleje, a następnie rośnie na przedziale $\bigg(\frac{1}{[bkw]};\infty\bigg)$, wobec tego w punkcie $x=\frac{1}{[bkw]}$ istnieje minimum lokalne.
+$$y\bigg(\frac{1}{[bkw]}\bigg)=[a]\cdot\frac{1}{[bkw]}-\sqrt{\frac{1}{[bkw]}}=\frac{[a]}{[bkw]}-\frac{1}{[b]}=-\frac{[ab]}{[bkw]}=-\frac{[licz]}{[mian]}$$
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$y_{min}=y\bigg(\frac{1}{[bkw]}\bigg)=-\frac{[licz]}{[mian]}$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $y_{max}=y\big(\frac{1}{[bkw]}\big)=\frac{[licz]}{[mian]}$\\
+B. $y_{min}=y\big(\frac{1}{[bkw]}\big)=-\frac{[licz]}{[mian]}$ \\
+C. $y_{min}=y\big(-\frac{1}{[bkw]}\big)=-\frac{[licz]}{[mian]}$, $y_{max}=y\big(\frac{1}{[bkw]}\big)=\frac{[licz]}{[mian]}$ \\
+D. $y_{min}=y\big(-\frac{1}{[bkw]}\big)=-\frac{[licz]}{[mian]}$ 
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

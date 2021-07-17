@@ -32,39 +32,42 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z5.19 o}
+\zadStart{Zadanie z Wikieł Z 5.19 o) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[a0]=2*[a]
+%[b0]=6*[b]
+%[dziel]=math.gcd([a0],[b0])
+%[a1]=int([a0]/[dziel])
+%[b1]=int([b0]/[dziel])
+%math.gcd([a],[b])==1
+Oblicz granicę $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
+\rozwStart{Joanna Świerzbin}{}
+$$ \lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3}$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$ \lim_{x \rightarrow 0} \frac{\left([a]e^x\sin(x)-[a]x(1+x)\right)'}{\left([b]x^3\right)'}=$$
+$$= \lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)+[a]e^x\cos(x)-[a](1+x)-[a]x}{3\cdot[b]x^2}=$$
+$$= \lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)+[a]e^x\cos(x)-[a]-2\cdot[a]x}{3\cdot[b]x^2}$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$\lim_{x \rightarrow 0} \frac{\left([a]e^x\sin(x)+[a]e^x\cos(x)-[a]-2\cdot[a]x\right)'}{\left(3\cdot[b]x^2\right)'}=$$
+$$=\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)+[a]e^x\cos(x)+[a]e^x\cos(x)-[a]e^x\sin(x)-2\cdot[a]}{6\cdot[b]x}=$$
+$$=\lim_{x \rightarrow 0} \frac{2\cdot[a]e^x\cos(x)-2\cdot[a]}{6\cdot[b]x}$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$\lim_{x \rightarrow 0} \frac{\left(2\cdot[a]e^x\cos(x)-2\cdot[a]\right)'}{\left(6\cdot[b]x\right)'}=$$
+$$=\lim_{x \rightarrow 0} \frac{2\cdot[a]e^x\cos(x)-2\cdot[a]e^x\sin(x)}{6\cdot[b]}=\frac{2\cdot[a]}{6\cdot[b]} = \frac{[a1]}{[b1]} $$
 \rozwStop
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  \frac{[a1]}{[b1]} $
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  \frac{[a1]}{[b1]} $\\
+B. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  \infty $\\
+C. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  \frac{1}{[b1]} $\\
+D. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  1 $\\
+E. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  e $\\
+F. $\lim_{x \rightarrow 0} \frac{[a]e^x\sin(x)-[a]x(1+x)}{[b]x^3} =  0 $
 \testStop
 \kluczStart
 A

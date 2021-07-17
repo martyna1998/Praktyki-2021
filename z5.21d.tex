@@ -32,34 +32,42 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.8c}
-\zadStart{Zadanie z Wikieł Z 4.8 c) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7]
-%[b]:[2,3,4,5,6,7]
-%[c]:[2,3,4,5,6,7]
-%[a]=random.randint(2,12)
-%[b]=random.randint(2,12)
-%[c]=random.randint(1,12)
-Obliczyć granice funkcji $\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{[a]cos^2x}{-[b]x^2-[c]}\bigg)$
+\kategoria{Wikieł/Z5.21d}
+\zadStart{Zadanie z Wikieł Z 5.21 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[a1]=[a]*5
+%[b]:[2,3,4,5,6,7,8,9]
+%[b1]=3*[b]
+%[c]:[2,3,4,5,6,7,8,9]
+%[delta]= ((-[b1])^2)-(4*[a1]*[c])
+%[delta]<0
+Wyznaczyć przedziały monotoniczności funkcji $f(x)=[a]x^5-[b]x^3+[c]$.
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Wyciągamy największego x i stosujemy własności działań na granicach:
-\begin{equation}
-\begin{split}
-\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{[a]cos^2x}{-[b]x^2-[c]}\bigg)=&\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{[a]cos^2x}{x^2(-[b]-\frac{[c]}{x^2})}\bigg)=\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{[a]cos^2x}{x^2}\bigg)\cdot\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{1}{-[b]-\frac{[c]}{x^2}}\bigg)=\\&=0\cdot(-\frac{1}{[b]})=0
-\end{split}
-\end{equation}
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=[a]x^5-[b]x^3+[c]x$$
+$$f'(x)=\left([a]x^5-[b]x^3+[c]x\right)'= 5\cdot[a]x^4-3\cdot[b]x^2+[c]= [a1]x^4-[b1]x^2+[c]$$
+$$t=x^2 \land t \geq 0  $$
+$$f'(x)= [a1]t^2-[b1]t+[c]$$
+$$\Delta=(-[b1])^2-4\cdot[a1]\cdot[c]$$
+$$\Delta=[delta] <0 $$
+$f'(x) > 0$ dla $ x\in \mathbb{R} $,
+a więc $f(x)$ jest rosnąca na $\mathbb{R}$.
 \rozwStop
 \odpStart
-$0$
+ $f(x)$ jest rosnąca na $\mathbb{R}$.
 \odpStop
 \testStart
-A.$0$
-B.$\infty$
-C.$-\infty$
-D.$-1$
+A. $f(x)$ jest rosnąca na $\mathbb{R}$. \\
+B. $f(x)$ jest malejąca na $\mathbb{R}$.\\
+C. $f(x)$ jest stałą na $\mathbb{R}$.\\
+D. $f(x)$ jest rosnąca dla $x\in (-\infty, 0)$ i malejąca dla  $x\in (0, \infty)$.\\
+E. $f(x)$ jest malejąca dla $x\in (-\infty, 0)$ i rosnąca dla  $x\in (0, \infty)$.\\
+F. $f(x)$ jest nierosnąca na $\mathbb{R}$.\\
 \testStop
 \kluczStart
 A
 \kluczStop
+
+
+
 \end{document}

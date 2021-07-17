@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,42 +32,31 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z5.23s}
+\zadStart{Zadanie z Wikieł Z 5.23 s) moja wersja nr [nrWersji]}
+%[a]:[2,3,4]
+%[b]=[a]-1
+%[aa1]=pow([a],[a])
+%[aa]=int([aa1])
+Znaleźć ekstrema lokalne funkcji $y=x^{[a]}e^{-x}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$y=x^{[a]}e^{-x}$$
+$$y'=(x^{[a]})'e^{-x}+x^{[a]}(e^{-x})'=-e^{-x}(x-[a])x^{[b]}$$
+$$-e^{-x}(x-[a])x^{[b]}=0 \Rightarrow (x-[a])=0 \vee x=0 \Rightarrow x=[a] \vee x=0$$
+$$y([a])=[a]^{[a]}e^{-[a]}=[aa]e^{-[a]}$$
+$$y(0)=0\cdot e^{0}=0$$
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$y_{min}=y(0)=0$, $y_{max}=y([a])=[aa]e^{-[a]}$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $y_{min}=y(0)=0$, $y_{max}=y([a])=-[aa]e^{-[a]}$\\
+B. $y_{min}=y(0)=0$, $y_{max}=y([a])=[aa]e^{-[a]}$ \\
+C. $y_{max}=y(0)=0$, $y_{min}=y([a])=[aa]e^{-[a]}$ \\
+D. $y_{max}=y(0)=0$, $y_{min}=y([a])=-[aa]e^{-[a]}$ 
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

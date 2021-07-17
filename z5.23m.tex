@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,42 +32,46 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z5.23m}
+\zadStart{Zadanie z Wikieł Z 5.23 m) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[ln]=round(math.log(1.5),2)
+%[ln1]=round([ln]-1,2)
+%[aln]=[a]*[ln1]
+%[lkw]=round([ln]**2,2)
+%[w]=round([aln]/[lkw],2)
+%[ln3]=round(math.log(3),2)
+%[ln33]=round([ln3]-1,2)
+%[ln3kw]=round([ln3]**2,2)
+%[a3ln]=[a]*[ln33]
+%[w2]=round([a3ln]/[ln3kw],2)
+Znaleźć ekstrema lokalne funkcji $y=\frac{[a]x}{lnx}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$y=\frac{[a]x}{lnx}$$
+$$y'=\frac{[a]lnx-\frac{1}{x}\cdot [a]x}{(lnx)^2}=\frac{[a](lnx-1)}{(lnx)^2}$$
+$$\frac{[a](lnx-1)}{(lnx)^2}=0 \Rightarrow [a](lnx-1)=0 \Rightarrow lnx=1 \Rightarrow x=e$$
+Otrzymujemy punkt, w którym może znajdować się ekstremum. Ten punkt (wraz z dziedziną funkcji) wyznacza dwa przedziały, w których należy zbadać znak funkcji:
+\\\\1. $\big(1;e\big)$
+$$y'\bigg(\frac{3}{2}\bigg)=\frac{[a](ln(\frac{3}{2})-1)}{(ln(\frac{3}{2}))^2}=\frac{[a]\cdot([ln1])}{[lkw]}=[w]$$
+[w] ma ujemny znak, więc funkcja na tym przedziale jest malejąca.
+\\\\2. $\big(e;\infty\big)$
+$$y'(3)=\frac{[a](ln(3)-1)}{(ln(3))^2}=\frac{[a]\cdot[ln33]}{[ln3kw]}=[w2]$$
+[w2] ma dodatni znak, więc funkcja na tym przedziale jest rosnąca.
+\\Podsumowując, funkcja na przedziale $\big(1;e\big)$ maleje, a następnie rośnie na przedziale $\big(e;\infty\big)$, wobec tego w punkcie $x=e$ istnieje minimum lokalne.
+$$y(e)=\frac{[a]e}{lne}=[a]e$$
+
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$y_{min}=y(e)=[a]e$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $y_{min}=y(e)=-[a]e$\\
+B. $y_{min}=y(e)=[a]e$ \\
+C. $y_{min}=y(-e)=-[a]e$ \\
+D. $y_{min}=y(e)=e$ 
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

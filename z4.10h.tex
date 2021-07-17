@@ -33,22 +33,22 @@
 
 
 \kategoria{Wikieł/Z4.10h}
-\zadStart{Zadanie z Wikieł Z 4.10 h) moja wersja nr 1}
-%[a]:[2,3,4,5,6,7,8,9,10]
-%[b]:[2,3,4,5,6,7,8,9,10]
+\zadStart{Zadanie z Wikieł Z 4.10 h) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8]
+%[b]:[2,3,4,5,6,7,8]
 %[a]=random.randint(2,18)
 %[b]=random.randint(2,18) 
 %[ab]=[a]*[b]
 Obliczyć granicę funkcji $\lim_{x \to \infty}[a]x(ln(x+[b])-lnx)$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\lim_{x \to \infty}[a]x(ln(x+[b])-lnx)$$
 $$\lim_{x \to \infty}\frac{ln(x+[b])-lnx}{\frac{1}{[a]x}}$$
 Używamy reguły de l'Hospitala
 $$\lim_{x \to \infty}\frac{\frac{1}{x+[b]}-\frac{1}{x}}{-\frac{1}{[a]x^{2}}}$$
 $$\lim_{x \to \infty}\frac{\frac{-[b]}{(x+[b])x}}{-\frac{1}{[a]x^{2}}}$$
 $$\lim_{x \to \infty}\frac{[ab]x}{x+[b]}$$
-$$\lim_{x \to \infty}\frac{x[ab]}{x(1+\frac{[b]}{x})}=\frac{[ab]}{1}=[ab]$$
+$$\lim_{x \to \infty}\frac{[ab]x}{x(1+\frac{[b]}{x})}=\frac{[ab]}{1}=[ab]$$
 \rozwStop
 \odpStart
 $$[ab]$$

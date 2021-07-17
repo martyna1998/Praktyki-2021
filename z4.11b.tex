@@ -40,10 +40,13 @@
 %[b]=random.randint(2,10)
 Obliczyć granice funkcji $\lim_{x \to \infty}\log_{2}\bigg|\frac{x+[a]}{x^{2}+[b]}\bigg|$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\lim_{x \to \infty}\log_{2}\bigg|\frac{x+[a]}{x^{2}+[b]}\bigg|$$
 $$\lim_{x \to \infty}\log_{2}\bigg(\frac{x+[a]}{x^{2}+[b]}\bigg)\text{, ponieważ }\frac{x+[a]}{x^{2}+[b]}\text{ jest zawsze dodatnie gdy }x\to\infty$$
-$$\lim_{x \to \infty}\log_{2}\bigg(\frac{x+[a]}{x^{2}+[b]}\bigg)=-\infty\text{, ponieważ }\lim_{x \to \infty}\bigg(\frac{x+[a]}{x^{2}+[b]}\bigg)=0$$
+Podstawmy $$u=\frac{x+[a]}{x^{2}+[b]}$$
+$$\lim_{x \to \infty}u=0$$
+czyli
+$$\lim_{u \to 0^{+}}\log_{2}(u)=-\infty$$
 \odpStart
 $-\infty$
 \odpStop

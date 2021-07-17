@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Laura Mieczkowska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,42 +32,41 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z5.23v}
+\zadStart{Zadanie z Wikieł Z 5.23 v) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]=[a]-1
+%[2a]=[a]+1
+%[l]=[a]-[2a]
+%[2akw]=[2a]**2
+%[d]=[2akw]*[l]
+Znaleźć ekstrema lokalne funkcji $y=\frac{e^{[a]x}}{x}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
-\rozwStop
+\rozwStart{Laura Mieczkowska}{}
+$$y=\frac{e^{[a]x}}{x}$$
+$$y'=\frac{(e^{[a]x})'x-e^{[a]x}(x)'}{x^2}=\frac{[a]e^{[a]x}\cdot x-e^{[a]x}}{x^2}=\frac{e^{[a]x}([a]x-1)}{x^2}$$
+$$\frac{e^{[a]x}([a]x-1)}{x^2}=0 \Rightarrow e^{[a]x}([a]x-1)=0 \Rightarrow [a]x-1=0 \Rightarrow x=\frac{1}{[a]}$$
+Otrzymujemy punkt, w którym może znajdować się ekstremum. Ten punkt (wraz z dziedziną funkcji) wyznacza dwa przedziały, w których należy zbadać znak funkcji:
+\\\\1. $\big(0;\frac{1}{[a]}\big)$
+$$y'\bigg(\frac{1}{[2a]}\bigg)=\frac{e^{\frac{[a]}{[2a]}}(\frac{[a]}{[2a]}-1)}{\big(\frac{1}{[2a]}\big)^2}=[2akw]\bigg(e^{\frac{[a]}{[2a]}}\cdot\frac{[l]}{[2a]}\bigg)=-[2a]e^{\frac{[a]}{[2a]}}$$
+$-[2a]e^{\frac{[a]}{[2a]}}$ ma ujemny znak, więc funkcja na tym przedziale jest malejąca.
+\\\\2. $\big(\frac{1}{[a]};\infty\big)$
+$$y'(1)=\frac{e^{[a]\cdot 1}([a]\cdot1-1)}{1^2}=[b]e^{[a]}$$
+$[b]e^{[a]}$ ma dodatni znak, więc funkcja na tym przedziale jest rosnąca.
+\\Podsumowując, funkcja na przedziale $(0;\frac{1}{[a]})$ maleje, a następnie rośnie na przedziale $(\frac{1}{[a]};\infty)$, wobec tego w punkcie $x=\frac{1}{[a]}$ istnieje minimum lokalne.
+$$y\bigg(\frac{1}{[a]}\bigg)=\frac{e^{[a]\cdot\frac{1}{[a]}}}{\frac{1}{[a]}}=\frac{e}{\frac{1}{[a]}}=[a]e$$
+
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$y_{min}=y(\frac{1}{[a]})=[a]e$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $y_{min}=y(\frac{1}{[a]})=-[a]e$\\
+B. $y_{min}=y(\frac{1}{[a]})=[a]e$ \\
+C. $y_{min}=y(-\frac{1}{[a]})=-[a]e$ \\
+D. $y_{min}=y(\frac{1}{[a]})=e$ 
 \testStop
 \kluczStart
-A
+B
 \kluczStop
 
 

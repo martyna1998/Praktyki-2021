@@ -32,39 +32,46 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z1.100}
+\zadStart{Zadanie z Wikieł Z 1.100) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
+%[h1]=[b]-(2*[a]*[c])
+%[h2]=-1*[h1]
+%[dziel]=math.gcd([h2],[a])
+%[h3]=int([h2]/[dziel])
+%[a3]=int([a]/[dziel])
+%[a]!=0 and [h1]<0 and [a3]!=1
+Dana jest funkcja $f(x)=\log([a]x^2-[b]x+[d])$. Znaleźć takie wartości $h$, aby $f([c]-h)<f([c])$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\log([a]x^2-[b]x+[d])$$
+$$f([c]-h)<f([c])$$
+$$\log([a]([c]-h)^2-[b]([c]-h)+[d])<\log([a]\cdot[c]^2-[b]\cdot [c]+[d])$$
+$$\log([a]([c]^2-2\cdot[c]\cdot h +h^2)-[b]\cdot[c]+[b]h+[d])<\log([a]\cdot[c]^2-[b]\cdot [c]+[d])$$
+$$\log([a]\cdot[c]^2-2\cdot[a]\cdot[c]\cdot h +[a]h^2-[b]\cdot[c]+[b]h+[d])<\log([a]\cdot[c]^2-[b]\cdot [c]+[d])$$
+$$[a]\cdot[c]^2-2\cdot[a]\cdot[c]\cdot h +[a]h^2-[b]\cdot[c]+[b]h+[d]<[a]\cdot[c]^2-[b]\cdot [c]+[d]$$
+$$-2\cdot[a]\cdot[c]\cdot h +[a]h^2+[b]h<0$$
+$$[h1] h +[a]h^2<0$$
+$$h([h1] +[a]h)<0$$
+Znajdźmy miejscą zerowe:
+$$h([h1] +[a]h)=0$$
+$$h=0 \lor  h=\frac{[h3]}{[a3]}$$
+więc
+$$h \in \left(0,\frac{[h3]}{[a3]}\right)$$
 \rozwStop
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+$h \in \left(0,\frac{[h3]}{[a3]}\right)$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A. $h \in \left(0,\frac{[h3]}{[a3]}\right)$\\
+B. $h \in \left(0, [h3]\right)$\\
+C. $h \in \left(0,[a3] \right)$\\
+D. $h \in \left(0,1 \right)$\\
+E. $h \in \left(0,\infty\right)$\\
+F. $h \in \mathbb{R}$\\
 \testStop
 \kluczStart
 A

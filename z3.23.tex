@@ -32,42 +32,41 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.36j}
-\zadStart{Zadanie z Wikieł Z 1.36 j) moja wersja nr [nrWersji]}
-%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[c]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
-%[delta]=[b]*[b]+4*[a]*[c]
-%[sdelta]=pow([delta],1/2)
-%[sdelta1]=int([sdelta].real)
-%[t2]=((-1)*[b]+[sdelta])/(2*[a])
-%[x2]=pow([t2],1/2)
-%[t21]=int([t2].real)
-%[x21]=int([x2].real)
-%[delta]>0 and [sdelta].is_integer()==True and [t2].is_integer()==True and [x2].is_integer()==True and [a]!=[x21]
-Rozwiązać równanie. $[a]x^{4}+[b]x^{2}-[c]=0$
+\kategoria{Wikieł/Z3.23}
+\zadStart{Zadanie z Wikieł Z 3.23 moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[2a]=2*[a]
+%
+Wyznaczyć ekstrema funkcji $f(x)=[a]x^2+[a]x^3+[a]x^4+\dots$, będącej sumą nieskończonego ciągu geometrycznego.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-Podstawiamy $t=x^{2}$\\ Dziedzina: $t\in[0,\infty)$
-$$[a]t^{2}+[b]t-[c]=0$$
-$$\Delta=[b]^{2}+4\cdot[a]\cdot[c]=[delta]$$
-$$\sqrt{\Delta}=\sqrt{[delta]}=[sdelta1]$$
-$$t_{1}=\frac{-[b]-[sdelta1]}{2\cdot[a]}<0\Rightarrow\notin[0,\infty),t_{2}=\frac{-[b]+[sdelta1]}{2\cdot[a]}=[t21]\in[0,\infty)$$
-$$x^{2}=[t21]$$
-$$x=[x21]\vee x=-[x21]$$
-$$x\in\{-[x21],[x21]\}$$
+\rozwStart{Adrianna Stobiecka}{}
+Funkcja jest sumą nieskończonego ciągu geometrycznego o pierwszym wyrazie $a_1=[a]x^2$ oraz $q=x$. Zakładamy $|q|<1$. 
+$$|q|<1\qquad\Leftrightarrow\qquad|x|<1\qquad\Leftrightarrow\qquad x<1~~\land~~ x>-1\qquad\Leftrightarrow\qquad x\in(-1,1)$$
+Mamy zatem założenie, że $x\in(-1,1)$. Następnie obliczamy sumę ciągu. Mamy zatem
+$$f(x)=\frac{[a]x^2}{1-x}.$$
+Przechodzimy do obliczena pochodnej funkcji $f(x)$ oraz znalezienia pierwiastków funkcji $f'(x)$.
+$$f'(x)=\frac{2\cdot[a]x(1-x)-[a]x^2\cdot(-1)}{(1-x)^2}=\frac{[2a]x-[2a]x^2+[a]x^2}{(1-x)^2}=\frac{[2a]x-[a]x^2}{(1-x)^2}$$
+$$f'(x)=0\Leftrightarrow\frac{[2a]x-[a]x^2}{(1-x)^2}=0\Leftrightarrow[2a]x-[a]x^2=0\Leftrightarrow-[a]x(x-2)=0$$
+Funkcja $-[a]x(x-2)$ jest parabolą z pierwiastkami w punktach $x_1=0$ i $x_2=2$. Zauważamy, że punkt $x_2=2$ nie należy do przedziału $(-1,1)$. Natomiast $x_1=0\in(-1,1)$. Obliczmy jeszcze $f(0)$.
+$$f(0)=\frac{[a]\cdot0}{1-0}=0$$
+Otrzymujemy zatem, że funkcja $f(x)=\frac{[a]x^2}{1-x}$ dla $x\in(-1,1)$, osiąga minumum w punkcie $x=0$ równe $f(0)=0$.
 \rozwStop
 \odpStart
-$$x\in\{-[x21],[x21]\}$$
+Minimum w punkcie $x=0$ równe $f(0)=0$
 \odpStop
 \testStart
-A.$x\in\{-[x21],[x21]\}$
-B.$x\in\{[x21]\}$
-C.$x\in\{-[x21]\}$
-D.$x\in\{-[x21],[a]\}$
+A.Minimum w punkcie $x=[a]$ równe $f([a])=\frac{1}{[a]}$\\
+B.Minimum w punkcie $x=[a]$ równe $f([a])=0$\\
+C.Maksimum w punkcie $x=[a]$ równe $f([a])=\frac{1}{[a]}$\\
+D.Minimum w punkcie $x=0$ równe $f(0)=0$\\
+E.Maksimum w punkcie $x=[a]$ równe $f([a])=0$\\
+F.Minimum w punkcie $x=0$ równe $f(0)=[a]$\\
+G.Maksimum w punkcie $x=0$ równe $f(0)=[a]$\\
+H.Maksimum w punkcie $x=0$ równe $f(0)=0$\\
+I.Maksimum w punkcie $x=0$ równe $f(0)=[2a]$
 \testStop
 \kluczStart
-A
+D
 \kluczStop
 
 
