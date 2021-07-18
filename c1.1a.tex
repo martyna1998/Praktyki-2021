@@ -32,32 +32,36 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.34f}
-\zadStart{Zadanie z Wikieł Z 3.34 f) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
-Obliczyć granicę ciągu $$a_n=sin^2\sqrt{([a]n^2+[a]n)}.$$
+\kategoria{Wikieł/C1.1a}
+\zadStart{Zadanie z Wikieł C 1.1a moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40]
+%[aa]=[a]*[a]
+%[a2]=[a]*2
+%[aa2]=[aa]*2
+%[a22]=[a2]*2
+%math.gcd([aa2],3)==1 and math.gcd([a22],7)==1
+Oblicz całke $$\int \sqrt{x}([a]-x^2)^2dx.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
-$$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}$$\\
-Z twierdzenia o trzech ciągach mamy:
-$$ (-1)^2 \leqslant sin^2\sqrt{\pi([a]n^2+[a]n)} \leqslant 1^2$$
-$$\lim_{n\rightarrow \infty}(-1)^2=1$$
-$$\lim_{n\rightarrow \infty}1^2=1$$\\
-Czyli $$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}=1$$
+$$\int \sqrt{x}([a]-x^2)^2dx=\int \sqrt{x}([aa]-[a2]x^2+x^4)dx=$$
+$$=\int[aa]\sqrt{x}-[a2]x^2\sqrt{x}+x^4\sqrt{x}dx=\int[aa]x^{\frac{1}{2}}-[a2]x^2\cdot x^{\frac{1}{2}}+x^4\cdot x^{\frac{1}{2}}dx=$$ 
+$$=\int[aa]x^{\frac{1}{2}}-[a2]x^{\frac{5}{2}}+x^{\frac{9}{2}}dx=[aa]\int x^\frac{1}{2}dx-[a2]\int x^\frac{5}{2}dx+\int x^\frac{9}{2}dx=$$
+$$=[aa]\cdot \frac{2x^{\frac{3}{2}}}{3}-[a2]\cdot \frac{2x^{\frac{7}{2}}}{7}+\frac{2x^{\frac{11}{2}}}{11}=[aa]\cdot \frac{2x\sqrt{x}}{3}-[a2]\cdot \frac{2x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C=$$
+$$= \frac{[aa2]x\sqrt{x}}{3}-\frac{[a22]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$$
 \rozwStop
 \odpStart
-$1$\\
+$\frac{[aa2]x\sqrt{x}}{3}-\frac{[a22]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$\\
 \odpStop
 \testStart
-A.$1$
-B.$\infty$
-C.$-\infty$
-D.$0$
-E.$9$
-F.$e$
-G.$4$
-H.$7$
-I.$-7$
+A.$\frac{[aa2]x\sqrt{x}}{3}-\frac{[a22]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+B.$-\frac{2x^5\sqrt{x}}{11}+C$
+C.$\frac{[aa2]x\sqrt{x}}{3}-2+C$
+D.$\frac{[aa2]x\sqrt{x}}{3}+C$
+E.$\frac{2x^5\sqrt{x}}{11}+C$
+F.$\frac{[a22]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+G.$-\frac{[a22]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+H.$\frac{[aa2]x\sqrt{x}}{3}+\frac{2x^5\sqrt{x}}{11}+C$
+I.$\frac{[aa2]x\sqrt{x}}{3}-\frac{[a22]x^3\sqrt{x}}{7}+C$
 \testStop
 \kluczStart
 A

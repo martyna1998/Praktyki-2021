@@ -32,32 +32,36 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.34f}
-\zadStart{Zadanie z Wikieł Z 3.34 f) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]
-Obliczyć granicę ciągu $$a_n=sin^2\sqrt{([a]n^2+[a]n)}.$$
+\kategoria{Wikieł/C1.7f}
+\zadStart{Zadanie z Wikieł C 1.7f moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[3,4,5,6,7,8,9]
+%[c]:[3,4,5,6,7,8,9]
+%[d]:[3,4,5,6,7,8,9]
+%[b1]=[d]-1
+%[e]=[b]*[b1]
+%math.gcd([a],[b])==1 and math.gcd([a],[e])==1 and [a]<[b]
+Oblicz całke $$\int \frac{[a]}{([b]x-[c])^{[d]}}dx.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
-$$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}$$\\
-Z twierdzenia o trzech ciągach mamy:
-$$ (-1)^2 \leqslant sin^2\sqrt{\pi([a]n^2+[a]n)} \leqslant 1^2$$
-$$\lim_{n\rightarrow \infty}(-1)^2=1$$
-$$\lim_{n\rightarrow \infty}1^2=1$$\\
-Czyli $$\lim_{n\rightarrow \infty}sin^2\sqrt{\pi([a]n^2+[a]n)}=1$$
+Używamy podstawienia:
+$$dx=\frac{1}{t'}xdt,t=[b]x-[c], t=[b]$$
+$$\int \frac{[a]}{[b]t^{[d]}}dt=\frac{[a]}{[b]}\int \frac{1}{t^{[d]}}dt=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b1]t^{[b1]}}\bigg)=$$
+$$=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b1]([b]x-[c])^{[b1]}}\bigg)=-\frac{[a]}{[e]([b]x-[c])^{[b1]}}+C$$
 \rozwStop
 \odpStart
-$1$\\
+$-\frac{[a]}{[e]([b]x-[c])^{[b1]}}+C$\\
 \odpStop
 \testStart
-A.$1$
-B.$\infty$
-C.$-\infty$
-D.$0$
-E.$9$
-F.$e$
-G.$4$
-H.$7$
-I.$-7$
+A.$-\frac{[a]}{[e]([b]x-[c])^{[b1]}}+C$
+B.$-\frac{2x^5\sqrt{x}}{11}+C$
+C.$\frac{[a]x\sqrt{x}}{3}-2+C$
+D.$\frac{[a]x\sqrt{x}}{3}+C$
+E.$\frac{2x^5\sqrt{x}}{11}+C$
+F.$\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+G.$-\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+H.$\frac{[a]x\sqrt{x}}{3}+\frac{2x^5\sqrt{x}}{11}+C$
+I.$\frac{[a]x\sqrt{x}}{3}-\frac{[b]x^3\sqrt{x}}{7}+C$
 \testStop
 \kluczStart
 A
