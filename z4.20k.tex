@@ -32,37 +32,43 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.15a}
-\zadStart{Zadanie z Wikieł Z 4.15 a) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
-%[xo]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-%[xoam]=[xo]-[a]
-%[ad]=2*[a]
-%[ac]=3*[a]
-%[xo]>[a] and [xo]!=[ad] and [xo]!=[ac]
-Zbadać, czy istnieje następująca granica $\lim\limits_{x\to [xo]}\frac{x^{2}-[a]x}{|x|}$. Jeśli tak, to obliczyć ją.
+\kategoria{Wikieł/Z4.20k}
+\zadStart{Zadanie z Wikieł Z 4.20k) moja wersja nr [nrWersji]}
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[d]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[bb]=[b]*[b]
+%[bc]=[b]*[c]
+%math.gcd([b],[c])==1 and math.gcd([bc],4)==1 and math.gcd([bc],9)==1
+Wyznaczyć wartości parametru tak, aby funkcja $
+f(x) = \left\{ \begin{array}{ll}
+\frac{a^{2}arctg([b]x)}{[c]x} & \textrm{dla $x\neq 0$}\\
+$[d]$ & \textrm{dla $x=0$}
+\end{array} \right.
+$ była ciągła.
 \zadStop
 \rozwStart{Justyna Chojecka}{}
-Obliczamy granice jednostronne w punkcie $x_{0}=[xo]$.
-$$\lim\limits_{x\to [xo]^{-}}\frac{x^{2}-[a]x}{|x|}=\lim\limits_{x\to [xo]^{-}}\frac{x(x-[a])}{-x}=\lim\limits_{x\to [xo]^{-}}-(x-[a])=-([xo]-[a])=-[xoam]$$
-$$\lim\limits_{x\to [xo]^{+}}\frac{x^{2}-[a]x}{|x|}=\lim\limits_{x\to [xo]^{+}}\frac{x(x-[a])}{x}=\lim\limits_{x\to [xo]^{+}}x-[a]=[xo]-[a]=[xoam]$$
-Skoro 
-$$\lim\limits_{x\to [xo]^{-}}\frac{x^{2}-[a]x}{|x|}\neq \lim\limits_{x\to [xo]^{+}}\frac{x^{2}-[a]x}{|x|},$$
-to granica $\lim\limits_{x\to [xo]}\frac{x^{2}-[a]x}{|x|}$ nie istnieje.
+Dla dowolnej wartości parametru $a$ funkcja jest ciągła w przedziałach $(-\infty,0)$ i $(0,\infty)$. Jedynym punktem, w którym funkcja mogłaby być nieciągła, jest punkt $x_{0}=0$.\\
+Wartość funkcji w tym punkcie jest równa $f(0)=[d]$.\\
+Korzystając z twierdzenia de l'Hospitala obliczamy następującą granicę:
+$$\lim\limits_{x\to 0}\frac{\sin([b]x)}{[c]x}=\frac{1}{[c]}\lim\limits_{x\to 0}\frac{\sin([b]x)}{x}\overset{l'H}{=}\frac{1}{[c]}\lim\limits_{x\to 0}\frac{[b]\cos([b]x)}{1}=\frac{1}{[c]}\cdot\frac{[b]\cos([b]\cdot 0)}{1}=\frac{[b]}{[c]}.$$
+A zatem
+$$f(0)=\lim\limits_{x\to 0}\frac{\sin([b]x)}{[c]x}\iff a^{2}=\frac{[b]}{[c]} \iff a=-\frac{\sqrt{[b]}}{\sqrt{[c]}}\lor a=\frac{\sqrt{[b]}}{\sqrt{[c]}}$$$$\iff a=-\frac{\sqrt{[bc]}}{[c]}\lor a=\frac{\sqrt{[bc]}}{[c]}.$$
+Stąd dla wartości parametru $a\in\left\{-\frac{\sqrt{[bc]}}{[c]},\frac{\sqrt{[bc]}}{[c]}\right\}$ funkcja jest ciągła dla wszystkich $x\in\mathbb{R}.$
 \rozwStop
 \odpStart
-nie istnieje
+$a\in\left\{-\frac{\sqrt{[bc]}}{[c]},\frac{\sqrt{[bc]}}{[c]}\right\}$
 \odpStop
 \testStart
-A.nie istnieje
-B.0
-C.$[a]$
-D.$-[a]$
-E.$-[xo]$
-F.$[xo]$
-G.$-[ad]$
-H.$-[ac]$
-I.$[ad]$
+A.$a\in\left\{-\frac{\sqrt{[bc]}}{[c]},\frac{\sqrt{[bc]}}{[c]}\right\}$\\
+B.$a=-\frac{\sqrt{[c]}}{[bc]}$\\
+C.$a=\frac{\sqrt{[c]}}{[bc]}$\\
+D.$a=-\frac{\sqrt{[bc]}}{[c]}$\\
+E.$a\in\left\{-\frac{\sqrt{[c]}}{[bc]},\frac{\sqrt{[c]}}{[bc]}\right\}$\\
+F.$a\in\left\{-\frac{\sqrt{[bc]}}{[c]},\frac{\sqrt{[c]}}{[bc]}\right\}$\\
+G.$a\in\{-[c],[c]\}$\\
+H.$a=\frac{\sqrt{[bc]}}{[c]}$\\
+I.$a\in\left\{-\frac{\sqrt{[c]}}{[bc]},\frac{\sqrt{[bc]}}{[c]}\right\}$\\
 \testStop
 \kluczStart
 A
