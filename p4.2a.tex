@@ -34,23 +34,26 @@
 
 \kategoria{Wikieł/P4.2a}
 \zadStart{Zadanie z Wikieł P 4.2 a) moja wersja nr [nrWersji]}
-%[p1]:[4,5,6,7,8,9,10,11,12]
-%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
-%[a]=random.randint(2,10)
-%[e]=random.randint(2,10)
-%[c]=random.randint(1,10)
-%[d]=random.randint(2,10)
-%[b]=random.randint(2,10)
-%[f]=random.randint(1,10)
+%[a]:[2,3,4,5,6]
+%[b]:[2,3,4,5,6]
+%[c]:[2,3,4,5,6]
+%[d]:[2,3,4,5,6]
+%[e]:[2,3,4,5,6]
+%[f]:[2,3,4,5,6]
+%[a]=random.randint(2,15)
+%[e]=random.randint(2,15)
+%[c]=random.randint(1,15)
+%[d]=random.randint(2,15)
+%[b]=random.randint(2,15)
+%[f]=random.randint(1,15)
 %[cpier]=math.sqrt([c])
 %[cpier2]=int([cpier])
 %[ab]=int([a]/[b])
 %[ciper]=[cpier2]*2
-%math.gcd([a],[b])==[b] and math.gcd([c],[ab])==[ab] and [a]>=[b] and [cpier].is_integer()==True and [ab]>1
+%math.gcd([a],[b])==[b] and math.gcd([c],[ab])==[ab] and [a]>=[b] and [cpier].is_integer()==True and [ab]>1 and math.gcd([b],[ciper])==1
 Obliczyć granice funkcji $\displaystyle{\lim_{x \to [c]}} \frac{[a]-[b]\sqrt{x}}{x-[c]}$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Martyna Czarnobaj}
 Korzystając w mianowniku ze wzoru na różnicę kwadratów $a^2-b^2=(a-b)(a+b)$, otrzymujemy:
 $$\displaystyle{\lim_{x \to [c]}} \frac{[a]-[b]\sqrt{x}}{x-[c]}=\big[\frac{0}{0}\big]=\displaystyle{\lim_{x \to [c]}} \frac{-[b](\sqrt{x}-[ab])}{(\sqrt{x}-[cpier2])(\sqrt{x}+[cpier2])}=\displaystyle{\lim_{x \to [c]}} \frac{-[b]}{\sqrt{x}+[cpier2]}=-\frac{[b]}{[ciper]}$$
 \rozwStop

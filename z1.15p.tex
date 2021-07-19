@@ -36,8 +36,6 @@
 \zadStart{Zadanie z Wikieł Z 1.15 p) moja wersja nr [nrWersji]}
 %[a]:[2,3,4,5,6]
 %[b]:[2,3,4,5,6]
-%[a]=random.randint(2,6)
-%[b]=random.randint(1,5)
 %[ab]=[a]*[b]
 %[2a]=2*[a]
 %[2b]=2*[b]
@@ -51,8 +49,8 @@
 %[a]!=[b] and [b]<[ab] and [x1]>[ba1] and [x1]<[b]
 Rozwiązać nierówność: $\big|\frac{x-[b]}{x+[b]}\big|\leq1$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Dziedzina: $x\in\mathbb{R}\symbol{92}\{[b]\}$.
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
+Dziedzina: $x\in\mathbb{R}\symbol{92}\{-[b]\}$.
 Korzystamy z własności wartości bezwzględnej:
 $$\bigg|\frac{x-[b]}{x+[b]}\bigg|=\frac{|x-[b]|}{|x+[b]|}$$
 Rozpatrujemy teraz 3 przypadki, a na końcu weźmiemy sumę ich rozwiązań i wyrzucimy to czego dziedzina nie zawiera.
@@ -62,33 +60,44 @@ $$\frac{-x+[b]}{-x-[b]}\leq1$$
 $$\frac{-x+[b]}{-x-[b]}-1\leq0$$
 $$\frac{-x+[b]+x+[b]}{-x-[b]}\leq0$$
 $$\frac{[2b]}{-x-[b]}\leq0$$
-Biorąc pod uwagę przedział dostajemy przedział:
-$$x\in(-\infty,[b])$$
+$$x\in(-[b],\infty)$$
+Biorąc pod uwagę przedział dostajemy przedział pusty: $x\in\emptyset$.
 \item $ [-[b],[b])\Rightarrow\frac{-x+[b]}{x+[b]}\leq1$
 $$\frac{-x+[b]}{x+[b]}\leq1$$
 $$\frac{-x+[b]}{x+[b]}-1\leq0$$
 $$\frac{-x+[b]-x-[b]}{x+[b]}\leq0$$
 $$\frac{-2x}{x+[b]}\leq0$$
 $$\frac{x}{x+[b]}\geq0$$
-Patrząc na ułamek możemy wywnioskować, że licznik musi być nieujemny natomiast mianownik większy od 0, aby spełnić zadaną nierówność: 
+Musimy rozpatrzeć dwa przypadki:
+\begin {enumerate}
+\item
+Licznik nieujemny i mianownik dodatni:
 $$x\geq0 \wedge x+[b]>0\Rightarrow x\in[0,\infty)$$
-Biorąc pod uwagę przedział dostajemy przedział:
+\item
+Licznik niedodatni i mianownik ujemny
+$$x\leq0 \wedge x+[b]<0\Rightarrow x\in(-\infty,-2)$$
+Po rozpatrzeniu przypadków i przedziału otrzymamy:
 $$x\in[0,[b])$$
+\end{enumerate}
 \item $x\in[[b],\infty)\Rightarrow\frac{x-[b]}{x+[b]}\leq1$
 $$\frac{x-[b]}{x+[b]}-1\leq0$$
 $$\frac{x-[b]-x-[b]}{x+[b]}\leq0$$
 $$\frac{0}{x-[b]}\geq0$$
-$$x\in\emptyset$$
+Jako, że warunek ten jest spełniony dla każdego x z zadanego przedziału, to otrzymujemy ten przedział:
+$$x\in[[b],\infty)$$
 \end{enumerate}
-Podsumowując i włączając wyznaczoną wcześniej przez nas dziedzinę otrzymujemy: $1\cup2\cup3\Rightarrow x\in(-\infty,[b])$.
+Podsumowując i włączając wyznaczoną wcześniej przez nas dziedzinę otrzymujemy: $1\cup2\cup3\Rightarrow x\in[0,\infty)$.
 \rozwStop
 \odpStart
-$x\in(-\infty,[b])$
+$x\in[0,\infty)$
 \odpStop
 \testStart
-A. $x\in(-\infty,[b])$
-B.$x\in([b],\infty)$
+A.$x\in[0,\infty)$
+\\
+B.$x\in[[b],\infty)$
+\\
 C.$x\in\emptyset$
+\\
 D.$x\in(-\infty,-[a])$
 \testStop
 \kluczStart

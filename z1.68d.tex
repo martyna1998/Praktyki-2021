@@ -34,10 +34,10 @@
 
 \kategoria{Wikieł/Z1.68d}
 \zadStart{Zadanie z Wikieł Z 1.68 d) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7]
-%[b]:[2,3,4,5,6,7]
-%[c]:[2,3,4,5,6,7]
-%[r]:[2,3,4,5,6,7]
+%[a]:[2,3,4,5]
+%[b]:[2,3,4,5]
+%[c]:[2,3,4,5]
+%[r]:[2,3,4,5]
 %[a]=random.randint(2,5)
 %[b]=random.randint(2,5)
 %[c]=random.randint(2,5)
@@ -62,9 +62,9 @@
 %[x1]=round([x1l]/[x1m],2)
 %[x2]=round([x2l]/[x2m],2)
 %[delta]>0 and [pierw].is_integer()==True and [x1]!=[b] and [x1]!=[-b] and [x2]!=[b] and [x2]!=[-b] and [a]>[b]
-Rozwiązać równanie: $\frac{x+[a]}{x+[b]}+\frac{x-[a]}{x-[b]}=\frac{[c]x^2-[r]}{x^2-[bkw]}$
+Rozwiązać równanie: $\frac{x+[a]}{x+[b]}-\frac{x-[a]}{x-[b]}=\frac{[c]x^2-[r]}{x^2-[bkw]}$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Zaczynamy od wyznaczania dziedziny:
 \begin{enumerate}
 \item $x+[b]\neq0 \Leftrightarrow x\neq-[b]$
@@ -73,7 +73,7 @@ Zaczynamy od wyznaczania dziedziny:
 \end{enumerate}
 Stąd otrzymujemy dziedzinę $x\in\mathbb{R}\symbol{92}\{-[b],[b]\}$
 Teraz możemy zabrać się za rozwiązywanie równania:
-$$\frac{x+[a]}{x+[b]}+\frac{x-[a]}{x-[b]}=\frac{[c]x^2-[r]}{x^2-[bkw]}$$
+$$\frac{x+[a]}{x+[b]}-\frac{x-[a]}{x-[b]}=\frac{[c]x^2-[r]}{x^2-[bkw]}$$
 $$\frac{(x+[a])(x-[b])-(x+[b])(x-[a])}{x^2-[bkw]}-\frac{[c]x^2-[r]}{x^2-[bkw]}=0$$
 $$\frac{x^2-[b]x+[a]x-[ab]-(x^2-[a]x+[b]x-[ab])-[c]x^2+[r]}{x^2-[bkw]}=0$$
 $$\frac{-[c]x^2+[w]x+[r]}{x^2-[bkw]}=0$$

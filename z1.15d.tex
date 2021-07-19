@@ -47,12 +47,13 @@
 %[cpdpb]=[cpd]+[b]
 %[cpdmb]=[cpd]-[b]
 %[cpdpba]=round([cpdpb]/[a],2)
-%[cpdmba]=round([cpdpb]/[a],2)
-Rozwiązać nierówność $\big||[a]x-[b]|-[c]|\big|\leq[d]$
+%[cpdmba]=round([cpdmb]/[a],2)
+%[cpdpba]!=0 and [cpdmba]!=0
+Rozwiązać nierówność $\big||[a]x-[b]|-[c]\big|\leq[d]$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Rozwiązujemy:
-$$\big||[a]x-[b]|-[c]|\big|\leq[d]$$
+$$\big||[a]x-[b]|-[c]\big|\leq[d]$$
 Jako, że pierwsza wartość bezwględna jest mniejsza/równa to po rozbiciu na przypadki bierzemy ich koniunkcję:
 $$|[a]x-[b]|-[c]\leq[d] \wedge |[a]x-[b]|-[c]\geq-[d]$$
 $$|[a]x-[b]|\leq[cpd] \wedge |[a]x-[b]|\geq[cmd]$$

@@ -47,7 +47,7 @@
 %([a]-[b])==1
 Rozwiązać nierówność: $\frac{[a]}{x+[c]}\leq\frac{[b]}{x-[d]}$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Zaczniemy od wyznaczenia dziedziny. Zauważmy, że nierówność nam się psuje dla x, których mianowniki zerują się, nie chcemy otrzymać przecież dzielenia przez zero. Stąd widzimy, że $x\in\mathbb{R}\symbol{92}\{-[c],[d]\}$. Mając dziedzinę zabieramy się za rozwiązywanie tej nierówności.
 $$\frac{[a]}{x+[c]}\leq\frac{[b]}{x-[d]}$$
 $$\frac{[a]}{x+[c]}-\frac{[b]}{x-[d]}\leq0$$
@@ -60,29 +60,32 @@ Możemy teraz rozwiązać zadanie w sposób standardowy czyli przemnożyc przez 
 \end{itemize}
 Więc rozłożymy sobie naszą nierównośc na dwa przypadki:
 \begin{enumerate}
-\item $(x+[c])(x-[d])>0 \wedge -x-[adbc]\leq0$
-\item  $(x+[c])(x-[d])<0 \wedge -x-[adbc]\geq0$
+\item $(x+[c])(x-[d])>0 \wedge x-[adbc]\leq0$
+\item  $(x+[c])(x-[d])<0 \wedge x-[adbc]\geq0$
 \end{enumerate}
 Rozwiążmy:
 \begin{enumerate}
 \item 
 $$(x+[c])(x-[d])>0\Leftrightarrow x\in(-\infty,-[c])\cup([d],\infty)$$
-$$-x-[adbc]\leq0\Leftrightarrow x\geq-[adbc]$$
-Bierzemy część wspólną rozwiązań i otrzymujemy: $x\in[-[adbc],-[c])\cup([d],\infty)$.
+$$x-[adbc]\leq0\Leftrightarrow x\leq[adbc]$$
+Bierzemy część wspólną rozwiązań i otrzymujemy: $x\in(-\infty,-[c])\cup([d],[adbc]]$.
 \item 
 $$(x+[c])(x-[d])<0\Leftrightarrow x\in(-[c],[d])$$
-$$ -x-[adbc]\geq0\Leftrightarrow  x\leq-[adbc]$$
+$$ x-[adbc]\geq0\Leftrightarrow  x\geq[adbc]$$
 Bierzemy część wspólną rozwiązań i otrzymujemy: $x\in\emptyset$.
 \end{enumerate}
 Teraz sumujemy oba przypadki i dostajemy odpowiedź:
-$$x\in[-[adbc],-[c])\cup([d],\infty)$$
+$$x\in(-\infty,-[c])\cup([d],[adbc]]$$.
 \odpStart
-$x\in[-[adbc],-[c])\cup([d],\infty)$
+$x\in(-\infty,-[c])\cup([d],[adbc]]$
 \odpStop
 \testStart
-A.$x\in[-[adbc],-[c])\cup([d],\infty)$
+A.$x\in(-\infty,-[c])\cup([d],[adbc]]$
+\\
 B.$x\in([b],\infty)$
+\\
 C.$x\in\emptyset$
+\\
 D.$x\in(-\infty,-[a])$
 \testStop
 \kluczStart

@@ -43,21 +43,24 @@
 %[a]>[b] and [c]<[b]
 Rozwiązać równanie: $\frac{(x+[a])(x-[b])}{(x+[c])^2}\leq0$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Zaczniemy od wyznaczenia dziedziny:
 $$(x+[c])^2\neq0\Leftrightarrow x\neq-[c] \Leftrightarrow Df:x\in\mathbb{R}\symbol{92}\{-[c]\}$$
 Jako, że mianownik nie ma wpływu na znak ułamka oraz została dziedzina wyznaczona przez nas, to możemy przystąpić do rozwiązania tej nierówności w postaci:
 $$(x+[a])(x-[b])\leq0$$
 Jak możemy zobaczyć, mamy do czynienia po lewej stronie z funkcją kwadratową w postaci iloczynowej o współczynniku $a=1$ oraz miejscach zerowych $x_1=-[a]$ i $x_2=[b]$. 
-Co oznacza, że nasza parabolka jest "uśmiechnięta" czyli skierowana w górę. Teraz możemy na podstawie otrzymanych informacji stwierdzić w jakich przedziałach funkcja ta ma wartości $\leq0$. Okazuje się, że są to przedziały, dla których $x\in(-[a],[b])$. Po sprawdzeniu założenia, ostateczną odpowiedzią będzie:  $x\in(-[a],[b])\symbol{92}\{[c]\}$.
+Co oznacza, że nasza parabolka jest "uśmiechnięta" czyli skierowana w górę. Teraz możemy na podstawie otrzymanych informacji stwierdzić w jakich przedziałach funkcja ta ma wartości $\leq0$. Okazuje się, że są to przedziały, dla których $x\in[-[a],[b]]$. Po sprawdzeniu założenia, ostateczną odpowiedzią będzie:  $x\in[-[a],[b]]\symbol{92}\{-[c]\}$.
 \odpStart
-$x\in(-[a],[b])\symbol{92}\{[c]\}$
+$x\in[-[a],[b]]\symbol{92}\{-[c]\}$
 \odpStop
 \testStart
-A.$x\in\{-[a],[b]\}\symbol{92}\{[c]\}$
-B.$x\in([b],\infty)$
+A.$x\in[-[a],[b]]\symbol{92}\{-[c]\}$
+\\
+B.$x\in[[b],\infty)$
+\\
 C.$x\in\emptyset$
-D.$x\in(-\infty,-[a])$
+\\
+D.$x\in(-\infty,-[a]]$
 \testStop
 \kluczStart
 A
