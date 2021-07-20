@@ -45,24 +45,24 @@
 %[d]=random.randint(1,12)
 %[e]=random.randint(2,11)
 %[pierwa]=math.sqrt([a])
-%[ac]=[pierwa]/[c]
-%[ac1]=int([ac]*(-1))
-%[-ac1]=int([ac1]*(-1))
-%[pierwa].is_integer()==True and [ac].is_integer()==True
+%[ae]=[pierwa]/[e]
+%[ae1]=int([ae]*(-1))
+%[-ae1]=int([ae1]*(-1))
+%[pierwa].is_integer()==True and [ae].is_integer()==True
 Obliczyć granice funkcji $\displaystyle{\lim_{x \to \infty}}\bigg(\frac{\sqrt{[a]x^2+[b]x-[c]}}{[d]-[e]x}\bigg)$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Wyciągamy x o najwyższej potędze przed nawias:
-$$\displaystyle{\lim_{x \to \infty}}\bigg(\frac{\sqrt{[a]x^2+[b]x-[c]}}{[d]-[e]x}\bigg)=\displaystyle{\lim_{x \to \infty}}\bigg(\frac{|x|\sqrt{[a]+\frac{[b]}{x}-\frac{[c]}{x^2}}}{x(\frac{[d]}{x}-[e])}\bigg)=\frac{\sqrt{[a]}}{-[c]}=[ac1]$$
+$$\displaystyle{\lim_{x \to \infty}}\bigg(\frac{\sqrt{[a]x^2+[b]x-[c]}}{[d]-[e]x}\bigg)=\displaystyle{\lim_{x \to \infty}}\bigg(\frac{|x|\sqrt{[a]+\frac{[b]}{x}-\frac{[c]}{x^2}}}{x(\frac{[d]}{x}-[e])}\bigg)=\frac{\sqrt{[a]}}{-[e]}=[ae1]$$
 \rozwStop
 \odpStart
-$[ac1]$
+$[ae1]$
 \odpStop
 \testStart
-A.$[ac1]$
+A.$[ae1]$
 B.$-\infty$
 C.$\infty$
-D.$[-ac1]$
+D.$[-ae1]$
 \testStop
 \kluczStart
 A

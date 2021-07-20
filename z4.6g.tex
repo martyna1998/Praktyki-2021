@@ -40,19 +40,20 @@
 %[a]=random.randint(2,6)
 %[b]=random.randint(2,6)
 %[c]=random.randint(1,5)
+%math.gcd([b],[a])==1
 Obliczyć granice funkcji $\displaystyle{\lim_{x \to \infty}}\bigg(\frac{[a]x^3+[b]x^2}{[a]x^2+[c]}-x\bigg)$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Sprowadzamy do wspólnego mianownika:
 $$\displaystyle{\lim_{x \to \infty}}\bigg(\frac{[a]x^3+[b]x^2}{[a]x^2+[c]}-x\bigg)=\displaystyle{\lim_{x \to \infty}}\bigg(\frac{[a]x^3+[b]x^2-[a]x^3-[c]x}{[a]x^2+[c]}\bigg)=\displaystyle{\lim_{x \to \infty}}\bigg(\frac{[b]x^2-[c]x}{[a]x^2+[c]}\bigg)$$
 Wyciągamy x w najwyższej potędze i liczymy:
 $$\displaystyle{\lim_{x \to \infty}}\bigg(\frac{[b]x^2-[c]x}{[a]x^2+[c]}\bigg)=\displaystyle{\lim_{x \to \infty}}\bigg(\frac{x^2([b]-\frac{[c]}{x})}{x^2([a]+\frac{[c]}{x^2})}\bigg)=\frac{[b]}{[a]}$$
 \rozwStop
 \odpStart
-$\frac{[c]}{[a]}$
+$\frac{[b]}{[a]}$
 \odpStop
 \testStart
-A.$\frac{[c]}{[a]}$
+A.$\frac{[b]}{[a]}$
 B.$-\infty$
 C.$0$
 D.$\infty$

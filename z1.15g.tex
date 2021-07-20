@@ -47,13 +47,14 @@
 %[cpdpb]=[cpd]+[b]
 %[cpdmb]=[cpd]-[b]
 %[cpdpba]=round([cpdpb]/[a],2)
-%[cpdmba]=round([cpdpb]/[a],2)
+%[cpdmba]=round([cpdmb]/[a],2)
 %[ba]=round([b]/[a],2)
-Rozwiązać nierówność $\big||[a]x-[b]|-[c]|\big|\geq[d]$
+%[cpdpba]!=0 and [cpdmba]!=0
+Rozwiązać nierówność $\big||[a]x-[b]|-[c]\big|\geq[d]$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Rozwiązujemy:
-$$\big||[a]x-[b]|-[c]|\big|\geq[d]$$
+$$\big||[a]x-[b]|-[c]\big|\geq[d]$$
 Jako, że pierwsza wartość bezwględna jest większa/równa to po rozbiciu na przypadki bierzemy ich sumę:
 $$|[a]x-[b]|-[c]\geq[d] \vee |[a]x-[b]|-[c]\leq-[d]$$
 $$|[a]x-[b]|\geq[cpd] \vee |[a]x-[b]|\leq[cmd]$$
@@ -61,18 +62,18 @@ Teraz liczymy te dwa przypadki. Zauważmy, że:
 $$|[a]x-[b]|\leq[cmd]$$ Ma tylko jedno rozwiązanie: $x=[ba]$\newline
 Teraz rozwiążmy kolejny przypadek:
 $$|[a]x-[b]|\geq[cpd]$$
-$$[a]x-[b]\geq[cpd]\wedge[a]x-[b]\leq-[cpd]$$
-$$[a]x\geq[cpdpb]\wedge[a]x\leq-[cpdmb]$$
-$$x\geq[cpdpba]\wedge x\leq-[cpdmba]$$
-Zatem otrzymujemy zbiór: $x\in(-\infty,-[cpdmba]]\cup[[cpdpba],\infty)$
+$$[a]x-[b]\geq[cpd]\vee[a]x-[b]\leq-[cpd]$$
+$$[a]x\geq[cpdpb]\vee[a]x\leq[cpdmb]$$
+$$x\geq[cpdpba]\vee x\leq[cpdmba]$$
+Zatem otrzymujemy zbiór: $x\in(-\infty,[cpdmba]]\cup[[cpdpba],\infty)$
 Bierzemy sumę przypadków, więc otrzymujemy:
-$x\in(-\infty,-[cpdmba]]\cup[[cpdpba],\infty)\cup\{[ba]\}$
+$x\in(-\infty,[cpdmba]]\cup[[cpdpba],\infty)\cup\{[ba]\}$
 \odpStop
 \testStart
-A.$x\in(-\infty,-[cpdmba]]\cup[[cpdpba],\infty)\cup\{[ba]\}$
+A.$x\in(-\infty,[cpdmba]]\cup[[cpdpba],\infty)\cup\{[ba]\}$
 B.$x\in[[cpdpba],\infty)$
-C.$x\in(-\infty,-[cpdmba]]$
-D.$x\in(-\infty,-[cpdmba]]\cup[[cpdpba],\infty)$
+C.$x\in(-\infty,[cpdmba]]$
+D.$x\in(-\infty,[cpdmba]]\cup[[cpdpba],\infty)$
 \testStop
 \kluczStart
 A
