@@ -32,60 +32,35 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z5.9b}
-\zadStart{Zadanie z Wikieł Z 5.9 b) moja wersja nr [nrWersji]}
-%[x]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[y]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[z]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[a]=random.randint(2,20)
-%[b]=random.randint(2,20)
-%[c]=random.randint(2,20)
-%[a1]=random.randint(2,20)
-%[c]=random.randint(2,20)
-%[c1]=random.randint(2,20)
-%[m]=2*[a]
-%[n]=[a1]+[b]
-%[r]=[n]/[m]
-%[p]=int([r])
-%[s]=(-1)*([a]*[p]*[p])+([b]*[p])+[c]
-%[t]=([a1]*[p])+[s]
-%[r].is_integer()==True and [r]!=0 and [t]>0
-Wyznaczyć równanie stycznej do krzywej $y=f(x)$, wiedząc, że styczna ta jest równoległa do prostej $[a1]x+y-[c1]=0$, jeżeli $f$ wyraża się wzorem:\\
-$f(x)=[c] +[b]x-[a]x^2$
+\kategoria{Wikieł/Z5.19 j}
+\zadStart{Zadanie z Wikieł Z 5.19 j) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]=2*[a]
+%[d]=[b]*[c]
+%[a]!=0
+Oblicz granicę $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x)$.
 \zadStop
-\rozwStart{Katarzyna Filipowicz}{}
-$$
-[a1]x+y-[c1]=0 \quad \Rightarrow \quad y=-[a1]x+[c1]
-$$
-Równanie stycznej do wykresu funkcji $y=f(x)$ w punkcie $P(x_0,f(x_0))$:
-$$
-y-f(x_0)=f'(x_0)(x-x_0)
-$$
-Ponieważ proste są równoległe, to ich współczynnik kierunkowy jest taki sam, a więc: $f'(x_0)=-[a1]$
-$$
-y=-[a1]x+[a1]\cdot x_0+f(x_0)
-$$ $$
-f'(x)=[b]-2\cdot [a]x \quad \Rightarrow \quad f'(x_0)=[b]-[m]x_0=-[a1]
-$$ $$
-[m]x_0=[n]
-$$ $$
-x_0=\frac{[n]}{[m]}=[p]
-$$ $$
-f([p])=[c]+[b]\cdot([p])-[a]\cdot([p])^2=[s]
-$$ $$
-y=-[a1]x+[a1]\cdot[p]+([s])=-[a1]x +[t]
-$$
+\rozwStart{Joanna Świerzbin}{}
+$$\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x)=-[b] \lim_{x \rightarrow \frac{1}{2}} \sin([a]-[c]x)\tg(\pi x)=$$
+$$=-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{\sin([a]-[c]x) \sin(\pi x)}{\cos(\pi x)}$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{\sin([a]-[c]x) \sin(\pi x)}{\cos(\pi x)}=$$
+$$=-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{\cos([a]-[c]x) (-[c]) \sin(\pi x) -\pi \cos(\pi x) \sin([a]-[c]x)}{-\pi \sin(\pi x)}=$$
+$$=-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{[c] \cos([a]-[c]x) \sin(\pi x) }{\pi \sin(\pi x)}-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{\pi \cos(\pi x) \sin([a]-[c]x)}{\pi \sin(\pi x)} = $$
+$$=-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{[c] \cos([a]-[c]x)}{\pi}-[b] \lim_{x \rightarrow \frac{1}{2}} \frac{ \cos(\pi x) \sin([a]-[c]x)}{ \sin(\pi x)} = $$
+$$=-\frac{[b]\cdot[c]}{\pi} -0 = -\frac{[d]}{\pi}$$
 \rozwStop
 \odpStart
-$f(x)=-[a1]x+ [t]$
+$\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  -\frac{[d]}{\pi} $
 \odpStop
 \testStart
-A. $f(x)=-[a1]x+ [t]$\\
-B. $f(x)=[a1]x+ [t]$\\
-C. $f(x)=-[a1]x$\\
-D. $f(x)=-x+ [t]$\\
-E. $f(x)=[a1]x$\\
-F. $f(x)=-[a]x-50$
+A. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  -\frac{[d]}{\pi} $\\
+B. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  -\frac{1}{\pi} $\\
+C. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  \frac{[d]}{\pi} $\\
+D. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  [d] $\\
+E. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  0 $\\
+F. $\lim_{x \rightarrow \frac{1}{2}} [b]\sin([c]x-[a])\tg(\pi x) =  1 $
 \testStop
 \kluczStart
 A
