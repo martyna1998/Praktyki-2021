@@ -40,9 +40,9 @@
 %[b]=[a]*[w]
 %[c]=random.randint([w]+1,30)
 %[c1]=2*[c]
-%[c2]=[c1]*[c1]
+%[c2]=[c]*[c]
 %[d]=([a]-[c1])*([a]-[c1])+4*([b]-[c2])
-%[d]<0
+%[d]<0 and [a]<[c1] and [b]<[c2]
 Rozwiązać nierówność $\sqrt{[a]x+[b]}>x+[c]$
 \zadStop
 \rozwStart{Barbara Bączek}{}
@@ -52,6 +52,7 @@ $$D: x \in [-[w], \infty)$$
 Obie strony nierówności: $\sqrt{[a]x+[b]}>x+[c]$ są nieujemne w dziedzinie.
 $$[a]x+[b]>x^2+ [c1]x + [c2]$$
 $$-x^2 + ([a]-[c1])x +[b]-[c2]>0$$
+$$\Delta=([a]-[c1])\cdot([a]-[c1])+4\cdot([b]-[c2])=[d]$$
 Skoro $\Delta= [d]<0$ oraz współczynnik przy $x^2$ jest ujemny, to powyższa nierówność jest sprzeczna. Więc $x \in \emptyset$. 
 \rozwStop
 \odpStart
