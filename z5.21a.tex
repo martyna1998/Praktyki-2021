@@ -32,60 +32,45 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z5.9b}
-\zadStart{Zadanie z Wikieł Z 5.9 b) moja wersja nr [nrWersji]}
-%[x]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[y]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[z]:[2,3,4,5,6,7,8,9,10,11,12,13]
-%[a]=random.randint(2,20)
-%[b]=random.randint(2,20)
-%[c]=random.randint(2,20)
-%[a1]=random.randint(2,20)
-%[c]=random.randint(2,20)
-%[c1]=random.randint(2,20)
-%[m]=2*[a]
-%[n]=[a1]+[b]
-%[r]=[n]/[m]
-%[p]=int([r])
-%[s]=(-1)*([a]*[p]*[p])+([b]*[p])+[c]
-%[t]=([a1]*[p])+[s]
-%[r].is_integer()==True and [r]!=0 and [t]>0
-Wyznaczyć równanie stycznej do krzywej $y=f(x)$, wiedząc, że styczna ta jest równoległa do prostej $[a1]x+y-[c1]=0$, jeżeli $f$ wyraża się wzorem:\\
-$f(x)=[c] +[b]x-[a]x^2$
+\kategoria{Wikieł/Z5.21 a}
+\zadStart{Zadanie z Wikieł Z 5.21 a) moja wersja nr [nrWersji]}
+%[a]:[4,6,8,10,12,14,18,20,22]
+%[b]=int([a]/2)
+%[a]!=0
+Wyznaczyć przedziały monotoniczności funkcji $f(x)=\frac{[a]}{x}-x^2$.
 \zadStop
-\rozwStart{Katarzyna Filipowicz}{}
-$$
-[a1]x+y-[c1]=0 \quad \Rightarrow \quad y=-[a1]x+[c1]
-$$
-Równanie stycznej do wykresu funkcji $y=f(x)$ w punkcie $P(x_0,f(x_0))$:
-$$
-y-f(x_0)=f'(x_0)(x-x_0)
-$$
-Ponieważ proste są równoległe, to ich współczynnik kierunkowy jest taki sam, a więc: $f'(x_0)=-[a1]$
-$$
-y=-[a1]x+[a1]\cdot x_0+f(x_0)
-$$ $$
-f'(x)=[b]-2\cdot [a]x \quad \Rightarrow \quad f'(x_0)=[b]-[m]x_0=-[a1]
-$$ $$
-[m]x_0=[n]
-$$ $$
-x_0=\frac{[n]}{[m]}=[p]
-$$ $$
-f([p])=[c]+[b]\cdot([p])-[a]\cdot([p])^2=[s]
-$$ $$
-y=-[a1]x+[a1]\cdot[p]+([s])=-[a1]x +[t]
-$$
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=\frac{[a]}{x}-x^2$$
+\\
+$$D_f:x \neq 0 $$
+\\
+$$f'(x)=\left(\frac{[a]}{x}-x^2\right)' = \frac{-[a]}{x^2} -2x = \frac{-[a]-2x^3}{x^2}$$
+\begin{enumerate}
+\item 
+$$\frac{-[a]-2x^3}{x^2}<0$$
+$$-[a]-2x^3<0$$
+$$x^3>-\frac{[a]}{2}$$
+$$x>-\sqrt[3]{[b]} \land x\neq 0$$ 
+$$ x \in ( -\sqrt[3]{[b]},0) \cup (0, \infty) $$
+\item 
+$$\frac{-[a]-2x^3}{x^2}>0$$
+$$-[a]-2x^3>0$$
+$$x^3<-\frac{[a]}{2}$$
+$$x<-\sqrt[3]{[b]} \land x\neq 0$$ 
+$$ x \in (-\infty , -\sqrt[3]{[b]})  $$
+\end{enumerate}
+Funkcja $f$ jest: \\ rosnąca dla $x \in \left(-\infty , -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},0\right) \cup \left(0, \infty \right)$.
 \rozwStop
 \odpStart
-$f(x)=-[a1]x+ [t]$
+$f$ jest: \\ rosnąca dla $x \in \left(-\infty , -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},0\right) \cup \left(0, \infty \right)$.
 \odpStop
 \testStart
-A. $f(x)=-[a1]x+ [t]$\\
-B. $f(x)=[a1]x+ [t]$\\
-C. $f(x)=-[a1]x$\\
-D. $f(x)=-x+ [t]$\\
-E. $f(x)=[a1]x$\\
-F. $f(x)=-[a]x-50$
+A. $f$ jest: \\ rosnąca dla $x \in \left(-\infty , -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},0\right) \cup \left(0, \infty \right)$.\\
+B. $f$ jest: \\ rosnąca dla $x \in \left(-\infty , -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},\infty \right)$.\\
+C. $f$ jest: \\ rosnąca dla $x \in \left(-\infty , \sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( \sqrt[3]{[b]},\infty \right)$.\\
+D. $f$ jest: \\ rosnąca dla $x \in \left(-\infty , -[b] \right)$ \\ malejąca dla $x \in \left( -[b],0\right) \cup \left(0, \infty \right)$.\\
+E. $f$ jest: \\ rosnąca dla $x \in \left(-[b], -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},0\right) \cup \left(0, \infty \right)$.\\
+F. $f$ jest: \\ rosnąca dla $x \in \left(-\infty , -\sqrt[3]{[b]}\right)$ \\ malejąca dla $x \in \left( -\sqrt[3]{[b]},0\right) \cup \left(0, [b] \right)$.
 \testStop
 \kluczStart
 A
