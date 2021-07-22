@@ -39,12 +39,13 @@
 %[c]=[b]*[b]
 %[d]=[b]*[a]
 %math.gcd([a],[b])==1 and [a]<[b]
-Oblicz całke $$\int \frac{[a]}{([b]x+[a])^{2}}dx.$$
+Oblicz całkę $$\int \frac{[a]}{([b]x+[a])^{2}}dx.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
 Używamy podstawienia:
-$$dx=\frac{1}{t'}xdt,t=[b]x+[a], t=[b]$$
-$$\int \frac{[a]}{[b]t^2}dt=\frac{[a]}{[b]}\int \frac{1}{t^2}dt=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{t}\bigg)=$$
+$$dx=\frac{1}{t'}xdt,t=[b]x+[a], t'=[b]$$
+$$\int \frac{[a]}{([b]x+[a])^2}\cdot \frac{1}{[b]}dt=\int \frac{[a]}{[b]([b]x+[a])^2}dt=$$
+$$=\int \frac{[a]}{[b]t^2}dt=\frac{[a]}{[b]}\int \frac{1}{t^2}dt=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{t}\bigg)=$$
 $$=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b]x+[a]}\bigg)=-\frac{[a]}{[c]x+[d]}+C$$
 \rozwStop
 \odpStart

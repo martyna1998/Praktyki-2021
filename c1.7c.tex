@@ -38,12 +38,13 @@
 %[b]:[3,4,5,6,7,8,9,10,11,12,13]
 %[b1]=[b]-1
 %[c]=[a]*[b1]
-Oblicz całke $$\int \frac{1}{(1-[a]x)^{[b]}}dx.$$
+Oblicz całkę $$\int \frac{1}{(1-[a]x)^{[b]}}dx.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
 Używamy podstawienia:
-$$dx=\frac{1}{t'}xdt,t=1-[a]x, t=-[a]$$
-$$\int -\frac{1}{[a]t^{[b]}}dt=-\frac{1}{[a]}\int \frac{1}{t^{[b]}}dt=-\frac{1}{[a]}\cdot \bigg(-\frac{1}{[b1]t^{[b1]}}\bigg)=$$
+$$dx=\frac{1}{t'}xdt,t=1-[a]x, t'=-[a]$$
+$$\int \frac{1}{(1-[a]x)^{[b]}}\cdot \bigg(-\frac{1}{[a]}\bigg)dt=\int -\frac{1}{[a](1-[a]x)^{[b]}}dt=$$
+$$=\int -\frac{1}{[a]t^{[b]}}dt=-\frac{1}{[a]}\int \frac{1}{t^{[b]}}dt=-\frac{1}{[a]}\cdot \bigg(-\frac{1}{[b1]t^{[b1]}}\bigg)=$$
 $$=-\frac{1}{[a]}\cdot \bigg(-\frac{1}{[b1](1-[a]x)^{[b1]}}\bigg)=\frac{1}{[c](1-[a]x)^{[b1]}}+C$$
 \rozwStop
 \odpStart
