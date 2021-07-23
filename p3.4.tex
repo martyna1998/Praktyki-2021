@@ -34,22 +34,24 @@
 
 \kategoria{Wikieł/P3.4}
 \zadStart{Zadanie z Wikieł P 3.4 moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9]
-%[b]:[21,23,24,34,38,45,56,48,59]
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59]
 %[ab]=[b]-[a]
-%[r]=round([ab]/7,1)
-%[a2]=round([a]+[r],1)
-%[a3]=round([a2]+[r],1)
-%[a4]=round([a3]+[r],1)
-%[a5]=round([a4]+[r],1)
-%[a6]=round([a5]+[r],1)
-%[a7]=round([a6]+[r],1)
+%[r]=[ab]/7
+%[cr]=int([r])
+%[a2]=[a]+[cr]
+%[a3]=[a2]+[cr]
+%[a4]=[a3]+[cr]
+%[a5]=[a4]+[cr]
+%[a6]=[a5]+[cr]
+%[a7]=[a6]+[cr]
+%[r].is_integer()==True
 Pomiędzy liczby [a] i [b] wstawić sześć liczb takich, aby wraz z danymi liczbami tworzyły ciąg arytmetyczny.
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
 Z treści zadania wynika, że w szukanym ciągu $a_{1}=[a]$ i $a_{8}=[b]$. Czyli 
 $$a_{1}+7\cdot r = [b]$$ 
-$$r=[r]$$
+$$r=[cr]$$
 Zatem
 $$a_{2}=a_{1}+r=[a2], a_{3}=a_{2}+r=[a3], a_{4}=a_{3}+r=[a4],$$ $$ a_{5}=a_{4}+r=[a5], a_{6}=a_{5}+r=[a6], a_{7}=a_{6}+r=[a7]$$
 czyli otrzymaliśmy $[a],[a2],[a3],[a4],[a5],[a6],[a7],[b]$

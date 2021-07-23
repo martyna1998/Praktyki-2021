@@ -41,12 +41,13 @@
 %[b1]=[d]-1
 %[e]=[b]*[b1]
 %math.gcd([a],[b])==1 and math.gcd([a],[e])==1 and [a]<[b]
-Oblicz całke $$\int \frac{[a]}{([b]x-[c])^{[d]}}dx.$$
+Oblicz całkę $$\int \frac{[a]}{([b]x-[c])^{[d]}}dx.$$
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
 Używamy podstawienia:
-$$dx=\frac{1}{t'}xdt,t=[b]x-[c], t=[b]$$
-$$\int \frac{[a]}{[b]t^{[d]}}dt=\frac{[a]}{[b]}\int \frac{1}{t^{[d]}}dt=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b1]t^{[b1]}}\bigg)=$$
+$$dx=\frac{1}{t'}xdt,t=[b]x-[c], t'=[b]$$
+$$\int \frac{[a]}{([b]x-[c])^{[d]}}\cdot \frac{1}{[b]}dt=\int \frac{[a]}{[b]([b]x-[c])^{[d]}}dt=$$
+$$=\int \frac{[a]}{[b]t^{[d]}}dt=\frac{[a]}{[b]}\int \frac{1}{t^{[d]}}dt=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b1]t^{[b1]}}\bigg)=$$
 $$=\frac{[a]}{[b]}\cdot \bigg(-\frac{1}{[b1]([b]x-[c])^{[b1]}}\bigg)=-\frac{[a]}{[e]([b]x-[c])^{[b1]}}+C$$
 \rozwStop
 \odpStart
