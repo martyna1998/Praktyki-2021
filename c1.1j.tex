@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/C1.1j}
+\zadStart{Zadanie z Wikieł C 1.1 j) moja wersja nr [nrWersji]}
+%[a]:[3,5,7,9,11,13,15,17]
+%[b]:[3,5,7,9,11,13,15,17]
+%[2a]=2*[a]
+%[c]=[a]//2
+Obliczyć całkę $$\int([a]x-[b]\sin{x})dx.$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+$$\int([a]x-[b]\sin{x})dx=\int[a]xdx+\int-[b]\sin{x}dx=[a]\int xdx-[b]\int\sin{x}dx$$
+$$=\frac{[a]}{2}x^2+[b]\cos{x}+C=[c]\frac{1}{2}x^2+[b]\cos{x}+C$$
+\rozwStop
+\odpStart
+$[c]\frac{1}{2}x^2+[b]\cos{x}+C$
+\odpStop
+\testStart
+A.$[c]\frac{1}{2}x^2+[b]\sin{x}+C$\\
+B.$[c]\frac{1}{2}x^2-[b]\cos{x}+C$\\
+C.$[c]\frac{1}{2}x^2-[b]\sin{x}+C$\\
+D.$[c]\frac{1}{2}x^2+[b]\cos{x}+C$\\
+E.$[2a]x^2+[b]\sin{x}+C$\\
+F.$[2a]x^2+[b]\cos{x}+C$\\
+G.$[2a]x^2-[b]\sin{x}+C$\\
+H.$[2a]x^2-[b]\cos{x}+C$\\
+I.$[c]\frac{1}{2}x^2+\frac{1}{[b]}\cos{x}+C$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}
