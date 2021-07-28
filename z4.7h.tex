@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z4.7h}
-\zadStart{Zadanie z Wikieł Z 4.7 h) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 4.7 h) moja wersja nr [nrWersji]}
 %[a]:[2,3,4,5,6,7,8]
 %[b]:[2,3,4,5,6,7,8]
 %[a]=random.randint(2,25)
@@ -42,14 +42,14 @@
 %math.gcd([a],[2b])==1
 Obliczyć granicę funkcji $\lim_{x \to \infty}\frac{[b]}{\sqrt{x}(\sqrt{x}-\sqrt{x-[a]})}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\lim_{x \to \infty}\frac{[b]}{\sqrt{x}(\sqrt{x}-\sqrt{x-[a]})}$$
 $$\lim_{x \to \infty}\frac{[b]}{x-\sqrt{x^{2}-[a]x}}$$
 $$\lim_{x \to \infty}\frac{[b]}{x-\sqrt{x^{2}-[a]x}}\cdot\frac{x+\sqrt{x^{2}-[a]x}}{x+\sqrt{x^{2}-[a]x}}$$
 $$\lim_{x \to \infty}\frac{[b]x+[b]\sqrt{x^{2}-[a]x}}{[a]x}$$
 $$\lim_{x \to \infty}\frac{[b]x+[b]x\sqrt{1-\frac{[a]}{x}}}{[a]x}$$
-$$\lim_{x \to \infty}\frac{x[b](1+\sqrt{1-\frac{[a]}{x}})}{x[a]}$$
-$$\frac{2\cdot[b]}{[a]}=\frac{[2b]}{[a]}$$
+$$\lim_{x \to \infty}\frac{[b]x(1+\sqrt{1-\frac{[a]}{x}})}{[a]x}$$
+$$\frac{[b]\cdot(1+1)}{[a]}=\frac{[2b]}{[a]}$$
 \rozwStop
 \odpStart
 $$\frac{[2b]}{[a]}$$

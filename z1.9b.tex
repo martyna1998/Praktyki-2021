@@ -34,21 +34,18 @@
 
 \kategoria{Wikieł/Z1.9b}
 \zadStart{Zadanie z Wikieł Z 1.9 b) moja wersja nr [nrWersji]}
-%[a]:[2,3,4]
-%[b]:[2,3,4]
-%[a]=random.randint(2,3)
-%[b]=random.randint(3,4)
+%[a]:[2,3,5,7]
 %[2a]=2*[a]
 %[8a]=8*[a]
 %[x]=8+[2a]^3
 
 Uprościć wyrażenie: $(x+\sqrt{[a]})^4-(x-\sqrt{[a]})^4$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Stosujemy wzory skróconego mnożenia (polecam naukę korzystania z trójkąta Pascala, aby nie musieć uczyć się wzorów na pamięć) $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$, $(a-b)^4=a^4-4a^3b+6a^2b^2-4ab^3+b^4$. Zatem: \newline
 $$(x+\sqrt{[a]})^4-(x-\sqrt{[a]})^4=$$
-$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4-\big(x^4-4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2-x(\sqrt{[a]})^3+(\sqrt{[a]})^4\big)=$$
-$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4-x^4+4x^3\cdot\sqrt{[a]}-6x^2\cdot(\sqrt{[a]})^2+x(\sqrt{[a]})^3-(\sqrt{[a]})^4=$$
+$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4-\big(x^4-4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2-4x(\sqrt{[a]})^3+(\sqrt{[a]})^4\big)=$$
+$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4-x^4+4x^3\cdot\sqrt{[a]}-6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3-(\sqrt{[a]})^4=$$
 Teraz musimy tylko uporządkować. To znaczy, że $x^4$ z $x^4$, $x^3$ z $x^3$ etc. dobrym pomysłem kiedy jest tego dużo, jest podkreślanie/zakreślanie kolorem liczb które będziemy łączyć.
 $$=8\sqrt{[a]}x^3+[8a]\sqrt{[a]}x$$
 \odpStop

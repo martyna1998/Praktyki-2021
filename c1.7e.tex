@@ -32,40 +32,37 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.10g}
-\zadStart{Zadanie z Wikieł Z 4.10 g) moja wersja nr [nrWersji]}
-%[a]:[2,3,4]
-%[b]:[2,3,4]
-%[c]:[2,3,4]
-%[a]=random.randint(2,8)
-%[b]=random.randint(2,8)
-%[ab]=[a]+[b]
-%[c]=[ab]
-%[a]!=[b]
-Obliczyć granice funkcji $\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{x^2-[a]}{x^2+[b]}\bigg)^{\frac{x}{[c]}}$
+\kategoria{Wikieł/C1.7e}
+\zadStart{Zadanie z Wikieł C 1.7e moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[3,4,5,6,7,8,9,10,11,12,13]
+%[b1]=[b]-1
+Oblicz całkę $$\int \frac{[a]}{(1+[a]x)^{[b]}}dx.$$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Zapisujemy w ten sposób licznik aby otrzymać mianownik i dodajemy uzupełnienie:
-$$\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{x^2-[a]}{x^2+[b]}\bigg)^{\frac{x}{[c]}}=\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{x^2-[b]+[ab]}{x^2-[b]}\bigg)^{\frac{x}{[c]}}=\displaystyle{\lim_{x \to -\infty}}\bigg(1+\frac{[ab]}{x^2-[b]}\bigg)^{\frac{x}{[c]}}$$
-Teraz stosujemy definicję (drobna uwaga: ta pierwsza potęga, to po prostu odwrotność ułamka):
-$$\displaystyle{\lim_{x \to -\infty}}\bigg[\bigg(1+\frac{[ab]}{x^2-[b]}\bigg)^{\frac{x^2-[b]}{[ab]}}\bigg]^{\frac{x}{[c]}}$$
-Teraz dokładamy do zewnętrznej potęgi nasz ułamek:
-$$\displaystyle{\lim_{x \to -\infty}}\bigg[\bigg(1+\frac{[ab]}{x^2-[b]}\bigg)^{\frac{x^2-[b]}{[ab]}}\bigg]^{\frac{x}{[c]}\cdot\frac{[ab]}{x^2-[b]}}$$
-$$\displaystyle{\lim_{x \to -\infty}}\bigg[\bigg(1+\frac{[ab]}{x^2-[b]}\bigg)^{\frac{x^2-[b]}{[ab]}}\bigg]^{\frac{x}{x^2-[b]}}$$
-Ponieważ:
-$$\displaystyle{\lim_{x \to -\infty}}\frac{x}{x^2-[b]}=0$$
-To (środek się zamienia w e, a zero to ta granica, którą policzyliśmy u góry):
-$$\displaystyle{\lim_{x \to -\infty}}\bigg(\frac{x^2+[a]}{x^2-[b]}\bigg)^{\frac{x}{[c]}}=\displaystyle{\lim_{x \to -\infty}}\bigg[\bigg(1+\frac{[ab]}{x^2-[b]}\bigg)^{\frac{x^2-[b]}{[ab]}}\bigg]^{\frac{x}{x^2-[b]}}=e^0=1$$
+\rozwStart{Aleksandra Pasińska}{}
+Używamy podstawienia:
+$$dx=\frac{1}{t'}xdt,t=1+[a]x, t'=[a]$$
+$$\int \frac{[a]}{(1+[a]x)^{[b]}}\cdot \frac{1}{[a]}dt=\int \frac{[a]}{[a](1+[a]x)^{[b]}}dt=\int \frac{1}{(1+[a]x)^{[b]}}dt=$$
+$$=\int \frac{1}{t^{[b]}}dt=-\frac{1}{[b1]t^{[b1]}}=-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$$
+\rozwStop
 \odpStart
-$1$
+$-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$\\
 \odpStop
 \testStart
-A.$1$
-B.$\infty$
-C.$-\infty$
-D.$0$
+A.$-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$
+B.$-\frac{2x^5\sqrt{x}}{11}+C$
+C.$\frac{[a]x\sqrt{x}}{3}-2+C$
+D.$\frac{[a]x\sqrt{x}}{3}+C$
+E.$\frac{2x^5\sqrt{x}}{11}+C$
+F.$\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+G.$-\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+H.$\frac{[a]x\sqrt{x}}{3}+\frac{2x^5\sqrt{x}}{11}+C$
+I.$\frac{[a]x\sqrt{x}}{3}-\frac{[b]x^3\sqrt{x}}{7}+C$
 \testStop
 \kluczStart
 A
 \kluczStop
+
+
+
 \end{document}

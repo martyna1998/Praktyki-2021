@@ -37,16 +37,11 @@
 %[a]:[2,3,4,5,6,7]
 Obliczyć granice funkcji $\displaystyle{\lim_{x \to \infty}}\big(\sqrt{x^2+[a]}-x\big)$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Wyciągamy x spod pierwiastka pamiętając o zastosowaniu własności:
-$$\displaystyle{\lim_{x \to \infty}}\big(|x|\sqrt{1+\frac{[a]}{x^2}}-x\big)$$
-Jako, że $x \to \infty$ to możemy bezkarnie opuścić wartość bezwględną:
-$$\displaystyle{\lim_{x \to \infty}}\big(x\sqrt{1+\frac{[a]}{x^2}}-x\big)$$
-Wyciągamy x i liczymy:
-$$\displaystyle{\lim_{x \to \infty}}\big(x(\sqrt{1+\frac{[a]}{x^2}}-1)\big)$$
-$$\infty*(\sqrt{1+0}-1)$$
-$$\infty*(1-1)$$
-$$\infty*0=0$$
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
+$$\text{Mnożymy przez sprzężenie: }$$
+$$\displaystyle{\lim_{x \to \infty}}\big(\sqrt{x^2+[a]}-x\cdot\frac{\sqrt{x^2+[a]}+x}{\sqrt{x^2+[a]}+x}\big)$$
+$$\displaystyle{\lim_{x \to \infty}}\big(\frac{x^2+[a]-x^2}{\sqrt{x^2+[a]}+x}\big)$$
+$$\text{x występuje tylko w mianowniku i dąży do nieskończoność, zatem nasza granica równa jest 0.}$$
 \rozwStop
 \odpStart
 $0$

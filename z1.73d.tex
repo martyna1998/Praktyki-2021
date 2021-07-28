@@ -42,7 +42,7 @@
 %[2a]=2*[a]
 %[ba]=[b]/[a]
 %[ba1]=round([ba],2)
-%[bmab]=[b]-[ab]
+%[bmab]=-[b]-[ab]
 %[abmb]=[ab]-[b]
 %[mbmab]=-[bmab]
 %[x1d]=[mbmab]/[2a]
@@ -50,7 +50,7 @@
 %[a]!=[b] and [b]<[ab] and [x1]>[ba1] and [x1]<[b]
 Rozwiązać nierówność: $\big|\frac{[a]x-[b]}{x-[b]}\big|\geq[a]$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Dziedzina: $x\in\mathbb{R}\symbol{92}\{[b]\}$.
 Korzystamy z własności wartości bezwzględnej:
 $$\bigg|\frac{[a]x-[b]}{x-[b]}\bigg|=\frac{|[a]x-[b]|}{|x-[b]|}$$
@@ -90,8 +90,11 @@ $x\in[[x1],[b])\cup([b],\infty)$
 \odpStop
 \testStart
 A. $x\in[[x1],[b])\cup([b],\infty)$
+\\
 B.$x\in([b],\infty)$
+\\
 C.$x\in\emptyset$
+\\
 D.$x\in(-\infty,-[a])$
 \testStop
 \kluczStart

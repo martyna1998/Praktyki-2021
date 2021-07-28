@@ -34,12 +34,8 @@
 
 \kategoria{Wikieł/Z1.70e}
 \zadStart{Zadanie z Wikieł Z 1.70 e) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9]
-%[b]:[2,3,4,5,6,7,8,9]
-%[c]:[2,3,4,5,6,7,8,9]
-%[a]=random.randint(2,43)
-%[b]=random.randint(2,43)
-%[c]=random.randint(2,43)
+%[a]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,31,32,33,34,35,36,37,38,39,40]
+%[b]:[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30,31,32,33,34,35,36,37,38,39,40]
 %[1a]=(-1-[a])
 %[-1a]=(1+[a])
 %[apb]=[a]+[b]
@@ -50,31 +46,34 @@
 %pow([1a],2)==[4apb]
 Rozwiązać nierówność $x\leq[a]-\frac{[b]}{x-1}$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-$$x\leq[a]-\frac{[b]}{x-1}$$
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 założenie: $$x-1\neq0$$
 $$x\neq1$$
 dziedzina:$$x\in \mathbb{R}-\{1\}$$
 rozwiązanie:$$x\leq[a]-\frac{[b]}{x-1}$$
 $$x-[a]+\frac{[b]}{x-1}\leq0$$
 $$\frac{x(x-1)-[a](x-1)+[b]}{x-1}\leq0\Leftrightarrow (x^{2}+([1a])x+[apb])\cdot(x-1)\leq0$$
+Podzielimy rozwiązanie na 2 przypadki:
 $$\textbf{1)}x^{2}+([1a])x+[apb]\geq0 \land (x-1)\leq0 \vee \textbf{2)}x^{2}+([1a])x+[apb]\leq0 \land (x-1)\geq0$$
+Pierwszy przypadek:\\
 \textbf{1)}
 $$\Delta=[delta] \land x\leq1$$
 $$x_{0}=\frac{[-1a]}{2}=[x01]\Rightarrow(x-[x01])^{2}\geq0\Rightarrow x\in \mathbb{R} \land x\leq1 \land x\neq1\Rightarrow x\in(-\infty,1)$$
+Drugi przypadek:\\
 \textbf{2)}
 $$(x-[x01])^{2}\leq0 \land (x-1)\geq0$$
 $$x=[x01] \land x\geq1 \land x\neq1\Rightarrow x=[x01]$$
-$$\textbf{1)}\land\textbf{2)}\Rightarrow x\in(-\infty,1)\cup\{[x01]\}$$
+Suma obu przypadków:
+$$\textbf{1)}\vee\textbf{2)}\Rightarrow x\in(-\infty,1)\cup\{[x01]\}$$
 \rozwStop
 \odpStart
 $$x\in(-\infty,1)\cup\{[x01]\}$$
 \odpStop
 \testStart
-A.$$x\in(-\infty,1)\cup\{[x01]\}$$
-B.$$x\in(-\infty,1)$$
-C.$$x\in(-\infty,-1)\cup\{[x01]\}$$
-D.$$x\in(-\infty,0)\cup\{[c]\}$$
+A.$x\in(-\infty,1)\cup\{[x01]\}$
+B.$x\in(-\infty,1)$
+C.$x\in(-\infty,-1)\cup\{[x01]\}$\\
+D.$x=[x01]$
 \testStop
 \kluczStart
 A

@@ -63,20 +63,26 @@
 %[b]!=[c] and [dbc]>0 and [reszta]!=0 and (pow([dbc],2)-4*[reszta])==0 and [x0]<[x3] 
 Rozwiązać nierówność $\frac{[a]}{(x-[b])(x-[c])}+\frac{[d]}{(x-[c])}+1\leq0$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
-$$\frac{[a]}{(x-[b])(x-[c])}+\frac{[d]}{(x-[c])}+1\leq0$$
-założenie: $$x-[b]\neq0\land x-[c]]\neq0$$
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
+założenie: $$x-[b]\neq0\land x-[c]\neq0$$
 $$x\neq[b]\land x\neq[c]$$
 dziedzina:$$x\in \mathbb{R}-\{[b],[c]\}$$
-rozwiązanie:$$\frac{[a]+[d](x-[b])+(x-[b])(x-[c])}{(x-[b])(x-[c])}\leq0$$
+rozwiązanie:$$\frac{[a]}{(x-[b])(x-[c])}+\frac{[d]}{(x-[c])}+1\leq0$$
+$$\frac{[a]+[d](x-[b])+(x-[b])(x-[c])}{(x-[b])(x-[c])}\leq0$$
 $$\frac{x^{2}+[dbc]x+[reszta]}{x^{2}-[cpb]x+[bc]}\leq0$$
+Podzielimy rozwiązanie na 2 przypadki:
 $$\textbf{1)}x^{2}+[dbc]x+[reszta]\leq0 \land x^{2}-[cpb]x+[bc]\geq0$$ $$\vee$$ $$\textbf{2)}x^{2}+[dbc]x+[reszta]\geq0 \land x^{2}-[cpb]x+[bc]\leq0$$
-$$\Delta_{1}=[dbc]^{2}-4\cdot[reszta]=[delta1] \land \Delta_{2}=[cpb]^{2}-4\cdot [bc]=[delta2]$$
-$$\sqrt{\Delta_{1}}=0 \land \sqrt{\Delta_{2}}=[sdelta22]$$
-$$x_{0}=[x01]\land x_{3}=[x31],x_{4}=[x41]$$
-$$\textbf{1)}(x-([x01]))^{2}\leq0 \land (x-([x31]))(x-([x41]))\geq0$$ $$\vee$$ $$\textbf{2)}(x-([x01]))^{2}\geq0 \land (x-[x31])(x-[x41])\leq0$$
-$$\textbf{1)}x=[x01]\land x\in(-\infty,[x31]]\cup [[x41],\infty)$$ $$\vee$$ $$\textbf{2)}x\in\mathbb{R}\land x\in[[x31],[x41]]$$
-\\$$(x=[x01] \vee x\in[[x31],[x41]])\land\text{dziedzina}$$
+Liczymy delty (dla obu przypadków wynoszą tyle samo ponieważ są to te same wartości po lewej stronie, różni się tylko strona w którą zwrócona jest nierówność)
+$$\Delta_{1}=[dbc]^{2}-4\cdot[reszta]=[delta1], \Delta_{2}=[cpb]^{2}-4\cdot [bc]=[delta2]$$
+$$\sqrt{\Delta_{1}}=0,\sqrt{\Delta_{2}}=[sdelta22]$$
+$$x_{0}=[x01], \text{   }x_{3}=[x31],x_{4}=[x41]$$
+Pierwszy przypadek:
+$$\textbf{1)}(x-([x01]))^{2}\leq0 \land (x-([x31]))(x-([x41]))\geq0$$
+$$x=[x01]\land x\in(-\infty,[x31]]\cup [[x41],\infty)$$
+Drugi przypadek:$$\textbf{2)}(x-([x01]))^{2}\geq0 \land (x-[x31])(x-[x41])\leq0$$
+$$x\in\mathbb{R}\land x\in[[x31],[x41]]$$
+Suma obu przypadków i uwzględnienie dziedziny:
+$$(x=[x01] \vee x\in[[x31],[x41]])\land\text{dziedzina}$$
 $$x\in[[x31],[x41]]\cup \{[x01]\}-\{[b],[c]\}$$
 \rozwStop
 \odpStart

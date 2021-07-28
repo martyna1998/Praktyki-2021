@@ -32,8 +32,8 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z4.13c}
-\zadStart{Zadanie z Wikieł Z 4.13 c) moja wersja nr [nrWersji]}
+\kategoria{Wikieł/Z4.13k}
+\zadStart{Zadanie z Wikieł Z 4.13 k) moja wersja nr [nrWersji]}
 %[a]=random.randint(2,6)
 %[b]:[2,5,6,7,8]
 %[c]:[5,9]
@@ -44,24 +44,25 @@
 %[bxo]=[b]*[xo]
 %[m]=[xo]-[f]
 %[l]=[a]-[bxo]
+%[ld]=-[l]
 %[a]<[bxo] and [c]>[d] and -[l]<[c] and [l]!=-6 and [l]!=-3
 Obliczyć granice jednostronne funkcji $f(x)=\frac{[a]-[b]x}{[c]+([d])^{\frac{[e]}{x-[f]}}}$ w punkcie $x_{0}=[xo]$. 
 \zadStop
 \rozwStart{Justyna Chojecka}{}
 Obliczamy granice jednostronne funkcji $f$ w punkcie $x_{0}=[xo]$.
-$$\lim\limits_{x\to [xo]^{-}}\frac{[a]-[b]x}{[c]+([d])^{\frac{[e]}{x-[f]}}}=\frac{[a]-[b]\cdot[xo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[a]-[bxo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[l]}{[c]+([d])^{\frac{[e]}{[m]^{-}}}}=\frac{[l]}{[c]}$$
+$$\lim\limits_{x\to [xo]^{-}}\frac{[a]-[b]x}{[c]+([d])^{\frac{[e]}{x-[f]}}}=\frac{[a]-[b]\cdot[xo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[a]-[bxo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[l]}{[c]+([d])^{\frac{[e]}{[m]^{-}}}}=-\frac{[ld]}{[c]}$$
 $$\lim\limits_{x\to [xo]^{+}}\frac{[a]-[b]x}{[c]+([d])^{\frac{[e]}{x-[f]}}}=\frac{[a]-[b]\cdot[xo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[a]-[bxo]}{[c]+([d])^{\frac{[e]}{[xo]-[f]}}}=\frac{[l]}{[c]+([d])^{\frac{[e]}{[m]^{+}}}}=0$$
 \rozwStop
 \odpStart
-$\lim\limits_{x\to [xo]^{-}}f(x)=\frac{[l]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=0$
+$\lim\limits_{x\to [xo]^{-}}f(x)=-\frac{[ld]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=0$
 \odpStop
 \testStart
-A.$\lim\limits_{x\to [xo]^{-}}f(x)=\frac{[l]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=0$\\
-B.$\lim\limits_{x\to [xo]^{-}}f(x)=\frac{[l]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=\infty$\\
-C.$\lim\limits_{x\to [xo]^{-}}f(x)=\frac{[l]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=-\infty$\\
-D.$\lim\limits_{x\to [xo]^{-}}f(x)=\infty, \lim\limits_{x\to [xo]^{+}}f(x)=\frac{[l]}{[c]}$\\
-E.$\lim\limits_{x\to [xo]^{-}}f(x)=-\infty, \lim\limits_{x\to [xo]^{+}}f(x)=\frac{[l]}{[c]}$\\
-F.$\lim\limits_{x\to [xo]^{-}}f(x)=0, \lim\limits_{x\to [xo]^{+}}f(x)=\frac{[l]}{[c]}$\\
+A.$\lim\limits_{x\to [xo]^{-}}f(x)=-\frac{[ld]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=0$\\
+B.$\lim\limits_{x\to [xo]^{-}}f(x)=-\frac{[ld]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=\infty$\\
+C.$\lim\limits_{x\to [xo]^{-}}f(x)=-\frac{[ld]}{[c]}, \lim\limits_{x\to [xo]^{+}}f(x)=-\infty$\\
+D.$\lim\limits_{x\to [xo]^{-}}f(x)=\infty, \lim\limits_{x\to [xo]^{+}}f(x)=-\frac{[ld]}{[c]}$\\
+E.$\lim\limits_{x\to [xo]^{-}}f(x)=-\infty, \lim\limits_{x\to [xo]^{+}}f(x)=-\frac{[ld]}{[c]}$\\
+F.$\lim\limits_{x\to [xo]^{-}}f(x)=0, \lim\limits_{x\to [xo]^{+}}f(x)=-\frac{[ld]}{[c]}$\\
 G.$\lim\limits_{x\to [xo]^{-}}f(x)=0, \lim\limits_{x\to [xo]^{+}}f(x)=-\infty$\\
 H.$\lim\limits_{x\to [xo]^{-}}f(x)=-\infty, \lim\limits_{x\to [xo]^{+}}f(x)=0$\\
 I.$\lim\limits_{x\to [xo]^{-}}f(x)=-\infty, \lim\limits_{x\to [xo]^{+}}f(x)=\infty$

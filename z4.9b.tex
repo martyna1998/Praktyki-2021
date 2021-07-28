@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z4.9b}
-\zadStart{Zadanie z Wikieł Z 4.9 b) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 4.9 b) moja wersja nr [nrWersji]}
 %[a]:[2,3,4,5,6,7,8]
 %[b]:[2,3,4,5,6,7,8]
 %[c]:[2,3,4,5,6,7,8]
@@ -47,9 +47,9 @@
 %[c]>[a] and [c]>[b] and [c]>[d] and [c]!=1 and [ca]>2 and [ca].is_integer()==True and math.gcd([b],[c])==1 and math.gcd([d],[c])==1
 Obliczyć granicę funkcji $\lim_{x \to \infty}\bigg(\frac{[a]^{x+2}+[b]^{x}}{[c]^{x}-[d]^{x}}\bigg)$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\lim_{x \to \infty}\bigg(\frac{[a]^{x+2}+[b]^{x}}{[c]^{x}-[d]^{x}}\bigg)$$
-$$\lim_{x \to \infty}\bigg(\frac{[c]^{x}\big(\frac{[a]^{2}[a]^{x}}{[c]^{x}}+\frac{[b]^{x}}{[c]^{x}}\big)}{[c]^{x}\big(1-\frac{[d]^{x}}{[c]^{x}}\big)}\bigg)$$
+$$\lim_{x \to \infty}\bigg(\frac{[c]^{x}\big(\frac{[a]^{2}\cdot[a]^{x}}{[c]^{x}}+\frac{[b]^{x}}{[c]^{x}}\big)}{[c]^{x}\big(1-\frac{[d]^{x}}{[c]^{x}}\big)}\bigg)$$
 $$\lim_{x \to \infty}\bigg(\frac{\frac{[a]^{2}}{[ca1]^{x}}+(\frac{[b]}{[c]})^{x}}{1-(\frac{[d]}{[c]})^{x}}\bigg)$$
 $$\frac{\lim_{x \to \infty}\big(\frac{[a]^{2}}{[ca1]^{x}}+(\frac{[b]}{[c]})^{x}\big)}{\lim_{x \to \infty}\big(1-(\frac{[d]}{[c]})^{x}\big)}$$
 $$\frac{0+0}{1-0}=0$$
@@ -61,7 +61,7 @@ $$0$$
 A.$0$
 B.$[a]$
 C.$-[a]$
-D.$[b]$
+D.$[c]$
 \testStop
 \kluczStart
 A

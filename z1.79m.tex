@@ -33,15 +33,15 @@
 
 
 \kategoria{Wikieł/Z1.79m}
-\zadStart{Zadanie z Wikieł Z 1.79 m) moja wersja nr 1}
-%[a]:[1, 2, 3, 4, 5, 6]
-%[b]:[1, 2, 3, 4, 5, 6]
-%[c]:[1, 2, 3, 4, 5, 6]
-%[d]:[1, 2, 3, 4, 5, 6]
-%[a]=random.randint(2,20)
-%[b]=random.randint(2,20)
-%[c]=random.randint(2,20)
-%[d]=random.randint(2,20)
+\zadStart{Zadanie z Wikieł Z 1.79 m) moja wersja nr [nrWersji]}
+%[a]:[1, 2, 3, 4]
+%[b]:[1, 2, 3, 4]
+%[c]:[1, 2, 3, 4]
+%[d]:[1, 2, 3, 4]
+%[a]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
 %[c2]=[c]*[c]
 %[d2]=[d]*[d]
 %[2cd]=2*[c]*[d]
@@ -55,14 +55,16 @@
 %[b]<[a] and [delta]<0 and [-1-c]<0
 Rozwiązać równanie. $\sqrt{(x-[a])([b]-x)}<[c]x+[d]$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 założenie: $$(x-[a])([b]-x)\geq0$$
 dziedzina:
 $$x\in[[b],[a]]$$
 rozwiązanie:\\podnosimy obustronnie do kwadratu
 $$(x-[a])([b]-x)<[c2]x^{2}+[2cd]x+[d2]$$
 $$[-1-c]x^{2}+([ba2cd])x-[resz]<0$$
-$$\Delta<0\Rightarrow x\in\mathbb{R}$$
+$$\Delta<0$$
+współczynnik przy $x^{2}$ jest ujemny, więc ramiona naszej funkcji są skierowane do dołu, czyli
+$$x\in\mathbb{R}$$
 $$x\in\mathbb{R} \land \text{dziedzina}$$
 $$x\in[[b],[a]]$$
 \rozwStop

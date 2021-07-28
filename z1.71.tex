@@ -44,7 +44,8 @@
 %[d]=random.randint(2,15)
 %[reszta1]=(([b]*[a])+[c])
 %[lreszta1]=[a]+[d]
-%[reszta2]=(([b]*[d])+[c])
+%[reszta2]=((-1)*([b]*[d])+[c])
+%[reszta2+]=(-1)*((-1)*([b]*[d])+[c])
 %[l1]=[reszta1]*[lreszta1]
 %[lreszta1b]=[lreszta1]*[b]
 %[w1]=([reszta2]-[lreszta1b]+[reszta1])
@@ -52,28 +53,28 @@
 Dana jest funkcja $f(x)=\frac{[a]-x}{[b]x+[c]}$. Rozwiązać nierówność.
 $$f(x+[a])\leq f(x-[d])$$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$f(x+[a])\leq f(x-[d])=\frac{[a]-(x+[a])}{[b](x+[a])+[c]}\leq\frac{[a]-(x-[d])}{[b](x-[d])+[c]}$$
-$$\frac{-x}{[b]x+[reszta1]}\leq\frac{[lreszta1]-x}{[b]x-[reszta2]}$$
-założenie:$$[b]x+[reszta1]\neq0 \land [b]x-[reszta2]\neq0$$
-$$x\neq\frac{-[reszta1]}{[b]} \land x\neq\frac{[reszta2]}{[b]}$$
-dziedzina:$$x\in\mathbb{R}-\{\frac{-[reszta1]}{[b]},\frac{[reszta2]}{[b]}\}$$
-rozwiązanie:$$\frac{-x}{[b]x+[reszta1]}\leq\frac{[lreszta1]-x}{[b]x-[reszta2]}$$
-$$\frac{-x([b]x-[reszta2])-([lreszta1]-x)([b]x+[reszta1])}{([b]x+[reszta1])([b]x-[reszta2])}\leq0$$
-$$\frac{[w1]x-[l1]}{([b]x+[reszta1])([b]x-[reszta2])}\leq0$$
-$$\textbf{1)}[w1]x-[l1]\geq0 \land ([b]x+[reszta1])([b]x-[reszta2])\leq0$$ $$\vee$$ $$\textbf{2)}[w1]x-[l1]\leq0 \land ([b]x+[reszta1])([b]x-[reszta2])\geq0$$
-$$\textbf{1)} x\geq\frac{[l1]}{[w1]}\land \frac{[reszta2]}{[b]}\leq x\leq\frac{[reszta1]}{[b]}$$ $$\vee$$
-$$\textbf{2)}x\leq\frac{[l1]}{[w1]}\land \big(x\leq\frac{-[reszta1]}{[b]}\vee x\geq\frac{[reszta2]}{[b]}\big)$$
-$$(\textbf{1)}\vee\textbf{2)})\land\text{dziedzina}\Rightarrow x\in(-\infty,\frac{-[reszta1]}{[b]})\cup(\frac{[reszta2]}{[b]},\frac{[l1]}{[w1]})$$
+$$\frac{-x}{[b]x+[reszta1]}\leq\frac{[lreszta1]-x}{[b]x[reszta2]}$$
+założenie:$$[b]x+[reszta1]\neq0 \land [b]x[reszta2]\neq0$$
+$$x\neq\frac{-[reszta1]}{[b]} \land x\neq\frac{[reszta2+]}{[b]}$$
+dziedzina:$$x\in\mathbb{R}-\{\frac{-[reszta1]}{[b]},\frac{[reszta2+]}{[b]}\}$$
+rozwiązanie:$$\frac{-x}{[b]x+[reszta1]}\leq\frac{[lreszta1]-x}{[b]x[reszta2]}$$
+$$\frac{-x([b]x[reszta2])-([lreszta1]-x)([b]x+[reszta1])}{([b]x+[reszta1])([b]x[reszta2])}\leq0$$
+$$\frac{-[l1]}{([b]x+[reszta1])([b]x[reszta2])}\leq0$$
+$$\Rightarrow$$
+$$([b]x+[reszta1])([b]x[reszta2])\geq0$$
+$$x\in\bigg(-\infty,\frac{-[reszta1]}{[b]}\bigg]\cup\bigg[\frac{[reszta2+]}{[b]},\infty\bigg)\land\text{dziedzina}$$
+$$x\in\bigg(-\infty,\frac{-[reszta1]}{[b]}\bigg)\cup\bigg(\frac{[reszta2+]}{[b]},\infty\bigg)$$
 \rozwStop
 \odpStart
-$$x\in(-\infty,\frac{-[reszta1]}{[b]})\cup(\frac{[reszta2]}{[b]},\frac{[l1]}{[w1]})$$
+$$x\in\bigg(-\infty,\frac{-[reszta1]}{[b]}\bigg)\cup\bigg(\frac{[reszta2+]}{[b]},\infty\bigg)$$
 \odpStop
 \testStart
-A.$$x\in(-\infty,\frac{-[reszta1]}{[b]})\cup(\frac{[reszta2]}{[b]},\frac{[l1]}{[w1]})$$
-B.$$x\in(\frac{[reszta2]}{[b]},\frac{[l1]}{[w1]})$$
-C.$$x\in(-\infty,\frac{-[reszta1]}{[b]})$$
-D.$$x\in(-\infty,\frac{-[reszta1]}{[b]})\cup(\frac{[reszta2]}{[b]},\infty)$$
+A.$$x\in\bigg(-\infty,\frac{-[reszta1]}{[b]}\bigg)\cup\bigg(\frac{[reszta2+]}{[b]},\infty\bigg)$$
+B.$$x\in\bigg(\frac{[reszta2]}{[b]},\infty\bigg)$$
+C.$$x\in\bigg(-\infty,\frac{[reszta2]}{[b]}\bigg)$$
+D.$$x\in\bigg(-\infty,\frac{-[reszta1]}{[b]}\bigg)\cup\bigg\{\frac{[reszta2+]}{[b]}\bigg\}$$
 \testStop
 \kluczStart
 A

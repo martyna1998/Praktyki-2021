@@ -34,17 +34,14 @@
 
 \kategoria{Wikieł/P1.35}
 \zadStart{Zadanie z Wikieł P 1.35) moja wersja nr [nrWersji]}
-%[p1]:[1,4,9,16,25,36,49,64,91,100]
-%[p2]:[2,3,4,5,6,7,8,9,10,11,12]
-%[p3]:[2,3,4,5,6,7,8,9,10,11,12]
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12]
 %[a]=random.randint(1,20)
 %[e]=random.randint(2,10)
 %[c]=random.randint(1,20)
 %[d]=random.randint(1,20)
 %[b]=random.randint(1,20)
 %[f]=random.randint(1,10)
-%[p1p2m]=[p1]-[p2]
-%[p1p3m]=[p1]-[p3]
 %[ab]=[a]*[b]
 %[cd]=[c]*[d]
 %[ac]=[a]+[c]
@@ -62,8 +59,8 @@
 %[a]<[b] and [ab]<[cd] and [ac]>0 and [abcd]>0 and [ab]>0 and [ackw]>[4abcd] and [pierw].is_integer()==True
 Rozwiązać równanie $x^4-[a](x^2-[b])=[c](x^2-[d])$.
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Równanie postaci $ax^4+bx^2+c=0, a\neq0$ nazywamy równaniem dwukwadratowym. Równanie to sprowadza się do równania kwadratowego za pomocą podstawienia $t=x^2$. Zatem stosując to podstawienie do naszego równania, otrzymamy: $$ t^2-[a](t^2-[b])=[c](t-[d])\Leftrightarrow t^2-[ac]t+[abcd]=0$$
+\rozwStart{Pascal Nawrocki}{Martyna Czarnobaj}
+Równanie postaci $ax^4+bx^2+c=0, a\neq0$ nazywamy równaniem dwukwadratowym. Równanie to sprowadza się do równania kwadratowego za pomocą podstawienia $t=x^2$. Zatem stosując to podstawienie do naszego równania, otrzymamy: $$ t^2-[a](t-[b])=[c](t-[d])\Leftrightarrow t^2-[ac]t+[abcd]=0$$
 Wówczas: $\bigtriangleup=[ackw]-[4abcd]\Rightarrow\sqrt{[delta]}=[pierw2]$, stąd mamy, że:
 $$t_1=\frac{[ac]+[pierw2]}{2}=[t11] \text{ oraz } t_2=\frac{[ac]-[pierw2]}{2}=[t22]$$
 Czyli:

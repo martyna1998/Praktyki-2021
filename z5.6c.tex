@@ -40,6 +40,9 @@
 %[m]=random.randint(1,50)
 %[w]=[m]*[a]
 %[k]=[a]-1
+%[dziel]=math.gcd([w],[a])
+%[w1]=int([w]/[dziel])
+%[a1]=int([a]/[dziel])
 Obliczyć pochodną funkcji $f$ oraz określić dziedzinę funkcji $f$ i funkcji pochodnej $f'$.\\
 $f(x)=[m]\sqrt[[a]]{-x}sin(x)$
 \zadStop
@@ -56,15 +59,14 @@ Dziedzina $D_{f'}: ([a]\sqrt[[a]]{-x}) \neq 0 \wedge -x\geq 0 \Rightarrow x < 0 
 $f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{[a](-x)^{\frac{[k]}{[a]}}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
 \odpStop
 \testStart
-A.$f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{[a](-x)^{\frac{[k]}{[a]}}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-B.$f'(x)=\frac{[w] x\cdot cos(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-C.$f'(x)=\frac{-[w]\cdot cos(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-D.$f'(x)=\frac{-[w] x\cdot sin(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-E.$f'(x)=\frac{-[w] x\cdot cos(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-F.$f'(x)=\frac{-[w] x\cdot cos(x)+sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-G.$f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-H$f'(x)=\frac{[w] x\cdot cos(x)+[m]sin(x)}{[a]\sqrt[[a]]{x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$
-I.$f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in [0,\infty), D_{f'}:x \in (0,\infty]$
+A.$f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{[a](-x)^{\frac{[k]}{[a]}}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+B.$f'(x)=\frac{[w] x\cdot cos(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+C.$f'(x)=\frac{-[w]\cdot cos(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+D.$f'(x)=\frac{-[w] x\cdot sin(x)-[m]sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+E.$f'(x)=\frac{-[w] x\cdot cos(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+F.$f'(x)=\frac{-[w] x\cdot cos(x)+sin(x)}{[a]\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+G.$f'(x)=\frac{-[w] x\cdot cos(x)-[m]sin(x)}{\sqrt[[a]]{-x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0)$\\
+H$f'(x)=\frac{[w] x\cdot cos(x)+[m]sin(x)}{[a]\sqrt[[a]]{x}}, D_f:x \in (-\infty,0], D_{f'}:x \in (-\infty,0]$\\
 \testStop
 \kluczStart
 A

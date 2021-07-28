@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Robert Fidytek}
+\author{Mirella Narewska}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,36 +32,40 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.9c}
-\zadStart{Zadanie z Wikieł Z 1.9 c) moja wersja nr [nrWersji]}
-%[a]:[2,3,4]
-%[b]:[2,3,4]
-%[c]:[2,3,4]
-%[a]=random.randint(2,3)
-%[b]=random.randint(2,4)
-%[c]=random.randint(2,3)
-%[cb]=[c]*[b]*[c]
-%[2a]=2*[a]
-%[8a]=8*[a]
-%[x]=8+[2a]^3
-Uprościć wyrażenie: $(x+\sqrt{[a]})^4+[b]x(x+[c])(x-[c])-(x-\sqrt{[a]})^4$
+\kategoria{Wikieł/z1.63e}
+\zadStart{Zadanie z Wikieł z1.63e moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14]
+%[c1]=[b]*[a]
+%[c]=int([c1])
+%[d]=pow([b],1/2)
+ %[d].is_integer()==False
+Rozwiązać nierówność $x^3+[a]x^2-[b]x-[c]<0$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
-Stosujemy wzory skróconego mnożenia (polecam naukę korzystania z trójkąta Pascala, aby nie musieć uczyć się wzorów na pamięć) $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$, $(a-b)^4=a^4-4a^3b+6a^2b^2-4ab^3+b^4$ oraz $(a+b)(a-b)=a^2-b^2$ Zatem: \newline
-$(x+\sqrt{[a]})^4+[b]x(x+[c])(x-[c])-(x-\sqrt{[a]})^4=$
-$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4+[b]x^3-[cb]x-\big(x^4-4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2-x(\sqrt{[a]})^3+(\sqrt{[a]})^4\big)=$$
-$$=x^4+4x^3\cdot\sqrt{[a]}+6x^2\cdot(\sqrt{[a]})^2+4x(\sqrt{[a]})^3+(\sqrt{[a]})^4-x^4+[b]x^3-[cb]x+4x^3\cdot\sqrt{[a]}-6x^2\cdot(\sqrt{[a]})^2+x(\sqrt{[a]})^3-(\sqrt{[a]})^4=$$
-Teraz musimy tylko uporządkować. To znaczy, że $x^4$ z $x^4$, $x^3$ z $x^3$ etc. dobrym pomysłem kiedy jest tego dużo, jest podkreślanie/zakreślanie kolorem liczb które będziemy łączyć.
-$$=\big([b]+8\sqrt{[a]}\big)x^3+\big([8a]\sqrt{[a]}-[cb]\big)x$$
+\rozwStart{Mirella Narewska}{}
+$$x^3+[a]x^2-[b]x-[c]>0$$
+$$x^2(x+[a])-[b](x+[a])>0$$
+$$(x+[a])(x^2-[b])>0$$
+$$(x+[a])(x-\sqrt{[b]})(x+\sqrt{[b]})>0$$
+$$x1=-[a] \vee x2=\sqrt{[b]} \vee x3=-\sqrt{[b]}$$
+$$x \in (-\infty,x1)$$
+\rozwStop
+\odpStart
+$x \in (-\infty,x1)$
 \odpStop
-$=8\sqrt{[a]}x^3+[8a]\sqrt{[a]}x$
 \testStart
-A.$=8\sqrt{[a]}x^3+[8a]\sqrt{[a]}x$
-B.$=8\sqrt{[a]}x^3-[8a]\sqrt{[a]}x$
-C.$x^3+[8a]\sqrt{[a]}x$
-D.$=x^3-[8a]\sqrt{[a]}x$
+A.$x \in (-\infty,x1)$
+\\
+B.$x \in \emptyset$
+\\
+C.$x \in (x2,\infty)$
+\\
+D.$x \in (-\infty,x2)]$
 \testStop
 \kluczStart
 A
 \kluczStop
+
+
+
 \end{document}

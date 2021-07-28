@@ -46,17 +46,22 @@
 %[w]<[a] and [w]>[pomoc] and math.gcd([1ba],[2b])==1
 Rozwiązać równania $\frac{1}{|[a]-x|}=\frac{[b]}{|[b]x-1|}$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
+założenie:
+$$[a]-x\neq0 \land [b]x-1\neq0$$
+$$x\neq[a]\land x\neq\frac{1}{[b]}$$
+dziedzina:$$x\in\mathbb{R}-\{[a],\frac{1}{[b]}\}$$
+rozwiązanie:
 $$\frac{1}{|[a]-x|}=\frac{[b]}{|[b]x-1|}$$
 $$[b]|[a]-x|=|[b]x-1|$$
-$$\text{Liczymy miejsca zerowe: }[a]-x=0\vee[b]x-1=0$$
+$$\text{Liczymy miejsca zerowe wartości bezwzględnych: }[a]-x=0\vee[b]x-1=0$$
 $$x=[a]\vee x=\frac{1}{[b]}$$
 $$\textbf{1)}x\in(-\infty,\frac{1}{[b]})$$
 $$[b]([a]-x)=-[b]x+1$$
 $$[ba]\neq1$$
 $$\textbf{2)}x\in[\frac{1}{[b]},[a])$$
 $$[b]([a]-x)=[b]x-1$$
-$$x=\frac{1+[b]\cdot[a]}{2\cdot[b]}=\frac{1+[ba]}{[2b]}=\frac{[1ba]}{[2b]}$$
+$$x=\frac{1+[b]\cdot[a]}{2\cdot[b]}=\frac{1+[ba]}{[2b]}=\frac{[1ba]}{[2b]}\in\text{dziedziny}$$
 $$\textbf{3)}x\in[[a],\infty)$$
 $$[b](-[a]+x)=[b]x-1$$
 $$[ba]\neq1$$
