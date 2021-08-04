@@ -32,54 +32,32 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z1.73c}
-\zadStart{Zadanie z Wikieł Z 1.73 c) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9]
-%[b]:[2,3,4,5,6,7,8,9]
-%[a]=random.randint(2,17)
-%[b]=random.randint(2,17)
-%[-a]=(-1)*[a]
-%[-ap1]=[-a]+1
-%[ap1]=[a]+1
-%[2b]=2*[b]
-%[2w]=[2b]/[ap1]
-%math.gcd([b],[a])==1 and [2w]<[b] and math.gcd([2b],[ap1])==1
-Rozwiązać nierówność.$\frac{|[a]x-[b]|}{|x-[b]|}\leq1$
+\kategoria{Dymkowska,Beger/C1.4s}
+\zadStart{Zadanie z Dymkowska,Beger C 1.4 s) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+%[2a]=2*[a]
+Obliczyć, całkując przez podstawienie.$$\int\frac{[a]e^{\sqrt{x}}}{\sqrt{x}}dx$$
 \zadStop
 \rozwStart{Jakub Ulrych}{Pascal Nawrocki}
-$$\frac{|[a]x-[b]|}{|x-[b]|}\leq1$$
-założenie: $$x-[b]\neq0$$
-$$x\neq[b]$$
-dziedzina:$$x\in\mathbb{R}-\{[b]\}$$
-rozwiązanie:$$\frac{|[a]x-[b]|}{|x-[b]|}\leq1$$
-$$|[a]x-[b]|\leq|x-[b]|$$
-Wyliczamy miejsca zerowe obu wartości bezwzględnych
-$$[a]x-[b]=0\Rightarrow x=\frac{[b]}{[a]}$$
-$$x-[b]\neq0\Rightarrow x=[b]$$
-Tworzymy przedziały
-$$\textbf{1)}x\in(-\infty,\frac{[b]}{[a]})\textbf{  2)}x\in[\frac{[b]}{[a]},[b])\textbf{  3)}x\in[[b],\infty)$$
-$$\textbf{1)}x\in(-\infty,\frac{[b]}{[a]})$$
-$$-[a]x+[b]\leq-x+[b]$$
-$$[-ap1]x\leq0$$
-$$x\geq0\land x\in(-\infty,\frac{[b]}{[a]})\Rightarrow x\in[0,\frac{[b]}{[a]})$$
-$$\textbf{2)}x\in[\frac{[b]}{[a]},[b])$$
-$$[a]x-[b]\leq-x+[b]$$
-$$x\leq\frac{[2b]}{[ap1]}\land x\in[\frac{[b]}{[a]},[b])\Rightarrow x\in[\frac{[b]}{[a]},\frac{[2b]}{[ap1]}]$$
-$$\textbf{  3)}x\in[[b],\infty)$$
-$$[a]x-[b]\leq x-[b]$$
-$$x\leq0\notin[[b],\infty)\Rightarrow x\in\emptyset$$
-$$\textbf{1)} \vee \textbf{2)} \vee \textbf{3)}\Rightarrow x\in[0,\frac{[2b]}{[ap1]}]$$
+$$\int\frac{[a]e^{\sqrt{x}}}{\sqrt{x}}dx$$
+Podstawiamy $t=\sqrt{x}\Rightarrow dt=\frac{1}{2\sqrt{x}}dx \Rightarrow2dt=\frac{1}{\sqrt{x}}dx$
+$$\int2\cdot[a]e^{t}dt$$
+$$[2a]\int e^{t}dt$$
+$$[2a]e^{t}+C=[2a]e^{\sqrt{x}}+C$$
 \rozwStop
 \odpStart
-$$x\in[0,\frac{[2b]}{[ap1]}]$$
+$$[2a]e^{\sqrt{x}}+C$$
 \odpStop
 \testStart
-A.$$x\in[0,\frac{[2b]}{[ap1]}]$$
-B.$$x\in[\frac{[b]}{[a]},\frac{[2b]}{[ap1]}]$$
-C.$$x\in[0,\infty]$$
-D.$$x\in[0,\frac{[b]}{[a]}]$$
+A.$[2a]e^{\sqrt{x}}+C$
+B.$[a]e^{\sqrt{x}}+C$
+C.$[2a]e^{\sqrt{2x}}+C$
+D.$[2a]e+C$
 \testStop
 \kluczStart
 A
 \kluczStop
+
+
+
 \end{document}
