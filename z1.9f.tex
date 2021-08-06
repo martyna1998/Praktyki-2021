@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -49,13 +35,16 @@
 \kategoria{Wikieł/Z1.9f}
 \zadStart{Zadanie z Wikieł Z 1.9f moja wersja nr [nrWersji]}
 %[p1]:[2,3,4]
-%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p2]:[2,3,5,6,7,8,10]
 %[p3]=random.randint(2,10)
 %[a]=-[p2]*0.25
 %[b]=-int(2*[a])
+%[p0]:[1]
 %[2a]=int(2*[a])
 %[aa]=round([b]-1/[p1],2)
 %[bb]=round(-2/[p1]-[2a]/9,2)
+%[a3]=round(-[a]/3,2)
+%[b]!=[p0]
 
 
 Uprościć wyrażenie $\sqrt[3]{\frac{1}{[p1]}a^{-1}b^{-2}}\div\left[\left(\frac{\sqrt[3]{[p3]b^{-\frac{2}{3}}}}{a^{-2}}\right)^{-[p2]}\right]^{0,25}$
@@ -67,24 +56,20 @@ $$\sqrt[3]{\frac{1}{[p1]}a^{-1}b^{-2}}\div\left[\left(\frac{\sqrt[3]{[p3]b^{-\fr
 
 $$\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{3}}b^{-\frac{2}{3}}\div \left(\frac{\sqrt[3]{[p3]b^{-\frac{2}{3}}}}{a^{-2}}\right)^{[a]}=\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{3}}b^{-\frac{2}{3}}\div \frac{\left(\sqrt[3]{[p3]b^{-\frac{2}{3}}}\right)^{[a]}}{a^{[b]}}=$$
 
-$$=\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{[p1]}}b^{-\frac{2}{[p1]}}\cdot\frac{a^{[b]}}{[p3]^{\frac{[a]}{3}}b^{\frac{[2a]}{9}}}=[p1]^{-\frac{1}{3}}[p3]^{-\frac{[a]}{3}}a^{[aa]}b^{[bb]}$$
-
-
+$$=\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{[p1]}}b^{-\frac{2}{[p1]}}\cdot\frac{a^{[b]}}{[p3]^{\frac{[a]}{3}}b^{\frac{[2a]}{9}}}=[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$$
 \rozwStop
 
 
 \odpStart
-$[p1]^{-\frac{1}{3}}[p3]^{-\frac{[a]}{3}}a^{[aa]}b^{[bb]}$
+$[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$
 \odpStop
 \testStart
-A.$[p1]^{-\frac{1}{3}}[p3]^{-\frac{[a]}{3}}a^{[aa]}b^{[bb]}$
-B.$[p1]a^{[b]}b^{\frac{[a]}{2}}$
-C.$\sqrt{[p2]a^{[b]}b^{\frac{[c]}{2}}}$
-D.$\sqrt{[p2]}a^{[b]}b^{[bb]}$
-E.$b^{[b]}a^{\frac{[b]}{2}}$
-F.$\sqrt{[p1]}a^{[b]}b^{\frac{[2a]}{2}}$
-
-
+A.$[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$\\
+B.$[p1]a^{[b]}b^{\frac{[a]}{2}}$\\
+C.$\sqrt{[p2]a^{[b]}b^{\frac{[p0]}{2}}}$\\
+D.$\sqrt{[p2]}a^{[b]}b^{[bb]}$\\
+E.$b^{[b]}a^{\frac{[p0]}{2}}$\\
+F.$\sqrt{[p1]}a^{[b]}b^{\frac{[p0]}{2}}$\\
 \testStop
 \kluczStart
 A

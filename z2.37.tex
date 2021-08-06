@@ -39,7 +39,7 @@
 %[p4]:[2,3,4,5,6,7,8,9,10]
 %[p5]=random.randint(1,10)
 %[p11]=-[p1]
-%[m]=round([p11]/[p4],2)
+%[m]=round([p1]/[p4],2)
 
 
 Podać wartości parametru $m$, dla których układ równań
@@ -50,23 +50,21 @@ mx [p1]y&=&[p2]\\
 ma rozwiązanie.
 \zadStop
 \rozwStart{Maja Szabłowska}{}
-$$W=\left| \begin{array}{lccr} m & [p1]  \\ 1 & [p4] \end{array}\right| = m\cdot [p4] [p1]\cdot 1=[p4]m [p1] \neq 0$$
+$$W=\left| \begin{array}{lccr} m & [p1]  \\ 1 & [p4] \end{array}\right| = m\cdot [p4] -([p1])\cdot 1=[p4]m+[p11] \neq 0$$
 
-$$[p4]m [p1] \neq 0 \Rightarrow [p4]m\neq [p11] \Rightarrow m\neq [m]$$
+$$[p4]m +[p11] \neq 0 \Rightarrow [p4]m\neq [p1] \Rightarrow m\neq [m]$$
 \rozwStop
 \odpStart
 $m\neq [m]$
 \odpStop
 \testStart
-A.$m\neq [p1]$
-B.$m\neq [p2]$
-C.$m\neq [p4]$
-D.$m\neq [p5]$
-E.$m\neq [p11]$
-F.$m\neq -[p2]$
-G.$m\neq 0$
-H.$m\neq -[p4]$
-I.$m\neq -[p5]$
+A.$m\neq [m]$\\
+B.$m\neq [p1]$\\
+C.$m\neq [p4]$\\
+D.$m\neq [p5]$\\
+E.$m\neq [p11]$\\
+F.$m\neq -[p2]$\\
+G.$m\neq 0$\\
 \testStop
 \kluczStart
 A
