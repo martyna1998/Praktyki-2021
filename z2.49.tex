@@ -49,7 +49,8 @@
 %[dm]=round(math.sqrt([p4]*[p4]+[p5]*[p5]),2)
 %[d]=round([dl]/[dm],2)
 %[dk]=round([d]*[d],2)
-%[dkr]=[dk]-[r]
+%[dkr]=round([dk]-[r],2)
+%[dkr2]=round(-[dk]-[r],2)
 %[dkr]>0
 
 
@@ -70,8 +71,8 @@ $$d=\frac{|[p4]\cdot[p12]+[p5]\cdot(-[p22])+[p6]|}{\sqrt{[p4]^{2}+[p5]^{2}}}=\fr
 
 Aby prosta nie miała punktów wspólnych z okręgiem musi być spełniony warunek $d(S,k)>r.$
 $$[d]>\sqrt{[r]+m^{2}}$$
-$$[dk]>[r]+m^{2}$$
-$$m^{2}<[dkr]$$
+$$[dk]>\big|[r]+m^{2}\big|$$
+$$m^{2}<[dkr]\quad \vee \quad m^{2}>[dkr2]$$
 $$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$$
 \rozwStop
 
@@ -80,14 +81,13 @@ $$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$$
 $m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$
 \odpStop
 \testStart
-A.$m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$
-B.$m=\sqrt{[dkr]}$
-C.$m\in(-\sqrt{[dk]}, \sqrt{[dk]})$
-D.$m\in[-\sqrt{[p12]}, \sqrt{[dkr]}]$
-E.$m\in(-[p4], [p5])$
-F.$m=[p22]$
-G.$m\in\emptyset$
-
+A. $m\in(-\sqrt{[dkr]}, \sqrt{[dkr]})$\\
+B. $m=\sqrt{[dkr]}$\\
+C. $m\in(-\sqrt{[dk]}, \sqrt{[dk]})$\\
+D. $m\in[-[p12], \sqrt{[dkr]}]$\\
+E. $m\in(-[p4], [p5])$\\
+F. $m=[p22]$\\
+G. $m\in\emptyset$
 \testStop
 \kluczStart
 A

@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -61,8 +47,8 @@
 %[d]=math.gcd([b],[dm2])
 %[l]=int([b]/[d])
 %[m]=int([dm2]/[d])
-%[w]=round([l]/[m],2)
-%[m2]<0 
+%[w]=int(round([l]/[m],2))
+%[m2]<0  and [b]!=1 and [b]!=0
 
 
 Podać dla jakieś wartości parametru $m$ prosta $y=[p1]x+m$ jest styczna do okręgu danego równaniem $x^{2}+y^{2}=[p2].$
@@ -87,14 +73,13 @@ $$m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$$
 $m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$
 \odpStop
 \testStart
-A.$m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$
-B.$m_{1}=1, \quad m_{2}=-1$
-C.$m_{1}=-\sqrt{[p1k]}, \quad m_{2}=0$
-D.$m_{1}=[p1], \quad m_{2}=-\sqrt{\frac{[l]}{[m]}}$
-E.$m_{1}=\sqrt{\frac{[a]}{[m]}}, \quad m_{2}=-[p2]$
-F.$m_{1}=[1p1k], \quad m_{2}=-\sqrt{\frac{[l]}{[b]}}$
-G.$m_{1}=\sqrt{[a]}, \quad m_{2}=-\sqrt{[a]}$
-
+A. $m_{1}=\sqrt{[w]}, \quad m_{2}=-\sqrt{[w]}$\\
+B. $m_{1}=1, \quad m_{2}=-1$\\
+C. $m_{1}=-[p1], \quad m_{2}=0$\\
+D. $m_{1}=[p1], \quad m_{2}=-\sqrt{[l]}$\\
+E. $m_{1}=\sqrt{[a]}, \quad m_{2}=-[p2]$\\
+F. $m_{1}=[1p1k], \quad m_{2}=-\sqrt{\frac{1}{[b]}}$\\
+G. $m_{1}=\sqrt{[a]}, \quad m_{2}=-\sqrt{[a]}$
 \testStop
 \kluczStart
 A

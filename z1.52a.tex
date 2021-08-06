@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -62,30 +48,30 @@ Obliczyć iloraz wielomianu $[p1]x^{3}+[p2]x^{2}+[p3]x-[p4] : x + [p5].$
 
 \rozwStart{Maja Szabłowska}{}
 Dzielenie wykonujemy schematem Hornera.
+
 \begin{table}[h!]
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-          & [p1] & [p2]                                       & [p3]                                      & -[p4]                                     \\ \hline
-          &          & -[p5]\cdot[p1]+[p2] & -[p5]\cdot[a]+[p3] & -[p5]\cdot[b]-[p4] \\ \hline
--[p5] & [p1] & [a]                                        & [b]                                       & [c]     \\ \hline                                 
+ & [p1] & [p2]   & [p3]                                      & -[p4]    \\ \hline
+          && $-[p5]\cdot[p1]+[p2]$ & $-[p5]\cdot[a]+[p3]$ & $-[p5]\cdot[b]-[p4]$\\ \hline
+-[p5] & [p1] & [a] & [b] & [c] \\ \hline                
 \end{tabular}
 \end{table}
-$$[p1]x^{3}+[p2]x^{2}+[p3]x-[p4] : x + [p5]= [p1]x^{2}+[a]x+[b] \quad \textrm{reszta:} [c]$$
+
+$$[p1]x^{3}+[p2]x^{2}+[p3]x-[p4] : x + [p5]= [p1]x^{2}+([a]x)+[b] \quad \textrm{reszta:} [c]$$
 \rozwStop
 
 
 \odpStart
-$[p1]x^{2}+[a]x+[b] \quad \textrm{reszta:}[c]$
+$[p1]x^{2}+([a]x)+[b] \quad \textrm{reszta:}[c]$
 \odpStop
 \testStart
-A.$[p1]x^{2}+[a]x+[b] \quad \textrm{reszta:}[c]$
-B.$[p1]x^{2}+[a]x+[b]$
-C.$[p1]x^{2}+[p2]x+[p3]$
-D.$[p3]x$
-E.$[p4]x^{2}-[p3]$
-F.nie da się wykonać takiego dzielenia
-
-
+A.$[p1]x^{2}+([a]x)+[b] \quad \textrm{reszta:}[c]$\\
+B.$[p1]x^{2}+([a]x)+[b]$\\
+C.$[p1]x^{2}+[p2]x+[p3]$\\
+D.$[p3]x$\\
+E.$[p4]x^{2}-[p3]$\\
+F.nie da się wykonać takiego dzielenia\\
 \testStop
 \kluczStart
 A

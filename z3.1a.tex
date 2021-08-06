@@ -40,24 +40,21 @@
 %[2p1]=2*[p1]
 %[r]=[p1]-[p2]+[p3]
 %[2p1p2]=[2p1]-[p2]
-%[n]=[2p1p2]-[p2]
-%[r2]=[r]+[p3]
+%[n]=[2p1p2]+[p2]
+%[r2]=[r]-[p3]
 %[2p1p2]>0 and [n]>0 and [r2]>0
 
 
 Zbadać monotoniczność ciągu $a_{n}=[p1]n^{2}-[p2]n+[p3]$.
-
 \zadStop
 
-\rozwStart{Maja Szabłowska}{}
+\rozwStart{Maja Szabłowska}{Wojciech Przybylski}
 $$a_{n+1}=[p1](n+1)^{2}-[p2](n+1)+[p3]=[p1]n^{2}+[2p1]n+[p1]-[p2]n-[p2]+[p3]=$$
 $$=[p1]n^{2}+[2p1p2]n+[r]$$
 
-$$a_{n+1}-a_{n}=[p1]n^{2}+[2p1p2]n+[r]-[p1]n^{2}-[p2]n+[p3]$$
+$$a_{n+1}-a_{n}=[p1]n^{2}+[2p1p2]n+[r]-[p1]n^{2}+[p2]n-[p3]$$
 
 $$a_{n+1}-a_{n}=[n]n+[r2] >0, \quad n\in\mathbb{N}$$
-
-
 \rozwStop
 
 
@@ -65,14 +62,12 @@ $$a_{n+1}-a_{n}=[n]n+[r2] >0, \quad n\in\mathbb{N}$$
 $a_{n}$ jest rosnący
 \odpStop
 \testStart
-A.$a_{n}$ jest rosnący
-B.$a_{n}$ jest malejący
-C.$a_{n}$ jest stały
-D.$a_{n}$ jest nierosnący
-E.$a_{n}$ jest niemalejący
-F.$a_{n}$ nie jest monotoniczny
-
-
+A. $a_{n}$ jest rosnący\\
+B. $a_{n}$ jest malejący\\
+C. $a_{n}$ jest stały\\
+D. $a_{n}$ jest nierosnący\\
+E. $a_{n}$ jest niemalejący\\
+F. $a_{n}$ nie jest monotoniczny
 \testStop
 \kluczStart
 A

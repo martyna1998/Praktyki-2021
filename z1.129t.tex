@@ -32,39 +32,55 @@
 \maketitle
 
 
-\kategoria{Wikieł/Z3.2b}
-\zadStart{Zadanie z Wikieł Z 3.2b moja wersja nr [nrWersji]}
-%[p1]:[1,2,3,5,6,7,9,10,11,13,14,15]
-%[a2]=1+round([p1]/4,2)
+\kategoria{Wikieł/Z1.129t}
+\zadStart{Zadanie z Wikieł Z 1.129 t) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p3k]=[p3]*[p3]
+%[2p3p1]=2*[p3]*[p1]
+%[p1k]=[p1]*[p1]
+%[xk]=-1-[p1k]
+%[x]=[p2]+[2p3p1]
+%[del]=[x]*[x]-4*[x]*[p3k]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2xk]=2*[xk]
+%[x1]=round((-[x]-[pdel])/[2xk],2)
+%[x2]=round((-[x]+[pdel])/[2xk],2)
+%[del]>0 and [x2]<[x1]
 
-
-Zbadać ograniczoność ciągu $a_{n}=(-1)^{n}+\frac{[p1]}{n^{2}}$.
+Wyznaczyć dziedzinę naturalną funkcji.
+$$f(x)=\log \left([p1]x+\sqrt{[p2]x-x^{2}}-[p3]\right)$$
 \zadStop
 
-\rozwStart{Maja Szabłowska}{Wojciech Przybylski}
-Zauważamy, że kolejne wyrazy ciągu są na przemian różnych znaków.
-Zatem można zapisać:
-$$
-a_{n}=\left\{ \begin{array}{ll}
-1+\frac{[p1]}{n^{2}} & \textrm{dla parzystych $n$}\\
--1+\frac{[p1]}{n^{2}} & \textrm{dla nieparzystych $n$}
-\end{array} \right.
-$$
-Ciąg będzie ograniczony z góry przez największy wyraz dla parzystych $n$ oraz z dołu przez -1, gdyż każdy kolejny wyraz dla nieparzystych $n$ będzie wzrastał.
-$$a_{2}=1+\frac{[p1]}{4}=[a2]$$
+\rozwStart{Maja Szabłowska}{}
+$$[p2]x-x^{2}\geq 0$$
+$$x([p2]-x)\geq 0$$
+$$x\in[0,[p2]]$$
+
+$$[p1]x+\sqrt{[p2]x-x^{2}}-[p3]>0$$
+$$\sqrt{[p2]x-x^{2}}>[p3]-[p1]x$$
+$$[p2]x-x^{2}>([p3]-[p1]x)^{2}$$
+$$[p2]x-x^{2}>[p3k]-[2p3p1]x+[p1k]x^{2} $$
+$$[xk]x^{2}+[x]x-[p3k]>0$$
+$$\Delta=[x]^{2}-4\cdot([xk])\cdot(-[p3k])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$x_{1}=\frac{-[x]-[pdel]}{[2xk]}=[x1], \quad x_{2}=\frac{-[x]+[pdel]}{[2xk]}=[x2]$$
+$$x\in([x2], [x1])$$
+
+Zatem ostatecznie 
+$$x\in([x2],[x1])$$
 \rozwStop
-
-
 \odpStart
-$a_{n}$ ograniczony z góry przez $[a2]$ i z dołu przez -1.
+$x\in([x2],[x1])$
 \odpStop
 \testStart
-A. $a_{n}$ ograniczony z góry przez $[a2]$ i z dołu przez -1.\\
-B. $a_{n}$ ograniczony z góry przez 1 i z dołu przez 0.\\
-C. $a_{n}$ ograniczony z góry przez 5.\\
-D. $a_{n}$ ograniczony z dołu przez 0.\\
-E. $a_{n}$ ograniczony z góry przez 3 i z dołu przez 0.\\
-F. $a_{n}$ ograniczony z góry przez 2 i z dołu przez 0.
+A.$x\in([x2],[x1])$\\
+B.$x\in[e^{[p2]},\infty)$\\
+C.$x\in(-\infty, 0)$\\
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$\\
+E.$x\in[[p1],\infty)$\\
+F.$x\in([p2],\infty)$\\
+G.$x\in\emptyset$
 \testStop
 \kluczStart
 A

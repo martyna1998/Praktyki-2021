@@ -39,18 +39,17 @@
 %[p11]=int([p1]+1)
 %[p21]=int([p2]+1)
 %[a]=round([p11]/[p21],2)
-
+%[E]=round(([p1]/[p2]),2)
+%[p11]!=[p21]
 
 Zbadać ograniczoność ciągu $a_{n}=\frac{[p1]+n^{2}}{[p2]+n^{3}}$.
-
 \zadStop
 
-\rozwStart{Maja Szabłowska}{}
+\rozwStart{Maja Szabłowska}{Wojciech Przybylski}
 Zauważamy, że
 $$\lim_{n\to\infty}\frac{[p1]+n^{2}}{[p2]+n^{3}}=0.$$
 Zatem ciąg jest ograniczy z góry swoim pierwszym wyrazem oraz z dołu 0.
 $$a_{1}=\frac{[p1]+1}{[p2]+1}=\frac{[p11]}{[p21]}=[a]$$
-
 \rozwStop
 
 
@@ -58,14 +57,12 @@ $$a_{1}=\frac{[p1]+1}{[p2]+1}=\frac{[p11]}{[p21]}=[a]$$
 $a_{n}$ ograniczony z góry przez $[a]$ i z dołu przez 0.
 \odpStop
 \testStart
-A.$a_{n}$ ograniczony z góry przez $[a]$ i z dołu przez 0.
-B.$a_{n}$ ograniczony z góry przez 1 i z dołu przez 0.
-C.$a_{n}$ ograniczony z góry przez $[a]$.
-D.$a_{n}$ ograniczony z dołu przez 0.
-E.$a_{n}$ ograniczony z góry przez $\frac{[p11]}{[p2]}$ i z dołu przez 0.
-F.$a_{n}$ ograniczony z góry przez 10 i z dołu przez 0.
-
-
+A. $a_{n}$ ograniczony z góry przez $[a]$ i z dołu przez 0.\\
+B. $a_{n}$ ograniczony z góry przez 1 i z dołu przez 0.\\
+C. $a_{n}$ ograniczony z góry przez $[a]$.\\
+D. $a_{n}$ ograniczony z dołu przez 0.\\
+E. $a_{n}$ ograniczony z góry przez $[E]$ i z dołu przez 0.\\
+F. $a_{n}$ ograniczony z góry przez 10 i z dołu przez 0.
 \testStop
 \kluczStart
 A

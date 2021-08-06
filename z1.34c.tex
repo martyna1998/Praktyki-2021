@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -58,6 +44,8 @@
 %[d2]=math.gcd([p1k],4)
 %[ndel]=int([p1k]/[d2])
 %[m]=int(4/[d2])
+%[q]=round(-[p1k]/-4,2)
+%math.gcd([ndel],[p2])==1
 
 
 Obliczyć współrzędne wierzchołka paraboli będącej wykresem podanej funkcji kwadratowej $f(x)=[p1]x-x^{2}.$
@@ -66,24 +54,20 @@ Obliczyć współrzędne wierzchołka paraboli będącej wykresem podanej funkcj
 \rozwStart{Maja Szabłowska}{}
 $$\Delta=([p1])^{2}-4\cdot(-1)\cdot0=[p1k]$$
 $$p=-\frac{[p1]}{-2}=[np1]$$
-$$q=-\frac{[p1k]}{-4}=\frac{[ndel]}{[m]}$$
-
-
+$$q=-\frac{[p1k]}{-4}=[q]$$
 \rozwStop
 
 
 \odpStart
-$W([np1],-\frac{[ndel]}{[m]})$
+$W([np1],[q])$
 \odpStop
 \testStart
-A.$W([np1],-\frac{[ndel]}{[m]})$
-B.$W([np1],\frac{[ndel]}{[m]})$
+A.$W([np1],[q])$
+B.$W(0,[q])$
 C.$W([np1],0)$
 D.$W([p1],-[p2])$
-E.$W(0,-\frac{[ndel]}{[m]})$
+E.$W(0,-[p1])$
 F.$W([np1],-\frac{[ndel]}{[p2]})$
-
-
 \testStop
 \kluczStart
 A
