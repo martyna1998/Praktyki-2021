@@ -1,0 +1,428 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z4.4f}
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 1}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(7 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(7 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(7 \cdot x)}{sin(7 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(7 \cdot x)}{\frac{sin(7 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(7 \cdot x)}{7 \cdot \frac{sin(7 \cdot x)}{7 \cdot x}} = \frac{1}{7}$$
+\rozwStop
+\odpStart
+$\frac{1}{7}$
+\odpStop
+\testStart
+A.$\frac{1}{7}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{7}$
+F.$7$
+G.$-7$
+H.$tan(7 \cdot x)$
+I.$sin(7 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 2}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(9 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(9 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(9 \cdot x)}{sin(9 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(9 \cdot x)}{\frac{sin(9 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(9 \cdot x)}{9 \cdot \frac{sin(9 \cdot x)}{9 \cdot x}} = \frac{1}{9}$$
+\rozwStop
+\odpStart
+$\frac{1}{9}$
+\odpStop
+\testStart
+A.$\frac{1}{9}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{9}$
+F.$9$
+G.$-9$
+H.$tan(9 \cdot x)$
+I.$sin(9 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 3}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(11 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(11 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(11 \cdot x)}{sin(11 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(11 \cdot x)}{\frac{sin(11 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(11 \cdot x)}{11 \cdot \frac{sin(11 \cdot x)}{11 \cdot x}} = \frac{1}{11}$$
+\rozwStop
+\odpStart
+$\frac{1}{11}$
+\odpStop
+\testStart
+A.$\frac{1}{11}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{11}$
+F.$11$
+G.$-11$
+H.$tan(11 \cdot x)$
+I.$sin(11 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 4}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(13 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(13 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(13 \cdot x)}{sin(13 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(13 \cdot x)}{\frac{sin(13 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(13 \cdot x)}{13 \cdot \frac{sin(13 \cdot x)}{13 \cdot x}} = \frac{1}{13}$$
+\rozwStop
+\odpStart
+$\frac{1}{13}$
+\odpStop
+\testStart
+A.$\frac{1}{13}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{13}$
+F.$13$
+G.$-13$
+H.$tan(13 \cdot x)$
+I.$sin(13 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 5}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(17 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(17 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(17 \cdot x)}{sin(17 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(17 \cdot x)}{\frac{sin(17 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(17 \cdot x)}{17 \cdot \frac{sin(17 \cdot x)}{17 \cdot x}} = \frac{1}{17}$$
+\rozwStop
+\odpStart
+$\frac{1}{17}$
+\odpStop
+\testStart
+A.$\frac{1}{17}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{17}$
+F.$17$
+G.$-17$
+H.$tan(17 \cdot x)$
+I.$sin(17 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 6}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(19 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(19 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(19 \cdot x)}{sin(19 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(19 \cdot x)}{\frac{sin(19 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(19 \cdot x)}{19 \cdot \frac{sin(19 \cdot x)}{19 \cdot x}} = \frac{1}{19}$$
+\rozwStop
+\odpStart
+$\frac{1}{19}$
+\odpStop
+\testStart
+A.$\frac{1}{19}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{19}$
+F.$19$
+G.$-19$
+H.$tan(19 \cdot x)$
+I.$sin(19 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 7}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(21 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(21 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(21 \cdot x)}{sin(21 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(21 \cdot x)}{\frac{sin(21 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(21 \cdot x)}{21 \cdot \frac{sin(21 \cdot x)}{21 \cdot x}} = \frac{1}{21}$$
+\rozwStop
+\odpStart
+$\frac{1}{21}$
+\odpStop
+\testStart
+A.$\frac{1}{21}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{21}$
+F.$21$
+G.$-21$
+H.$tan(21 \cdot x)$
+I.$sin(21 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 8}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(23 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(23 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(23 \cdot x)}{sin(23 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(23 \cdot x)}{\frac{sin(23 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(23 \cdot x)}{23 \cdot \frac{sin(23 \cdot x)}{23 \cdot x}} = \frac{1}{23}$$
+\rozwStop
+\odpStart
+$\frac{1}{23}$
+\odpStop
+\testStart
+A.$\frac{1}{23}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{23}$
+F.$23$
+G.$-23$
+H.$tan(23 \cdot x)$
+I.$sin(23 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 9}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(27 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(27 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(27 \cdot x)}{sin(27 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(27 \cdot x)}{\frac{sin(27 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(27 \cdot x)}{27 \cdot \frac{sin(27 \cdot x)}{27 \cdot x}} = \frac{1}{27}$$
+\rozwStop
+\odpStart
+$\frac{1}{27}$
+\odpStop
+\testStart
+A.$\frac{1}{27}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{27}$
+F.$27$
+G.$-27$
+H.$tan(27 \cdot x)$
+I.$sin(27 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 10}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(29 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(29 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(29 \cdot x)}{sin(29 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(29 \cdot x)}{\frac{sin(29 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(29 \cdot x)}{29 \cdot \frac{sin(29 \cdot x)}{29 \cdot x}} = \frac{1}{29}$$
+\rozwStop
+\odpStart
+$\frac{1}{29}$
+\odpStop
+\testStart
+A.$\frac{1}{29}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{29}$
+F.$29$
+G.$-29$
+H.$tan(29 \cdot x)$
+I.$sin(29 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 11}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(31 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(31 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(31 \cdot x)}{sin(31 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(31 \cdot x)}{\frac{sin(31 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(31 \cdot x)}{31 \cdot \frac{sin(31 \cdot x)}{31 \cdot x}} = \frac{1}{31}$$
+\rozwStop
+\odpStart
+$\frac{1}{31}$
+\odpStop
+\testStart
+A.$\frac{1}{31}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{31}$
+F.$31$
+G.$-31$
+H.$tan(31 \cdot x)$
+I.$sin(31 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 12}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(33 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(33 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(33 \cdot x)}{sin(33 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(33 \cdot x)}{\frac{sin(33 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(33 \cdot x)}{33 \cdot \frac{sin(33 \cdot x)}{33 \cdot x}} = \frac{1}{33}$$
+\rozwStop
+\odpStart
+$\frac{1}{33}$
+\odpStop
+\testStart
+A.$\frac{1}{33}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{33}$
+F.$33$
+G.$-33$
+H.$tan(33 \cdot x)$
+I.$sin(33 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 13}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(37 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(37 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(37 \cdot x)}{sin(37 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(37 \cdot x)}{\frac{sin(37 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(37 \cdot x)}{37 \cdot \frac{sin(37 \cdot x)}{37 \cdot x}} = \frac{1}{37}$$
+\rozwStop
+\odpStart
+$\frac{1}{37}$
+\odpStop
+\testStart
+A.$\frac{1}{37}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{37}$
+F.$37$
+G.$-37$
+H.$tan(37 \cdot x)$
+I.$sin(37 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Przykład z Wikieł Z 4.4f moja wersja nr 14}
+
+
+Obliczyć granicę funkcji $\lim\limits_{x\to\ 0}\frac{x}{tan(39 \cdot x)}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ 0}\frac{x}{tan(39 \cdot x)}=\lim\limits_{x\to\ 0}\frac{x \cdot cos(39 \cdot x)}{sin(39 \cdot x)}=\lim\limits_{x\to\ 0}\frac{cos(39 \cdot x)}{\frac{sin(39 \cdot x)}{x}}=\lim\limits_{x\to\ 0}\frac{cos(39 \cdot x)}{39 \cdot \frac{sin(39 \cdot x)}{39 \cdot x}} = \frac{1}{39}$$
+\rozwStop
+\odpStart
+$\frac{1}{39}$
+\odpStop
+\testStart
+A.$\frac{1}{39}$
+B.$\infty$
+C.$-\infty$
+D.$0$
+E.$-\frac{1}{39}$
+F.$39$
+G.$-39$
+H.$tan(39 \cdot x)$
+I.$sin(39 \cdot x)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

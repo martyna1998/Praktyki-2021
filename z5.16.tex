@@ -1,0 +1,89 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.16}
+\zadStart{Zadanie z Wikieł Z 5.16 moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]=random.randint(3,10)
+%[d]=random.randint(3,10)
+%[e]=random.randint(2,10)
+%[f]=-[b]*[c]
+%[g]=[c]-1
+%[h]=[d]-1
+%[i]=-[b]*[b]*[c]*[g]
+%[j]=[g]-1
+%[k]=[h]-1
+%[l]=[e]*[e]*2
+%[m]=pow([a],[g])*[f]+[e]
+%[a]!=0 and [m]<0 and [a]!=[b] and math.gcd([a],[b])==1 and [i]<0 and [j]>1
+Dana jest funkcja $f(x)=([a]-[b]x)^{[c]}+\sin^{[d]}(x)+\tg([e]x)$.\\ Oblicz $f'(0)+f''(\pi)$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=([a]-[b]x)^{[c]}+\sin^{[d]}(x)+\tg([e]x)$$
+$$f'(x)= \left( ([a]-[b]x)^{[c]}+\sin^{[d]}(x)+\tg([e]x) \right)' = $$ 
+$$= [c]\left([a]-[b]x\right)^{[c]-1}\left([a]-[b]x\right)'+[d]sin^{[d]-1}\left(x\right)\left(\sin\left(x\right)\right)'+\frac{1}{\cos^2\left([e]x\right)}\left([e]x\right)' = $$
+$$= [c]\left([a]-[b]x\right)^{[c]-1}\left(-[b]\right)+[d]sin^{[d]-1}\left(x\right)\left(\cos\left(x\right)\right)+\frac{[e]}{\cos^2\left([e]x\right)}= $$
+$$= [f]\left([a]-[b]x\right)^{[g]}+[d]sin^{[h]}\left(x\right)\cos\left(x\right)+\frac{[e]}{\cos^2\left([e]x\right)}= $$
+$$f'(0)=[f]\cdot[a]^{[g]}+[d]\sin^{[h]}(0) \cos(0)+\frac{[e]}{\cos^2(0)} = [f]\cdot[a]^{[g]} +0 + [e] = [m] $$
+
+$$f''(x)=\left( [f]\left([a]-[b]x\right)^{[g]}+[d]sin^{[h]}\left(x\right)\left(\cos\left(x\right)\right)+\frac{[e]}{\cos^2\left([e]x\right)} \right)'= $$
+$$= [f]\cdot[g]\left([a]-[b]x\right)^{[g]-1}\left([a]-[b]x\right)'+[d]\left( \left(\sin^{[h]}(x) \right)' \cos(x)+\sin^{[h]}(x)\left(\cos(x)\right)'\right)+ $$ $$+\frac{[e]\cdot(-2)}{\cos^3\left([e]x\right)}\left( \cos([e]x)\right)' = $$
+$$= [f]\cdot[g]\cdot(-[b])\left([a]-[b]x\right)^{[g]-1}+[d]\left( [h]\sin^{[h]-1}(x) \left( \sin(x)\right)' \cos(x)+\sin^{[h]}(x)\left(-\sin(x)\right)'\right)+ $$ $$+\frac{[e]\cdot(-2)}{\cos^3\left([e]x\right)}\left( -\sin([e]x)\right)\left( [e]x\right)' = $$
+$$= [i]\left([a]-[b]x\right)^{[j]}+[d]\left( [h]\sin^{[k]}(x) \cos^2(x)-\sin^{[d]}(x)\right)+ \frac{[e]^2\cdot2}{\cos^3\left([e]x\right)}\left(\sin([e]x)\right) = $$
+$$= [i]\left([a]-[b]x\right)^{[j]}+[d]\left( [h]\sin^{[k]}(x) \cos^2(x)-\sin^{[d]}(x)\right)+ \frac{[i] \sin([e]x) }{\cos^3\left([e]x\right)} $$
+$$f''(\pi)=[i]\left([a]-[b]\pi \right)^{[j]}+[d]\left( [h]\sin^{[k]}(\pi) \cos^2(\pi)-\sin^{[d]}(\pi)\right)+ \frac{[i] \sin([e]\pi) }{\cos^3\left([e]\pi\right)}=$$
+$$=[i]\left([a]-[b]\pi \right)^{[j]}+[d]\left( [h]\cdot 0\cdot 1 - 0 \right)+ \frac{[i] \cdot 0 }{\cos^3\left([e]\pi\right)}=
+[i]\left([a]-[b]\pi \right)^{[j]}$$
+
+$$f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[j]} $$
+\rozwStop
+\odpStart
+$f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[j]} $
+\odpStop
+\testStart
+A. $f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[j]} $\\
+B. $f'(0)+f''(\pi) = [l]  [i]\left([a]-[b]\pi \right)^{[j]} $ \\
+C. $f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[k]} $\\
+D. $f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[h]} $\\
+E. $f'(0)+f''(\pi) = [m]  [i]\left([a]-[b]\pi \right)^{[g]} $\\
+F. $f'(0)+f''(\pi) = [f]  [i]\left([a]-[b]\pi \right)^{[j]} $
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

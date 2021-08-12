@@ -1,0 +1,67 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.138e}
+\zadStart{Zadanie z Wikieł Z 1.138 e) moja wersja nr [nrWersji]}
+%[a]:[4,5,9,10,12]
+%[b]:[2,3,6,7,8]
+%[c]:[2,3,4,5,6,7,8]
+%[bc]=[b]*[c]
+Wyznaczyć funckję odwrotną do danej funkcji $f$ określonej na zbiorze $\mathcal{D}_{f}$.\\
+e) $f(x)=log_{[a]}(\frac{1}{[b]}x+[c])\hspace{5mm}\mathcal{D}_{f}=\mathbb{R}$
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$f(x)=log_{[a]}(\frac{1}{[b]}x+[c])\hspace{5mm} \mathcal{D}_{f}=(-[bc],\infty), \quad f(\mathcal{D}_{f})=\mathbb{R}$$
+$$y=log_{[a]}\Big(\frac{1}{[b]}x+[c]\Big) \quad \Rightarrow \quad \frac{ln(\frac{1}{[b]}x+[c])}{ln([a])}=y \quad \Rightarrow $$
+$$\Rightarrow \quad ln\Big(\frac{1}{[b]}x+[c]\Big)=ln([a]^{y}) \quad \Rightarrow \quad x=[b]\cdot([a]^{y}-[c])$$
+$$y=f^{-1}(x)=[b]\cdot([a]^{x}-[c]) \mbox{ dla } x\in \mathbb{R}$$
+\rozwStop
+\odpStart
+Funkcja odwrotna jest postaci $y=[b]\cdot([a]^{x}-[c]) \mbox{ dla }x\in \mathbb{R}$
+\odpStop
+\testStart
+A. Funkcja odwrotna jest postaci $y=[b]\cdot([a]^{x}-[c])  \mbox{ dla }x\in\mathbb{R}$\\
+B. Funkcja odwrotna jest postaci $y=[b]\cdot[a]^{x} \mbox{ dla }x\in\mathbb{R}$\\
+C. Funkcja odwrotna jest postaci $y=[b]\cdot([a]^{x}+[c])  \mbox{ dla }x\in(-\infty,[a])$\\
+D. Funkcja odwrotna jest postaci $y=([a]^{x}-[c]) \mbox{ dla }x\in[0,\infty)$\\
+E. Funkcja odwrotna jest postaci $y=([a]^{x}+[c]) \mbox{ dla }x\in \mathbb{R}$\\
+F. Funkcja odwrotna jest postaci $y=[b]\cdot([a]^{2x}+[c])\mbox{ dla }x\in[[a],\infty)$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

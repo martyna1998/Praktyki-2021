@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.41d}
+\zadStart{Zadanie z Wikieł Z 2.41 d)  moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p3]=random.randint(2,10)
+%[p4]:[2,3,4,5,6,7,8,9,10]
+%[p5]=random.randint(2,10)
+%[p6]=random.randint(2,10)
+%[p1p5]=[p1]*[p5]
+%[p2p4]=[p2]*[p4]
+%[p3p5]=[p3]*[p5]
+%[p2p6]=[p2]*[p6]
+%[p1p6]=[p1]*[p6]
+%[p3p6]=[p3]*[p6]
+%[p3p4]=[p3]*[p4]
+%math.gcd([p2p4],[p1p5])==1 
+
+Rozwiązać układ równań, w którym $m$ jest parametrem.
+$$\left\{\begin{array}{ccc}
+[p1]x+[p2]my&=&[p3]\\
+\ [p4]mx+[p5]y&=&[p6]m
+\end{array} \right.$$
+
+\zadStop
+\rozwStart{Maja Szabłowska}{}
+Powyższemu układowi równań odpowiadają wyznaczniki:
+$$W=\left| \begin{array}{lccr} [p1] & [p2]m \\ \ [p4]m & [p5] \end{array}\right| = [p1]\cdot[p5] - [p2]m\cdot[p4]m=[p1p5]-[p2p4]m^{2}$$
+
+$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2]m \\ \ [p6]m & [p5] \end{array}\right| = [p3]\cdot[p5] - [p2]m\cdot[p6]m=[p3p5]-[p2p6]m^{2}$$
+
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3] \\ \ [p4] & [p6]m \end{array}\right| = [p1]\cdot[p6]m - [p3]\cdot[p4]=[p1p6]m-[p3p4]$$
+
+$$W\neq 0 \iff [p1p5]-[p2p4]m^{2} \neq 0  \iff
+m^{2}\neq -\frac{[p1p5]}{[p2p4]}, m\in\mathbb{R} $$
+
+$$x=\frac{W_{x}}{W}=\frac{[p3p5]-[p2p6]m^{2}}{[p1p5]-[p2p4]m^{2}}$$
+
+$$y=\frac{W_{y}}{W}=\frac{[p1p6]m-[p3p4]}{[p1p5]-[p2p4]m^{2}}$$
+\rozwStop
+\odpStart
+$x=\frac{[p3p5]-[p2p6]m^{2}}{[p1p5]-[p2p4]m^{2}}, y=\frac{[p1p6]m-[p3p4]}{[p1p5]-[p2p4]m^{2}}$
+\odpStop
+\testStart
+A.$x=\frac{[p3p5]-[p2p6]m^{2}}{[p1p5]-[p2p4]m^{2}}, y=\frac{[p1p6]m-[p3p4]}{[p1p5]-[p2p4]m^{2}}$\\
+B.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]+[p2p4]m^{2}}$\\
+C.$x=\frac{[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]+[p3p4]m}{[p1p5]+[p2p4]m^{2}}$\\
+D.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m}$\\
+E.$x=\frac{-[p3p5]m+[p2p6]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{-[p1p5]+[p2p4]m^{2}}$\\
+F.$x=\frac{-[p3p5]+[p2p6]m}{[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]-[p3p4]m}{[p1p5]}$\\
+G.$x=\frac{[p3p5]}{-[p1p5]+[p2p4]m^{2}}, y=\frac{[p1p6]}{-[p1p5]+[p2p4]m^{2}}$\\
+H.$x=\frac{-[p3p5]+[p2p6]m}{-[p1p5]+[p2p4]m^{2}}, y=[p1p6]-[p3p4]m$\\
+I.$x=[p1], y=-[p5]$\\
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

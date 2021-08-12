@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.2}
+\zadStart{Zadanie z Wikieł Z 2.2  moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p4]:[2,3,4,5]
+%[p5]=random.randint(2,10)
+%[p2p4]=[p2]-[p4]
+%[p1p3]=[p1]-[p3]
+%[a]=round([p2p4]/([p1p3]+0.0000001),2)
+%[ab]=round([p1]*[a],2)
+%[b]=round([p2]-[ab],2)
+%[p5b]=round([p5]-[b],2)
+%[x]=round([a]/([p5b]+0.0000001),2)
+%[p2p4]!=0 and [p1p3]!=0 and math.gcd([p2p4],[p1p3])==1 and [p5b]!=0 and [p5]!=[p1] and math.gcd([p5],[p3])==1 and math.gcd([p1],[p2])==1 and [ab]!=[p5b]
+
+Punkty $A([p1],[p2]), B([p3],[p4]), C(x,[p5])$ są współliniowe. Wyznaczyć $x$.
+\zadStop
+
+\rozwStart{Maja Szabłowska}{Wojciech Przybylski}
+$$\left\{ \begin{array}{ll}
+\ [p2]=[p1]a+b\\
+\ [p4]=[p3]a+b
+\end{array} \right.$$
+$$[p2]-[p4]=[p1]a-[p3]a$$
+$$[p2p4]=[p1p3]a$$
+$$a=\frac{[p2p4]}{[p1p3]}=[a]$$
+
+$$[p2]=[p1]\cdot[a]+b $$
+$$b=[p2]-([ab])=[b]$$
+
+Zatem $y=[a]x+[b].$ Punkt $C$ również należy do tej prostej, wówczas:
+$$[p5]=[a]x+[b]$$
+$$[p5b]=[a]x$$
+$$x=\frac{[a]}{[p5b]}=[x]$$
+\rozwStop
+
+
+\odpStart
+$x=[x]$
+\odpStop
+\testStart
+A.$x=[x]$
+B.$x=\frac{[p1]}{[p2]}$
+D.$x=[b]$
+E.$x=[ab]$
+F.$x=[p2p4]$
+G.$x=[p5b]$
+H.$x=\frac{[p5]}{[p3]}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Laura Mieczkowska}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.33b}
+\zadStart{Zadanie z Wikieł Z 1.33 b) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[d]=2*[a]
+%[akw]=[a]**2
+%[mian]=abs([akw]-[b])
+%[a]<[b] and [akw]<[b] and [mian]>1 and [mian]!=[d] and math.gcd([d],[mian])==1
+Podać przykłąd trójmianu kwadratowego o współczynnikach całkowitych, którego pierwiastkami są pary liczb $\frac{1}{[a]-\sqrt{[b]}}$ i $\frac{1}{[a]+\sqrt{[b]}}$.
+\zadStop
+\rozwStart{Laura Mieczkowska}{}
+Dane są pierwiastki równania kwadratowego $x_1=\frac{1}{[a]-\sqrt{[b]}}$ i $x_2=\frac{1}{[a]+\sqrt{[b]}}$.
+\\\\Ponieważ
+$$(x-x_1)(x-x_2)=0 \Leftrightarrow x^2-(x_1+x_2)x+x_1x_2=0$$
+więc obliczamy:
+$$x_1+x_2=\frac{1}{[a]-\sqrt{[b]}}+\frac{1}{[a]+\sqrt{[b]}}=\frac{[a]+\sqrt{[b]}+[a]-\sqrt{[b]}}{([a]-\sqrt{[b]})([a]+\sqrt{[b]})}=\frac{[d]}{[akw]-[b]}=-\frac{[d]}{[mian]}$$
+$$x_1\cdot x_2=\bigg(\frac{1}{[a]-\sqrt{[b]}}\bigg)\bigg(\frac{1}{[a]+\sqrt{[b]}}\bigg)=\frac{1}{[akw]-[b]}=-\frac{1}{[mian]}$$
+\\Ostatecznie
+$$x^2+\frac{[d]}{[mian]}x-\frac{1}{[mian]}$$
+\odpStart
+$x^2+\frac{[d]}{[mian]}x-\frac{1}{[mian]}$
+\odpStop
+\testStart
+A. $x^2+\frac{[d]}{[mian]}x+\frac{1}{[mian]}$ \\
+B. $-x^2+\frac{[d]}{[mian]}x-\frac{1}{[mian]}$ \\
+C. $x^2+\frac{[d]}{[mian]}x-\frac{1}{[mian]}$ \\
+D. $x^2-\frac{[d]}{[mian]}x-\frac{1}{[mian]}$ 
+\testStop
+\kluczStart
+C
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.12d}
+\zadStart{Zadanie z Wikieł Z 3.12 d) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7]
+%[b]:[2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[d]:[2,3,4,5,6,7]
+%[2a]=2*[a]
+%[2c]=2*[c]
+%[e]=[a]+[2a]+[b]
+%[f]=[2a]+[b]
+%[g]=[c]+[2c]
+%math.gcd([a],[c])==1 and math.gcd([b],[d])==1 and [b]!=[c] and [a]!=[d] and [a]!=[b] and [c]!=[d] 
+Obliczyć granicę ciągu 
+$$a_n=\frac{[a](n+2)!+[b](n+1)!}{[c](n+2)!-[d](n-1)!}.$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+$$\lim_{n\to\infty}\frac{[a](n+2)!+[b](n+1)!}{[c](n+2)!-[d](n-1)!}$$
+$$=\lim_{n\to\infty}\frac{[a](n+2)(n+1)n(n-1)!+[b](n+1)n(n-1)!}{[c](n+2)(n+1)n(n-1)!-[d](n-1)!}$$
+$$=\lim_{n\to\infty}\frac{(n-1)![[a](n+2)(n+1)n+[b](n+1)n]}{(n-1)![[c](n+2)(n+1)n-[d]]}$$
+$$=\lim_{n\to\infty}\frac{[a](n+2)(n+1)n+[b](n+1)n}{[c](n+2)(n+1)n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a](n^2+n+2n+2)n+[b](n^2+n)}{[c](n^2+n+2n+2)n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]n^3+[a]n^2+[2a]n^2+[2a]n+[b]n^2+[b]n}{[c]n^3+[c]n^2+[2c]n^2+[2c]n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]n^3+[e]n^2+[f]n}{[c]n^3+[g]n^2+[2c]n-[d]}$$
+$$=\lim_{n\to\infty}\frac{[a]+\frac{[e]}{n}+\frac{[f]}{n^2}}{[c]+\frac{[g]}{n}+\frac{[2c]}{n^2}-\frac{[d]}{n^3}}=\frac{[a]}{[c]}$$
+\rozwStop
+\odpStart
+ $\frac{[a]}{[c]}$
+\odpStop
+\testStart
+A.$\infty$
+B. $\frac{[c]}{[a]}$
+C.$0$
+D.$\frac{[a]}{[c]}$
+E. $-\frac{[c]}{[a]}$
+F.$-\frac{[a]}{[c]}$
+G.$-\infty$
+H.$-\frac{[b]}{[d]}$
+I.$-\frac{[d]}{[b]}$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}

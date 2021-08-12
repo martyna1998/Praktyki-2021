@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.6}
+\zadStart{Zadanie z Wikieł Z 2.6 moja wersja nr [nrWersji]}
+%[v1]:[1,2,3,4,5,6,7,8,9]
+%[v3]=-[v1]
+%[u1]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[u2]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[u3]=[u1]
+%[ku1]=[u1]*[u1]
+%[ku2]=[u2]*[u2]
+%[ku3]=[u3]*[u3]
+%[kv1]=[v1]*[v1]
+%[kv3]=[v3]*[v3]
+%[a]=[u1]*[v1]
+%[b]=[u3]*[v3]
+%[ab]=[a]+[b]
+%[U]=[ku1]+[ku2]+[ku3]
+%[V]=[kv1]+[kv3]
+%[VU]=[V]*[U]
+%[2u2]=2*[u2]
+%[k2u2]=[2u2]*[2u2]
+%[x]=[VU]-[ab]
+%[y]=[k2u2]-[U]
+%[xy]=[x]/[y]
+%[cxy]=int([xy])
+%[xy].is_integer()==True and [k2u2]>[U] and [VU]>[ab] and math.gcd([cxy],4)==2 and math.gcd([cxy],9)==3 and math.gcd([cxy],25)==1 and math.gcd([cxy],49)==1
+Wyznaczyć wartość parametru k, dla których wektor [[v1],k,[v3]] tworzy z \\ wektorem [[u1],[u2],[u3]] kąt o mierze $\frac{\pi}{3}$.
+\zadStop
+\rozwStart{Aleksandra Pasińska}{}
+$$cos\angle(v,u)=\frac{u\circ v}{|u|\cdot |v|}$$
+$$u\circ v=[u1]\cdot [v1]+[u2]\cdot k+[u3]\cdot ([v3])=[a]+[u2]k+([b])=[u2]k$$
+$$|u|\cdot |v|=\sqrt{[u1]^2+[u2]^2+[u3]^2}\cdot \sqrt{[v1]^2+k^2+([v3])^2}=\sqrt{[U]}\cdot\sqrt{[V]+k^2}$$
+$$cos\angle(v,u)=cos(\frac{\pi}{3})=\frac{1}{2}$$
+$$\frac{1}{2}=\frac{[u2]k}{\sqrt{[U]}\cdot\sqrt{[V]+k^2}}$$
+$$\sqrt{[U]}\cdot\sqrt{[V]+k^2}=2\cdot[u2]k$$
+$$\sqrt{[VU]+[U]k^2}=[2u2]k \bigg/^2$$
+$$[VU]+[U]k^2=[k2u2]k^2$$
+$$[k2u2]k^2-[U]k^2=[VU]$$
+$$k^2=[cxy],k=\sqrt{[cxy]}$$
+\rozwStop
+\odpStart
+$k=\sqrt{[cxy]}$\\
+\odpStop
+\testStart
+A.$k=\sqrt{[cxy]}$
+B.$k=\infty$
+C.$k=-\infty$
+D.$k=1$
+E.$k=9$
+F.$k=e$
+G.$k=4$
+H.$k=7$
+I.$k=-7$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

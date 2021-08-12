@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.79n}
+\zadStart{Zadanie z Wikieł Z 1.79 n) moja wersja nr [nrWersji]}
+%[b]:[2,9,4,3,8,5,16,12,18,49,32,25]
+%[m1]:[8,36,32,18,48,50,80,108,144,12,392,320,150]
+%[d1]=int([m1]/[b])
+%[de]=[b]*[b] + 4*[m1]
+%[dep]=int(math.sqrt([de]))
+%[x1]=int((-[b]-[dep])/(-2))
+%[x2]=int((-[b]+[dep])/(-2))
+%[d1]- ([m1]/[b])==0 and [dep]-(math.sqrt([de]))==0 and [dep]>[b] and [x1]-((-[b]-[dep])/(-2))==0 and [x2]-((-[b]+[dep])/(-2))==0
+Rozwiązać nierówność $\frac{\sqrt{[b]x+[m1]}}{x}<1$
+\zadStop
+\rozwStart{Barbara Bączek}{}
+Zaczniemy od wyznaczenia dziedziny.
+$$D:[b]x+[m1] \geq 0 \hspace{0.2 cm} \wedge \hspace{0.2 cm} x \ne 0$$
+$$D: x \in [ -[d1], 0) \cup (0, \infty)$$
+\begin{enumerate}
+\item Niech $x \in [-[d1], 0)$, wtedy:
+$$\frac{\sqrt{[b]x+[m1]}}{x}<1$$
+$$\sqrt{[b]x+[m1]}>x$$
+Nierówność jest tożsamościowa dla $x \in [-[d1], 0)$.
+\item  Niech $x \in (0, \infty)$, wtedy:
+$$\frac{\sqrt{[b]x+[m1]}}{x}<1$$
+$$\sqrt{[b]x+[m1]}<x$$
+Obie strony są dodatnie.
+$$-x^2 + [b]x+ [m1]<0$$
+$$\Delta = [de] \hspace{0.2 cm} \wedge \hspace{0.2 cm} \sqrt{\Delta}= [dep]$$
+$$x_1 = \frac{-[b]-[dep]}{-2}=[x1]  \hspace{0.2 cm} \wedge \hspace{0.2 cm} x_2 = \frac{-[b]+[dep]}{-2}=[x2]$$
+Rozwiązaniem $-x^2+[b]x+[m1]<0$ w zbiorze $(0, \infty)$ jest więc $([x1], \infty)$.
+\end{enumerate}
+3. Podsumowując: $x \in [-[d1],0) \cup ([x1], \infty)$
+\rozwStop
+\odpStart
+$x \in [-[d1],0) \cup ([x1], \infty)$
+\odpStop
+\testStart
+A.$x \in [-[d1],0)$
+B.$x \in (0,[x1])$
+C.$x \in ([x1], \infty)$
+D.$x \in [-[d1],0) \cup ([x1], \infty)$
+E.$x \in [-[d1],[x1])$
+G.$x \in [-[d1],0) \cup [[x1], \infty)$
+H.$x \in (-[d1],0) \cup ([x1], \infty)$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}

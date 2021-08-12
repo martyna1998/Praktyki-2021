@@ -1,0 +1,645 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z4.16a}
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 1}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-103} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-103} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-103} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-103} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-103} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 2}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-107} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-107} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-107} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-107} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-107} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 3}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-109} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-109} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-109} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-109} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-109} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 4}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-113} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-113} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-113} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-113} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-113} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 5}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-127} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-127} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-127} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-127} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-127} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 6}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-131} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-131} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-131} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-131} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-131} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 7}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-137} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-137} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-137} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-137} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-137} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 8}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-139} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-139} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-139} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-139} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-139} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 9}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-149} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-149} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-149} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-149} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-149} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 10}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-151} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-151} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-151} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-151} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-151} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 11}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-157} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-157} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-157} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-157} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-157} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 12}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-163} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-163} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-163} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-163} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-163} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 13}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-167} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-167} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-167} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-167} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-167} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 14}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-173} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-173} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-173} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-173} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-173} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 15}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-179} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-179} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-179} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-179} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-179} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 16}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-251} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-251} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-251} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-251} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-251} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 17}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-257} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-257} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-257} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-257} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-257} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 18}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-263} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-263} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-263} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-263} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-263} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 19}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-269} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-269} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-269} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-269} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-269} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 20}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-271} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-271} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-271} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-271} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-271} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 4.16 a) moja wersja nr 21}
+
+Zbadaj, czy istnieje $\lim\limits_{x\to\ x_{0}}$. Jeżeli tak, to oblicz tę granicę.\\   $f(x) = \left\{ \begin{array}{ll}
+\frac{x+1}{x-277} & \textrm{gdy $x<-1$}\\
+x^{2}-1 & \textrm{gdy $x>-1$}
+\end{array} \right.$, $x_{0}=-1$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{x\to\ [x_{0}]^{-}}\frac{x+1}{x-277} = \lim\limits_{x\to\ [-1]^{-}}\frac{x+1}{x-277} = 0$$
+\\
+$$\lim\limits_{x\to\ [x_{0}]^{+}}\frac{x+1}{x-277} = \lim\limits_{x\to\ [-1]^{+}}\frac{x+1}{x-277} = 0$$
+\\
+Niech $L=\lim\limits_{x\to\ [x_{0}]^{-}}f(x)$ i $P=\lim\limits_{x\to\ [x_{0}]^{+}}f(x)$.
+\rozwStop
+\odpStart
+$L=0, P=0$
+\odpStop
+\testStart
+A.$L=0, P=0$\\ B.$L=\infty, P=0$\\ C.$L=0, P=\infty$\\ D.$L=-\infty, P=0$\\ E.$L=0, P=-\infty$\\
+F.$L=-\infty, P=\infty$\\ G.$L=\infty, P=\infty$\\
+H.$L=-\infty, P=-\infty$\\
+I.$L=\infty, P=-\infty$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

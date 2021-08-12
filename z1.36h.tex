@@ -51,17 +51,18 @@
 %[pierw]=(pow([delta],1/2))
 %[pierw1]=[pierw].real
 %[pierw2]=int([pierw1])
-%[t1]=([b]+[pierw2])/2
-%[t2]=([b]-[pierw2])/2
-%[t11]=int([t1])
-%[t22]=int([t2])
+%[t1]=([b]+[pierw2])/(2*[a])
+%[t2]=([b]-[pierw2])/(2*[a])
+%[t11]=round([t1],2)
+%[t22]=round([t2],2)
+%[2a]=2*[a]
 %[bkw]>[4ac] and [pierw].is_integer()==True
 Rozwiązać równanie $[a]x^4-[b]x^2+[c]=0$.
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Równanie postaci $ax^4+bx^2+c=0, a\neq0$ nazywamy równaniem dwukwadratowym. Równanie to sprowadza się do równania kwadratowego za pomocą podstawienia $t=x^2$. Zatem stosując to podstawienie do naszego równania, otrzymamy: $$ [a]t^2-[b]t+[c]=0$$
 Wówczas: $\bigtriangleup=[bkw]-[4ac]\Rightarrow\sqrt{[delta]}=[pierw2]$, stąd mamy, że:
-$$t_1=\frac{[b]+[pierw2]}{2}=[t11] \text{ oraz } t_2=\frac{[b]-[pierw2]}{2}=[t22]$$
+$$t_1=\frac{[b]+[pierw2]}{[2a]}=[t11] \text{ oraz } t_2=\frac{[b]-[pierw2]}{[2a]}=[t22]$$
 Czyli:
 $$x^2={[t11]}\Leftrightarrow x_1=\sqrt{[t11]} \vee x_2=-\sqrt{[t11]} \text{ oraz } x^2=[t22]\Leftrightarrow x_3=\sqrt{[t22]} \vee x_4=-\sqrt{[t22]}$$
 \rozwStop

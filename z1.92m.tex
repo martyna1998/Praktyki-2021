@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.92m}
+\zadStart{Zadanie z Wikieł Z 1.92 m) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,6,8,10,12,14]
+%[b]:[5,7,9,11,13]
+%[c]:[2,3,4,5,6,7,8,9]
+%[d]:[1,2,3,4,5,6,7,8]
+%[dd]=pow([d],2)
+%[p]=([b]-[a])
+%[2d]=(2*[d])
+%[k]=([2d]*[c])
+%[l]=[b]-([dd]*[c])
+%[r2]=([p]/[c])
+%[r]=int([r2])
+%[delta]=(([k]**2)+4*([c]*[l]))
+%[2c]=2*[c]
+%[b]>[a] and [r2].is_integer()==True and [r2].is_integer()==True and [l]>0 and (2*[2d])<([k]+(pow([delta],1/2))) and [l]>0 and ([d]**2-([p]/[c]))==0
+Rozwiązać równanie $ \log_{\frac{1}{[a]}}{\big([b]- [c] (x-[d])^2\big)} = -1$
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+Dziedzina:
+$$[b]- [c] (x-[d])^2>0$$
+$$ -[b]+[c] (x^2-[2d]x+[dd])<0$$
+$$ [c] x^2-[k]x-[l]<0$$
+$$ \bigtriangleup = (-[k])^2 + 4 \cdot [c] \cdot [l] = [delta] \quad  \Longrightarrow \quad \sqrt{\bigtriangleup} = \sqrt{[delta]}$$
+$$x =\frac{[k]-\sqrt{[delta]}}{[2c]} \quad \vee \quad x =\frac{[k]+\sqrt{[delta]}}{[2c]}$$
+$$D=\Big(\frac{[k]-\sqrt{[delta]}}{[2c]}, \frac{[k]+\sqrt{[delta]}}{[2c]}\Big)$$
+Rozwiązujemy równanie:
+$$\log_{\frac{1}{[a]}}{\big([b]- [c] (x-[d])^2\big)} = -1$$
+$$ [b]- [c] (x-[d])^2= [a]$$
+$$ [c] (x^2-[2d]x+[dd])= [p]$$
+$$ x^2-[2d]x+[dd]= [r]$$
+$$x^2-[2d]x=0$$
+$$x(x-[2d])=0$$
+$$x=0 \in D \quad \vee \quad x=[2d] \in D$$
+\rozwStop
+\odpStart
+$x \in \{0, [2d] \}$
+\odpStop
+\testStart
+A. $x \in \{-[r], 0 \}$\\
+B. $x = -1$\\
+C. $x \in \{0, [2d] \}$\\
+D. $x = 3$\\
+E. $x \in \{-1, 3\}$\\
+F. $x \in \{-[2d], 0 \}$
+\testStop
+\kluczStart
+C
+\kluczStop
+
+
+
+\end{document}

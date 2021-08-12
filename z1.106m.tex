@@ -1,0 +1,102 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.106m}
+\zadStart{Zadanie z Wikieł Z 1.106 m) moja wersja nr [nrWersji]}
+%[y]:[2,49,64,81,100,121,144,1,2,3,4,5,6,7]
+%[x]:[4,9,16,25,36,49,64,81,100,121,144]
+%[z]:[4,9,16,25,36,49,64,81,100,121,144]
+%[a]=random.randint(2,20)
+%[b]=random.randint(2,20)
+%[c]=[a]+[b]
+%[f]=([a]-[b])/2
+%[d]=[a]-[b]
+%[k]=2*[d]
+%[l]=2*[c]
+%[d]>2 and math.gcd(2,[d])==1 and math.gcd(3,[l])==1
+Rozwiązać równania.\\
+ $sin([a]x)+cos([b]x)=0$
+\zadStop
+\rozwStart{Katarzyna Filipowicz}{}
+$$
+sin([a]x)+cos([b]x)=0
+$$ $$
+sin([a]x)+sin\left(\frac{\pi}{2}-[b]x\right)=0
+$$ $$
+2sin\left(\frac{[a]x+\frac{\pi}{2}-[b]x}{2}\right)cos\left(\frac{[a]x-\frac{\pi}{2}+[b]x}{2}\right)=0
+$$ $$
+sin\left(\frac{[d]x+\frac{\pi}{2}}{2}\right)cos\left(\frac{[c]x-\frac{\pi}{2}}{2}\right)=0
+$$ 
+1.
+ $$
+sin\left(\frac{[d]x+\frac{\pi}{2}}{2}\right)=0
+$$ $$
+\frac{[d]x+\frac{\pi}{2}}{2}=0+k\pi
+$$ $$
+ [d]x=-\frac{\pi}{2}+2k\pi
+$$ $$
+x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]}
+$$
+2.
+$$
+cos\left(\frac{[c]x-\frac{\pi}{2}}{2}\right)=0
+$$ $$
+\frac{[c]x-\frac{\pi}{2}}{2}=\frac{\pi}{2}+2k\pi  
+$$ $$
+[c]x=\frac{\pi}{2}+\pi+4k\pi  
+$$ $$
+x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}
+$$
+\rozwStop
+\odpStart
+$x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]}  \vee x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}$
+\odpStop
+\testStart
+A.$x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]}  \vee x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}$\\
+B.$x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}$\\
+C.$x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]} $\\
+D.$x=0+\frac{2k\pi}{[d]}  \vee x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}$\\
+E.$x=\frac{\pi}{2}+2k\pi    \vee x=0+k\pi$\\
+F.$x=\frac{\pi}{[k]}+\frac{2k\pi}{[d]}  \vee x=\frac{3\pi}{[l]}+\frac{2k\pi}{[c]}$\\
+G.$x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]}  \vee x=-\frac{3\pi}{[l]}+\frac{4k\pi}{[c]}$\\
+H.$x=-\frac{\pi}{[k]}+\frac{2k\pi}{[d]}  \vee x=\frac{\pi}{[l]}+\frac{2k\pi}{[c]}$\\
+I.$x=-\frac{\pi}{[k]}+2k\pi \vee x=\frac{3\pi}{[l]}+\frac{4k\pi}{[c]} $
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

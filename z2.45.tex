@@ -1,0 +1,117 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.45}
+\zadStart{Zadanie z Wikieł Z 2.45  moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p3]=random.randint(2,10)
+%[p4]:[2,3,4,5,6,7,8,9,10]
+%[p5]=random.randint(2,10)
+%[p6]=random.randint(2,10)
+%[p7]=random.randint(2,10)
+%[p7]=random.randint(2,10)
+%[p8]=random.randint(2,10)
+%[p1p5]=[p1]*[p5]
+%[p2p6]=[p2]*[p6]
+%[p3p6]=[p3]*[p6]
+%[p3p7]=[p3]*[p7]
+%[p3p8]=[p3]*[p8]
+%[p4p6]=[p4]*[p6]
+%[p1p6]=[p1]*[p6]
+%[p2p5]=[p2]*[p5]
+%[p1p7]=[p1]*[p7]
+%[p3p5]=[p3]*[p5]
+%[p1p8]=[p1]*[p8]
+%[p4p5]=[p4]*[p5]
+%[p2p7]=[p2]*[p7]
+%[p2p8]=[p2]*[p8]
+%[w]=-[p1p6]+[p2p5]
+%[wx]=-[p3p6]-[p2p7]
+%[wx1]=[p4p6]+[p2p8]
+%[wy]=-[p1p7]-[p3p5]
+%[wyp]=-[wy]
+%[wy1]=[p1p8]+[p4p5]
+%[w]<0 and [wx]<0 and [p2p7]/[wx]<[p1p7]/[wyp] and math.gcd([p2p7],[wx])==1 and math.gcd([p1p7],[wyp])==1 
+
+Podać, dla jakich wartości parametru $m$ rozwiązaniem układu równań
+$$\left\{\begin{array}{ccc}
+[p1]x-[p2]y&=&[p3]m-[p4]\\
+\ [p5]x-[p6]y&=&-[p7]m+[p8]
+\end{array} \right.$$
+jest para liczb ujemnych. 
+\zadStop
+
+\rozwStart{Maja Szabłowska}{}
+Powyższemu układowi równań odpowiadają wyznaczniki:
+$$W=\left| \begin{array}{lccr} [p1] & -[p2] \\ \ [p5] & -[p6] \end{array}\right| = [p1]\cdot(-[p6]) - (-[p2])\cdot[p5]=-[p1p6]+[p2p5]=[w]$$
+
+$$W_{x}=\left| \begin{array}{lccr} [p3]m -[p4] & -[p2] \\ \ -[p7]m+[p8] & -[p6] \end{array}\right| = ([p3]m-[p4])\cdot(-[p6]) - (- [p2])\cdot(-[p7]m+[p8])=$$
+$$=-[p3p6]m+[p4p6]-[p2p7]m+[p2p8]=[wx]m+[wx1]$$
+
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m-[p4] \\ \ [p5] & -[p7]m+[p8] \end{array}\right| = [p1]\cdot(-[p7]m+[p8]) - ([p3]m-[p4])\cdot[p5]=-[p1p7]m+[p1p8]-[p3p5]m+[p4p5]=[wy]m+[wy1]$$
+
+$$W\neq 0 \iff [w] \neq 0, m\in\mathbb{R} $$
+
+$$x=\frac{W_{x}}{W}=\frac{[wx]m-[p2p7]}{[w]}$$
+
+$$y=\frac{W_{y}}{W}=\frac{[p1p7][wy]m}{[w]}$$
+
+$$x<0 \quad \land \quad y<0$$
+
+$$\frac{[wx]m-[p2p7]}{[w]}<0 \quad \land \quad  \frac{[p1p7][wy]m}{[w]}<0$$
+
+$$[wx]m-[p2p7]>0 \quad \land \quad  [p1p7][wy]m>0$$
+
+$$[wx]m>[p2p7] \quad \land \quad [wy]m>-[p1p7]$$
+
+$$m<\frac{[p2p7]}{[wx]} \quad \land \quad m<\frac{[p1p7]}{[wyp]}$$
+
+$$m\in\left(-\infty, \frac{[p2p7]}{[wx]}\right) $$
+\rozwStop
+\odpStart
+m\in\left(-\infty, \frac{[p2p7]}{[wx]}\right)\odpStop
+\testStart
+A.m\in\left(-\infty, \frac{[p2p7]}{[wx]}\right)
+B.m\in\left(\frac{[p2p7]}{[wx]}, \infty\right)
+C.m\in\left(-\infty, \frac{[p1p7]}{[wyp]}\right)
+D.m\in\left(-\infty, \frac{[p2p7]}{[w]}\right)
+E.m\in\emptyset
+F.m\in\mathbb{R}
+G.m\in\left(-\infty, \frac{[p2p7]}{[wx]}\right)\cup \left(\frac{[p1p7]}{[wyp]}, \infty\right)
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

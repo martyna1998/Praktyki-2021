@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.59a}
+\zadStart{Zadanie z Wikieł Z 5.59 a) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[a3]=[a]*3
+%[b2]=[b]*2
+%[a6]=[a3]*2
+%[c]=round([a6]/[b2],2)
+%[x1]=round([c]+1,2)
+%[x2]=round([c]-1,2)
+%[dodat]=round([a6]*[x1]-[b2],2)
+%[ujem]=round([a6]*[x2]-[b2],2)
+%[ujem]<0 and [dodat]>0
+Zbadać wypukłość funkcji:
+a) $ f(x)=[a]x^{3}-[b]x^{2}$
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$ f(x)=[a]x^{3}-[b]x^{2}\hspace{5mm} \mathcal{D}_{f}=\mathbb{R}$$
+$$ f'(x)=[a3]x^{2}-[b2]x, \hspace {5mm} f''(x)=[a6]x-[b2]$$
+$$\mbox{Sprawdzamy warunek konieczny: }f''(x_{0})=0 \Rightarrow [a6]x_{0}-[b2]=0\Rightarrow x_{0}=[c]$$
+$$\mbox{Sprawdzamy warunek dostateczny: }x_{1}=x_{0}+1, \hspace{3mm} x_{2}=x_{0}-1$$
+$$f''(x_{1})=[a6]\cdot[x1]-[b2]=[dodat]>0,\hspace{3mm}f''(x_{2})=[a6]\cdot[x2]-[b2]=[ujem]<0$$
+$$\mbox{Funkcja } f(x)=[a]x^{3}-[b]x^{2} \mbox{ jest wypukła na } ([c],\infty) \mbox{ oraz wklęsła na }(-\infty,[c])$$
+\rozwStop
+\odpStart
+$f(x)$ jest wypukła na $([c],\infty)$, wklęsła na $(-\infty,[c])$.
+\odpStop
+\testStart
+A. $f(x)$ jest wypukła na $([c],\infty)$, wklęsła na $(-\infty,[c])$.\\
+B. $f(x)$ jest wypukła na $\mathbb{R}$.\\
+C. $f(x)$ jest wypukła na $(-\infty,[c])$, wklęsła na $([c],\infty)$.\\
+D. $f(x)$ jest wypukła na $([x2],\infty)$, wklęsła na $(-\infty,[x2])$.\\
+E. $f(x)$ jest wypukła na $([x1],\infty)$, wklęsła na $(-\infty,[x1])$.\\
+F. $f(x)$ nie jest wypukła.
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

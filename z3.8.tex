@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.8}
+\zadStart{Zadanie z Wikieł Z 3.8 ) moja wersja nr [nrWersji]}
+%[p1]:[1,2,3,4,6,7,8,10,11,12,14]
+%[a]=random.randint(1,10)
+%[b]=random.randint(1,10)
+%[c]=random.randint(1,10)
+%[d]=random.randint(1,10)
+%[a2]=[a]*[p1]+[b]+[c]+[d]
+Zbadać monotoniczność ciągu określonego rekurencyjnie.
+$$
+ \left\{ \begin{array}{ll}
+a_{1}= [p1] & \\
+a_{n+1}=[a]a_{n}+[b]n^{2}+[c]n+[d]  & \mbox{dla }n\geq1
+\end{array} \right.
+$$
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$a_{2}=a_{1+1}=[a]\cdot[p1]+[b]\cdot(1)^{2}+[c]\cdot1+[d]=[a2] $$
+$$\mbox{Dowód indukcyjny:}$$
+$$\mbox{I Sprawdzenie } [a2]=a_{2}>a_{1}=[a]$$
+$$\mbox{II Założenie niech }n\geq1 \mbox{ takie, że } a_{n+1}>a_{n}$$
+$$\mbox{III Krok indukcyjny }\mbox{Udowodnimy, że } a_{n+2}>a_{n+1}$$
+$$a_{n+2}=[a]a_{n+1}+[b](n+2)^{2}+[c](n+2)+[d]=$$
+$$=[a]a_{n+1}+[b](n^{2}+2n+1+2n+3)+[c](n+1+1)+[d]=$$
+$$=[a]a_{n+1}+[b](n+1)^{2}+[c](n+1)+[d]+[b](2n+4)>$$
+$$---\mbox{z założenia }a_{n+1}>a_{n} \mbox{ oraz } [b](2n+4)>0---$$
+$$>[a]a_{n}+[b](n+1)^{2}+[c](n+1)+[d]=a_{n+1}$$
+$$a_{n+2}>a_{n+1}$$
+$$\mbox{Dowód indukcyjny jest spełniony ciąg rekurencyjny jest rosnący}$$
+\rozwStop
+\odpStart
+Ciąg rekurencyjny jest ciągiem rosnącym.
+\odpStop
+\testStart
+A. Ciąg rekurencyjny jest ciągiem rosnącym.\\
+B. Ciąg rekurencyjny jest ciągiem malejącym.\\
+C. Ciąg rekurencyjny jest ciągiem nierosnącym.\\
+D. Ciąg rekurencyjny jest ciągiem stałym\\
+E. Ciąg rekurencyjny nie jest monotoniczny.
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,498 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z3.33c}
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 1}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+103\choose103}\cdot{n+103+1\choose103+1}}{n\cdot{n+103+2\choose103+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+103\choose103}\cdot{n+103+1\choose103+1}}{n\cdot{n+103+2\choose103+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+103)!}{103! \cdot n!}\cdot \frac{(n+103+1)!}{103! \cdot (n+1)!}}{n\cdot \frac{(n+103+2)!}{103! \cdot (n+2)!}} = \frac{(103+2)!}{a!\cdot (103+1)!} = \frac{103+2}{103!} = \frac{105}{103!}$$
+\rozwStop
+\odpStart
+$\frac{105}{103!}$
+\odpStop
+\testStart
+A.$\frac{105}{103!}$ B.$-\frac{105}{103!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$105$ G.$101$
+H.$103$
+I.$-103$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 2}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+107\choose107}\cdot{n+107+1\choose107+1}}{n\cdot{n+107+2\choose107+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+107\choose107}\cdot{n+107+1\choose107+1}}{n\cdot{n+107+2\choose107+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+107)!}{107! \cdot n!}\cdot \frac{(n+107+1)!}{107! \cdot (n+1)!}}{n\cdot \frac{(n+107+2)!}{107! \cdot (n+2)!}} = \frac{(107+2)!}{a!\cdot (107+1)!} = \frac{107+2}{107!} = \frac{109}{107!}$$
+\rozwStop
+\odpStart
+$\frac{109}{107!}$
+\odpStop
+\testStart
+A.$\frac{109}{107!}$ B.$-\frac{109}{107!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$109$ G.$105$
+H.$107$
+I.$-107$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 3}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+109\choose109}\cdot{n+109+1\choose109+1}}{n\cdot{n+109+2\choose109+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+109\choose109}\cdot{n+109+1\choose109+1}}{n\cdot{n+109+2\choose109+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+109)!}{109! \cdot n!}\cdot \frac{(n+109+1)!}{109! \cdot (n+1)!}}{n\cdot \frac{(n+109+2)!}{109! \cdot (n+2)!}} = \frac{(109+2)!}{a!\cdot (109+1)!} = \frac{109+2}{109!} = \frac{111}{109!}$$
+\rozwStop
+\odpStart
+$\frac{111}{109!}$
+\odpStop
+\testStart
+A.$\frac{111}{109!}$ B.$-\frac{111}{109!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$111$ G.$107$
+H.$109$
+I.$-109$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 4}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+113\choose113}\cdot{n+113+1\choose113+1}}{n\cdot{n+113+2\choose113+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+113\choose113}\cdot{n+113+1\choose113+1}}{n\cdot{n+113+2\choose113+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+113)!}{113! \cdot n!}\cdot \frac{(n+113+1)!}{113! \cdot (n+1)!}}{n\cdot \frac{(n+113+2)!}{113! \cdot (n+2)!}} = \frac{(113+2)!}{a!\cdot (113+1)!} = \frac{113+2}{113!} = \frac{115}{113!}$$
+\rozwStop
+\odpStart
+$\frac{115}{113!}$
+\odpStop
+\testStart
+A.$\frac{115}{113!}$ B.$-\frac{115}{113!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$115$ G.$111$
+H.$113$
+I.$-113$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 5}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+127\choose127}\cdot{n+127+1\choose127+1}}{n\cdot{n+127+2\choose127+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+127\choose127}\cdot{n+127+1\choose127+1}}{n\cdot{n+127+2\choose127+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+127)!}{127! \cdot n!}\cdot \frac{(n+127+1)!}{127! \cdot (n+1)!}}{n\cdot \frac{(n+127+2)!}{127! \cdot (n+2)!}} = \frac{(127+2)!}{a!\cdot (127+1)!} = \frac{127+2}{127!} = \frac{129}{127!}$$
+\rozwStop
+\odpStart
+$\frac{129}{127!}$
+\odpStop
+\testStart
+A.$\frac{129}{127!}$ B.$-\frac{129}{127!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$129$ G.$125$
+H.$127$
+I.$-127$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 6}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+131\choose131}\cdot{n+131+1\choose131+1}}{n\cdot{n+131+2\choose131+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+131\choose131}\cdot{n+131+1\choose131+1}}{n\cdot{n+131+2\choose131+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+131)!}{131! \cdot n!}\cdot \frac{(n+131+1)!}{131! \cdot (n+1)!}}{n\cdot \frac{(n+131+2)!}{131! \cdot (n+2)!}} = \frac{(131+2)!}{a!\cdot (131+1)!} = \frac{131+2}{131!} = \frac{133}{131!}$$
+\rozwStop
+\odpStart
+$\frac{133}{131!}$
+\odpStop
+\testStart
+A.$\frac{133}{131!}$ B.$-\frac{133}{131!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$133$ G.$129$
+H.$131$
+I.$-131$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 7}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+137\choose137}\cdot{n+137+1\choose137+1}}{n\cdot{n+137+2\choose137+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+137\choose137}\cdot{n+137+1\choose137+1}}{n\cdot{n+137+2\choose137+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+137)!}{137! \cdot n!}\cdot \frac{(n+137+1)!}{137! \cdot (n+1)!}}{n\cdot \frac{(n+137+2)!}{137! \cdot (n+2)!}} = \frac{(137+2)!}{a!\cdot (137+1)!} = \frac{137+2}{137!} = \frac{139}{137!}$$
+\rozwStop
+\odpStart
+$\frac{139}{137!}$
+\odpStop
+\testStart
+A.$\frac{139}{137!}$ B.$-\frac{139}{137!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$139$ G.$135$
+H.$137$
+I.$-137$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 8}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+139\choose139}\cdot{n+139+1\choose139+1}}{n\cdot{n+139+2\choose139+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+139\choose139}\cdot{n+139+1\choose139+1}}{n\cdot{n+139+2\choose139+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+139)!}{139! \cdot n!}\cdot \frac{(n+139+1)!}{139! \cdot (n+1)!}}{n\cdot \frac{(n+139+2)!}{139! \cdot (n+2)!}} = \frac{(139+2)!}{a!\cdot (139+1)!} = \frac{139+2}{139!} = \frac{141}{139!}$$
+\rozwStop
+\odpStart
+$\frac{141}{139!}$
+\odpStop
+\testStart
+A.$\frac{141}{139!}$ B.$-\frac{141}{139!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$141$ G.$137$
+H.$139$
+I.$-139$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 9}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+149\choose149}\cdot{n+149+1\choose149+1}}{n\cdot{n+149+2\choose149+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+149\choose149}\cdot{n+149+1\choose149+1}}{n\cdot{n+149+2\choose149+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+149)!}{149! \cdot n!}\cdot \frac{(n+149+1)!}{149! \cdot (n+1)!}}{n\cdot \frac{(n+149+2)!}{149! \cdot (n+2)!}} = \frac{(149+2)!}{a!\cdot (149+1)!} = \frac{149+2}{149!} = \frac{151}{149!}$$
+\rozwStop
+\odpStart
+$\frac{151}{149!}$
+\odpStop
+\testStart
+A.$\frac{151}{149!}$ B.$-\frac{151}{149!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$151$ G.$147$
+H.$149$
+I.$-149$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 10}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+151\choose151}\cdot{n+151+1\choose151+1}}{n\cdot{n+151+2\choose151+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+151\choose151}\cdot{n+151+1\choose151+1}}{n\cdot{n+151+2\choose151+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+151)!}{151! \cdot n!}\cdot \frac{(n+151+1)!}{151! \cdot (n+1)!}}{n\cdot \frac{(n+151+2)!}{151! \cdot (n+2)!}} = \frac{(151+2)!}{a!\cdot (151+1)!} = \frac{151+2}{151!} = \frac{153}{151!}$$
+\rozwStop
+\odpStart
+$\frac{153}{151!}$
+\odpStop
+\testStart
+A.$\frac{153}{151!}$ B.$-\frac{153}{151!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$153$ G.$149$
+H.$151$
+I.$-151$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 11}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+157\choose157}\cdot{n+157+1\choose157+1}}{n\cdot{n+157+2\choose157+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+157\choose157}\cdot{n+157+1\choose157+1}}{n\cdot{n+157+2\choose157+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+157)!}{157! \cdot n!}\cdot \frac{(n+157+1)!}{157! \cdot (n+1)!}}{n\cdot \frac{(n+157+2)!}{157! \cdot (n+2)!}} = \frac{(157+2)!}{a!\cdot (157+1)!} = \frac{157+2}{157!} = \frac{159}{157!}$$
+\rozwStop
+\odpStart
+$\frac{159}{157!}$
+\odpStop
+\testStart
+A.$\frac{159}{157!}$ B.$-\frac{159}{157!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$159$ G.$155$
+H.$157$
+I.$-157$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 12}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+163\choose163}\cdot{n+163+1\choose163+1}}{n\cdot{n+163+2\choose163+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+163\choose163}\cdot{n+163+1\choose163+1}}{n\cdot{n+163+2\choose163+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+163)!}{163! \cdot n!}\cdot \frac{(n+163+1)!}{163! \cdot (n+1)!}}{n\cdot \frac{(n+163+2)!}{163! \cdot (n+2)!}} = \frac{(163+2)!}{a!\cdot (163+1)!} = \frac{163+2}{163!} = \frac{165}{163!}$$
+\rozwStop
+\odpStart
+$\frac{165}{163!}$
+\odpStop
+\testStart
+A.$\frac{165}{163!}$ B.$-\frac{165}{163!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$165$ G.$161$
+H.$163$
+I.$-163$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 13}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+167\choose167}\cdot{n+167+1\choose167+1}}{n\cdot{n+167+2\choose167+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+167\choose167}\cdot{n+167+1\choose167+1}}{n\cdot{n+167+2\choose167+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+167)!}{167! \cdot n!}\cdot \frac{(n+167+1)!}{167! \cdot (n+1)!}}{n\cdot \frac{(n+167+2)!}{167! \cdot (n+2)!}} = \frac{(167+2)!}{a!\cdot (167+1)!} = \frac{167+2}{167!} = \frac{169}{167!}$$
+\rozwStop
+\odpStart
+$\frac{169}{167!}$
+\odpStop
+\testStart
+A.$\frac{169}{167!}$ B.$-\frac{169}{167!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$169$ G.$165$
+H.$167$
+I.$-167$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 14}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+173\choose173}\cdot{n+173+1\choose173+1}}{n\cdot{n+173+2\choose173+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+173\choose173}\cdot{n+173+1\choose173+1}}{n\cdot{n+173+2\choose173+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+173)!}{173! \cdot n!}\cdot \frac{(n+173+1)!}{173! \cdot (n+1)!}}{n\cdot \frac{(n+173+2)!}{173! \cdot (n+2)!}} = \frac{(173+2)!}{a!\cdot (173+1)!} = \frac{173+2}{173!} = \frac{175}{173!}$$
+\rozwStop
+\odpStart
+$\frac{175}{173!}$
+\odpStop
+\testStart
+A.$\frac{175}{173!}$ B.$-\frac{175}{173!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$175$ G.$171$
+H.$173$
+I.$-173$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 15}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+179\choose179}\cdot{n+179+1\choose179+1}}{n\cdot{n+179+2\choose179+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+179\choose179}\cdot{n+179+1\choose179+1}}{n\cdot{n+179+2\choose179+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+179)!}{179! \cdot n!}\cdot \frac{(n+179+1)!}{179! \cdot (n+1)!}}{n\cdot \frac{(n+179+2)!}{179! \cdot (n+2)!}} = \frac{(179+2)!}{a!\cdot (179+1)!} = \frac{179+2}{179!} = \frac{181}{179!}$$
+\rozwStop
+\odpStart
+$\frac{181}{179!}$
+\odpStop
+\testStart
+A.$\frac{181}{179!}$ B.$-\frac{181}{179!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$181$ G.$177$
+H.$179$
+I.$-179$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 16}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+251\choose251}\cdot{n+251+1\choose251+1}}{n\cdot{n+251+2\choose251+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+251\choose251}\cdot{n+251+1\choose251+1}}{n\cdot{n+251+2\choose251+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+251)!}{251! \cdot n!}\cdot \frac{(n+251+1)!}{251! \cdot (n+1)!}}{n\cdot \frac{(n+251+2)!}{251! \cdot (n+2)!}} = \frac{(251+2)!}{a!\cdot (251+1)!} = \frac{251+2}{251!} = \frac{253}{251!}$$
+\rozwStop
+\odpStart
+$\frac{253}{251!}$
+\odpStop
+\testStart
+A.$\frac{253}{251!}$ B.$-\frac{253}{251!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$253$ G.$249$
+H.$251$
+I.$-251$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 17}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+257\choose257}\cdot{n+257+1\choose257+1}}{n\cdot{n+257+2\choose257+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+257\choose257}\cdot{n+257+1\choose257+1}}{n\cdot{n+257+2\choose257+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+257)!}{257! \cdot n!}\cdot \frac{(n+257+1)!}{257! \cdot (n+1)!}}{n\cdot \frac{(n+257+2)!}{257! \cdot (n+2)!}} = \frac{(257+2)!}{a!\cdot (257+1)!} = \frac{257+2}{257!} = \frac{259}{257!}$$
+\rozwStop
+\odpStart
+$\frac{259}{257!}$
+\odpStop
+\testStart
+A.$\frac{259}{257!}$ B.$-\frac{259}{257!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$259$ G.$255$
+H.$257$
+I.$-257$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 18}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+263\choose263}\cdot{n+263+1\choose263+1}}{n\cdot{n+263+2\choose263+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+263\choose263}\cdot{n+263+1\choose263+1}}{n\cdot{n+263+2\choose263+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+263)!}{263! \cdot n!}\cdot \frac{(n+263+1)!}{263! \cdot (n+1)!}}{n\cdot \frac{(n+263+2)!}{263! \cdot (n+2)!}} = \frac{(263+2)!}{a!\cdot (263+1)!} = \frac{263+2}{263!} = \frac{265}{263!}$$
+\rozwStop
+\odpStart
+$\frac{265}{263!}$
+\odpStop
+\testStart
+A.$\frac{265}{263!}$ B.$-\frac{265}{263!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$265$ G.$261$
+H.$263$
+I.$-263$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 19}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+269\choose269}\cdot{n+269+1\choose269+1}}{n\cdot{n+269+2\choose269+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+269\choose269}\cdot{n+269+1\choose269+1}}{n\cdot{n+269+2\choose269+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+269)!}{269! \cdot n!}\cdot \frac{(n+269+1)!}{269! \cdot (n+1)!}}{n\cdot \frac{(n+269+2)!}{269! \cdot (n+2)!}} = \frac{(269+2)!}{a!\cdot (269+1)!} = \frac{269+2}{269!} = \frac{271}{269!}$$
+\rozwStop
+\odpStart
+$\frac{271}{269!}$
+\odpStop
+\testStart
+A.$\frac{271}{269!}$ B.$-\frac{271}{269!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$271$ G.$267$
+H.$269$
+I.$-269$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 20}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+271\choose271}\cdot{n+271+1\choose271+1}}{n\cdot{n+271+2\choose271+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+271\choose271}\cdot{n+271+1\choose271+1}}{n\cdot{n+271+2\choose271+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+271)!}{271! \cdot n!}\cdot \frac{(n+271+1)!}{271! \cdot (n+1)!}}{n\cdot \frac{(n+271+2)!}{271! \cdot (n+2)!}} = \frac{(271+2)!}{a!\cdot (271+1)!} = \frac{271+2}{271!} = \frac{273}{271!}$$
+\rozwStop
+\odpStart
+$\frac{273}{271!}$
+\odpStop
+\testStart
+A.$\frac{273}{271!}$ B.$-\frac{273}{271!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$273$ G.$269$
+H.$271$
+I.$-271$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.33 c) moja wersja nr 21}
+
+Obliczyć granicę ciągu $a_{n}=\frac{{n+277\choose277}\cdot{n+277+1\choose277+1}}{n\cdot{n+277+2\choose277+2}}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Szymon Tokarski}
+$$\lim\limits_{n\to\ \infty}\frac{{n+277\choose277}\cdot{n+277+1\choose277+1}}{n\cdot{n+277+2\choose277+2}} = \lim\limits_{n\to\ \infty}\frac{\frac{(n+277)!}{277! \cdot n!}\cdot \frac{(n+277+1)!}{277! \cdot (n+1)!}}{n\cdot \frac{(n+277+2)!}{277! \cdot (n+2)!}} = \frac{(277+2)!}{a!\cdot (277+1)!} = \frac{277+2}{277!} = \frac{279}{277!}$$
+\rozwStop
+\odpStart
+$\frac{279}{277!}$
+\odpStop
+\testStart
+A.$\frac{279}{277!}$ B.$-\frac{279}{277!}$ C.$0$ D.$\infty$ E.$-\infty$
+F.$279$ G.$275$
+H.$277$
+I.$-277$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

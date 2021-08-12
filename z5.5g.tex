@@ -1,0 +1,73 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5g}
+\zadStart{Zadanie z Wikieł Z 5.5 g) moja wersja nr [nrWersji]}
+%[x]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+%[y]:[1,2,3,4,5,6,7,8,9,10,11,12,13]
+%[c]=random.randint(2,10)
+%[c1]=5*[c]
+%[d]=random.randint(2,10)
+%[d1]=4*[d]
+%[f]=random.randint(2,10)
+%[f1]=2*[f]
+%[g]=random.randint(2,10)
+%[h]=random.randint(2,10)
+Korzystając z podstawowych twierdzeń i wzorów, wyznaczyć pochodną funkcji (bez określania zakresu zmienności $x$).\\
+$f(x)=([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^5$.
+\zadStop
+\rozwStart{Katarzyna Filipowicz}{}
+$$f(x)=([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^5$$
+$$f'(x)=(([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^5)' = $$
+$$ =5\cdot ([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^4\cdot( 5\cdot [c]x^4-4 \cdot [d]x^3+ 2\cdot [f]x-[g] )= $$
+$$ = 5\cdot ([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^4\cdot( [c1]x^4- [d1]x^3+ [f1]x-[g] )$$
+\rozwStop
+\odpStart
+$ f'(x)=5\cdot ([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^4\cdot( [c1]x^4- [d1]x^3+ [f1]x-[g] )$
+\odpStop
+\testStart
+A.$ f'(x)=5\cdot ([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^4\cdot( [c1]x^4- [d1]x^3+ [f1]x-[g] ) $\\
+B.$ f'(x)=5\cdot ([c]x^5-[d]x^4+[f]x^2-[g]x-[h])^4 $ \\
+C. $ f'(x)=5\cdot ( [c1]x^4- [d1]x^3+ [f1]x-[g] )^4 $\\
+D. $ f'(x)=5\cdot ( [c1]x^4- [d1]x^3+ [f1]x-[g] )^5 $\\
+E. $ f'(x)= [c1]x^4- [d1]x^3+ [f1]x-[g] $\\
+F. $ f'(x)=5\cdot ([c]x^4-[d]x^3+[f]x)^4$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

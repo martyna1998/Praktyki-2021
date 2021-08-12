@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.18 a}
+\zadStart{Zadanie z Wikieł Z 5.18 a) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[3,5,7,9,11,13]
+%[d]=10+[b]
+%[a]!=0
+Oblicz granicę $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1}$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$ \lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = \lim_{x \rightarrow 1^+} e^{ln \left(\left( [a] \ctg{([b] \pi x)} \right)^{x-1}\right)}
+= \lim_{x \rightarrow 1^+} e^{(x-1) ln\left( [a] \ctg{([b] \pi x)} \right)}=$$
+$$= e^{ \lim_{x \rightarrow 1^+} (x-1) ln\left( [a] \ctg{([b] \pi x)} \right)}$$
+Policzmy $ \lim_{x \rightarrow 1^+} (x-1) ln\left( [a] \ctg{([b] \pi x)} \right)$.
+$$\lim_{x \rightarrow 1^+} (x-1) ln\left( [a] \ctg{([b] \pi x)} \right) = \lim_{x \rightarrow 1^+} \frac{ln\left( [a] \ctg{([b] \pi x)} \right)}{\frac{1}{x-1}}$$
+Otrzymujemy $ \left[ \frac{\infty}{\infty} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$\lim_{x \rightarrow 1^+} \frac{\left(ln\left( [a] \ctg{([b] \pi x)} \right)\right)'}{\left(\frac{1}{x-1}\right)'} = \lim_{x \rightarrow 1^+} \frac{\frac{1}{ [a] \ctg{([b] \pi x)}}\left( [a] \ctg{([b] \pi x)} \right)'}{\frac{-1}{(x-1)^2}}=$$
+$$= \lim_{x \rightarrow 1^+} \frac{\frac{1}{ [a] \ctg{([b] \pi x)}}\frac{-[a]}{\sin^2([b] \pi x )}\left([b] \pi x\right)'}{\frac{-1}{(x-1)^2}}=
+\lim_{x \rightarrow 1^+} \frac{\frac{[b] \pi}{ \ctg{([b] \pi x)} \cdot \sin^2([b] \pi x )}}{\frac{1}{(x-1)^2}}=$$
+$$ = \lim_{x \rightarrow 1^+} \frac{[b] \pi (x-1)^2}{ \frac{\cos{([b] \pi x)}}{\sin([b] \pi x)} \cdot \sin^2([b] \pi x )}
+= \lim_{x \rightarrow 1^+} \frac{[b] \pi (x-1)^2}{ \cos{([b] \pi x)} \cdot \sin([b] \pi x )}=$$
+$$ =[b] \pi \lim_{x \rightarrow 1^+} \frac{(x-1)^2}{\sin([b] \pi x )}  \lim_{x \rightarrow 1^+} \frac{1}{\cos{([b] \pi x)}}=- [b] \pi \lim_{x \rightarrow 1^+} \frac{(x-1)^2}{\sin([b] \pi x )}$$
+Otrzymujemy $ \left[ \frac{0}{0} \right] $ więc możemy skorzystać z twierdzenia de l'Hospitala.
+$$- [b] \pi \lim_{x \rightarrow 1^+} \frac{\left((x-1)^2\right)'}{\left(\sin([b] \pi x )\right)'}= - [b] \pi \lim_{x \rightarrow 1^+} \frac{2(x-1)}{[b] \pi \cos([b] \pi x )} = 0 $$
+Podstawmy do początkowego przykładu.
+$$e^{ \lim_{x \rightarrow 1^+} (x-1) ln\left( [a] \ctg{([b] \pi x)} \right)} = e^0 = 1$$
+\rozwStop
+\odpStart
+$\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = 1$
+\odpStop
+\testStart
+A. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = 1$\\
+B. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = 0$\\
+C. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = [a]$\\
+D. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = [d]$\\
+E. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = e$\\
+F. $\lim_{x \rightarrow 1^+} \left( [a] \ctg{([b] \pi x)} \right)^{x-1} = e^{[a]}$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

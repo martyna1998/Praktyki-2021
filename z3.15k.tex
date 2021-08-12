@@ -1,0 +1,279 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Patryk Wirkus}
+%\date{\today}
+\date{}
+\newcommand{\kategoria}[1]{\section{#1}}
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline}
+\newcommand{\zadStop}{\end{zad}}
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline}
+\newcommand{\rozwStop}{\newline}                                           
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}
+\newcommand{\odpStop}{\newline}
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline}
+\newcommand{\testStop}{\newline}
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline}
+\newcommand{\kluczStop}{\newline}
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}}
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z3.15k}
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 1}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+3}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+3}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{3} = \lim\limits_{n\to\infty} 2^{3} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{3}$
+D.$-2^{3}$
+E.$0$
+F.$2^{-3}$
+G.$-2^{-3}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 2}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+7}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+7}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{7} = \lim\limits_{n\to\infty} 2^{7} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{7}$
+D.$-2^{7}$
+E.$0$
+F.$2^{-7}$
+G.$-2^{-7}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 3}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+11}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+11}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{11} = \lim\limits_{n\to\infty} 2^{11} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{11}$
+D.$-2^{11}$
+E.$0$
+F.$2^{-11}$
+G.$-2^{-11}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 4}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+13}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+13}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{13} = \lim\limits_{n\to\infty} 2^{13} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{13}$
+D.$-2^{13}$
+E.$0$
+F.$2^{-13}$
+G.$-2^{-13}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 5}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+17}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+17}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{17} = \lim\limits_{n\to\infty} 2^{17} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{17}$
+D.$-2^{17}$
+E.$0$
+F.$2^{-17}$
+G.$-2^{-17}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 6}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+19}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+19}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{19} = \lim\limits_{n\to\infty} 2^{19} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{19}$
+D.$-2^{19}$
+E.$0$
+F.$2^{-19}$
+G.$-2^{-19}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 7}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+23}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+23}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{23} = \lim\limits_{n\to\infty} 2^{23} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{23}$
+D.$-2^{23}$
+E.$0$
+F.$2^{-23}$
+G.$-2^{-23}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 8}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+29}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+29}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{29} = \lim\limits_{n\to\infty} 2^{29} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{29}$
+D.$-2^{29}$
+E.$0$
+F.$2^{-29}$
+G.$-2^{-29}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\zadStart{Zadanie z Wikieł Z 3.15 k) moja wersja nr 9}
+Obliczyć granicę ciągu $a_{n}=(\frac{2n+1}{n})^{5n+31}$.
+\zadStop
+\rozwStart{Patryk Wirkus}{Martyna Czarnobaj}
+$$\lim\limits_{n\to\infty} a_{n} = \lim\limits_{n\to\infty}(\frac{2n+1}{n})^{5n+31}=$$
+$$=\lim\limits_{n\to\infty}\frac{(2+\frac{1}{2n})}{1} \cdot (\frac{2n+1}{n})^{31} = \lim\limits_{n\to\infty} 2^{31} \cdot \lim\limits_{n\to\infty} (2+\frac{1}{2n})^{n} = \infty$$
+\rozwStop
+\odpStart
+$\infty$
+\odpStop
+\testStart
+A.$\infty$
+B.$-\infty$
+C.$2^{31}$
+D.$-2^{31}$
+E.$0$
+F.$2^{-31}$
+G.$-2^{-31}$
+H.$2$
+I.$-2$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+
+
+\end{document}

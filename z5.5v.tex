@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5v}
+\zadStart{Zadanie z Wikieł Z 5.5 v) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+%[c]=random.randint(3,10)
+%[d]=[c]-1
+%[e]=pow([b],[d])*[a]*[c]
+%[f]=2*[c]
+%[g]=pow([b],[f])
+%[a]!=1 and [g]<100000
+Wyznacz pochodną funkcji \\ $f(x)=[a] \ctg^{-1}\left(\left([b]x\right)^{[c]}\right)$.
+\zadStop
+\rozwStart{Joanna Świerzbin}{}
+$$f(x)=[a] \ctg^{-1}\left(\left([b]x\right)^{[c]}\right)$$
+$$f'(x)= \left( [a] \ctg^{-1} \left(\left([b]x\right)^{[c]}\right) \right)' = [a] \left( -\frac{1}{([b]x)^{2\cdot [c]}+1} \right)\left(\left([b]x\right)^{[c]}\right)'= $$
+$$= [a] \left( -\frac{1}{([b]x)^{2\cdot [c]}+1} \right) [c] \left( [b]x \right)^{[c]-1}=\left( -\frac{[a]\cdot[c]\cdot[b]^{[d]}x^{[d]}}{([b]x)^{2\cdot [c]}+1} \right) =$$
+$$ =\left( \frac{- [e] x^{[d]}}{[g]x^{[f]}+1} \right) $$
+\rozwStop
+\odpStart
+$ f'(x) = \left( \frac{- [e] x^{[d]}}{[g]x^{[f]}+1} \right) $
+\odpStop
+\testStart
+A. $ f'(x) = \left( \frac{- [e] x^{[d]}}{[g]x^{[f]}} \right) $\\
+B. $ f'(x) = \left( \frac{ [e] x^{[d]}}{[g]x^{[f]}+1} \right) $\\
+C. $ f'(x) = \left( \frac{- x^{[d]}}{[g]x^{[f]}+1} \right) $\\
+D. $ f'(x) = \left( \frac{- [e] x}{[g]x^{[f]}+1} \right) $\\
+E. $ f'(x) = \left( \frac{- [e] x^{[d]}}{[g]x^{[f]}+1} \right) $\\
+F. $ f'(x) = \left( \frac{- [e] x^{[d]}}{x^{[f]}+1} \right) $
+\testStop
+\kluczStart
+E
+\kluczStop
+
+
+
+\end{document}

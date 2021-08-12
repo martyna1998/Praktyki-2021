@@ -1,0 +1,96 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z2.38}
+\zadStart{Zadanie z Wikieł Z 2.38  moja wersja nr [nrWersji]}
+%[p1]=random.randint(-10,-2)
+%[p2]:[2,3,4,5,6,7,8,9,10]
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p4]:[2,3,4,5,6,7,8,9,10]
+%[p5]=random.randint(2,10)
+%[p24]=[p2]*[p4]
+%[p52]=[p5]*[p2]
+%[p23]=[p2]*[p3]
+%[p15]=[p1]*[p5]
+%[m]=round([p24]/[p1],2)
+%[m1]=round([p23]/[p15],2)
+%[wx]=[p3]-[p52]
+%math.gcd([p24],[p1])==1 and math.gcd([p23],[p15])==1 and [m]<[m1]
+
+
+Podać wartości parametru $m$, dla których rozwiązaniem układu
+$$\left\{\begin{array}{rcl}
+[p1]x+[p2]y&=&[p3]\\
+\ [p4]x+my&=&[p5]m
+\end{array} \right.$$
+jest para liczb dodatnich.
+\zadStop
+\rozwStart{Maja Szabłowska}{}
+$$W=\left| \begin{array}{lccr} [p1] & [p2]  \\ \ [p4] & m \end{array}\right| = [p1]\cdot m - [p2]\cdot [p4]=[p1]m-[p24] \neq 0$$
+
+$$[p1]m-[p24] \neq 0 \Rightarrow [p1]m\neq [p24] \Rightarrow m\neq [m]$$
+
+$$W_{x}=\left| \begin{array}{lccr} [p3] & [p2] \\ \ [p5]m & m \end{array}\right| = [p3]\cdot m - [p5]m\cdot [p2]=[p3]m-[p52]m=[wx]m$$
+
+$$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]  \\ \ [p4] & [p5]m \end{array}\right| = [p1]\cdot[p5]m - [p2]\cdot[p3]=[p15]m-[p23]$$
+
+$$x=\frac{W_{x}}{W}=\frac{[wx]m}{[p1]m-[p24]}>0$$
+$$([wx]m)([p1]m-[p24])>0$$ 
+$$m_{1}=0 \land m_{2}=\frac{[p24]}{[p1]}=[m] $$
+$$m\in(-\infty,[m])\cup(0,\infty)$$
+
+$$y=\frac{W_{y}}{W}=\frac{[p15]m-[p23]}{[p1]m-[p24]}>0$$
+$$([p15]m-[p23])([p1]m-[p24])>0$$ 
+$$m_{1}=\frac{[p23]}{[p15]}=[m1] \land m_{2}=\frac{[p24]}{[p1]}=[m] $$
+$$m\in(-\infty,[m])\cup([m1],\infty)$$
+Zatem $m\in(-\infty,[m])\cup(0,\infty).$
+\rozwStop
+\odpStart
+$m\in(-\infty,[m])\cup(0,\infty)$
+\odpStop
+\testStart
+A.$m\in(-\infty,[m])\cup(0,\infty)$
+B.$m\in(-\infty,[m])\cup([m1],\infty)$
+C.$m\in(-\infty,[m])\cup([p23],\infty)$
+D.$m\in(-\infty,[m1])\cup(0,\infty)$
+E.$m\in(-\infty,[m])\cup([p15],\infty)$
+F.$m\in(-\infty,[p23])\cup(0,\infty)$
+G.$m\in(-\infty,[m])$
+H.$m\in(0,\infty)$
+I.$m=2$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

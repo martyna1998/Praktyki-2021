@@ -1,0 +1,83 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.9a}
+\zadStart{Zadanie z Wikieł Z 1.9 a) moja wersja nr [nrWersji]}
+%[a]:[2,3,4]
+%[b]:[2,3,4]
+%[c]:[2,3,4]
+%[bk]=[b]*[b]
+%[bk2]=[bk]-2
+%[ak]=[a]*[a]
+%[ab2]=2*[a]*[b]
+%[4a]=4*[a]
+%[6ak]=6*[ak]
+%[4a3]=4*[a]*[a]*[a]
+%[xkw]=[6ak]*2+[ab2]
+%[ck]=[c]*[c]
+%[4c]=4*[c]
+%[6ck]=6*[ck]
+%[4c3]=4*[c]*[c]*[c]
+%[aczw]=[a]*[a]*[a]*[a]
+%[cczw]=[c]*[c]*[c]*[c]
+%[doczwartej]=2-[bk]
+%[dotrzeciej]=[4a]-[4c]
+%[dodrugiej]=[6ak]+[ab2]+[6ck]
+%[dopierwszej]=[4a3]-[4c3]
+%[wolny]=[aczw]-[ak]+[cczw]
+%[a]>[c]
+Uprościć wyrażenie: $(x+[a])^4-([b]x^2-[a])^2+(x-[c])^4$
+\zadStop
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
+Stosujemy wzory skróconego mnożenia (polecam naukę korzystania z trójkąta Pascala, aby nie musieć uczyć się wzorów na pamięć) $(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4$, $(a-b)^4=a^4-4a^3b+6a^2b^2-4ab^3+b^4$ oraz $(a-b)^2=a^2-2ab+b^2$. Zatem: \newline
+$$(x+[a])^4-([b]x^2-[a])^2+(x-[c])^4 =$$
+$$=x^4+4x^3\cdot[a]+6x^2\cdot[a]^2+4x[a]^3+[a]^4-([b]^2\cdot x^4-2\cdot[b]\cdot x^2\cdot[a]+[a]^2)+x^4-4x^3\cdot[c]+6x^2\cdot[c]^2-4x[c]^3+[c]^4=$$
+$$=x^4+[4a]x^3+[6ak]x^2+[4a3]x+[aczw]-[bk]x^4+[ab2]x^2-[ak]+x^4-[4c]x^3+[6ck]x^2-[4c3]x+[cczw]=$$
+Teraz musimy tylko uporządkować. To znaczy, że $x^4$ z $x^4$, $x^3$ z $x^3$ etc. dobrym pomysłem kiedy jest tego dużo, jest podkreślanie/zakreślanie kolorem liczb które będziemy łączyć.
+$$=[doczwartej]x^4+[dotrzeciej]x^3+[dodrugiej]x^2+[dopierwszej]x+[wolny]$$
+\odpStop
+$[doczwartej]x^4+[dotrzeciej]x^3+[dodrugiej]x^2+[dopierwszej]x+[wolny]$
+\testStart
+A.$[doczwartej]x^4+[dotrzeciej]x^3+[dodrugiej]x^2+[dopierwszej]x+[wolny]$
+\\
+B.$-[bk2]x^4+[wolny]$
+\\
+C.$[wolny]$
+\\
+D.$-[xkw]x^2-[wolny]$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.93j}
+\zadStart{Zadanie z Wikieł Z 1.93 j) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[s]:[2,4,6,8,10]
+%[b]:[1,2,3,4,5,6,7,8,9,10]
+%[d]:[1,2,3,4,5,6,7,8,9,10]
+%[e]:[3,5,7,9,11,13,15]
+%[f]=int(([s]*[e])/2)
+%[ff]=pow([f],2)
+%[t1]=[a]*[c]
+%[t2]=[b]*[c]+[a]*[d]
+%[t3]=[ff]-[b]*[d]
+%[delta]=[t2]**2+4*([t1]*[t3])
+%[p]=(pow([delta],1/2))
+%[pp]=int([p].real)
+%[m]=2*[t1]
+%[z1]=([t2]-[pp])/([m])
+%[z2]=([t2]+[pp])/([m])
+%[x1]=int([z1])
+%[x2]=int([z2])
+%[t3]>0 and math.gcd([a],[b])==1 and [delta]>0 and [p].is_integer()==True and [x1]>(-([b]/[a])) and ([x2])>(-([b]/[a])) and ([x1])>(-([d]/[c])) and ([x2])>(-([d]/[c])) and [b]!=[d]
+Rozwiązać równanie $\frac{1}{2} \log_{[s]}{([a]x+[b])} + \log_{[s]}{\sqrt{[c]x+[d]}}  = 1 + \log_{[s]}{\frac{[e]}{2}} $
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+Dziedzina:
+$$[a]x+[b] > 0 \quad \land \quad [c]x+[d] > 0 \quad \Longrightarrow \quad x > -\frac{[b]}{[a]} \quad \land \quad x > -\frac{[d]}{[c]}$$
+Rozwiązujemy równo\'sć:
+$$ \frac{1}{2} \log_{[s]}{([a]x+[b])} + \log_{[s]}{\sqrt{[c]x+[d]}}  = 1 + \log_{[s]}{\frac{[e]}{2}} $$
+$$ \Longleftrightarrow \quad \frac{1}{2} \log_{[s]}{([a]x+[b])} + \frac{1}{2} \log_{[s]}{([c]x+[d])}  = 1 + \log_{[s]}{\frac{[e]}{2}}$$
+$$ \Longleftrightarrow \quad \log_{[s]}{([a]x+[b])} + \log_{[s]}{([c]x+[d])}  = 2(\log_{[s]}{[s]} + \log_{[s]}{\frac{[e]}{2}}) $$
+$$ \Longleftrightarrow \quad \log_{[s]}{([a]x+[b])([c]x+[d])}  = \log_{[s]}{[f]^2} $$
+$$ \Longleftrightarrow \quad ([a]x+[b])([c]x+[d]) = [ff] \quad \Longleftrightarrow \quad [t1] x^2 +[t2] x - [t3]=0 $$
+$$ \bigtriangleup =[t2]^2+4 \cdot [t1] \cdot [t3] = [delta] \qquad \sqrt{\bigtriangleup} = [pp]$$
+$$ x_1 = \frac{[t2]-[pp]}{2 \cdot [t1]} = \frac{[z1]}{[m]} = [x1] \in D$$
+$$ x_2 = \frac{[t2]+[pp]}{2 \cdot [t1]} = \frac{[z1]}{[m]} = [x2] \in D$$
+\rozwStop
+\odpStart
+$x \in \{[x1], [x2]\}$
+\odpStop
+\testStart
+A. $x \in \{-\frac{1}{8}, \frac{1}{8}\}$\\
+B. $x \in \{0, 1\}$\\
+C. $x \in \{\frac{1}{4}, \frac{1}{11}\}$\\
+D. $x \in \{[x1], [x2]\}$\\
+E. $x \in \{[z1], [z2]\}$
+\testStop
+\kluczStart
+D
+\kluczStop
+
+
+
+\end{document}

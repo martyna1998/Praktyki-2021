@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.129t}
+\zadStart{Zadanie z Wikieł Z 1.129 t) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8,9,10]
+%[p2]=random.randint(2,10)
+%[p3]:[2,3,4,5,6,7,8,9,10]
+%[p3k]=[p3]*[p3]
+%[2p3p1]=2*[p3]*[p1]
+%[p1k]=[p1]*[p1]
+%[xk]=-1-[p1k]
+%[x]=[p2]+[2p3p1]
+%[del]=[x]*[x]-4*[x]*[p3k]
+%[pdel]=round(math.sqrt(abs([del])),2)
+%[2xk]=2*[xk]
+%[x1]=round((-[x]-[pdel])/[2xk],2)
+%[x2]=round((-[x]+[pdel])/[2xk],2)
+%[del]>0 and [x2]<[x1]
+
+Wyznaczyć dziedzinę naturalną funkcji.
+$$f(x)=\log \left([p1]x+\sqrt{[p2]x-x^{2}}-[p3]\right)$$
+\zadStop
+
+\rozwStart{Maja Szabłowska}{}
+$$[p2]x-x^{2}\geq 0$$
+$$x([p2]-x)\geq 0$$
+$$x\in[0,[p2]]$$
+
+$$[p1]x+\sqrt{[p2]x-x^{2}}-[p3]>0$$
+$$\sqrt{[p2]x-x^{2}}>[p3]-[p1]x$$
+$$[p2]x-x^{2}>([p3]-[p1]x)^{2}$$
+$$[p2]x-x^{2}>[p3k]-[2p3p1]x+[p1k]x^{2} $$
+$$[xk]x^{2}+[x]x-[p3k]>0$$
+$$\Delta=[x]^{2}-4\cdot([xk])\cdot(-[p3k])=[del] \Rightarrow \sqrt{\Delta}=[pdel]$$
+$$x_{1}=\frac{-[x]-[pdel]}{[2xk]}=[x1], \quad x_{2}=\frac{-[x]+[pdel]}{[2xk]}=[x2]$$
+$$x\in([x2], [x1])$$
+
+Zatem ostatecznie 
+$$x\in([x2],[x1])$$
+\rozwStop
+\odpStart
+$x\in([x2],[x1])$
+\odpStop
+\testStart
+A.$x\in([x2],[x1])$\\
+B.$x\in[e^{[p2]},\infty)$\\
+C.$x\in(-\infty, 0)$\\
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$\\
+E.$x\in[[p1],\infty)$\\
+F.$x\in([p2],\infty)$\\
+G.$x\in\emptyset$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

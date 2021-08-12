@@ -1,0 +1,90 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z3.3c}
+\zadStart{Zadanie z Wikieł Z 3.3 c moja wersja nr [nrWersji]}
+%[p1]:[2,3,4,5,6,7,8]
+%[p2]:[4,5,6,7,10]
+%[p3]:[2,3,4,5,6,7]
+%[p4]:[3,6,7,8,9]
+%[p5]:[1,2,4,5,10]
+%[a]=random.randint(3,20)
+%[b]=random.randint(4,25)
+%[p11]=[p1]-1
+%[p21]=[p2]-1
+%[p31]=[p3]-1
+%[p41]=[p4]-1
+%[p51]=[p5]-1
+%[p123]=[p11]+[p21]-[p31]
+%[ap]=round([a]/([p123]+0.0001),2)
+%[p45]=[p41]+[p51]
+%[bp]=round([b]/(2*[ap]+[p45]+0.0001),2)
+%[abp]=round([ap]*[bp],2)
+%([p1]+[p2]-[p3])!=([p4]+[p5]) and [a]!=[b] and [p1]!=[p2] and [p1]!=[p3] and [p2]!=[p3] and [p123]!=0 and (2*[ap]+[p45])!=0 and [p1]!=[bp]
+Znaleźć wyraz pierwszy $a_{1}$ oraz różnicę $r$ ciągu arytmetycznego ($a_{n}$), w którym \\
+b) $a_{[p1]}+a_{[p2]}-a_{[p3]}=[a]$ oraz $a_{[p4]}+ a_{[p5]}=[b]$
+\zadStop
+\rozwStart{Wojciech Przybylski}{}
+$$a_{[p1]}+a_{[p2]}-a_{[p3]}=[a]\Rightarrow a_{1}+[p11]r+a_{1}+[p21]r-a_{1}-[p31]r=[a]$$
+$$a_{1}+[p123]r=[a] \Rightarrow a_{1}=[ap]r$$
+$$a_{[p4]}+ a_{[p5]}=[b] \Rightarrow 2a_{1}+[p45]r=[b] \Rightarrow 2([ap]r)+[p45]r=[b]$$
+$$r=[bp] \Rightarrow a_{1}=[ap]\cdot [bp] \Rightarrow a_{1}=[abp] $$
+$$
+ \left\{ \begin{array}{ll}
+r=[bp] & \\
+a_{1}=[abp] &
+\end{array} \right.
+$$
+\rozwStop
+\odpStart
+$r=[bp]$ oraz $a_{1}=[abp]$
+\odpStop
+\testStart
+A. $r=[bp]$ oraz $a_{1}=[abp]$\\
+B. Ciąg jest nieskończony\\
+C. $r=[bp]$ oraz $a_{1}=0$\\
+D. $r=0$ oraz $a_{1}=[bp]$\\
+E. $r=[p1]$ oraz $a_{1}=[p1]$\\
+F. $r=[p2]$ oraz $a_{1}=[p2]$\\
+G. $r=[p3]$ oraz $a_{1}=[p3]$\\
+H. $r=[p4]$ oraz $a_{1}=[p5]$\\
+I. $r=[p1]$ oraz $a_{1}=[p2]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

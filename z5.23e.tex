@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Radosław Grzyb}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.23e}
+\zadStart{Zadanie z Wikieł Z 5.23 e) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11,12]
+%[c]=random.randint(2,5)
+%[d]=random.randint(2,5)
+%[e]=2*[c]
+%[f]=2*[d]
+%[g]=[e]*[d]
+%[k]=[e]*[b]
+%[i]=[c]*[f]
+%[j]=[a]*[f]
+%[l]=[k]-[j]
+%[g]-[i]=0
+%math.gcd([a],[b])==1
+Znaleźć ekstrema lokalne funkcji:
+$$f(x)=\frac{[c]x^2+[a]}{[d]x^2+[b]}$$
+\zadStop
+\rozwStart{Klaudia Klejdysz}{}
+Funkcja $f(x)$ jest różniczkowalna w swojej dziedzinie, czyli w zbiorze $\mathbb{R}$. Obliczamy pochodną:
+$$f'(x)=\frac{(2*[c]x)([d]x^2+[b])-([c]x^2+[a])(2*[d]x)}{([d]x^2+[b])^2}=$$$$=\frac{([e]x)([d]x^2+[b])-([c]x^2+[a])([f]x)}{([d]x^2+[b])^2}=$$
+$$=\frac{[g]x^3+[k]x-[i]x^3-[j]x}{([d]x^2+[b])^2}=\frac{[l]x}{([d]x^2+[b])^2}$$
+\noindent Z warunku koniecznego istnienia ekstremum mamy do rozwiązania równanie $f'(x)=0$. Stąd otrzymujemy tylko jeden punkt stacjonarny:
+$$\frac{[l]x}{([d]x^2+[b])^2}=0\Leftrightarrow[l]x=0\Leftrightarrow x=0$$
+Na podstawie twierdzenia Fermata wnioskujemy, że funkcja $f(x)$ może mieć ekstrema tylko w punkcie $x=0$.\\
+Aby zbadać znak pochodnej, rozwiązujemy nierówności $f'(x)>0$ i $f'(x)<0$:
+$$f'(x)>0\Leftrightarrow\frac{[l]x}{([d]x^2+[b])^2}>0\Leftrightarrow [l]x>0\Leftrightarrow x\in(0,\infty)$$
+$$f'(x)<0\Leftrightarrow\frac{[l]x}{([d]x^2+[b])^2}<0\Leftrightarrow [l]x<0\Leftrightarrow x\in(-\infty,0)$$
+
+\noindent Ustalamy znaki pochodnych w otoczeniu punktu $x_0=0$. Zestawimy wyniki w tabeli:
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+x     & $(\infty,0)$ & 0 & $(\infty,0)$ \\ \hline
+$f'(x)$ & -                          & 0 & +                         \\ \hline
+$f(x)$  & $\searrow$    & $\frac{[a]}{[b]}$ & $\nearrow$   \\ \hline
+\end{tabular}
+\end{table}\\
+Zgodnie z twierdzeniem funkcja osiąga minimum lokalne w punkcie $x_0=0$.
+\rozwStop
+\odpStart
+Minimum lokalne w punkcie $x_0=0$.
+\odpStop
+\testStart
+A. Minimum lokalne w punkcie $x_0=0$.\\
+B. Maksimum lokalne w punkcie $x_0=1$.\\
+C. Minimum lokalne w punkcie $x_0=1$.\\
+D. Maksimum lokalne w punkcie $x_0=0$.\\
+E. Maksimum lokalne w punkcie $x_0=-1$.\\
+F. Minimum lokalne w punkcie $x_0=-1$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+\end{document}

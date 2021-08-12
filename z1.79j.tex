@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.79j}
+\zadStart{Zadanie z Wikieł Z 1.79 j) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12]
+%[c]=random.randint(-100,-14)
+%[a]!=[b] and [a]!=[c] and [b]!=[c] and math.gcd([a],[b])==1
+Rozwiązać nierówność
+$$\sqrt{[a]x^2-[b]x}>[c].$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zakładamy, że $[a]x^2-[b]x\geq0$. Zatem:
+$$[a]x^2-[b]x\geq\Leftrightarrow[a]x\bigg(x-\frac{[b]}{[a]}\bigg)\geq0$$
+Zauważamy, że mamy parabolę z ramionami skierowanymi w górę oraz miejscami zerowymi w $x=0$ oraz $x=\frac{[b]}{[a]}$. Stąd $x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$.
+\\Lewa strona rozważanej nierówności jest nieujemna, a prawa ujemna, więc nierówność zachodzi dla każdego $x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$.
+\rozwStop
+\odpStart
+$x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$
+\odpStop
+\testStart
+A.$x\in\big(-\infty,[c]\big]\cup\big[0,\infty\big)$
+B.$x\in\mathbb{R}\setminus\{0\}$
+C.$x\in\mathbb{R}$
+D.$x\in\big(-\infty,0\big)\cup\big(\frac{[b]}{[a]},\infty\big)$
+E.$x\in\big(-\infty,0\big]\cup\big[\frac{[b]}{[a]},\infty\big)$
+F.$x\in\big(-\infty,0\big]\cup\big(\frac{[b]}{[a]},\infty\big)$
+G.$x\in\big[\frac{[b]}{[a]},\infty\big)$
+H.$x\in\big(-\infty,0\big)\cup\big[\frac{[b]}{[a]},\infty\big)$
+I.$x\in\big(-\infty,0\big]$
+\testStop
+\kluczStart
+E
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,131 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.139}
+\zadStart{Zadanie z Wikieł Z 1.139 moja wersja nr [nrWersji]}
+%[a]:[2,4,6,8,10,12,14,16,18,20]
+%[c]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+%[d]=int([a]/2)
+%[e]=pow([d],2)-[b]
+%[f]=[c]-pow([d],2)
+%[e]>0 and [f]>0 and (-([d]**2)+[a]*[d]-[b])==([d]**2-[a]*[d]+[c])
+Znaleźć funkcję odwrotną do funkcji:
+$$
+f(x) = \left\{ \begin{array}{ll}
+-x^2+[a]x-[b] & \textrm{dla $x<[d]$}\\
+x^2-[a]x+[c] & \textrm{dla $x \ge [d]$}
+\end{array} \right.
+$$
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+dla $x<[d]$:
+$$y=-x^2+[a]x-[b] $$
+$$y=-(x^2-[a]x+[b]) $$
+$$y = -((x-[d])^2-[e])$$
+$$-y = (x-[d])^2-[e]$$
+$$-y + [e]= ([d]-x)^2$$
+$$\sqrt{-y + [e]}= [d]-x$$
+$$x = [d]- \sqrt{[e]-y}$$
+$$f^{-1}(x) = [d]- \sqrt{[e]-x}$$
+Dziedzina: $x \in (-\infty, [e]]$\\
+dla $x\ge [d]$:
+$$y=x^2-[a]x+[c] $$
+$$y = (x-[d])^2+[f]$$
+$$y -[f]= (x-[d])^2$$
+$$\sqrt{y - [f]}= x-[d]$$
+$$x = [d]+\sqrt{y - [f]}$$
+$$f^{-1}(x) = [d]+\sqrt{x - [f]}$$
+Dziedzina: $x \in [[f], \infty)$\\
+Ostatecznie:
+$$
+f^{-1}(x) = \left\{ \begin{array}{ll}
+[d] - \sqrt{[e]-x} & \textrm{dla $x<[e]$}\\
+\sqrt{x - [f]}+[d] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$$
+\rozwStop
+\odpStart
+$$
+f^{-1}(x) = \left\{ \begin{array}{ll}
+[d] - \sqrt{[e]-x} & \textrm{dla $x<[e]$}\\
+\sqrt{x - [f]}+[d] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$$
+\odpStop
+\testStart
+A. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+\sqrt{-x + [d]}+[e] & \textrm{dla $x>[e]$}\\
+\sqrt{x - [d]}+[f] & \textrm{dla $x \le [f]$}
+\end{array} \right.
+$\\
+B. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+\sqrt{-x + [e]}-[d] & \textrm{dla $x<[e]$}\\
+\sqrt{x - [f]}+[d] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$\\
+C. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+\sqrt{-x + [e]}+[d] & \textrm{dla $x<[e]$}\\
+\sqrt{x - [f]}+[d] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$\\
+D. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+\sqrt{-x + [d]}+[e] & \textrm{dla $x<[e]$}\\
+\sqrt{x - [d]}-[f] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$\\
+E. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+\frac{\sqrt{-x + [e]}}{[d]} & \textrm{dla $x>[e]$}\\
+\frac{\sqrt{x - [f]}}{[d]} & \textrm{dla $x \le [f]$}
+\end{array} \right.
+$\\
+F. $
+f^{-1}(x) = \left\{ \begin{array}{ll}
+[d] - \sqrt{[e]-x} & \textrm{dla $x<[e]$}\\
+\sqrt{x - [f]}+[d] & \textrm{dla $x \ge [f]$}
+\end{array} \right.
+$
+\testStop
+\kluczStart
+F
+\kluczStop
+
+
+
+\end{document}

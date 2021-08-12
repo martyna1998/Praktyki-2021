@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.5r}
+\zadStart{Zadanie z Wikieł Z 5.5 r) moja wersja nr [nrWersji]}
+%[x]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[y]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[a]=random.randint(2,10)
+%[b]=random.randint(2,10)
+%[c]=random.randint(2,10)
+%[d]=random.randint(2,10)
+%[m]=[d]*[a]
+%[n]=[d]*[b]
+%[l]=[a]-([c]*[b])
+%[u]=[c]*[a]
+%[l]<0
+Korzystając z podstawowych twierdzeń i wzorów, wyznaczyć pochodną funkcji (bez określania zakresu zmienności $x$).\\ 
+$f(x)=([a]x+[b])e^{-[c]x}\sin([d]x)$.
+\zadStop
+\rozwStart{Katarzyna Filipowicz}{}
+$$f(x)=([a]x+[b])e^{-[c]x}\sin([d]x)$$
+$$f'(x)=\left(([a]x+[b])e^{-[c]x}\sin([d]x)\right)' = $$
+$$ = [a]e^{-[c]x}\sin([d]x)-[c]([a]x+[b])e^{-[c]x}\sin([d]x)+[d]([a]x+[b])e^{-[c]x}\cos([d]x)=
+$$ $$
+=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)+\sin([d]x)([a]-[c]\cdot[a]x-[c]\cdot[b])\Big]=
+$$ $$
+=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)-\sin([d]x)([u]x [l])\Big]
+$$
+\rozwStop
+\odpStart
+$ f'(x)=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)-\sin([d]x)([u]x [l])\Big]$
+\odpStop
+\testStart
+A. $ f'(x)=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)-\sin([d]x)([u]x [l])\Big]$\\
+B. $ f'(x)=e^{-x}\Big[([m]x+[n])\cos([d]x)-\sin([d]x)([u]x [l])\Big]$\\
+C. $ f'(x)=e^{-[c]x}\Big[([a]x+[b])\cos([d]x)-\sin([d]x)([u]x [l])\Big]$ \\
+D. $ f'(x)=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)+\sin([d]x)([a]x [b])\Big]$\\
+E. $ f'(x)=e^{-[c]x}\Big[([m]x+[n])\cos([d]x)\Big]$\\
+F. $ f'(x)=e^{-[c]x}\Big[\sin([d]x)([u]x [l])\Big]$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

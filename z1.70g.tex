@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.70g}
+\zadStart{Zadanie z Wikieł Z 1.70 g) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[c]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[d]:[2,3,4,5,6,7,8,9,10,11,12,13]
+%[a]=random.randint(2,25)
+%[b]=random.randint(2,25)
+%[c]=random.randint(2,25)
+%[d]=random.randint(2,25)
+%[dbc]=[d]-[b]-[c]
+%[bd]=[b]*[d]
+%[bc]=[b]*[c]
+%[reszta]=[a]-[bd]+[bc]
+%[cpb]=[c]+[b]
+%[delta1]=pow([dbc],2)-4*[reszta]
+%[delta2]=pow([cpb],2)-4*[bc]
+%[sdelta1]=pow([delta1],1/2)
+%[sdelta11]=int([sdelta1].real)
+%[sdelta2]=pow([delta2],1/2)
+%[sdelta22]=int([sdelta2].real)
+%[x0]=(-[dbc])/2
+%[x2]=(-[dbc]+[sdelta11])/2
+%[x3]=([cpb]-[sdelta22])/2
+%[x4]=([cpb]+[sdelta22])/2
+%[x01]=int([x0])
+%[x31]=int([x3])
+%[x41]=int([x4])
+%[b]!=[c] and [dbc]>0 and [reszta]!=0 and (pow([dbc],2)-4*[reszta])==0 and [x0]<[x3] 
+Rozwiązać nierówność $\frac{[a]}{(x-[b])(x-[c])}+\frac{[d]}{(x-[c])}+1\leq0$
+\zadStop
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
+założenie: $$x-[b]\neq0\land x-[c]\neq0$$
+$$x\neq[b]\land x\neq[c]$$
+dziedzina:$$x\in \mathbb{R}-\{[b],[c]\}$$
+rozwiązanie:$$\frac{[a]}{(x-[b])(x-[c])}+\frac{[d]}{(x-[c])}+1\leq0$$
+$$\frac{[a]+[d](x-[b])+(x-[b])(x-[c])}{(x-[b])(x-[c])}\leq0$$
+$$\frac{x^{2}+[dbc]x+[reszta]}{x^{2}-[cpb]x+[bc]}\leq0$$
+Podzielimy rozwiązanie na 2 przypadki:
+$$\textbf{1)}x^{2}+[dbc]x+[reszta]\leq0 \land x^{2}-[cpb]x+[bc]\geq0$$ $$\vee$$ $$\textbf{2)}x^{2}+[dbc]x+[reszta]\geq0 \land x^{2}-[cpb]x+[bc]\leq0$$
+Liczymy delty (dla obu przypadków wynoszą tyle samo ponieważ są to te same wartości po lewej stronie, różni się tylko strona w którą zwrócona jest nierówność)
+$$\Delta_{1}=[dbc]^{2}-4\cdot[reszta]=[delta1], \Delta_{2}=[cpb]^{2}-4\cdot [bc]=[delta2]$$
+$$\sqrt{\Delta_{1}}=0,\sqrt{\Delta_{2}}=[sdelta22]$$
+$$x_{0}=[x01], \text{   }x_{3}=[x31],x_{4}=[x41]$$
+Pierwszy przypadek:
+$$\textbf{1)}(x-([x01]))^{2}\leq0 \land (x-([x31]))(x-([x41]))\geq0$$
+$$x=[x01]\land x\in(-\infty,[x31]]\cup [[x41],\infty)$$
+Drugi przypadek:$$\textbf{2)}(x-([x01]))^{2}\geq0 \land (x-[x31])(x-[x41])\leq0$$
+$$x\in\mathbb{R}\land x\in[[x31],[x41]]$$
+Suma obu przypadków i uwzględnienie dziedziny:
+$$(x=[x01] \vee x\in[[x31],[x41]])\land\text{dziedzina}$$
+$$x\in[[x31],[x41]]\cup \{[x01]\}-\{[b],[c]\}$$
+\rozwStop
+\odpStart
+$$x\in([x31],[x41])\cup \{[x01]\}$$
+\odpStop
+\testStart
+A.$$x\in([x31],[x41])\cup \{[x01]\}$$
+B.$$x\in(-[x31],[x41])\cup \{[x01]\}$$
+C.$$x\in(-\infty,[x31])\cup\{28\}$$
+D.$$x\in(-\infty,0)\cup\{28\}$$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

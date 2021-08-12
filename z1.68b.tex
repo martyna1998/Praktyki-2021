@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.68b}
+\zadStart{Zadanie z Wikieł Z 1.68 b) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7]
+%[b]:[2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[a]=random.randint(2,12)
+%[b]=random.randint(2,12)
+%[c]=random.randint(1,12)
+%[-b]=(-1)*[b]
+%[bkw]=[b]*[b]
+%[e]=[a]+[b]
+%[f]=([a]*[b]+[c])
+%[g]=4*[f]
+%[delta]=[e]*[e]+[g]
+%[pierw]=(pow([delta],1/2))
+%[pierw1]=[pierw].real
+%[pierw2]=int([pierw1])
+%[x1]=int(((-1)*[e]+[pierw2])/2)
+%[x2]=int(((-1)*[e]-[pierw2])/2)
+%[delta]>0 and [pierw].is_integer()==True and [x1]!=[b] and [x1]!=[-b] and [x2]!=[b] and [x2]!=[-b]
+Rozwiązać równanie: $\frac{[a]}{x+[b]}+\frac{x}{x-[b]}=\frac{[c]}{x^2-[bkw]}$
+\zadStop
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
+Zaczynamy od wyznaczania dziedziny:
+\begin{enumerate}
+\item $x+[b]\neq0 \Leftrightarrow x\neq-[b]$
+\item $x-[b] \neq0 \Leftrightarrow x\neq[b]$
+\item $x^2-[bkw]\neq0 \Leftrightarrow x\neq[b] \vee x\neq-[b]$
+\end{enumerate}
+Stąd otrzymujemy dziedzinę $x\in\mathbb{R}\symbol{92}\{-[b],[b]\}$
+Teraz możemy zabrać się za rozwiązywanie równania:
+$$\frac{[a]}{x+[b]}+\frac{x}{x-[b]}=\frac{[c]}{x^2-[bkw]}$$
+$$\frac{[a](x-[b])+x(x+[b])}{x^2-[bkw]}-\frac{[c]}{x^2-[bkw]}=0$$
+$$\frac{[a](x-[b])+x(x+[b])-[c]}{x^2-[bkw]}=0$$
+Zauważmy, że dane równanie jest spełnione w naszej dziedzinie wtedy i tylko wtedy, gdy nasz licznik = 0. Stąd:
+$$x^2+[e]x-[f]=0$$
+Liczymy deltę:
+$$\Delta=[e]^2+4\cdot[f]=[delta]$$
+$$\sqrt{\Delta}=\sqrt{[delta]}=[pierw2]$$
+$$x_1=\frac{-[e]+[pierw2]}{2}=[x1]\in\text{Dziedziny} \vee x_2=\frac{-[e]-[pierw2]}{2}=[x2]\in\text{Dziedziny}$$
+\odpStart
+$x=[x1] \vee x=[x2]$
+\odpStop
+\testStart
+A.$x=[x1] \vee x=[x2]$
+B.$x=[x1]$
+C.$x\in\emptyset$
+D.$x=[x2]$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

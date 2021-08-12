@@ -1,0 +1,84 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Laura Mieczkowska}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z5.21c}
+\zadStart{Zadanie z Wikieł Z 5.21 c) moja wersja nr [nrWersji]}
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[a]:[2,3,4,5,6,7,8,9,10]
+%[c]=[a]*3
+%[m]=2*[c]
+%[delta]=4*[c]*[b]
+%[pierw1]=math.sqrt([delta])
+%[pierw]=int([pierw1])
+%[ulamek1]=[pierw]/[m]
+%[ulamek]=int([ulamek1])
+%[x]=[ulamek]+1
+%[xkw]=[x]**2
+%[p1]=[c]*[xkw]-[b]
+%[pierw1].is_integer()==True and [ulamek1].is_integer()==True
+Wyznaczyć przedziały monotoniczności funkcji $f(x)=[a]x^3-[b]x$.
+\zadStop
+\rozwStart{Laura Mieczkowska}{}
+$$f(x)=[a]x^3-[b]x$$
+Dziedziną funkcji $f$ jest zbiór liczb rzeczywistych tj. $\mathnormal{D_f}=\mathbb{R}.$
+\\\\Obliczamy pochodną funkcji
+$$f'(x)=[c]x^2-[b]$$
+$$\Delta=0-4\cdot[c]\cdot(-[b])=[delta]\Rightarrow \sqrt{\Delta}=[pierw]$$
+$$x_1=\frac{-[pierw]}{[m]} \vee x_2=\frac{[pierw]}{[m]}$$
+$$x_1=-[ulamek] \vee x_2=[ulamek]$$
+Otrzymujemy trzy przedziały monotoniczności $(-\infty;-[ulamek]), (-[ulamek],[ulamek])$ oraz $([ulamek],\infty)$, w których następnie należy sprawdzić znak funkcji.
+\\\\$(-\infty;-[ulamek])$
+$$f'(-[x])=[c]\cdot(-[x])^2-[b]=[p1]$$
+$(-[ulamek],[ulamek])$
+$$f'(0)=0-[b]=-[b]$$
+$([ulamek],\infty)$
+$$f'([x])=[c]\cdot[x]^2-[b]=[p1]$$
+Więc funkcja $f(x)=[a]x^3-[b]x$ jest rosnąca na przedziale $(-\infty;-[ulamek])$ i $([ulamek],\infty)$ oraz malejąca na przedziale $(-[ulamek],[ulamek])$.
+
+\odpStart
+$\nearrow$ w $(-\infty;-[ulamek])$ i $([ulamek],\infty)$,$\searrow$ w $(-[ulamek],[ulamek])$
+\odpStop
+\testStart
+A. $\nearrow$ w $(-\infty;-[ulamek])$,$\searrow$ w $(-[ulamek],[ulamek])$ i $([ulamek],\infty)$\\
+B. $\searrow$ w $(-\infty;-[ulamek])$,$\nearrow$ w $(-[ulamek],[ulamek])$ i $([ulamek],\infty)$ \\
+C. $\nearrow$ w $(-\infty;-[ulamek])$ i $([ulamek],\infty)$,$\searrow$ w $(-[ulamek],[ulamek])$ \\
+D. $\searrow$ w $(-\infty;-[ulamek])$ i $([ulamek],\infty)$,$\nearrow$ w $(-[ulamek],[ulamek])$ 
+\testStop
+\kluczStart
+C
+\kluczStop
+
+
+
+\end{document}
