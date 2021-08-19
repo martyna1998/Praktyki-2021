@@ -33,26 +33,30 @@
 
 
 \kategoria{Wikieł/Z4.7j}
-\zadStart{Zadanie z Wikieł Z 4.7 j) moja wersja nr 1}
-%[b]:[2,3,4,5,6,7,8]
-%[c]:[2,3,4,5,6,7,8]
-%[d]:[2,3,4,5,6,7,8]
-%[b]=random.randint(1,24)
-%[c]=random.randint(1,24)
-%[d]=random.randint(2,25)
+\zadStart{Zadanie z Wikieł Z 4.7 j) moja wersja nr [nrWersji]}
+%[b]:[2,3,4,5,6,7]
+%[c]:[2,3,4,5,6,7]
+%[d]:[2,3,4,5,6,7]
+%[b]=random.randint(1,8)
+%[c]=random.randint(1,8)
+%[d]=random.randint(2,9)
 %[bmc]=[b]-[c]
 Obliczyć granicę funkcji $\lim_{x \to \infty}\frac{[d]^{\sqrt{x^{2}+2x+[b]}}}{[d]^{\sqrt{x^{2}+[c]}}}$.
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$\lim_{x \to \infty}\frac{[d]^{\sqrt{x^{2}+2x+[b]}}}{[d]^{\sqrt{x^{2}+[c]}}}$$
 $$\lim_{x \to \infty}[d]^{\sqrt{x^{2}+2x+[b]}-\sqrt{x^{2}+[c]}}$$
 $$[d]^{\lim_{x \to \infty}\big(\sqrt{x^{2}+2x+[b]}-\sqrt{x^{2}+[c]}\big)}$$
-Mnożymy wyrażenie w potędze przez $\frac{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}$
-$$[d]^{\lim_{x \to \infty}\big(\frac{x^{2}+2x+[b]-x^{2}-[c]}{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}\big)}$$
-$$[d]^{\lim_{x \to \infty}\big(\frac{2x+([bmc])}{\sqrt{x^{2}+ax+[b]}+\sqrt{x^{2}+[c]}}\big)}$$
-$$[d]^{\lim_{x \to \infty}\bigg(\frac{2x+([bmc])}{x\sqrt{1+\frac{2}{x}+\frac{[b]}{x^{2}}}+x\sqrt{1+\frac{[c]}{x^{2}}}}\bigg)}$$
-$$[d]^{\lim_{x \to \infty}\bigg(\frac{x(2+\frac{[bmc]}{x})}{x\big(\sqrt{1+\frac{2}{x}+\frac{[b]}{x^{2}}}+\sqrt{1+\frac{[c]}{x^{2}}}\big)}\bigg)}$$
-$$[d]^{\frac{2}{\sqrt{1}+\sqrt{1}}}=[d]$$
+Obliczymy teraz granice w potędze
+$$\lim_{x \to \infty}\big(\sqrt{x^{2}+2x+[b]}-\sqrt{x^{2}+[c]}\big)$$
+Mnożymy ją przez $\frac{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}$
+$$\lim_{x \to \infty}\bigg(\frac{x^{2}+2x+[b]-x^{2}-[c]}{\sqrt{x^{2}+2x+[b]}+\sqrt{x^{2}+[c]}}\bigg)$$
+$$\lim_{x \to \infty}\bigg(\frac{2x+([bmc])}{\sqrt{x^{2}+ax+[b]}+\sqrt{x^{2}+[c]}}\bigg)$$
+$$\lim_{x \to \infty}\bigg(\frac{2x+([bmc])}{x\sqrt{1+\frac{2}{x}+\frac{[b]}{x^{2}}}+x\sqrt{1+\frac{[c]}{x^{2}}}}\bigg)$$
+$$\lim_{x \to \infty}\bigg(\frac{x(2+\frac{[bmc]}{x})}{x\big(\sqrt{1+\frac{2}{x}+\frac{[b]}{x^{2}}}+\sqrt{1+\frac{[c]}{x^{2}}}\big)}\bigg)$$
+$$\frac{2}{\sqrt{1}+\sqrt{1}}=\frac{2}{2}=1$$
+Ostatecznie mamy
+$$[d]^{1}=[d]$$
 \rozwStop
 \odpStart
 $$[d]$$

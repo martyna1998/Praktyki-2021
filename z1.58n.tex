@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Mirella Narewska}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.58n}
+\zadStart{Zadanie z Wikieł Z 1.58 n) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,20]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[c]=[a]-[b]
+%[delta]=[c]**2-4*[a]*[a]
+%[pierw2]=pow([delta],1/2)
+%[pierw1]=[pierw2].real
+%[pierw]=int([pierw1])
+%[m]=2*[a]
+%[licz1]=-[c]-[pierw]
+%[licz2]=-[c]+[pierw]
+%[uu1]=[licz1]/[m]
+%[uu2]=[licz2]/[m]
+%[u1]=int([uu1])
+%[u2]=int([uu2])
+%[a]>[b] and [c]**2>4*[a]*[a] and [licz1]!=0 and [licz2]!=0 and [pierw2].is_integer()==True and [uu1].is_integer()==True and [uu2].is_integer()==True 
+
+Rozwiązać równanie $[a]x^3-[b]x^2+[b]x-[a]=0$.
+\zadStop
+\rozwStart{Mirella Narewska}{}
+$$[a]x^3-[b]x^2+[b]x-[a]=0$$
+$$[a](x^3-1)-[b]x(x-1)=0$$
+$$[a](x-1)(x^2+x+1)-[b]x(x-1)=0$$
+$$(x-1)([a]x^2+[a]x+[a]-[b]x)=0$$
+$$(x-1)([a]x^2+[c]x+[a]=0$$
+$$x=1 \vee [a]x^2+[c]x+[a]=0$$
+$$\triangle=[c]^2-4\cdot [a] \cdot [a]=[delta] \Rightarrow \sqrt{\triangle}=[pierw]$$
+$$x=1 \vee x=\frac{-[c]-[pierw]}{2\cdot[a]} \vee x=\frac{-[c]+[pierw]}{2\cdot[a]}$$
+$$x=1 \vee x=\frac{[licz1]}{[m]} \vee x=\frac{[licz2]}{[m]}$$
+$$x=1 \vee x=[u1] \vee x=[u2]$$
+\odpStart
+$x=1 \vee x=[u1] \vee x=[u2]$
+\odpStop
+\testStart
+A. $x=1 \vee x=[u1] \vee x=[u2]$ \\
+B. $x=1 \vee x=[u1] \vee x=[u2]$ \\
+C. $x=1 \vee x=[u1] \vee x=[u2]$ \\
+D. $x=1 \vee x=[u1] \vee x=[u2]$ 
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

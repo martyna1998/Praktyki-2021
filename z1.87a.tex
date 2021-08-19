@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z1.87a}
-\zadStart{Zadanie z Wikieł Z 1.87 a) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 1.87 a) moja wersja nr [nrWersji]}
 %[a]:[2,3,4,5,6,7,8,9,10]
 %[b]:[2,3,4,5,6,7,8,9,10]
 %[c]:[2,3,4,5,6,7,8,9,10]
@@ -49,18 +49,19 @@
 %[sdelta1]=int([sdelta])
 %[x1]=([b]-[sdelta])/([2a])
 %[x2]=([b]+[sdelta])/([2a])
+%[x11+]=round((-1)*([b]-[sdelta])/([2a]),2)
 %[x11]=round([x1],2)
 %[x21]=int([x2])
-%[sdelta].is_integer()==True and [x2].is_integer()==True and [x1].is_integer()==False
+%[sdelta].is_integer()==True and [x2].is_integer()==True and [x1].is_integer()==False and [x1]<0
 Wyznaczyć wartości zmiennej x, dla których funkcja przyjmuje wartości\\ dodatnie.\\ $f(x)=\big(\frac{3}{5}\big)^{[a]x^{2}-[b]x-[c]}-1$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$f(x)=\big(\frac{3}{5}\big)^{[a]x^{2}-[b]x-[c]}-1>0$$
 $$\big(\frac{3}{5}\big)^{[a]x^{2}-[b]x-[c]}>1\Leftrightarrow [a]x^{2}-[b]x-[c]<0$$
 $$\Delta=[b]^{2}-4\cdot[a]\cdot-[c]=[delta]\Rightarrow \sqrt{\Delta}=[sdelta1]$$
 $$x_{1}=[x11],x_{2}=[x21]$$
-$$[a](x-([x11]))(x-[x21])<0$$
-$$(x-([x11]))(x-[x21])<0$$
+$$[a](x+[x11+])(x-[x21])<0$$
+$$(x+[x11+])(x-[x21])<0$$
 $$x\in([x11],[x21])$$
 \rozwStop
 \odpStart

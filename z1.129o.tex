@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -80,24 +66,25 @@
 %[x21]=round((-[x2]-[pdel2])/([2a2]+0.0000001),2)
 %[x22]=round((-[x2]+[pdel2])/([2a2]+0.0000001),2)
 %[w]=round([p6]/[p7],2)
-%math.gcd([p6],[p7])==1 and [del1]>0 and [del2]>0 and [x1]<0 and [r1]<0 and [x12]<[x11] and [x21]<[x22] and [x11]!=[x21]
+%[a]=round(-[p5]/[p4],2)
+%math.gcd([p6],[p7])==1 and [del1]>0 and [del2]>0 and [x1]<0 and [r1]<0 and [x12]<[x11] and [x21]<[x22] and [x11]==[x21] and math.gcd([p5],[p4])==1
 
 Wyznaczyć dziedzinę naturalną funkcji.
 $$f(x)=\sqrt{[p1]-\left|\frac{[p2]x-[p3]}{[p4]x+[p5]}\right|}-\ln([p6]-[p7]x)$$
 \zadStop
 
 \rozwStart{Maja Szabłowska}{}
-$$[p1]-\left|\frac{[p2]x-[p3]}{[p4]x+[p5]}\right|\geq 0 \quad \land\quad [p6]-[p7]x>0$$
-$$\left|\frac{[p2]x-[p3]}{[p4]x+[p5]}\right|\leq [p1] \quad \land \quad [p7]x<[p6]$$
-$$\frac{[p2]x-[p3]}{[p4]x+[p5]}\leq [p1] \quad \lor \quad \frac{[p2]x-[p3]}{[p4]x+[p5]}\geq -[p1] \quad \land \quad x<\frac{[p6]}{[p7]}$$
+$$[p1]-\left|\frac{[p2]x-[p3]}{[p4]x+[p5]}\right|\geq 0 \quad \land\quad [p6]-[p7]x>0 \quad \land\quad [p4]x+[p5]\neq0$$
+$$\left|\frac{[p2]x-[p3]}{[p4]x+[p5]}\right|\leq [p1] \quad \land \quad [p7]x<[p6] \quad \land\quad x\neq-\frac{[p5]}{[p4]}=[a]$$
+$$\frac{[p2]x-[p3]}{[p4]x+[p5]}\leq [p1] \quad \land \quad \frac{[p2]x-[p3]}{[p4]x+[p5]}\geq -[p1] \quad \land \quad x<\frac{[p6]}{[p7]}$$
 
-$$([p2]x-[p3])([p4]x+[p5])\leq [p1]([p4]x+[p5])^{2} \quad \lor \quad ([p2]x-[p3])([p4]x+[p5])\geq -[p1]([p4]x+[p5])^{2}$$
+$$([p2]x-[p3])([p4]x+[p5])\leq [p1]([p4]x+[p5])^{2} \quad \land \quad ([p2]x-[p3])([p4]x+[p5])\geq -[p1]([p4]x+[p5])^{2}$$
 
 $$[p2p4]x^{2}+[p2p5]x-[p3p4]x-[p3p5]\leq [p1]([p4k]x^{2}+[2p4p5]x+[p5k])$$
-$$\lor$$
+$$\land$$
 $$[p2p4]x^{2}+[p2p5]x-[p3p4]x-[p3p5]\geq -[p1]([p4k]x^{2}+[2p4p5]x+[p5k])$$
 
-$$[xk1]x^{2}[x1]x[r1]\leq0 \quad \lor \quad [xk2]x^{2}+[x2]x+[r2]\geq 0$$
+$$[xk1]x^{2}[x1]x[r1]\leq0 \quad \land \quad [xk2]x^{2}+[x2]x+[r2]\geq 0$$
 
 $$\Delta_{1}=([x1])^{2}-4\cdot([xk1])\cdot([r1])=[del1] \Rightarrow \sqrt{\Delta_{1}}=[pdel1]$$
 
@@ -107,22 +94,21 @@ $$x_{11}=\frac{[x1p]-[pdel1]}{[2a1]}=[x11], \quad x_{12}=\frac{[x1p]+[pdel1]}{[2
 
 $$x_{21}=\frac{-[x2]-[pdel2]}{[2a2]}=[x21], \quad x_{22}=\frac{-[x2]+[pdel2]}{[2a2]}=[x22]$$
 
-$$x\in(-\infty,[x12]]\cup[[x11],\infty) \lor x\in(-\infty,[x21]]\cup[[x22],\infty) \land x<[w]$$
+$$x\in(-\infty,[x12]]\cup[[x11],\infty) \land x\in(-\infty,[x21]]\cup[[x22],\infty) \land x<[w]$$
 
-$$x\in[[x22],[w])$$
+$$x\in(-\infty,[w])\setminus\{[a]\}$$
 \rozwStop
 \odpStart
-$x\in[[x22],[w])$
+$x\in(-\infty,[w])\setminus\{[a]\}$
 \odpStop
 \testStart
-A.$x\in[[x22],[w])$
+A.$x\in(-\infty,[w])\setminus\{[a]\}$
 B.$x\in[e^{[p2]},\infty)$
 C.$x\in(-\infty, 0)$
 D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
 E.$x\in[[p1],\infty)$
-F.$x\in([p0],\infty)$
+F.$x\in(0,\infty)$
 G.$x\in\emptyset$
-
 \testStop
 \kluczStart
 A

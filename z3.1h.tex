@@ -33,7 +33,7 @@
 
 
 \kategoria{Wikieł/Z3.1h}
-\zadStart{Zadanie z Wikieł Z 3.1 h) moja wersja nr 1}
+\zadStart{Zadanie z Wikieł Z 3.1 h) moja wersja nr [nrWersji]}
 %[a]:[1, 2, 3, 4, 5, 6]
 %[b]:[1, 2, 3, 4, 5, 6]
 %[c]:[1, 2, 3, 4, 5, 6]
@@ -43,10 +43,10 @@
 %[ab]=[a]/[b]
 %[abc]=pow([ab],[c])
 %[abc1]=round([abc]-1,2)
-%[a]<[b] and [abc1]!=(-1)
+%[a]<[b] and [abc1]!=(-1) and math.gcd([a],[b])==1
 Zbadać monotoniczność ciągu $a_{n}$.\\ $a_{n}=\big(\frac{[a]}{[b]}\big)^{[c]n}$
 \zadStop
-\rozwStart{Jakub Ulrych}{}
+\rozwStart{Jakub Ulrych}{Pascal Nawrocki}
 $$a_{n+1}=\bigg(\frac{[a]}{[b]}\bigg)^{[c](n+1)}=\bigg(\frac{[a]}{[b]}\bigg)^{[c]n+[c]}$$
 $$a_{n+1}-a_{n}=\bigg(\frac{[a]}{[b]}\bigg)^{[c]n+[c]}-\bigg(\frac{[a]}{[b]}\bigg)^{[c]n}$$
 $$\bigg(\frac{[a]}{[b]}\bigg)^{[c]n}\cdot\bigg(\frac{[a]}{[b]}\bigg)^{[c]}-\bigg(\frac{[a]}{[b]}\bigg)^{[c]n}$$

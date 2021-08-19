@@ -44,7 +44,7 @@
 %[r]=[a2]-[x1]
 %[rr]=[r]*[r]
 %[m]=[rr]-[xx1]
-%[rr]>0 and [m]>0
+%[rr]>0 and [m]>0 and math.gcd([m],4)==1 and math.gcd([m],9)==1
 Okręgi $x^2+y^2-[a1]x=0$ oraz $x^2+(y-m)^2=[aa2]$ są styczne wewnętrznie. Obliczyć m.
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
@@ -61,12 +61,12 @@ $m=\pm \sqrt{[m]}$\\
 \odpStop
 \testStart
 A.$m=\pm \sqrt{[m]}$
-B.$m=\pm \sqrt{[2m]}$
-C.$m=\sqrt{[7m]}$
-D.$m=\pm \sqrt{[1m]}$
-E.$m=\pm \sqrt{[9m]}$
-F.$m= \sqrt{[2m]}$
-G.$m=\sqrt{0}$
+B.$m=\sqrt{[cx]}$
+C.$m=6$
+D.$m=\pm 8$
+E.$m=\pm \sqrt{999}$
+F.$m= 2$
+G.$m=0$
 H.$m=\sqrt{[m]}$
 I.$m=- \sqrt{[m]}$
 \testStop

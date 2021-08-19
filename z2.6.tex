@@ -55,15 +55,16 @@
 %[x]=[VU]-[ab]
 %[y]=[k2u2]-[U]
 %[xy]=[x]/[y]
-%[xy].is_integer()==True and [k2u2]>[U] and [VU]>[ab]
 %[cxy]=int([xy])
+%[xy].is_integer()==True and [k2u2]>[U] and [VU]>[ab] and math.gcd([cxy],4)==2 and math.gcd([cxy],9)==3 and math.gcd([cxy],25)==1 and math.gcd([cxy],49)==1
 Wyznaczyć wartość parametru k, dla których wektor [[v1],k,[v3]] tworzy z \\ wektorem [[u1],[u2],[u3]] kąt o mierze $\frac{\pi}{3}$.
 \zadStop
 \rozwStart{Aleksandra Pasińska}{}
 $$cos\angle(v,u)=\frac{u\circ v}{|u|\cdot |v|}$$
 $$u\circ v=[u1]\cdot [v1]+[u2]\cdot k+[u3]\cdot ([v3])=[a]+[u2]k+([b])=[u2]k$$
 $$|u|\cdot |v|=\sqrt{[u1]^2+[u2]^2+[u3]^2}\cdot \sqrt{[v1]^2+k^2+([v3])^2}=\sqrt{[U]}\cdot\sqrt{[V]+k^2}$$
-$$cos\frac{\pi}{3}(v,u)=\frac{1}{2}=\frac{[u2]k}{\sqrt{[U]}\cdot\sqrt{[V]+k^2}}$$
+$$cos\angle(v,u)=cos(\frac{\pi}{3})=\frac{1}{2}$$
+$$\frac{1}{2}=\frac{[u2]k}{\sqrt{[U]}\cdot\sqrt{[V]+k^2}}$$
 $$\sqrt{[U]}\cdot\sqrt{[V]+k^2}=2\cdot[u2]k$$
 $$\sqrt{[VU]+[U]k^2}=[2u2]k \bigg/^2$$
 $$[VU]+[U]k^2=[k2u2]k^2$$

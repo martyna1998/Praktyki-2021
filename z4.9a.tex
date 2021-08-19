@@ -44,13 +44,13 @@
 %[d]=random.randint(2,12)
 Obliczyć granice funkcji $\displaystyle{\lim_{x \to -\infty}}([a]^x+[b]^x+[c]^x-[d]^x)$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Stosujemy własności działań na granicach:
 $$\displaystyle{\lim_{x \to -\infty}}([a]^x+[b]^x+[c]^x-[d]^x)=\displaystyle{\lim_{x \to -\infty}}([a]^x)+\displaystyle{\lim_{x \to -\infty}}([b]^x)+\displaystyle{\lim_{x \to -\infty}}([c]^x)-\displaystyle{\lim_{x \to -\infty}}([d]^x)$$
 Zauważmy teraz, że każdy z tych składników sprowadza się do obliczenia tego samego:
 $$\displaystyle{\lim_{x \to -\infty}}(a^x)=0$$
 Dlaczego 0? Jako, że $x \to -\infty$, to możemy tego minusa się pozbyć z praw działań na potęgach, czyli:
-$$a^{-x}\Leftrightarrow\frac{1}{a^x} \text{ co już wiemy, że przy $x \to -\infty$ zawsze jest równe }0\text{.}$$
+$$a^{-x}\Leftrightarrow\frac{1}{a^x} \text{ co już wiemy, że przy $x \to \infty$ zawsze jest równe }0\text{.}$$
 Stąd:
 $$\displaystyle{\lim_{x \to -\infty}}([a]^x)+\displaystyle{\lim_{x \to -\infty}}([b]^x)+\displaystyle{\lim_{x \to -\infty}}([c]^x)-\displaystyle{\lim_{x \to -\infty}}([d]^x)=0+0+0-0=0$$
 \rozwStop

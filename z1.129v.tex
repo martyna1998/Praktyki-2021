@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -48,64 +34,64 @@
 
 \kategoria{Wikieł/Z1.129v}
 \zadStart{Zadanie z Wikieł Z 1.129 v) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[p3]:[2,3,4,5]
+%[p1]:[2,3,4,5]
+%[p2]:[2,3,4,5,6]
+%[p3]:[2,3,4,5,6]
 %[a]=pow([p1],[p2])
 %[r]=-1+[p2]-[p3]
-%[r1]=1+[p2]+[p3]
-%[b]=pow([p1],[r1])
-%[pb]=round(math.sqrt([b]),2)
-%[c]=1-[p2]-[p3]
-%[p1]<[a] and [r]>0 and [pb]<[a] and [p1]<[pb]
+%[r1]=1+[p2]-[p3]
+%[r12]=round([r1]/2,2)
+%[p1r12]=round([p1]**([r12]),2)
+%[c]=abs(-1-[p2]-[p3])
+%[c2]=round([c]/2,2)
+%[p1c2]=round([p1]**([c2]),2)
+%[p1]<[a] and [r]<0  and [p1r12]>0 and [p1r12]<[p1] and [p1c2]>[a]
 
 
 Wyznaczyć dziedzinę naturalną funkcji.
 $$f(x)=\ln(|1-\log_{[p1]}x|+|\log_{[p1]}x-[p2]|-[p3])$$
 \zadStop
 
-\rozwStart{Maja Szabłowska}{}
-$$|1-\log_{[p1]}x|+|\log_{[p1]}-[p2]|-[p3]>0$$
+\rozwStart{Maja Szabłowska}{Wojciech Przybylski}
+$$|1-\log_{[p1]}x|+|\log_{[p1]}x-[p2]|-[p3]>0$$
 $$x\in(0,\infty)$$
 Na początku należy sprawdzić, dla jakich wartości $x$ zmienia się znak w wartości bezwzględnej.
 $$1-\log_{[p1]}x=0 \Rightarrow \log_{[p1]}x=\log_{[p1]}[p1] \Rightarrow x=[p1]$$
 $$\log_{[p1]}x-[p2]=0 \Rightarrow \log_{[p1]}x=\log_{[p1]}[a]\Rightarrow x=[a]$$
 Kolejno, przechodzimy do rozwiązania nierówności.
 \begin{enumerate}
-    \item $x\in(-\infty, [p1])$
-    $$-1+\log_{[p1]}x-\log_{[p1]}x+[p2]-[p3]>0$$
-    $$\log_{[p1]}1+[r]>0$$
-    $$[r]>0$$
-    $$x\in(-\infty, [p1])$$
+    \item $x\in(0, [p1])$
+    $$1-\log_{[p1]}x-\log_{[p1]}x+[p2]-[p3]>0$$
+    $$-2\log_{[p1]}x+[r1]>0$$
+    $$[r12]>\log_{[p1]}x$$
+    $$[p1r12]>x$$
+    $$x\in(0, [p1r12])$$
     
     \item $x\in[[p1],[a])$
-    $$-1+\log_{[p1]}x+\log_{[p1]}x-[p2]-[p3]>0$$
-    $$\log_{[p1]}x^{2}>[r1]$$
-    $$\log_{[p1]}x^{2}>\log_{[p1]}[b]$$
-    $$x^{2}>[b]$$
-    $$x\in(-\infty, -[pb])\cup([pb],\infty)$$
-    $$x\in([pb],[a])$$
+    $$-1+\log_{[p1]}x-\log_{[p1]}x+[p2]-[p3]>0$$
+    $$[r]>0, \quad \textit{Sprzeczność!}$$
     
     \item $x\in [[a],\infty)$
-    $$1-\log_{[p1]}x+\log_{[p1]}x-[p2]-[p3]>0$$
-    $$[c]>0, \quad \textit{Sprzeczność!}$$
-    $$x\in\emptyset$$
+    $$-1+\log_{[p1]}x+\log_{[p1]}x-[p2]-[p3]>0$$
+    $$2\log_{[p1]}x>[c]$$
+    $$\log_{[p1]}x>[c2]$$
+    $$x>[p1c2]$$
+    $$x\in([p1c2],\infty)$$
 \end{enumerate}
 Ostatecznie otrzymujemy
-$$x\in(0, [p1])\cup([pb],[a])$$
+$$x\in(0, [p1r12])\cup([p1c2],\infty)$$
 \rozwStop
 \odpStart
-$x\in(0, [p1])\cup([pb],[a])$
+$x\in(0, [p1r12])\cup([p1c2],\infty)$
 \odpStop
 \testStart
-A.$x\in(0, [p1])\cup([pb],[a])$
-B.$x\in[e^{[p2]},\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
-E.$x\in[[p1],\infty)$
-F.$x\in([p2],\infty)$
-G.$x\in\emptyset$
-
+A. $x\in(0, [p1r12])\cup([p1c2],\infty)$
+B. $x\in([p1c2],\infty)$
+C. $x\in(-\infty, 0)$\\
+D. $x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
+E. $x\in[[p1],\infty)$
+F. $x\in([p2],\infty)$
+G. $x\in\emptyset$
 \testStop
 \kluczStart
 A

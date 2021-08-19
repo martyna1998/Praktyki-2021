@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.92j}
+\zadStart{Zadanie z Wikieł Z 1.92 j) moja wersja nr [nrWersji]}
+%[a]:[3,5,7,9,11,13,15,17,19,21,23,25,27,29]
+%[b]:[2,4]
+%[c]:[2,3,4,5,6,7,8,9,10,11]
+%[e]:[2,3]
+%[d]=pow([c],[e])
+%[del]=(4*[a])/[b]
+%[delta]=1+int([del])
+%[f]=[a]+[b]
+%[h]=([a]/[b])+(1/[c])
+%[hh]=int([h])
+%[del2]=(4*[f])/[b]
+%[delta2]=1+int([del2])
+%[delta3]=1+4*[hh]
+%[pr2]=(pow([delta3],(1/2)))
+%[pr1]=[pr2].real
+%[pr]=int([pr1])
+%[z1]=int((1-[pr])/2)
+%[z2]=int((1+[pr])/2)
+%math.gcd([a],[b])==1 and [d]<130 and [del].is_integer()==True and [del2].is_integer()==True and [h].is_integer()==True and [h].is_integer()==True and [delta]>0 and [delta2]>0 and [delta3]>0 and [pr2].is_integer()==True and [z1]<((1-pow([delta],1/2))/2) and [z2]>((1+pow([delta],1/2))/2)
+Rozwiązać równanie $\log_{x^2-x-\frac{[a]}{[b]}}{[d]}=-[e]$
+\zadStop
+\rozwStart{Małgorzata Ugowska}{}
+Dziedzina:
+$$x^2-x-\frac{[a]}{[b]}>0$$
+$$ \bigtriangleup = 1^2 + 4 \cdot \frac{[a]}{[b]} = [delta] \quad  \Longrightarrow \quad \sqrt{\bigtriangleup} = \sqrt{[delta]}$$
+$$x_{11}=\frac{1-\sqrt{[delta]}}{2} \quad \land \quad x_{12}=\frac{1+\sqrt{[delta]}}{2} $$
+$$x^2-x-\frac{[a]}{[b]} \ne 1$$
+$$x^2-x-\frac{[f]}{[b]} \ne 0$$
+$$ \bigtriangleup = 1^2 + 4 \cdot \frac{[f]}{[b]} = [delta2] \quad  \Longrightarrow \quad \sqrt{\bigtriangleup} = \sqrt{[delta2]}$$
+$$x_{21}=\frac{1-\sqrt{[delta2]}}{2} \quad \land \quad x_{22}=\frac{1+\sqrt{[delta2]}}{2} $$
+$$x \in \Big(-\infty, \frac{1-\sqrt{[delta]}}{2}\Big) \cup \Big(\frac{1+\sqrt{[delta]}}{2}, \infty \Big) \quad \land \quad x \notin \Big\{\frac{1-\sqrt{[delta2]}}{2}, \frac{1+\sqrt{[delta2]}}{2} \Big\} $$
+Rozwiązujemy równanie:
+$$\log_{x^2-x-\frac{[a]}{[b]}}{[d]}=-[e]$$
+$$\frac{1}{\log_{[d]}{(x^2-x-\frac{[a]}{[b]})}}=-[e]$$
+$$\log_{[d]}{(x^2-x-\frac{[a]}{[b]})}=-\frac{1}{[e]}$$
+$$[d]^{-\frac{1}{[e]}} = x^2-x-\frac{[a]}{[b]}$$
+$$\frac{1}{[c]} = x^2-x-\frac{[a]}{[b]}$$
+$$x^2-x-[hh] = 0$$
+$$ \bigtriangleup = 1^2 + 4 \cdot [hh] = [delta3] \quad  \Longrightarrow \quad \sqrt{\bigtriangleup} = [pr]$$
+$$x =\frac{1-[pr]}{2} = [z1] \quad \vee \quad x =\frac{1+[pr]}{2} =[z2]$$
+\rozwStop
+\odpStart
+$x \in \{ [z1], [z2] \}$
+\odpStop
+\testStart
+A. $x \in \{ [z1], [z2] \}$\\
+B. $x \in \{ 0, \frac{1}{2} \}$\\
+C. $x \in \Big\{\frac{1-\sqrt{[delta2]}}{2}, \frac{1+\sqrt{[delta2]}}{2} \Big\}$\\
+D. $ x \in \Big\{\frac{1-\sqrt{[delta]}}{2}, \frac{1+\sqrt{[delta]}}{2} \Big\} $ \\
+E. $x \in \{ -\frac{1}{2}, \frac{1}{2} \}$\\
+F. $x \in \emptyset $
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.15o}
+\zadStart{Zadanie z Wikieł Z 1.15 o) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5]
+%[b]:[2,3,4,5]
+%[a]=random.randint(1,8)
+%[b]=random.randint(1,8)
+%[2a]=2*[a]
+%[2apa]=[2a]+[a]
+%[ap2]=int([a]/2)
+%[apb]=[a]+[b]
+%[bma]=[b]-[a]
+%[bma2]=round([bma]/2,2)
+%[bpa]=[b]+[a]
+%[a]!=[b] and [b]>[a]
+Rozwiązać nierówność: $\frac{1}{|x-[a]|}<\frac{1}{|x+[b]|}$
+\zadStop
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
+Pamiętamy aby wyznaczyć dziedzinę: $x\in\mathbb{R}\symbol{92}\{-[b],[a]\}$.
+Przerzucamy i sprowadzamy do wspólnego mianownika:
+$$\frac{1}{|x-[a]|}<\frac{1}{|x+[b]|}$$
+\newline
+$$\frac{1}{|x-[a]|}-\frac{1}{|x+[b]|}<0$$
+\newline
+$$\frac{|x+[b]|-|x-[a]|}{|x-[a]||x+[b]|}<0$$
+Wyznaczamy sobie przedziały na podstawie miejsc zerowych w wartościach bezwględnych:
+\begin{enumerate}
+\item $x\in(-\infty,-[b])$ (obie wartości bezwględne zmieniają znaki)
+$$\frac{-x-[b]+x-[a]}{(-x+[a])(-x-[b])}<0$$
+$$\frac{-[apb]}{(-x+[a])(-x-[b])}<0$$
+$$\frac{[apb]}{(-x+[a])(-x-[b])}>0$$
+Zauważmy, że licznik nie będzie grał żadnej roli w tej nierówności (bo nie ma x), więc rozpatrujemy co się dzieje w mianowniku. Zauważmy, że interesuje nas tylko przedział, w którym to mianownik będzie dodatni (bo licznik jest dodatni). Nasza parabolka się uśmiecha, więc:
+$$x\in(-\infty,-[b])\cup([a],\infty)$$
+Pamiętamy teraz w jakim przedziale operujemy, stąd interesuje nas tylko:
+$$x\in(-\infty,-[b])$$
+\item $x\in[-[b],[a])$ (znak tylko zmienia $|x-[a]|$)
+$$\frac{x+[b]+x-[a]}{(-x+[a])(x+[b])}<0$$
+$$\frac{2x+[bma]}{(-x+[a])(x+[b])}<0$$
+W tym wypadku będzie na interesować znak licznika oraz mianownika. Zauważmy, że są tylko 2 przypadki kiedy to cały ułamek będzie spełniał nierówność.
+\begin{itemize}
+\item licznik ujemny i mianownik dodatni:
+$$2x+[bma]<0 \wedge (-x+[a])(x+[b])>0$$
+$$x<-[bma2] \wedge x\in(-[b],[a])\Rightarrow x\in(-[b],-[bma2])$$
+\item licznik dodatni i mianownik ujemny:
+$$2x+[bma]>0 \wedge (-x+[a])(x+[b])<0$$
+$$x>-[bma2] \wedge x\in(-\infty,-[b])\cup([a],\infty)\Rightarrow x\in([a],\infty)$$
+\end{itemize}
+Czyli mamy: $x\in(-[b],-[bma2])\cup x\in([a],\infty)$
+Pamiętamy na jakim przedziale operujemy, stąd:
+$$x\in(-[b],-[bma2])$$
+\item $x\in[[a],\infty)$ (bez zmiany znaków)
+$$\frac{x+[b]-x+[a]}{(x-[a])(x+[b])}<0$$
+$$\frac{[bpa]}{(x-[a])(x+[b])}<0$$
+Interesuje nas w tym wypadku przedział, w którym to mianownik jest ujemny. Stąd:
+$$x\in(-[b],[a])$$
+Jako, że rozwiązanie to nie wpada w nasz przedział stąd: $x\in\emptyset$.
+\end{enumerate}
+Na koniec sumujemy otrzymane rozwiązania i uwzględnieniamy początkowe założenie. Stąd naszym rozwiązaniem jest: 
+$$x\in(-\infty,-[b])\cup(-[b],-[bma2])$$
+\odpStop
+\testStart
+A. $x\in(-\infty,-[b])\cup(-[b],-[bma2])$
+B.$x\in(-\infty,-[b])$
+C.$x\in\emptyset$
+D.$x\in(-[b],-[bma2])$
+\testStop
+\kluczStart
+A
+\kluczStop
+\end{document}

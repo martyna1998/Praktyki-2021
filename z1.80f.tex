@@ -1,0 +1,91 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.80f}
+\zadStart{Zadanie z Wikieł Z 1.80 f)  moja wersja nr [nrWersji]}
+
+%[p1]=random.randint(2,10)
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[ak]=pow([a],2)
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[bk]=pow([b],2)
+%[c]=random.randint(2,10)
+%[akc]=[ak]*[c]
+%[dz]=math.gcd([bk],[akc])
+%[l]=int([bk]/[dz])
+%[m]=int([akc]/[dz])
+%[p3]:[1,8,27,64,125,216]
+%[p4]:[1,8,27,64,125,216]
+%[nl]=int([l]**(1./3.))
+%[nm]=int([m]**(1./3.))
+%[nmnl]=[nm]-[nl]
+%[del]=round(1-4*[nmnl]*[p1]/[nm],2)
+%([akc]/[dz])==[p3] and ([bk]/[dz])==[p4] and [nmnl]!=0 and [del]<0 and [a]!=[b]
+
+
+Rozwiązać równanie 
+$$(x^{2}-x+[p1])^{-\frac{3}{2}}=\frac{[a]}{[b]}\sqrt{[c]}x^{-3}$$
+\zadStop
+
+\rozwStart{Maja Szabłowska}{}
+$$(x^{2}-x+[p1])^{-\frac{3}{2}}=\frac{[a]}{[b]}\sqrt{[c]}x^{-3}$$
+$$x^{2}-x+[p1]=\left(\frac{[a]}{[b]}\sqrt{[c]}x^{-3}\right)^{-\frac{2}{3}}$$
+$$x^{2}-x+[p1]=\left(\frac{[b]}{[a]}\cdot\frac{1}{\sqrt{[c]}}x^{3}\right)^{\frac{2}{3}}$$
+$$x^{2}-x+[p1]=\left(\frac{[bk]}{[ak]}\cdot\frac{1}{[c]}\right)^{\frac{1}{3}}x^{2}$$
+$$x^{2}-x+[p1]=\left(\frac{[bk]}{[akc]}\right)^{\frac{1}{3}}x^{2}$$
+$$x^{2}-x+[p1]=\left(\frac{[l]}{[m]}\right)^{\frac{1}{3}}x^{2}$$
+$$x^{2}-x+[p1]=\frac{[nl]}{[nm]}x^{2}$$
+$$\frac{[nmnl]}{[nm]}x^{2}-x+[p1]=0$$
+$$\Delta=(-1)^2 - 4\cdot\frac{[nmnl]}{[nm]}\cdot[p1]=[del]<0$$
+Brak rozwiązań w zbiorze liczb rzeczywistych.
+\rozwStop
+\odpStart
+Brak rozwiązań w zbiorze liczb rzeczywistych.
+\odpStop
+\testStart
+A.Brak rozwiązań w zbiorze liczb rzeczywistych.\\
+B.$x_{1}=[a], \quad x_{2}=[bk]$\\
+D.$x_{1}=[l], \quad x_{2}=[m]$\\
+E.$x_{1}=[del], \quad x_{2}=[b]$\\
+F.$x_{1}=[ak], \quad x_{2}=[c]$\\
+G.$x_{1}=[p3], \quad x_{2}=[bk]$\\
+H.$x_{1}=[akc], \quad x_{2}=[a]$\\
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

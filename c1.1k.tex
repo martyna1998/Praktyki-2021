@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/C1.1k}
+\zadStart{Zadanie z Wikieł C 1.1 k) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9]
+%[b]:[2,3,4,5,6,7,8,9]
+Obliczyć całkę $$\int\bigg(\frac{[a]}{x}+[b]e^{x}\bigg)dx.$$
+\zadStop
+\rozwStart{Adrianna Stobiecka}{}
+Zakładamy $x\ne0$.
+$$\int\bigg(\frac{[a]}{x}+[b]e^{x}\bigg)dx=\int\frac{[a]}{x}dx+\int[b]e^{x}dx$$
+$$=[a]\int\frac{1}{x}dx+[b]\int e^{x}dx=[a]\ln{|x|}+[b]e^{x}+C$$
+\rozwStop
+\odpStart
+$[a]\ln{|x|}+[b]e^{x}+C$
+\odpStop
+\testStart
+A.$[a]\ln{|x|}+e^{[b]x}+C$\\
+B.$[a]\ln{|x|}+[b]e^{x}+C$\\
+C.$\frac{1}{[a]}\ln{|x|}+\frac{1}{[b]}e^{x}+C$\\
+D.$\ln{|x|}+[b]e^{x}+C$\\
+E.$[a]\ln{|x|}+\frac{1}{[b]}e^{x}+C$\\
+F.$[a]\ln{|x|}+e^{x}+C$\\
+G.$\frac{1}{[a]}+[b]e^{x}+C$\\
+H.$\ln{|x|}+e^{x}+C$\\
+I.$\frac{1}{[a]}\ln{|x|}+[b]e^{x}+C$
+\testStop
+\kluczStart
+B
+\kluczStop
+
+
+
+\end{document}

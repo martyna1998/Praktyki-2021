@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -65,7 +51,7 @@
 Rozwiązać układ równań
 $$\left\{\begin{array}{ccc}
 [p1]x+[p2]y&=&[p3]m\\
-mx-[p4]y&=&[p5]
+\ mx-[p4]y&=&[p5]
 \end{array} \right.$$
 i przeprowadzić dyskusję rozwiązań w zależności od parametru $m$.
 \zadStop
@@ -73,7 +59,7 @@ i przeprowadzić dyskusję rozwiązań w zależności od parametru $m$.
 Powyższemu układowi równań odpowiadają wyznaczniki:
 $$W=\left| \begin{array}{lccr} [p1] & [p2] \\ m & -[p4] \end{array}\right| = -[p4]\cdot[p1] - m\cdot[p2]=[p4p1]-[p2]m$$
 
-$$W_{x}=\left| \begin{array}{lccr} [p3]m & [p2] \\ [p5] & -[p4] \end{array}\right| = -[p4]\cdot[p3]m - [p5]\cdot[p2]=[p4p3]m-[p5p2]$$
+$$W_{x}=\left| \begin{array}{lccr} [p3]m & [p2] \\ \ [p5] & -[p4] \end{array}\right| = -[p4]\cdot[p3]m - [p5]\cdot[p2]=[p4p3]m-[p5p2]$$
 
 $$W_{y}=\left| \begin{array}{lccr} [p1] & [p3]m \\ m & [p5] \end{array}\right| = [p1]\cdot[p5] - m\cdot[p3]m=[p5p1]-[p3]m^{2}$$
 \begin{enumerate}
@@ -117,7 +103,4 @@ układ sprzeczny dla $m\=[m1]$.
 \kluczStart
 A
 \kluczStop
-
-
-
 \end{document}

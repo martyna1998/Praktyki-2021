@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/Z1.9f}
+\zadStart{Zadanie z Wikieł Z 1.9f moja wersja nr [nrWersji]}
+%[p1]:[2,3,4]
+%[p2]:[2,3,5,6,7,8,10]
+%[p3]=random.randint(2,10)
+%[a]=-[p2]*0.25
+%[b]=-int(2*[a])
+%[p0]:[1]
+%[2a]=int(2*[a])
+%[aa]=round([b]-1/[p1],2)
+%[bb]=round(-2/[p1]-[2a]/9,2)
+%[a3]=round(-[a]/3,2)
+%[b]!=[p0]
+
+
+Uprościć wyrażenie $\sqrt[3]{\frac{1}{[p1]}a^{-1}b^{-2}}\div\left[\left(\frac{\sqrt[3]{[p3]b^{-\frac{2}{3}}}}{a^{-2}}\right)^{-[p2]}\right]^{0,25}$
+
+\zadStop
+
+\rozwStart{Maja Szabłowska}{}
+$$\sqrt[3]{\frac{1}{[p1]}a^{-1}b^{-2}}\div\left[\left(\frac{\sqrt[3]{[p3]b^{-\frac{2}{3}}}}{a^{-2}}\right)^{-[p2]}\right]^{0,25}=$$
+
+$$\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{3}}b^{-\frac{2}{3}}\div \left(\frac{\sqrt[3]{[p3]b^{-\frac{2}{3}}}}{a^{-2}}\right)^{[a]}=\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{3}}b^{-\frac{2}{3}}\div \frac{\left(\sqrt[3]{[p3]b^{-\frac{2}{3}}}\right)^{[a]}}{a^{[b]}}=$$
+
+$$=\frac{1}{\sqrt[3]{[p1]}}a^{-\frac{1}{[p1]}}b^{-\frac{2}{[p1]}}\cdot\frac{a^{[b]}}{[p3]^{\frac{[a]}{3}}b^{\frac{[2a]}{9}}}=[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$$
+\rozwStop
+
+
+\odpStart
+$[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$
+\odpStop
+\testStart
+A.$[p1]^{-\frac{1}{3}}[p3]^{[a3]}a^{[aa]}b^{[bb]}$\\
+B.$[p1]a^{[b]}b^{\frac{[a]}{2}}$\\
+C.$\sqrt{[p2]a^{[b]}b^{\frac{[p0]}{2}}}$\\
+D.$\sqrt{[p2]}a^{[b]}b^{[bb]}$\\
+E.$b^{[b]}a^{\frac{[p0]}{2}}$\\
+F.$\sqrt{[p1]}a^{[b]}b^{\frac{[p0]}{2}}$\\
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}

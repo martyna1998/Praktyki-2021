@@ -12,20 +12,6 @@
 \title{Multizestaw zadań}
 \author{Robert Fidytek}
 %\date{\today}
-\date{}\documentclass[12pt, a4paper]{article}
-\usepackage[utf8]{inputenc}
-\usepackage{polski}
-
-\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
-\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
-\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
-\usepackage{amsfonts}
-\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
-\theoremstyle{definition} %styl dla definicji
-\newtheorem{zad}{} 
-\title{Multizestaw zadań}
-\author{Robert Fidytek}
-%\date{\today}
 \date{}
 \newcounter{liczniksekcji}
 \newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
@@ -56,8 +42,8 @@
 %[p1k]=[p1]*[p1]
 %[xk]=-1-[p1k]
 %[x]=[p2]+[2p3p1]
-%[del]=[x]*[x]+4*[x]*[p3k]
-%[pdel]=round(math.sqrt([del]),2)
+%[del]=[x]*[x]-4*[x]*[p3k]
+%[pdel]=round(math.sqrt(abs([del])),2)
 %[2xk]=2*[xk]
 %[x1]=round((-[x]-[pdel])/[2xk],2)
 %[x2]=round((-[x]+[pdel])/[2xk],2)
@@ -82,20 +68,19 @@ $$x_{1}=\frac{-[x]-[pdel]}{[2xk]}=[x1], \quad x_{2}=\frac{-[x]+[pdel]}{[2xk]}=[x
 $$x\in([x2], [x1])$$
 
 Zatem ostatecznie 
-$$x\in[0,[x1])$$
+$$x\in([x2],[x1])$$
 \rozwStop
 \odpStart
-$x\in[0,[x1])$
+$x\in([x2],[x1])$
 \odpStop
 \testStart
-A.$x\in[0,[x1])$
-B.$x\in[e^{[p2]},\infty)$
-C.$x\in(-\infty, 0)$
-D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$
-E.$x\in[[p1],\infty)$
-F.$x\in([p2],\infty)$
+A.$x\in([x2],[x1])$\\
+B.$x\in[e^{[p2]},\infty)$\\
+C.$x\in(-\infty, 0)$\\
+D.$x\in(-\infty, -[p2]] \cup [\ln[p1],\infty)$\\
+E.$x\in[[p1],\infty)$\\
+F.$x\in([p2],\infty)$\\
 G.$x\in\emptyset$
-
 \testStop
 \kluczStart
 A

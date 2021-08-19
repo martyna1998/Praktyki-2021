@@ -35,10 +35,12 @@
 
 \kategoria{Wikieł/P1.20a}
 \zadStart{Zadanie z Wikieł P 1.20 a) moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8]
-%[p2]:[2,3,4,5,6]
-%[p3]:[4,5,6,7,8,9,10,11]
-%[p4]:[2,3,4,5,6]
+%[a]:[2,3,4]
+%[b]:[2,3,4]
+%[c]:[2,3,4]
+%[d]:[2,3,4]
+%[e]:[2,3,4]
+%[f]:[2,3,4]
 %[a]=random.randint(2,10)
 %[e]=random.randint(2,10)
 %[c]=random.randint(1,10)
@@ -46,13 +48,10 @@
 %[b]=random.randint(2,10)
 %[f]=random.randint(1,10)
 %[g]=2*[a]
-%[p3p1m]=[p3]-[p1]
-%[p3p2m]=[p3]-[p2]
-%[p3p4m]=[p3]-[p4]
-%[p3]>[p1] and [p3]>[p4] and [p1]>[p2] and math.gcd([a],[d])==1 and [p3p1m]>1 and [p3p2m]>1 and [p3p4m]>1
+%math.gcd([a],[d])==1
 Zbadać parzystość (nieparzystość) funkcji $f(x)=\sqrt[3]{(x-[a])^2}-\sqrt[3]{(x+[a])^2}$.
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Szymon Tokarski}
 Funkcja jest parzysta jeżeli w całej swojej dziedznie spełnia warunek, że $f(x)=-f(x)$. Natomiast nieparzysta jeżeli spełnia warunek, że $f(-x)=-f(x)$.
 Sprawdzamy dziedzinę, jako że pod pierwiastkami występują wyrażenia kwadratowe, to oznacza, że dziedzina naszej funkcji równa jest $ \mathbb{R}$.
 Sprawdźmy:
@@ -74,7 +73,9 @@ Zatem funkcja jest nieparzysta, gdyż w całej swojej dziedznie spełnia warunek
 \odpStop
 \testStart
 A.Funkcja jest nieparzysta
+\\
 B.Funkcja jest parzysta
+\\
 C.Funkcja nie jest parzysta ani nieparzysta
 \testStop
 \kluczStart

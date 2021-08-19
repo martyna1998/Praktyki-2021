@@ -1,0 +1,85 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Robert Fidytek}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+\kategoria{Wikieł/Z5.37f}
+
+\zadStart{Zadanie z Wikieł Z 5.37 f) moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11]
+%[b]:[1,2,3,4,5,6,7,8,9,10,11]
+%[e]=[a]*2
+%[f]=[b]*3
+%[g]=math.sqrt([f])
+%[x]=round([g],2)
+%[h]=([a]*[g])/([b]+[f])
+%[fx]=round([h],2)
+Wyznaczyć współrzędne punktów przegięcia wykresu podanej funkcji.
+$$y = \frac{[a]x}{[b] + x^2}$$
+\zadStop
+
+\rozwStart{Natalia Danieluk}{}
+Dziedzina funkcji: $\quad \mathcal{D}_f=\mathbb{R}$. \\
+Postępujemy według schematu:
+\begin{enumerate}
+\item Obliczamy pochodne: 
+$$f'(x) = \frac{[a]x'([b] + x^2) - ([b] + x^2)'[a]x}{([b] + x^2)^2} = \frac{-[a](x^2-[b])}{([b] + x^2)^2},$$
+$$f''(x) = \frac{-[a](x^2-[b])'([b] + x^2)^2 - (([b] + x^2)^2)'(-[a](x^2-[b]))}{([b] + x^2)^4} = \frac{[e]x(x^2-[f])}{([b] + x^2)^3}$$
+i określamy ich dziedziny: $\quad \mathcal{D}_{f'}=\mathcal{D}_{f''}=\mathbb{R}$. \\
+\item Znajdujemy miejsca zerowe $f''$: \\
+Zauważmy, że dla każdego $x \in \mathcal{D}_f$ mamy $\frac{[e]}{([b] + x^2)^3} > 0$. \\
+Wystarczy zatem zbadać znak czynnika $x(x^2-[f])$. \\
+$$f''(x)=0 \Leftrightarrow x_0=0 \vee x_1=\sqrt{[f]}\approx[x] \vee x_2=-\sqrt{[f]}\approx-[x]$$
+\item Badamy znak $f''$ po obu stronach miejsc zerowych. \\
+	\begin{enumerate}
+	\item $f''(x) > 0 \Leftrightarrow x \in (-[x],0)\cup([x],\infty)$\\
+	\item $f''(x) < 0 \Leftrightarrow x \in (-\infty,-[x])\cup(0,[x])$
+	\end{enumerate}
+\end{enumerate}
+Tym samym w sąsiedztwie punktów: $x=0$, $x=[x]$ i $x=-[x]$ druga pochodna zmienia znak, a więc wykres funkcji ma punkty przegięcia w punktach o współrzędnych: $(x_0,f(x_0)) = (0,0)$, $(x_1,f(x_1)) = ([x],[fx])$ i $(x_2,f(x_2)) = (-[x],-[fx])$.
+\rozwStop
+
+\odpStart
+Współrzędne punktów przegięcia to: $(0,0), ([x],[fx]), (-[x],-[fx])$.
+\odpStop
+
+\testStart
+A. Funkcja nie ma punktów przegięcia.
+B. Współrzędne punktów przegięcia to: $(0,0)$.
+C. Współrzędne punktów przegięcia to:  $([x],[fx]), (-[x],-[fx])$.
+D. Współrzędne punktów przegięcia to:  $(0,0), ([x],[fx]), (-[x],-[fx])$.
+\testStop
+
+\kluczStart
+D
+\kluczStop
+
+\end{document}

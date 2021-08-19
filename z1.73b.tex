@@ -40,11 +40,11 @@
 %[b]=random.randint(1,10)
 %[ab]=[a]-[b]
 %[apb]=[a]+[b]
-%[b2]=round([b]/2,2)
+%[ab2]=round([ab]/2,2)
 %[ab]>0 and [ab]<[b]
 Rozwiązać nierówność: $\frac{|x-[a]|}{x+[b]}<1$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Zaczynamy od dziedziny: $x\in\mathbb{R}\symbol{92}\{-[b]\}$
 Rozwiązujemy:
 $$\frac{|x-[a]|}{x+[b]}<1$$
@@ -57,9 +57,9 @@ $$(|x-[a]|-x-[b])(x+[b])<0$$
 $$(|x-[a]|-x-[b])(x+[b])<0$$
 $$(-x+[a]-x-[b])(x+[b])<0$$
 $$(-2x+[ab])(x+[b])<0$$
-$$x\in(-\infty,-[b])\cup[[b2],\infty)$$
+$$x\in(-\infty,-[b])\cup([ab2],\infty)$$
 Jeszcze patrzymy w jakim przedziale działamy i mamy:
-$$x\in(-\infty,-[b])\cup[[b2],[a])$$
+$$x\in(-\infty,-[b])\cup([ab2],[a])$$
 \item Przypadek gdy: $x\in[[a],\infty)$
 $$(|x-[a]|-x-[b])(x+[b])<0$$
 $$(x-[a]-x-[b])(x+[b])<0$$
@@ -70,7 +70,7 @@ Patrzymy na przedział i zapisujemy rozwiązanie:
 $$x\in[[a],\infty)$$
 \end{enumerate}
 Sumujemy pamiętając o założeniu i mamy:
-$$x\in(-\infty,-[b])\cup[[b2],\infty)$$
+$$x\in(-\infty,-[b])\cup[[ab2],\infty)$$
 \odpStop
 \testStart
 A. $x\in(-\infty,-[a])\cup([2a],\infty)$

@@ -32,35 +32,33 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.22}
-\zadStart{Zadanie z Wikieł P 1.22) moja wersja nr [nrWersji]}
-%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-%[b]:[3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
-%[abm]=[b]-[a]
-%[ap]=[a]+[a]
-%[ak]=[a]*[a]
-%[akbm]=[ak]-[b]
-%[b]>[a] and [abm]!=0 and [akbm]!=0 and [ak]>[b] and [ap]!=[abm]
-Niech funkcje $f:\mathbb{R}\rightarrow\mathbb{R}$ i $g:\mathbb{R}\rightarrow\mathbb{R}$ określone będą wzorami: $f(x)=x+[a]$ oraz $g(x)=x^{2}-[b]$. Wyznaczyć złożenia $f\circ g$ i $g\circ f$.
+\kategoria{Wikieł/Z3.34e}
+\zadStart{Zadanie z Wikieł Z 3.34 e) moja wersja nr [nrWersji]}
+%[a]:[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44]
+%math.gcd([a],3)==1
+Obliczyć granicę ciągu. $$a_n=\bigg(\sqrt[3]{1-\frac{[a]}{n}}-1\bigg)n$$
 \zadStop
-\rozwStart{Justyna Chojecka}{}
-Dla $x\in \mathbb{R}$ mamy
-$$(f\circ g)(x)=f(g(x))=f(x^{2}-[b])=(x^{2}-[b])+[a]=x^2-[abm]$$
-$$(g\circ f)(x)=g(f(x))=g(x+[a])=(x+[a])^{2}-[b]=x^{2}+[ap]x+[ak]-[b]$$$$=x^{2}+[ap]x+[akbm]$$
+\rozwStart{Aleksandra Pasińska}{}
+$$\lim_{n\rightarrow \infty}\bigg(\sqrt[3]{1-\frac{[a]}{n}}-1\bigg)n=$$
+$$=\lim_{n\rightarrow \infty}\bigg(\frac{(\sqrt[3]{1-\frac{[a]}{n}}-1)n(1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}})}{1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}}}\bigg)=$$
+$$=\lim_{n\rightarrow \infty}\bigg(\frac{\sqrt[3]{1-\frac{[a]}{n}}n+(1-\frac{[a]}{n})^\frac{2}{3}n+(1-\frac{[a]}{n})n-n-\sqrt[3]{1-\frac{[a]}{n}}n-(1-\frac{[a]}{n})^\frac{2}{3}n}{1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}}}\bigg)=$$
+$$=\lim_{n\rightarrow \infty}\bigg(\frac{(1-\frac{[a]}{n})n-n}{1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}}}\bigg)=$$
+$$=\frac{\lim_{n\rightarrow \infty}((1-\frac{[a]}{n})n-n)}{\lim_{n\rightarrow \infty}(1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}})}=\frac{\lim_{n\rightarrow \infty}(n-[a]-n)}{\lim_{n\rightarrow \infty}(1+\sqrt[3]{1-\frac{[a]}{n}}+(1-\frac{[a]}{n})^{\frac{2}{3}})}=$$
+$$=\frac{-[a]}{1+\sqrt[3]{1-0}+(1-0)^{\frac{2}{3}}}=-\frac{[a]}{3}$$
 \rozwStop
 \odpStart
-$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$
+$-\frac{[a]}{3}$\\
 \odpStop
 \testStart
-A.$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-B.$(f\circ g)(x)=x^2+[abm], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-C.$(f\circ g)(x)=x^2-[abm], (g\circ f)(x)=x^{2}-[ap]x+[akbm]$\\
-D.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[ap]x+[abm]$\\
-E.$(f\circ g)(x)=x^2+[ap], (g\circ f)(x)=x^{2}-[ap]x+[akbm]$\\
-F.$(f\circ g)(x)=x^2+[ap], (g\circ f)(x)=x^{2}+[ap]x-[abm]$\\
-G.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[ap]x+[akbm]$\\
-H$(f\circ g)(x)=x^2+[akbm], (g\circ f)(x)=x^{2}+[ap]x+[abm]$\\
-I.$(f\circ g)(x)=x^2-[ap], (g\circ f)(x)=x^{2}+[akbm]x+[abm]$
+A.$-\frac{[a]}{3}$
+B.$\infty$
+C.$-\infty$
+D.$1$
+E.$9$
+F.$e$
+G.$4$
+H.$7$
+I.$-7$
 \testStop
 \kluczStart
 A

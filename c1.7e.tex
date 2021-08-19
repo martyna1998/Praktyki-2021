@@ -32,31 +32,32 @@
 \maketitle
 
 
-\kategoria{Wikieł/P3.20a}
-\zadStart{Zadanie z Wikieł z1.14f moja wersja nr [nrWersji]}
-%[a]:[4,5,6,7,8,9,10,11,12]
-%[b]:[2,3,4,5,6,7,8,9,10,11,12]
-%[c]:[2,3,4,5,6,7,8,9,10,11,12]
-%[s1]=[c]+[b]
-%[s2]=[b]-[c]
-%[a]!=0 and math.gcd([a],[s1])==1 and math.gcd([a],[s2])==1 
-Rozwiązać równanie  $|[a]x-[b]|=[c]$.
+\kategoria{Wikieł/C1.7e}
+\zadStart{Zadanie z Wikieł C 1.7e moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12]
+%[b]:[3,4,5,6,7,8,9,10,11,12,13]
+%[b1]=[b]-1
+Oblicz całkę $$\int \frac{[a]}{(1+[a]x)^{[b]}}dx.$$
 \zadStop
-\rozwStart{Mirella Narewska}{}
-$$|[a]x-[b]|=[c]  $$
-$$[a]x-[b]=[c]  \vee [a]x-[b]=-[c]$$
-$$ [a]x=[s1] \vee  [a]x=[s2] $$ 
-$$ x=\frac{[s1]}{[a]} \vee x=\frac{[s2]}{[a]}$$ 
+\rozwStart{Aleksandra Pasińska}{}
+Używamy podstawienia:
+$$dx=\frac{1}{t'}xdt,t=1+[a]x, t'=[a]$$
+$$\int \frac{[a]}{(1+[a]x)^{[b]}}\cdot \frac{1}{[a]}dt=\int \frac{[a]}{[a](1+[a]x)^{[b]}}dt=\int \frac{1}{(1+[a]x)^{[b]}}dt=$$
+$$=\int \frac{1}{t^{[b]}}dt=-\frac{1}{[b1]t^{[b1]}}=-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$$
 \rozwStop
 \odpStart
-$x=\frac{[s1]}{[a]} \vee x=\frac{[s2]}{[a]}$
+$-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$\\
 \odpStop
 \testStart
-A.$x=\frac{[s1]}{[a]} \vee x=\frac{[s1]}{[a]}$
-B.$0$
-C.$-2$
-D.$[a]$
-E.$[b]$
+A.$-\frac{1}{[b1](1+[a]x)^{[b1]}}+C$
+B.$-\frac{2x^5\sqrt{x}}{11}+C$
+C.$\frac{[a]x\sqrt{x}}{3}-2+C$
+D.$\frac{[a]x\sqrt{x}}{3}+C$
+E.$\frac{2x^5\sqrt{x}}{11}+C$
+F.$\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+G.$-\frac{[a]x^3\sqrt{x}}{7}+\frac{2x^5\sqrt{x}}{11}+C$
+H.$\frac{[a]x\sqrt{x}}{3}+\frac{2x^5\sqrt{x}}{11}+C$
+I.$\frac{[a]x\sqrt{x}}{3}-\frac{[b]x^3\sqrt{x}}{7}+C$
 \testStop
 \kluczStart
 A

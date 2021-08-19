@@ -39,27 +39,27 @@
 %[c]:[2,3,4,5,6]
 %[d]:[2,3,4,5,6]
 %[e]:[2,3,4,5,6]
-%[a]=random.randint(2,8)
+%[a]=random.randint(2,4)
 %[b]=random.randint(2,8)
 %[c]=random.randint(2,8)
-%[d]=random.randint(2,8)
+%[d]=random.randint(6,9)
 %[e]=random.randint(2,8)
-%[amd]=[a]-[d]
+%[dma]=[d]-[a]
 %[bpd]=[b]+[d]
 %[cpd]=[c]+[d]
-%[delta]=([bpd]*[bpd])+(4*[amd]*[cpd])
+%[delta]=([bpd]*[bpd])+(4*(-[dma])*[cpd])
 %[pierw]=math.sqrt(abs([delta]))
 %[pierw1]=int([pierw])
-%[x1]=round([bpd]-[pierw1]/2*[amd],2)
-%[x2]=round([bpd]+[pierw1]/2*[amd],2)
+%[x1]=round(([bpd]-[pierw1])/(-2*[dma]),2)
+%[x2]=round(([bpd]+[pierw1])/(-2*[dma]),2)
 %[apd]=[a]+[d]
 %[mbpd]=-[b]+[d]
 %[mcpd]=-[c]+[d]
-%[d]>[a] and [amd]!=-1 and [delta]>0 and [pierw].is_integer() and [amd]!=0 and [mbpd]>1 and [mcpd]>0
+%[delta]>0 and [pierw].is_integer() and [mbpd]>1 and [mcpd]>0
 
 Rozwiązać nierówność: $\big|\frac{[a]x^2-[b]x-[c]}{x^2+x+1}\big|\leq[d]$
 \zadStop
-\rozwStart{Pascal Nawrocki}{}
+\rozwStart{Pascal Nawrocki}{Jakub Ulrych}
 Korzystamy z własności wartości bezwzględnej:
 $$\bigg|\frac{[a]x^2-[b]x-[c]}{x^2+x+1}\bigg|=\frac{|[a]x^2-[b]x-[c]|}{|x^2+x+1|}$$
 Zauważmy teraz, że mianownik jest zawsze dodatni, zatem możemy opuścić wartość bezwględną bez żadnych konsekwencji:
@@ -73,13 +73,13 @@ $$|[a]x^2-[b]x-[c]|\leq[d](x^2+x+1) \wedge |[a]x^2-[b]x-[c]|\geq-[d](x^2+x+1)$$
 Rozwiązujemy oba przypadki i bierzemy część wspólną:
 \begin{enumerate}
 \item$$|[a]x^2-[b]x-[c]|\leq[d](x^2+x+1)$$
-$$[amd]x^2-[bpd]x-[cpd]\leq0$$
+$$-[dma]x^2-[bpd]x-[cpd]\leq0$$
 $$\Delta=[delta]\Rightarrow\sqrt{\Delta}=\sqrt{[delta]}=[pierw1]$$
-$$x_1=[x1] \vee x_2=[x2]\Leftrightarrow x\in(-\infty,[x2])\cup([x1],\infty)$$
+$$x_1=[x1] \vee x_2=[x2]\Leftrightarrow x\in(-\infty,[x2]]\cup[[x1],\infty)$$
 \item$$|[a]x^2-[b]x-[c]|\geq-[d](x^2+x+1)$$
 $$[apd]x^2+[mbpd]x+[mcpd]\geq0\Leftrightarrow x\in\mathbb{R} \text{ (bo $\Delta<0$)}$$
 \end{enumerate}
-A więc $x\in(-\infty,[x2])\cup([x1],\infty) \wedge x\in\mathbb{R} \Rightarrow  x\in(-\infty,[x2])\cup([x1],\infty)$
+A więc $x\in(-\infty,[x2]]\cup[[x1],\infty) \wedge x\in\mathbb{R} \Rightarrow  x\in(-\infty,[x2]]\cup[[x1],\infty)$
 \rozwStop
 \odpStart
 $x\in(-\infty,[x2])\cup([x1],\infty)$
