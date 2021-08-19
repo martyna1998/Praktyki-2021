@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+
+\usepackage{amsthm}  %pakiet do tworzenia twierdzeń itp.
+\usepackage{amsmath} %pakiet do niektórych symboli matematycznych
+\usepackage{amssymb} %pakiet do symboli mat., np. \nsubseteq
+\usepackage{amsfonts}
+\usepackage{graphicx} %obsługa plików graficznych z rozszerzeniem png, jpg
+\theoremstyle{definition} %styl dla definicji
+\newtheorem{zad}{} 
+\title{Multizestaw zadań}
+\author{Jacek Jabłoński}
+%\date{\today}
+\date{}
+\newcounter{liczniksekcji}
+\newcommand{\kategoria}[1]{\section{#1}} %olreślamy nazwę kateforii zadań
+\newcommand{\zadStart}[1]{\begin{zad}#1\newline} %oznaczenie początku zadania
+\newcommand{\zadStop}{\end{zad}}   %oznaczenie końca zadania
+%Makra opcjonarne (nie muszą występować):
+\newcommand{\rozwStart}[2]{\noindent \textbf{Rozwiązanie (autor #1 , recenzent #2): }\newline} %oznaczenie początku rozwiązania, opcjonarnie można wprowadzić informację o autorze rozwiązania zadania i recenzencie poprawności wykonania rozwiązania zadania
+\newcommand{\rozwStop}{\newline}                                            %oznaczenie końca rozwiązania
+\newcommand{\odpStart}{\noindent \textbf{Odpowiedź:}\newline}    %oznaczenie początku odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\odpStop}{\newline}                                             %oznaczenie końca odpowiedzi końcowej (wypisanie wyniku)
+\newcommand{\testStart}{\noindent \textbf{Test:}\newline} %ewentualne możliwe opcje odpowiedzi testowej: A. ? B. ? C. ? D. ? itd.
+\newcommand{\testStop}{\newline} %koniec wprowadzania odpowiedzi testowych
+\newcommand{\kluczStart}{\noindent \textbf{Test poprawna odpowiedź:}\newline} %klucz, poprawna odpowiedź pytania testowego (jedna literka): A lub B lub C lub D itd.
+\newcommand{\kluczStop}{\newline} %koniec poprawnej odpowiedzi pytania testowego 
+\newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
+
+\begin{document}
+\maketitle
+
+
+\kategoria{Wikieł/z1.84d}
+\zadStart{Zadanie z Wikieł z1.84d) moja wersja nr [nrWersji]}
+%[p1]:[2,3,4]
+%[p2]:[2,3,4,5]
+%[p3]:[2,3,4]
+%[a]=random.randint(2,4)
+%[b]=random.randint(2,4)
+%[c]=random.randint(2,4)
+%[r1]=int(math.pow(2,[p1]))
+%[r2]=[p3]
+%[r3]=int(math.pow(2,[r2]))
+%[r4]=[p1]*[a]
+%[r5]=[r2]*[b]
+%[r6]=[r5]*[c]
+%[r7]=[p1]-([r5]*[p2])
+%[r8]=[r6]+[r4]
+%[r9]=[r8]*[p2]
+%[r10]=int(math.gcd([r9],[r7]))
+%[r11]=int([r9]/[r10])
+%[r12]=int(([r7]/[r10])*(-1))
+%[ra]=[r11]+[a]
+%[rb]=[r11]+[b]
+%[rc]=[r11]+[c]
+%[rra]=[r12]+[a]
+%[rrb]=[r12]+[b]
+%[rrc]=[r12]+[c]
+Rozwiązać równanie:
+d) $[r1]^{\frac{1}{[p2]} x - [a]} = [r3]^{[b] (x + [c])}$
+\zadStop
+\rozwStart{Jacek Jabłoński}{}
+$$[r1]^{\frac{1}{[p2]} x - [a]} = [r3]^{[b] (x + [c])}$$
+$$2^{[p1](\frac{1}{[p2]} x - [a])} = 2^{[r2]([b] (x + [c]))}$$
+$$[p1](\frac{1}{[p2]} x - [a]) = [r2]([b] (x + [c]))$$
+$$\frac{[p1]}{[p2]}x - [r4] = [r5]x + [r6] $$
+$$\frac{[p1]}{[p2]}x - [r5]x = [r6]+[r4]$$
+$$x(\frac{[r7]}{[p2]}) = [r8]$$
+$$x=[r8] \cdot \frac{[p2]}{[r7]}$$
+$$x=\frac{[r9]}{[r7]}$$
+$$x=- \frac{[r11]}{[r12]}$$
+\rozwStop
+\odpStart
+$$x=- \frac{[r11]}{[r12]}$$
+\odpStop
+\testStart
+A. $$x=- \frac{[r11]}{[r12]}$$
+B. $$x = \frac{[ra]}{[r12]}$$
+C. $$x = \frac{[r11]}{[rra]}$$
+D. $$x = \frac{[rb]}{[r12]}$$
+E. $$x = \frac{[r11]}{[rrb]}$$
+F. $$x = \frac{[rc]}{[r12]}$$
+G. $$x = \frac{[r11]}{[rrc]}$$
+H. $$x = \frac{[ra]}{[rrb]}$$
+I. $$x = \frac{[rc]}{[rra]}$$
+\testStop
+\kluczStart
+A
+\kluczStop
+
+
+
+\end{document}
