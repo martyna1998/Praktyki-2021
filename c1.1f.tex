@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Laura Mieczkowska}
+\author{Robert Fidytek}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,36 +32,30 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.44}
-\zadStart{Zadanie z Wikieł P 1.44 ) moja wersja nr [nrWersji]}
-%[a]:[7,8,9,10,11,12,13]
-%[b]:[2,3,4,5,6]
-%[c]=[a]*[b]
-%[d]=[b]**2
-%[e]=[a]-[b]
-%x!=[b] and x!=-[b]
-Rozwiązać równanie $\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$.
+\kategoria{Dymkowska, Beger/C1.1f}
+\zadStart{Zadanie z Dymkowska, Beger C 1.1f moja wersja nr [nrWersji]}
+%[c]:[2,3,4,5,6,7]
+%[b]=[c]+1
+%[a]=[b]+1
+
+Obliczyć całkę $$\int \frac{x^{[a]}-[b]x^{[b]}+[c]x^{[c]}-1}{x^{[b]}}dx$$
 \zadStop
 \rozwStart{Laura Mieczkowska}{}
-$$\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$$
-$$\frac{[a](x+[b])+x(x-[b])}{(x-[b])(x+[b])}=\frac{[c]}{x^2-[d]}$$ 
-$$\frac{[a]x+[a]\cdot[b]+x^2-[b]x}{x^2-[d]}=\frac{[c]}{x^2-[d]}$$
-$$[a]x+[c]+x^2-[b]x=[c] \wedge x^2\neq[d]\Rightarrow x\neq\pm[b]$$
-$$x^2+[e]x=0 \Rightarrow x=0 \vee x=[e]$$
-
-
-
+$$\int \frac{x^{[a]}-[b]x^{[b]}+[c]x^{[c]}-1}{x^{[b]}}dx=\int \bigg(\frac{x^{[a]}}{x^{[b]}}-\frac{[b]x^{[b]}}{x^{[b]}}+\frac{[c]x^{[c]}}{x^{[b]}}-\frac{1}{x^{[b]}}\bigg)dx=$$
+$$=\int xdx-\int [b]dx+\int \frac{[c]}{x}dx-\int \frac{1}{x^{[b]}}dx=$$
+$$=\frac{x^2}{2}-[b]x+[c]lnx+\frac{1}{[c]x^{[c]}}+C$$
+\rozwStop
 \odpStart
-$x=0 \vee x=[e]$
+$\frac{x^2}{2}-[b]x+[c]lnx+\frac{1}{[c]x^{[c]}}+C$
 \odpStop
 \testStart
-A. $x=0 \vee x=0$ \\
-B. $x=[a]$\\
-C. $x=0 \vee x=[e]$ \\
-D. $x=[b] \vee x=[e]$ 
+A. $\frac{x^2}{2}-[c]x+[a]lnx+\frac{1}{[c]x^{[c]}}+C$ \\
+B. $\frac{x^2}{2}-[b]x+[c]lnx+\frac{1}{[c]x^{[c]}}+C$ \\
+C. $\frac{x^2}{2}+[b]x+[c]lnx+\frac{1}{x^{[c]}}+C$ \\
+D. $\frac{x^2}{2}-[b]x-[c]lnx-\frac{1}{[c]x^{[c]}}+C$
 \testStop
 \kluczStart
-C
+B
 \kluczStop
 
 
