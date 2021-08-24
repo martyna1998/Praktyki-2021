@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Laura Mieczkowska}
+\author{Robert Fidytek}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,36 +32,31 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.44}
-\zadStart{Zadanie z Wikieł P 1.44 ) moja wersja nr [nrWersji]}
-%[a]:[7,8,9,10,11,12,13]
-%[b]:[2,3,4,5,6]
-%[c]=[a]*[b]
-%[d]=[b]**2
-%[e]=[a]-[b]
-%x!=[b] and x!=-[b]
-Rozwiązać równanie $\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$.
+\kategoria{Dymkowska, Beger/C1.1p}
+\zadStart{Zadanie z Dymkowska, Beger C 1.1p  moja wersja nr [nrWersji]}
+%[a]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[b]:[2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+%[c]=[b]-[a]
+%[b]>[a]+1
+
+Obliczyć całkę $$\int \frac{[a]x^2+[b]}{x^2+1}dx$$
 \zadStop
 \rozwStart{Laura Mieczkowska}{}
-$$\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$$
-$$\frac{[a](x+[b])+x(x-[b])}{(x-[b])(x+[b])}=\frac{[c]}{x^2-[d]}$$ 
-$$\frac{[a]x+[a]\cdot[b]+x^2-[b]x}{x^2-[d]}=\frac{[c]}{x^2-[d]}$$
-$$[a]x+[c]+x^2-[b]x=[c] \wedge x^2\neq[d]\Rightarrow x\neq\pm[b]$$
-$$x^2+[e]x=0 \Rightarrow x=0 \vee x=[e]$$
-
-
-
+$$\int \frac{[a]x^2+[b]}{x^2+1}dx= \int\frac{[a]x^2}{x^2+1}dx+\int\frac{[b]}{x^2+1}dx=$$
+$$=[a]\int\frac{x^2+1-1}{x^2+1}dx+[b]\int\frac{1}{x^2+1}dx=[a]\bigg(\int 1 dx-\int\frac{1}{x^2+1}dx\bigg)+[b]\int\frac{1}{x^2+1}dx=$$
+$$=[a]x-[a]arctgx+[b]arctgx+C=[a]x+[c]arctgx+C$$
+\rozwStop
 \odpStart
-$x=0 \vee x=[e]$
+$[a]x+[c]arctgx+C$
 \odpStop
 \testStart
-A. $x=0 \vee x=0$ \\
-B. $x=[a]$\\
-C. $x=0 \vee x=[e]$ \\
-D. $x=[b] \vee x=[e]$ 
+A.$[a]x-[c]arctgx+C$ \\
+B.$[a]x+[c]arctgx+C$ \\
+C.$[a]x+[c]arcsinx+C$ \\
+D.$[a]x-[c]arcsinx+C$
 \testStop
 \kluczStart
-C
+B
 \kluczStop
 
 

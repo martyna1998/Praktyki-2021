@@ -10,7 +10,7 @@
 \theoremstyle{definition} %styl dla definicji
 \newtheorem{zad}{} 
 \title{Multizestaw zadań}
-\author{Laura Mieczkowska}
+\author{Robert Fidytek}
 %\date{\today}
 \date{}
 \newcounter{liczniksekcji}
@@ -32,36 +32,33 @@
 \maketitle
 
 
-\kategoria{Wikieł/P1.44}
-\zadStart{Zadanie z Wikieł P 1.44 ) moja wersja nr [nrWersji]}
-%[a]:[7,8,9,10,11,12,13]
-%[b]:[2,3,4,5,6]
-%[c]=[a]*[b]
-%[d]=[b]**2
-%[e]=[a]-[b]
-%x!=[b] and x!=-[b]
-Rozwiązać równanie $\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$.
+\kategoria{Dymkowska, Beger/C1.1g}
+\zadStart{Zadanie z Dymkowska, Beger C 1.1g  moja wersja nr [nrWersji]}
+%[a]:[3,4,5,6,7,8]
+%[b]=[a]+1
+%[c]=[b]+1
+%[a1]=[a]-1
+%[b1]=[b]-1
+%[c1]=[c]-1
+
+Obliczyć całkę $$\int \frac{\sqrt[{[a]}]{x}+\sqrt[{[b]}]{x}+\sqrt[{[c]}]{x}}{x}dx$$
 \zadStop
 \rozwStart{Laura Mieczkowska}{}
-$$\frac{[a]}{x-[b]}+\frac{x}{x+[b]}=\frac{[c]}{x^2-[d]}$$
-$$\frac{[a](x+[b])+x(x-[b])}{(x-[b])(x+[b])}=\frac{[c]}{x^2-[d]}$$ 
-$$\frac{[a]x+[a]\cdot[b]+x^2-[b]x}{x^2-[d]}=\frac{[c]}{x^2-[d]}$$
-$$[a]x+[c]+x^2-[b]x=[c] \wedge x^2\neq[d]\Rightarrow x\neq\pm[b]$$
-$$x^2+[e]x=0 \Rightarrow x=0 \vee x=[e]$$
-
-
-
+$$\int \frac{\sqrt[{[a]}]{x}+\sqrt[{[b]}]{x}+\sqrt[{[c]}]{x}}{x}dx=\int\frac{\sqrt[{[a]}]{x}}{x}dx+\int\frac{\sqrt[{[b]}]{x}}{x}dx+\int\frac{\sqrt[{[c]}]{x}}{x}dx=$$
+$$=\int x^{-\frac{[a1]}{[a]}}dx+\int x^{-\frac{[b1]}{[b]}}dx+\int x^{-\frac{[c1]}{[c]}}dx=$$
+$$=[a]x^{\frac{1}{[a]}}+[b]x^{\frac{1}{[b]}}+[c]x^{\frac{1}{[c]}}+C$$
+\rozwStop
 \odpStart
-$x=0 \vee x=[e]$
+$[a]x^{\frac{1}{[a]}}+[b]x^{\frac{1}{[b]}}+[c]x^{\frac{1}{[c]}}+C$
 \odpStop
 \testStart
-A. $x=0 \vee x=0$ \\
-B. $x=[a]$\\
-C. $x=0 \vee x=[e]$ \\
-D. $x=[b] \vee x=[e]$ 
+A. $-[a]x^{\frac{1}{[a]}}-[b]x^{\frac{1}{[b]}}-[c]x^{\frac{1}{[c]}}+C$ \\
+B. $x^{\frac{1}{[a]}}+x^{\frac{1}{[b]}}+x^{\frac{1}{[c]}}+C$ \\
+C. $[a]x^{-\frac{1}{[a]}}+[b]x^{-\frac{1}{[b]}}+[c]x^{-\frac{1}{[c]}}+C$ \\
+D. $[a]x^{\frac{1}{[a]}}+[b]x^{\frac{1}{[b]}}+[c]x^{\frac{1}{[c]}}+C$
 \testStop
 \kluczStart
-C
+D
 \kluczStop
 
 
