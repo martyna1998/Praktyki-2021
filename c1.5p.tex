@@ -28,62 +28,34 @@
 \newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
 \begin{document}
 \maketitle
-\kategoria{Wikieł/Z1.84f}
-\zadStart{Zadanie z Wikieł Z 1.84f moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[s1]=2**[p1]
-%[s2]=2**[p2]
-%[g1]=4*[p1]
-%[g2]=4*[p2]
-%[g3]=3+[g2]
-%[Delta]=[g1]**2+4*[g2]*[g3]
-%[tDelta]=math.sqrt([Delta])
-%[sDelta]=int([tDelta])
-%[h1]=[g1]+[sDelta]
-%[h2]=2*[g2]
-%[gcd]=math.gcd([h1],[h2])
-%[h11]=int([h1]/[gcd])
-%[h22]=int([h2]/[gcd])
-%[a1]=[g1]-[sDelta]
-%[gcd2]=math.gcd([a1],[h2])
-%[a11]=-int([a1]/[gcd2])
-%[ak11]=int([h2]/[gcd2])
-%([tDelta]).is_integer() is True
-Rozwiązać równanie:
-$$2\cdot[s1]^{\sqrt{x}}=\sqrt[4]{2}\cdot[s2]^{x-1}$$.
+\kategoria{Beger/c1.5p}
+\zadStart{Zadanie z Beger C 1.5p moja wersja nr [nrWersji]}
+%[p1]:[4,9,16,25,36,49,64,81]
+%[p2]:[4,9,16,25,36,49,64,81]
+%[p11]=int(math.sqrt([p1]))
+%[p22]=int(math.sqrt([p2]))
+%[s1]=[p1]*[p22]
+%math.gcd([p11],[p22])==1
+Obliczyć, całkując przez podstawienie.
+$$\int \frac{e^{x}}{\sqrt{[p2]-[p1]e^{2x}}} \,dx$$
 \zadStop
 \rozwStart{Radosław Grzyb}{}
-$$2\cdot2^{[p1]\sqrt{x}}=2^{\frac{1}{4}}\cdot2^{[p2]x-[p2]}$$
-$$2^{[p1]\sqrt{x}+1}=2^{[p2]x-[p2]+\frac{1}{4}}$$
-Logarytmując obie strony równania otrzymujemy::
-$$[p1]\sqrt{x}+1=[p2]x-[p2]+\frac{1}{4}/\cdot4$$
-$$[g1]\sqrt{x}+4=[g2]x-[g2]+1$$
-Przenosimy wszystko na lewą stronę równania i upraszczamy:
-$$-[g2]x+[g1]\sqrt{x}+4-1+[g2]=0$$
-$$-[g2]x+[g1]\sqrt{x}+[g3]=0$$
-Podstawiając $t=\sqrt{x}$ otrzymamy równanie kwadratowe. Zakładamy także, że $t\geq0$.
-$$-[g2]t^{2}+[g1]t+[g3]=0$$
-Policzmy więc deltę:
-$$\Delta_{t}=[g1]^2-4(-[g2])[g3]=[Delta]\implies\sqrt{[Delta]}=[sDelta]$$
-Znajdźmy miejsca zerowe:
-$$t_{1}=\frac{-[g1]-[sDelta]}{2\cdot(-[g2])}=\frac{[g1]+[sDelta]}{2\cdot[g2]}=\frac{[h1]}{[h2]}=\frac{[h11]}{[h22]}$$
-$$t_{2}=\frac{-[g1]+[sDelta]}{2\cdot(-[g2])}=\frac{[g1]-[sDelta]}{2\cdot[g2]}=\frac{[a1]}{[h2]}=-\frac{[a11]}{[ak11]}$$
-Z racji naszego założenia, odrzucami wynik $t_{2}<0$ i rozpatrujemy jedynie $t_{1}$:
-$$t_{1}=\sqrt{x}=\frac{[h11]}{[h22]}$$
-Podnosimy obie strony do kwadratu otrzymując wynik:
-$$x=(\frac{[h11]}{[h22]})^{2}$$
+Lekko przekształcamy mianownik oraz podstawiamy:
+$$[p11]e^{x}=u \implies du=[p11]e^{x}dx\implies dx=\frac{e^{-x}}{[p11]}du$$:
+$$\int \frac{e^{x}}{\sqrt{[p2]-([p11]e^{x})^{2}}}\cdot\frac{e^{-x}}{[p11]}\,du=\frac{1}{[p11]}\int \frac{1}{\sqrt{[p2]-u^{2}}} \,du$$
+Wykorzystajmy teraz gotowy wzór na całkę $\int\frac{1}{\sqrt{a^2-x^2}}dx=\arcsin\frac{x}{a}+C$ i otrzymajmy finalny wynik:
+$$\frac{1}{[p11]}\arcsin\frac{u}{[p22]}+C=\frac{1}{[p11]}\arcsin\frac{[p11]e^{x}}{[p22]}+C$$
 \rozwStop
 \odpStart
-$$(\frac{[h11]}{[h22]})^{2}$$
+$$\frac{1}{[p11]}\arcsin\frac{[p11]e^{x}}{[p22]}+C$$
 \odpStop
 \testStart
-A.$$(\frac{[h22]}{[h11]})^{2}$$
-B.$$(\frac{[h11]}{[h22]})^{2}$$
-C.$$(\frac{[h11]}{[h22]})^{3}$$
-D.$$\frac{[h11]}{[h22]}$$
+A.$$\frac{1}{[p11]}\arcsin\frac{[p11]e^{x}}{[p22]}+C$$
+B.$$\arcsin(\frac{x}{\sqrt{[p2]}})+C$$
+C.$$\frac{1}{[s1]}\arctan\frac{e^{[p1]x}}{[p22]}+C$$
+D.$$\frac{[p1]}{3}\ln(|\frac{3x}{[p2]}|)+C$$
 \testStop
 \kluczStart
-B
+A
 \kluczStop
 \end{document}

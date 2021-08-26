@@ -28,60 +28,39 @@
 \newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
 \begin{document}
 \maketitle
-\kategoria{Wikieł/Z1.84f}
-\zadStart{Zadanie z Wikieł Z 1.84f moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[s1]=2**[p1]
-%[s2]=2**[p2]
-%[g1]=4*[p1]
-%[g2]=4*[p2]
-%[g3]=3+[g2]
-%[Delta]=[g1]**2+4*[g2]*[g3]
+\kategoria{Beger/c1.14c}
+\zadStart{Zadanie z Beger C 1.14c moja wersja nr [nrWersji]}
+%[p1]:[3,5,7,9,1]
+%[p2]:[1,2,3,4,5,6,7,8,9,10]
+%[Delta]=[p1]**2-4*(-1)*[p2]
 %[tDelta]=math.sqrt([Delta])
 %[sDelta]=int([tDelta])
-%[h1]=[g1]+[sDelta]
-%[h2]=2*[g2]
-%[gcd]=math.gcd([h1],[h2])
-%[h11]=int([h1]/[gcd])
-%[h22]=int([h2]/[gcd])
-%[a1]=[g1]-[sDelta]
-%[gcd2]=math.gcd([a1],[h2])
-%[a11]=-int([a1]/[gcd2])
-%[ak11]=int([h2]/[gcd2])
 %([tDelta]).is_integer() is True
-Rozwiązać równanie:
-$$2\cdot[s1]^{\sqrt{x}}=\sqrt[4]{2}\cdot[s2]^{x-1}$$.
+Obliczyć całkę niewymierną.
+$$\int \frac{1}{\sqrt{[p2]+[p1]x-x^{2}}} \,dx$$
 \zadStop
 \rozwStart{Radosław Grzyb}{}
-$$2\cdot2^{[p1]\sqrt{x}}=2^{\frac{1}{4}}\cdot2^{[p2]x-[p2]}$$
-$$2^{[p1]\sqrt{x}+1}=2^{[p2]x-[p2]+\frac{1}{4}}$$
-Logarytmując obie strony równania otrzymujemy::
-$$[p1]\sqrt{x}+1=[p2]x-[p2]+\frac{1}{4}/\cdot4$$
-$$[g1]\sqrt{x}+4=[g2]x-[g2]+1$$
-Przenosimy wszystko na lewą stronę równania i upraszczamy:
-$$-[g2]x+[g1]\sqrt{x}+4-1+[g2]=0$$
-$$-[g2]x+[g1]\sqrt{x}+[g3]=0$$
-Podstawiając $t=\sqrt{x}$ otrzymamy równanie kwadratowe. Zakładamy także, że $t\geq0$.
-$$-[g2]t^{2}+[g1]t+[g3]=0$$
-Policzmy więc deltę:
-$$\Delta_{t}=[g1]^2-4(-[g2])[g3]=[Delta]\implies\sqrt{[Delta]}=[sDelta]$$
-Znajdźmy miejsca zerowe:
-$$t_{1}=\frac{-[g1]-[sDelta]}{2\cdot(-[g2])}=\frac{[g1]+[sDelta]}{2\cdot[g2]}=\frac{[h1]}{[h2]}=\frac{[h11]}{[h22]}$$
-$$t_{2}=\frac{-[g1]+[sDelta]}{2\cdot(-[g2])}=\frac{[g1]-[sDelta]}{2\cdot[g2]}=\frac{[a1]}{[h2]}=-\frac{[a11]}{[ak11]}$$
-Z racji naszego założenia, odrzucami wynik $t_{2}<0$ i rozpatrujemy jedynie $t_{1}$:
-$$t_{1}=\sqrt{x}=\frac{[h11]}{[h22]}$$
-Podnosimy obie strony do kwadratu otrzymując wynik:
-$$x=(\frac{[h11]}{[h22]})^{2}$$
+Do obliczenia całki wykorzystamy pomocniczy wzór:
+$$ax^{2}+bx+c = a[(x+\frac{b}{2a})^{2}-\frac{\Delta}{4a^{2}}]$$
+Obliczmy najpierw deltę:
+$$\Delta=[p1]^2-4\cdot(-1)\cdot[p2]=[Delta]$$
+Podstawiając do wzoru otrzymujemy:
+$$-[(x+\frac{[p1]}{2\cdot(-1)})^{2}-\frac{[Delta]}{4}]$$
+A więc:
+$$\int \frac{1}{\sqrt{-[(x-\frac{[p1]}{2})^{2}-\frac{[Delta]}{4}]}} \,dx=\int \frac{1}{\sqrt{-[(x-\frac{[p1]}{2})^{2}-\frac{[Delta]}{4}]}} \,dx = \int \frac{1}{\sqrt{-(x-\frac{[p1]}{2})^{2}+\frac{[Delta]}{4}}} \,dx$$
+Podstawiamy $t=x-\frac{[p1]}{2}$, a więc $dt=dx$:
+$$\int\frac{1}{\sqrt{-t^{2}+\frac{[Delta]}{4}}} \,dt=\int\frac{1}{\sqrt{(\frac{[sDelta]}{2})^{2}-t^{2}}} \,dt$$
+Korzystając z gotowego wzoru na całkę  $\int \frac{1}{\sqrt{a^{2}-x^{2}}} \,dx = \arcsin(\frac{x}{a})+C$  otrzymujemy:
+$$\int\frac{1}{\sqrt{(\frac{[sDelta]}{2})^{2}-t^{2}}} \,dt=\arcsin(\frac{t}{\frac{[sDelta]}{2}})+C=\arcsin(\frac{2t}{[sDelta]})+C=\arcsin(\frac{2(x-\frac{[p1]}{2})}{[sDelta]})+C$$
 \rozwStop
 \odpStart
-$$(\frac{[h11]}{[h22]})^{2}$$
+$$\arcsin(\frac{2(x-\frac{[p1]}{2})}{[sDelta]})+C$$
 \odpStop
 \testStart
-A.$$(\frac{[h22]}{[h11]})^{2}$$
-B.$$(\frac{[h11]}{[h22]})^{2}$$
-C.$$(\frac{[h11]}{[h22]})^{3}$$
-D.$$\frac{[h11]}{[h22]}$$
+A.$$\arcsin(\frac{2(x-\frac{[p1]}{7})}{[sDelta]})+C$$
+B.$$\arcsin(\frac{2(x-\frac{[p1]}{2})}{[sDelta]})+C$$
+C.$$\arccos(\frac{2(x-\frac{[p1]}{2})}{[sDelta]})+C$$
+D.$$\tg(\frac{2(x-\frac{[p1]}{2})}{[sDelta]})+C$$
 \testStop
 \kluczStart
 B

@@ -28,60 +28,39 @@
 \newcommand{\wstawGrafike}[2]{\begin{figure}[h] \includegraphics[scale=#2] {#1} \end{figure}} %gdyby była potrzeba wstawienia obrazka, parametry: nazwa pliku, skala (jak nie wiesz co wpisać, to wpisz 1)
 \begin{document}
 \maketitle
-\kategoria{Wikieł/Z1.84f}
-\zadStart{Zadanie z Wikieł Z 1.84f moja wersja nr [nrWersji]}
-%[p1]:[2,3,4,5,6,7,8,9,10]
-%[p2]:[2,3,4,5,6,7,8,9,10]
-%[s1]=2**[p1]
-%[s2]=2**[p2]
-%[g1]=4*[p1]
-%[g2]=4*[p2]
-%[g3]=3+[g2]
-%[Delta]=[g1]**2+4*[g2]*[g3]
-%[tDelta]=math.sqrt([Delta])
-%[sDelta]=int([tDelta])
-%[h1]=[g1]+[sDelta]
-%[h2]=2*[g2]
-%[gcd]=math.gcd([h1],[h2])
-%[h11]=int([h1]/[gcd])
-%[h22]=int([h2]/[gcd])
-%[a1]=[g1]-[sDelta]
-%[gcd2]=math.gcd([a1],[h2])
-%[a11]=-int([a1]/[gcd2])
-%[ak11]=int([h2]/[gcd2])
-%([tDelta]).is_integer() is True
+\kategoria{Wikieł/Z1.84k}
+\zadStart{Zadanie z Wikieł Z 1.84k moja wersja nr [nrWersji]}
+%[p2]:[5,13,29,53,68,85]
+%[p3]:[2,3,5,6,7]
+%[c1]=[p3]**2
+%[c2]=[p2]-4
+%[wynik]=int(math.sqrt([c2]))
+%[wynik2]=int(-[wynik])
+%[zlywynik1]=int(1-[wynik])
+%[zlywynik11]=-[zlywynik1]+1.5
+%[zlywynik2]=int(10-[wynik])
+%[zlywynik22]=-[zlywynik2]+10
+%[zlywynik3]=int(2*[wynik]-5)
+%[zlywynik33]=-[zlywynik3]+21
 Rozwiązać równanie:
-$$2\cdot[s1]^{\sqrt{x}}=\sqrt[4]{2}\cdot[s2]^{x-1}$$.
+$$(\sqrt{[p3]})^{x^{2}-[p2]}=\frac{1}{[c1]}$$
 \zadStop
 \rozwStart{Radosław Grzyb}{}
-$$2\cdot2^{[p1]\sqrt{x}}=2^{\frac{1}{4}}\cdot2^{[p2]x-[p2]}$$
-$$2^{[p1]\sqrt{x}+1}=2^{[p2]x-[p2]+\frac{1}{4}}$$
-Logarytmując obie strony równania otrzymujemy::
-$$[p1]\sqrt{x}+1=[p2]x-[p2]+\frac{1}{4}/\cdot4$$
-$$[g1]\sqrt{x}+4=[g2]x-[g2]+1$$
-Przenosimy wszystko na lewą stronę równania i upraszczamy:
-$$-[g2]x+[g1]\sqrt{x}+4-1+[g2]=0$$
-$$-[g2]x+[g1]\sqrt{x}+[g3]=0$$
-Podstawiając $t=\sqrt{x}$ otrzymamy równanie kwadratowe. Zakładamy także, że $t\geq0$.
-$$-[g2]t^{2}+[g1]t+[g3]=0$$
-Policzmy więc deltę:
-$$\Delta_{t}=[g1]^2-4(-[g2])[g3]=[Delta]\implies\sqrt{[Delta]}=[sDelta]$$
-Znajdźmy miejsca zerowe:
-$$t_{1}=\frac{-[g1]-[sDelta]}{2\cdot(-[g2])}=\frac{[g1]+[sDelta]}{2\cdot[g2]}=\frac{[h1]}{[h2]}=\frac{[h11]}{[h22]}$$
-$$t_{2}=\frac{-[g1]+[sDelta]}{2\cdot(-[g2])}=\frac{[g1]-[sDelta]}{2\cdot[g2]}=\frac{[a1]}{[h2]}=-\frac{[a11]}{[ak11]}$$
-Z racji naszego założenia, odrzucami wynik $t_{2}<0$ i rozpatrujemy jedynie $t_{1}$:
-$$t_{1}=\sqrt{x}=\frac{[h11]}{[h22]}$$
-Podnosimy obie strony do kwadratu otrzymując wynik:
-$$x=(\frac{[h11]}{[h22]})^{2}$$
+$$(\sqrt{[p3]})^{x^{2}-[p2]}=[p3]^{-2}$$
+$$(\sqrt{[p3]})^{x^{2}-[p2]}=\sqrt{[p3]}^{-4}$$
+Pierwiastkując obie strony równania otrzymujemy:
+$$x^{2}-[p2]=-4$$
+$$x^{2}=[c2]$$
+$$x=[wynik] \vee [wynik2]$$
 \rozwStop
 \odpStart
-$$(\frac{[h11]}{[h22]})^{2}$$
+$[wynik] \vee [wynik2]$
 \odpStop
 \testStart
-A.$$(\frac{[h22]}{[h11]})^{2}$$
-B.$$(\frac{[h11]}{[h22]})^{2}$$
-C.$$(\frac{[h11]}{[h22]})^{3}$$
-D.$$\frac{[h11]}{[h22]}$$
+A.$[zlywynik1] \vee [zlywynik11]$
+B.$[wynik] \vee [wynik2]$
+C.$[zlywynik2] \vee [zlywynik22]$
+D.$[zlywynik3] \vee [zlywynik33]$
 \testStop
 \kluczStart
 B
